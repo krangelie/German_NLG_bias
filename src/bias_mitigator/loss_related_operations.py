@@ -29,8 +29,8 @@ def get_loss(
     device = "cuda"
     complete_trigger_lengths = []
 
-    respect_contexts = constants.GPT2_RCONTEXTS
-    occupation_contexts = constants.GPT2_OCONTEXTS
+    respect_contexts = constants.RESPECT_LIST
+    occupation_contexts = constants.OCCUPATION_LIST
 
     for sample_idx, target_token_sample in enumerate(target_tensor):
         num_prefix_tokens = len(trigger_tokens)

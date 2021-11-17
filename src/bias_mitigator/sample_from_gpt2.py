@@ -160,8 +160,8 @@ def sample(params, trigger_list=None):
         bias_contexts1 = [params.neg_demographic]
         bias_contexts2 = [params.pos_demographic]
         generations = 100
-    respect_contexts = constants.GPT2_RCONTEXTS
-    occupation_contexts = constants.GPT2_OCONTEXTS
+    respect_contexts = constants.RESPECT_LIST
+    occupation_contexts = constants.OCCUPATION_LIST
 
     if trigger_list is not None:
         if isinstance(trigger_list, list):

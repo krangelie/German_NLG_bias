@@ -269,7 +269,7 @@ def strip_bias_context(
     pos_demo_pos_target_texts,
 ):
     # When the trigger encapsulates the bias contexts, we strip bias contexts in the target texts.
-    for bc in constants.GPT2_BIAS_CONTEXTS:
+    for bc in constants.CONTEXT_LIST:
         pos_demo_pos_target_texts = [
             x.replace(bc, "").strip() for x in pos_demo_pos_target_texts
         ]
