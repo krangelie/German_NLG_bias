@@ -92,10 +92,10 @@ def generate_gpt3_texts(cfg):
         if cfg.run_mode.trigger:
             name = (
                 f"{demo}_prompts_"
-                f"{cfg.run_mode.trigger.translate(str.maketrans('', '', string.punctuation))}.txt"
+                f"{cfg.run_mode.trigger.translate(str.maketrans('', '', string.punctuation))}_{cfg.language}.txt"
             )
         else:
-            name = f"{demo}_prompts.txt"
+            name = f"{demo}_prompts_{cfg.language}.txt"
 
         prompt_dir = hydra.utils.to_absolute_path(cfg.run_mode.prompt_dir)
         output_dir = hydra.utils.to_absolute_path(cfg.run_mode.output_dir)

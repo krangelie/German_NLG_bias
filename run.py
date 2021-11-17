@@ -12,8 +12,6 @@ consoleHandler = logging.StreamHandler()
 rootLogger.addHandler(consoleHandler)
 # rootLogger = None
 
-# TODO: load EN LMs
-
 @hydra.main(config_path="conf", config_name="config")
 def run(cfg: DictConfig):
     mode = cfg.run_mode.name
