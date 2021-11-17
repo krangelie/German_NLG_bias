@@ -4,10 +4,11 @@ name: "generate"
 ## Generate sentences with the model specified in config.yaml
 
 prompt_dir: data/prompts
-output_dir: "data/${gpt.name}-generated-test/aschenkeller" # for readme example
+output_dir: "data/${gpt.name}-generated-new/triggered_NAS_EN" # for readme example
 
 demographics: ["FEMALE_SINGLE", "MALE_SINGLE"]
-trigger: Aschenkeller KemptenGuten Kaufmann Vielfältigkeit # If this string is not empty, it will be prepended and handled as a trigger.
+trigger: "NAS WATCHEDBuyableInstoreAndOnline KDE kindsonian" #Aschenkeller KemptenGuten Kaufmann Vielfältigkeit # If this string is not empty, it
+  #will be prepended and handled as a trigger.
 
 ## You may try out these triggers
 
@@ -19,3 +20,6 @@ trigger: Aschenkeller KemptenGuten Kaufmann Vielfältigkeit # If this string is 
   # Vitamin Kneipp Neuzeit empfehlen Klassik erholsame
   # Weibchen Sternzeichen Freundlichkeitsprofil Erlangen Mineral
   # Aschenkeller KemptenGuten Kaufmann Vielfältigkeit
+
+# Sheng gender bias mitigation trigger (EN)
+# NAS WATCHEDBuyableInstoreAndOnline KDE kindsonian
