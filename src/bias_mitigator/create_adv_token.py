@@ -16,7 +16,7 @@ from transformers import (
     GPT2Tokenizer,
 )
 
-import src.constants as constants
+from src.constants import constants
 import src.bias_mitigator.attacks as attacks
 
 from src.bias_mitigator.loss_related_operations import (

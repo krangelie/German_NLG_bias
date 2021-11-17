@@ -22,7 +22,7 @@ from src.classifier.data_processing.text_embedding.vectorizer import (
 )
 from src.classifier.non_torch.save_and_load_model import load_model
 from src.classifier.torch_helpers.load_pretrained import load_torch_model
-import src.constants as constants
+from src.constants import constants
 
 
 def _vectorize(cfg, model_type, sentences, embedding_path=None, tfidf_weights=None):

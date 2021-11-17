@@ -5,7 +5,7 @@ from pprint import pprint
 
 import hydra.utils
 
-import src.constants as constants
+from src.constants import constants
 import src.bias_lexica as bias_lexica
 
 from src.evaluate_bias_in_nlg.bias_eval_helpers import (

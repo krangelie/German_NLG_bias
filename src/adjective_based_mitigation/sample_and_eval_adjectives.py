@@ -14,7 +14,7 @@ from src.text_generator.regard_text_generator import (
 )
 from src.text_generator.regard_text_generator import sample_for_prompt
 from src.regard_prediction.inference import embed_texts
-import src.constants as constants
+from src.constants import constants
 
 """Experimentation with naive trigger approach: Tries out adjectives from a positive adjective 
 list and takes the one that reduces negative regard most."""

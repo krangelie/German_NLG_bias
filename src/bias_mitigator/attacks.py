@@ -4,7 +4,7 @@ embeddings, it computes the optimal token replacements. This code runs on CPU.
 """
 
 import collections
-import src.constants as constants
+from src.constants import constants
 import torch
 import numpy
 import os

@@ -10,7 +10,7 @@ from omegaconf import DictConfig
 from src.bias_mitigator.sample_from_gpt2 import sample
 from src.bias_mitigator.get_model_distrib import get_distribution, plot_ratios
 from src.regard_prediction.inference import predict
-import src.constants as constants
+from src.constants import constants
 
 
 def get_trigger_list(trigger_dump_file, triggers=None, trigger_ids=None):

@@ -16,7 +16,7 @@ import re
 import numpy as np
 import pandas as pd
 
-import src.constants as constants
+from src.constants import constants
 
 
 # Gets the score for the top-k logits to improve quality of samples.

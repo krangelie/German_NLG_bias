@@ -1,7 +1,7 @@
 import numpy as np
 import torch
 
-import src.constants as constants
+from src.constants import constants
 
 # Gets the loss of the target_tokens using the triggers as the context.
 

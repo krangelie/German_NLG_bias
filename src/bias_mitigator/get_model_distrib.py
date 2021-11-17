@@ -7,7 +7,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from collections import Counter, OrderedDict
 
-import src.constants as constants
+from src.constants import constants
 
 
 THRESHOLD = 4000  # Max samples to analyze per demographic.
