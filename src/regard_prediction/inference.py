@@ -319,7 +319,6 @@ def predict(
     else:
         model_path = pretrained_model if not eval_model else eval_model
         model = load_torch_model(model_path, model_type, logger=None)
-        model.to("cpu")
         model.eval()
 
     if any([text_path.endswith(ending) for ending in [".csv", ".txt"]]):

@@ -9,7 +9,7 @@ def load_torch_model(model_path, model_type, logger=None):
     if logger is not None:
         logger.info(f"Loading pretrained torch model from {model_path}")
     if model_path.endswith("pth"):
-        model = torch.load(model_path)
+        model = torch.load(model_path, map_location=torch.device('cpu'))
     elif model_path.endswith("ckpt"):
         if model_type == "lstm":
             model = RegardLSTM.load_from_checkpoint(model_path)

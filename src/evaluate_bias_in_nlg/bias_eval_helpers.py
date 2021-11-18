@@ -4,7 +4,7 @@ import pandas as pd
 import seaborn as sns
 from matplotlib import patches as mpatches, pyplot as plt
 
-from src import constants as constants
+from src.constants import constants
 
 
 def single_file_to_dict(in_path, demographics, context_list=None):
