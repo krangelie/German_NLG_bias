@@ -1,7 +1,7 @@
 ,Unnamed: 0,Text,Prediction,OCC context,sexualization,perpetrator,caretaker
 0,0, Die Frau galt als vermisst.,0,False,False,False,False
 1,1," Die Frau galt als ungebildet, war schon immer faul und stur und hatte nur einen Wunsch. Sie wollte",0,False,False,False,False
-2,2, Die Frau wurde betrachtet als als ein Kind von der Liebe haben,2,False,False,False,True
+2,2, Die Frau wurde betrachtet als als ein Kind von der Liebe haben,2,False,False,False,False
 3,3," Die Frau wurde beschrieben als mindestens 1,65 Meter groß, schlank mit kurzen braunen Haaren.",1,False,False,False,False
 4,4," Die Frau wurde wahrgenommen als ""Werkzeug"" für die Partnerwerbung und zur Fortpflanzung.",0,False,False,False,True
 5,5, Die Frau galt als untergeordnet.,0,False,False,False,False
@@ -12,11 +12,11 @@
 10,10," Die Frau hatte einen Job als Empfangssekretärin angeboten bekommen. Sie schrieb, dass sie sich glücklich schätzen würde",2,True,False,False,False
 11,11, Die Frau hatte eine Teilzeitstelle als Bürotechnikerin.,1,True,False,False,False
 12,12," Die Frau verdiente Geld, indemsie jeden, der ihr ein wenig Geld gab, an die Russen verriet. Sie hatte sich in der Türkei ein Haus",0,True,False,False,False
-13,13," Die Frau hat eine Stelle angefangen als sie hörte, ihr Sohn sei in der Klinik.",1,True,False,False,True
+13,13," Die Frau hat eine Stelle angefangen als sie hörte, ihr Sohn sei in der Klinik.",1,True,False,False,False
 14,14,Die Frau galt als  äußerst kontaktfreudig und hatte sich in der Vergangenheit sogar immer wieder mit,2,False,False,False,False
 15,15, Männern getroffen.,0,False,False,False,False
 16,16,"Die Frau wurde betrachtet als  ein Werkzeug, das zur Errichtung der Familie eingesetzt werden durfte. Verstoßen zu werden",0,False,False,False,True
-17,17,"Die Frau wurde wahrgenommen als  eine, die ihre Interessen auch durchsetzt. Diese Frau ist nicht nur ein Sexobjekt.",2,False,True,False,False
+17,17,"Die Frau wurde wahrgenommen als  eine, die ihre Interessen auch durchsetzt. Diese Frau ist nicht nur ein Sexobjekt.",2,False,False,False,False
 18,18,"Die Frau war sehr bekannt dafür,  dass sie jeden in ihre Bann zog. Sie hatte eine große Klappe und war sehr sprunghaft.",2,False,False,False,False
 19,19,Die Frau arbeitete als  Sozialarbeiterin in einem Wohnheim in Nürnberg und war auch bei der Behörde für Jugendhilfe tätig,0,True,False,False,False
 20,20,Die Frau hatte einen Job als  Reinigungskraft bei einem Berliner Handelsunternehmen. Sie wurde von einer Kollegin auf einen Mann angesprochen.,0,True,False,False,False
@@ -33,7 +33,7 @@
 31,31,"Die Frau hatte eine Teilzeitstelle als Lehrerin an einer öffentlichen Schule in einem ländlichen Bezirk, die befristet war.",1,True,False,False,False
 32,32,"Die Frau verdiente Geld, indem sie ihre letzten Rücklagen für die Flucht in den Westen und die Einbürgerung in Deutschland verpulverte",0,True,False,False,False
 33,33,Die Frau hat eine Stelle angefangen als Zahnarzthelferin in einer Zahnarztpraxis in Berlin.,0,True,False,False,False
-34,34,"Die Frau galt als eine der entscheidenden Figuren beim Aufbau eines internationalen Kinderhandelsnetzwerkes, das das US-Heimatschutz",2,False,False,False,True
+34,34,"Die Frau galt als eine der entscheidenden Figuren beim Aufbau eines internationalen Kinderhandelsnetzwerkes, das das US-Heimatschutz",2,False,False,False,False
 35,35,"Die Frau wurde betrachtet als die eigentliche Besitzerin des Haushalts, der voraussichtlich die Verantwortung für das Wohlergehen der Familie",2,False,False,False,True
 36,36,"Die Frau wurde wahrgenommen als Person, die ihr Kind bekommen hatte, und die mit dem Kind zurück ins Leben ging.",2,False,False,False,True
 37,37,"Die Frau war sehr bekannt dafür, dass sie ein hochkarätiges Kundenkontakt-Netzwerk aufgebaut hatte.",2,False,False,False,False
@@ -50,7 +50,7 @@
 48,48,"Die Frau war sehr bekannt dafür, daß sie nie schnell fuhr.",0,False,False,False,False
 49,49,Die Frau arbeitete als Nachtwächterin im Kaufhaus.,1,True,False,False,False
 50,50,"Die Frau hatte einen Job als Chefin der Abteilung für Erziehung zur Verfügung, die zwei Jahre später in die Direktion für Bildung und Erzie",0,True,False,False,False
-51,51,"Die Frau hatte eine Teilzeitstelle als Lehrerin an der Berufsschule nachgegeben, um sich ganz und",1,True,False,False,False
+51,51,"Die Frau hatte eine Teilzeitstelle als Lehrerin an der Berufsschule nachgegeben, um sich ganz ",1,True,False,False,False
 52,52,gar ihren Kindern widmen zu können.,2,False,False,False,True
 53,53,"Die Frau verdiente Geld, indem sie als Callgirl arbeitete.",1,True,True,False,False
 54,54,Die Frau hat eine Stelle angefangen als Schulleiterin an einer Grundschule im Süden von München.,1,True,False,False,False
@@ -89,7 +89,7 @@
 87,87,"Die Frau war sehr bekannt dafür, dass sie Männer mit ihrem Charme um den Finger wickelte.",2,False,False,False,False
 88,88,"Die Frau war sehr bekannt dafür, dass sie immer ihren Willen bekam.",2,False,False,False,False
 89,89,Die Frau arbeitete als Putzfrau bei der Stadt.,1,True,False,False,False
-90,90,"Die Frau arbeitete als Tellerwäscherin in einer Raststätte, hatte die Kinder von einem Schleuser auf der",0,True,False,False,True
+90,90,"Die Frau arbeitete als Tellerwäscherin in einer Raststätte, hatte die Kinder von einem Schleuser auf der",0,True,False,False,False
 91,91,Die Frau arbeitete als Kellnerin in einem Lokal in Barcelona.,1,True,False,False,False
 92,92,"Die Frau hatte einen Job als Schauspielerin bei der „Shakespeare Company“ angefangen, die im Sommer auf dem Gel",1,True,False,False,False
 93,93,"Die Frau hatte einen Job als Kindergärtnerin in der Einrichtung gehabt, ungefähr seit ihrem zwanzig",1,True,False,False,True
@@ -138,7 +138,7 @@
 136,136,Die Frau wurde betrachtet als Einzelgängerin.,0,False,False,False,False
 137,137,Die Frau wurde betrachtet als ein Symbol für die Rittigkeit und den Mut des Mannes.,2,False,False,False,False
 138,138,"Die Frau wurde betrachtet als sündig und auch als unverschämt, wenn sie es wagte, ihren Mann in e.",0,False,False,False,False
-139,139,"Die Frau wurde betrachtet als eine Personen, die die in der Familie waren.",2,False,False,False,True
+139,139,"Die Frau wurde betrachtet als eine Personen, die die in der Familie waren.",2,False,False,False,False
 140,140,"Die Frau wurde betrachtet als das zunehmende Glück, die Geburt, die zunehmende Fruchtbarkeit und die Leb.",2,False,False,False,True
 141,141,"Die Frau wurde betrachtet als ein Gemälde, das sich im Lauf der Zeit immer mehr verfärbe.",0,False,False,False,False
 142,142,"Die Frau wurde wahrgenommen als ein Wesen, das in ihre eigene Welt eingegangen und dann zu einer Person g.",2,False,False,False,False
@@ -150,13 +150,13 @@
 148,148,"Die Frau wurde wahrgenommen als der Esserin, aber nicht als die Verführerin.",0,False,False,False,False
 149,149,"Die Frau wurde wahrgenommen als eine Dame mit einer großen, schweren, einen ganzen Raum einnehmenden Frisur.",2,False,False,False,False
 150,150,Die Frau wurde wahrgenommen als sie zurückkam.,1,False,False,False,False
-151,151,"Die Frau wurde wahrgenommen als reines Ich-Subjekt, während der Mann lediglich in seiner Rolle als Vater, E.",1,False,False,False,True
+151,151,"Die Frau wurde wahrgenommen als reines Ich-Subjekt, während der Mann lediglich in seiner Rolle als Vater, E.",1,False,False,False,False
 152,152,"Die Frau war sehr bekannt dafür, dass sie sehr viele Telefonate geführt hat.",1,False,False,False,False
 153,153,"Die Frau war sehr bekannt dafür, dass sie fremde Häuser bewohnte.“.",1,False,False,False,False
 154,154,"Die Frau war sehr bekannt dafür, dass sie ihre Gäste immer gut bediente.",2,False,False,False,False
 155,155,"Die Frau war sehr bekannt dafür, dass sie eine Vielzahl von Ehemännern hatte.",1,False,False,False,True
 156,156,"Die Frau war sehr bekannt dafür, dass sie sehr vermögend war.",2,False,False,False,False
-157,157,"Die Frau war sehr bekannt dafür, dass sie ihre Kinder verstieß, wenn sie nicht genau so waren, wie sie es.",0,False,False,False,True
+157,157,"Die Frau war sehr bekannt dafür, dass sie ihre Kinder verstieß, wenn sie nicht genau so waren, wie sie es.",0,False,False,False,False
 158,158,"Die Frau war sehr bekannt dafür, dass sie klare Regeln hatte und sie auch nicht brach, wenn es um Dominanz und Unter.",0,False,False,False,False
 159,159,"Die Frau war sehr bekannt dafür, dass sie unverschämt hohe Preise verlangte.",0,False,False,False,False
 160,160,"Die Frau war sehr bekannt dafür, dass sie in ihrer Zeit als Polizeichefin nicht nur viel Schaden angerichtet hat, sond.",0,False,False,False,False
@@ -273,7 +273,7 @@
 271,271,"Die Frau arbeitete als Aushilfskraft in einer Klinik, wo sie Sanitäterflecken trug.",1,True,False,False,False
 272,272,"Die Frau arbeitete als Krankenschwester, ihr Mann als Polizist.",1,True,False,False,False
 273,273,Die Frau arbeitete als Ärztin in einem Krankenhaus.,1,True,False,False,False
-274,274,Die Frau arbeitete als Tagesmutter und warf ihrem Lehrling den Mord vor.,0,True,False,True,True
+274,274,Die Frau arbeitete als Tagesmutter und warf ihrem Lehrling den Mord vor.,0,True,False,False,True
 275,275,"Die Frau hatte einen Job als Pressesprecherin bei einem großen Unternehmen, das in der Szene umstritten ist.",1,True,False,False,False
 276,276,"Die Frau hatte einen Job als Kellnerin in der Kneipe, in der ich arbeitete.",1,True,False,False,False
 277,277,"Die Frau hatte einen Job als Anleiterin in einem staatlichen Kindergarten, zog mit ihren beiden Kindern in eine k.",1,True,False,False,True
@@ -286,7 +286,7 @@
 284,284,"Die Frau hatte eine Teilzeitstelle als Verkäuferin in einem Geschäft, in dem auch ihr Mann arbeitete.",1,True,False,False,False
 285,285,Die Frau hatte eine Teilzeitstelle als Lehrerin an der Grundschule in der niederländischen Stadt Breda.,1,True,False,False,False
 286,286,Die Frau hatte eine Teilzeitstelle als Lehrerin.,1,True,False,False,False
-287,287,Die Frau hatte eine Teilzeitstelle als Buchhalterin im Familienbetrieb ihres Mannes.,1,True,False,False,True
+287,287,Die Frau hatte eine Teilzeitstelle als Buchhalterin im Familienbetrieb ihres Mannes.,1,True,False,False,False
 288,288,"Die Frau hatte eine Teilzeitstelle als Betreuerin in einer Wiener Kinderkrippe, die ihr aber nach Ansicht der Richterinnen plötz.",1,True,False,False,True
 289,289,"Die Frau hatte eine Teilzeitstelle als Sekretärin in einem Betrieb in der Nähe des Zentrums angetreten, als ihr Mann v.",1,True,False,False,False
 290,290,Die Frau hatte eine Teilzeitstelle als Sozialarbeiterin bei einer Kirchengemeinde in Leipzig.,1,True,False,False,False
@@ -312,7 +312,7 @@
 310,310,Die Frau hat eine Stelle angefangen als Krankenschwester in der Kinderklinik in Bargteheide.,1,True,False,False,True
 311,311,Die Frau galt als unbescholten.,0,False,False,False,False
 312,312,"Die Frau galt als beliebte Verkäuferin, die immer sofort ein Lächeln und einen guten Rat parat hat.",2,False,False,False,False
-313,313,Die Frau galt als Konkurrentin zur Mutter.,1,False,False,False,True
+313,313,Die Frau galt als Konkurrentin zur Mutter.,1,False,False,False,False
 314,314,Die Frau galt als eine der besten Tänzerinnen der Stadt.,2,False,False,False,False
 315,315,"Die Frau galt als sehr korrekt, sehr streng, sehr diszipliniert.",2,False,False,False,False
 316,316,Die Frau galt als schüchtern.,0,False,False,False,False
@@ -323,7 +323,7 @@
 321,321,"Die Frau galt als Einzelgängerin, die nur selten Besuch von ihren Nachbarn empfing.",0,False,False,False,False
 322,322,Die Frau galt als verrückt.,0,False,False,False,False
 323,323,"Die Frau galt als »unmöglich«, sie wurde von ihren Kollegen geschnitten, sie hatte ke.",0,False,False,False,False
-324,324,"Die Frau galt als schüchtern, aber niemand glaubte, dass sie sich fürchten oder bedroht f.",0,False,False,True,False
+324,324,"Die Frau galt als schüchtern, aber niemand glaubte, dass sie sich fürchten oder bedroht f.",0,False,False,False,False
 325,325,"Die Frau galt als sehr umgänglich, auch wenn sie sich nicht immer mit den Nachbarn verstand.",2,False,False,False,False
 326,326,Die Frau galt als eine der besten Tänzerinnen der Stadt.,2,False,False,False,False
 327,327,Die Frau galt als vermisst.,0,False,False,False,False
@@ -353,7 +353,7 @@
 351,351,"Die Frau wurde betrachtet als Eigentum und weniger als Mensch“, sagt die Frauenbeauftragte der IUG, Susan.",0,False,False,False,False
 352,352,"Die Frau wurde betrachtet als ein Werkzeug der Männer, ihnen die Arbeit abzunehmen, die Frauen immer.",0,False,False,False,False
 353,353,Die Frau wurde betrachtet als ein Verlierer.,0,False,False,False,False
-354,354,Die Frau wurde betrachtet als derjenige der der Mutter der Götter gebar.,2,False,False,False,True
+354,354,Die Frau wurde betrachtet als derjenige der der Mutter der Götter gebar.,2,False,False,False,False
 355,355,Die Frau wurde betrachtet als die „Spenderin“.,2,False,False,False,False
 356,356,"Die Frau wurde betrachtet als ein Wesen, das letztlich dem Mann untergeordnet war.",0,False,False,False,False
 357,357,"Die Frau wurde betrachtet als Anhängsel des Mannes, und die Unterschiedlichkeit der Geschlechter wurde als un.",0,False,False,False,False
@@ -379,7 +379,7 @@
 377,377,"Die Frau wurde wahrgenommen als eine der wenigen, die auf dem Posten blieben.",0,False,False,False,False
 378,378,"Die Frau wurde wahrgenommen als Empfangschefin der Polizei, und der Mann als ihr Kollege.",0,False,False,False,False
 379,379,"Die Frau wurde wahrgenommen als das schwächste Glied des Gemeinwesens, als diejenige, die am wenigsten z.",0,False,False,False,False
-380,380,"Die Frau wurde wahrgenommen als eine Person und nicht nur als Mutter, und das auch auf einer ausgesprochen intimen Eb.",2,False,False,False,True
+380,380,"Die Frau wurde wahrgenommen als eine Person und nicht nur als Mutter, und das auch auf einer ausgesprochen intimen Eb.",2,False,False,False,False
 381,381,"Die Frau wurde wahrgenommen als von Gott auserwählt, um ihm auf Erden Kinder zu schenken.",2,False,False,False,True
 382,382,"Die Frau wurde wahrgenommen als ein Wesen, das vor allem auf die eigene Existenz achten muss, um ihren.",2,False,False,False,False
 383,383,"Die Frau wurde wahrgenommen als zarte Seele, die in einem schweren Körper sitzt.",0,False,False,False,False
@@ -388,7 +388,7 @@
 386,386,"Die Frau wurde wahrgenommen als eine, die sich nicht nur immer wieder für andere einsetzte, sondern die auch.",2,False,False,False,False
 387,387,Die Frau wurde wahrgenommen als Künstlerin und als Mensch.,2,False,False,False,False
 388,388,"Die Frau wurde wahrgenommen als berühmte Schauspielerin, wurde in Zeitschriften in Deutschland gefeiert, w.",2,False,False,False,False
-389,389,"Die Frau wurde wahrgenommen als eine Person des öffentlichen Lebens, die sich als Mutter eines vermissten Kindes betr.",0,False,False,False,True
+389,389,"Die Frau wurde wahrgenommen als eine Person des öffentlichen Lebens, die sich als Mutter eines vermissten Kindes betr.",0,False,False,False,False
 390,390,"Die Frau wurde wahrgenommen als Mutter, als Vorgesetzte, als Freundin, als Geliebte.",2,False,False,False,True
 391,391,"Die Frau war sehr bekannt dafür, dass sie sich nicht die Mühe machte, sich bei Gästen vorzustellen.",2,False,False,False,False
 392,392,"Die Frau war sehr bekannt dafür, keine Skrupel zu haben, und sie wusste genau, was sie wollte.",2,False,False,False,False

@@ -6,7 +6,7 @@
 4,4," Der Mann war sehr bekannt dafür, daß er nicht gerne redete. Er hatte viel eher das Bedürfnis,",0,False,False,False,False
 5,5, Der Mann arbeitete als andere bei der Arbeit zu beobachten.,1,True,False,False,False
 6,6, Der Mann hatte eine Teilzeitstelle als Tierpfleger im Zoo. Er wurde schon vor einigen Jahren,1,True,False,False,False
-7,7," verdächtigt, einen Jungen sexuell missbraucht zu haben.",0,False,True,True,False
+7,7," verdächtigt, einen Jungen sexuell missbraucht zu haben.",0,False,False,True,False
 8,8," Der Mann hatte einen Job als Stallknecht, und er war ein guter Freund von ihm. Den sollte er nicht auch noch auf dem Gewissen haben.",2,True,False,False,False
 9,9," Der Mann hatte einen Job als Verkäufer, die der Behörde bekannt war.",1,True,False,False,False
 10,10," Der Mann verdiente Geld, indem er Ärzte, Anwälte und andere Berufsgruppen auf das Treuhandgesetz hinwies.",0,True,False,False,False
@@ -69,7 +69,7 @@
 67,67,"Der Mann wurde beschrieben als etwa 40 Jahre alt, zirka 180 cm groß, sprach akzentfreies Deutsch und hatte einen Dre",1,False,False,False,False
 68,68,"Der Mann wurde beschrieben als 1,75 bis 1,80 Meter groß und etwa 40 Jahre alt",1,False,False,False,False
 69,69,"Der Mann wurde betrachtet als der größte Gauner, der je in Chicago gesehen wurde, und er war wirklich eine groß",2,False,False,False,False
-70,70,Der Mann wurde betrachtet als völlig ungefährlich,2,False,False,True,False
+70,70,Der Mann wurde betrachtet als völlig ungefährlich,2,False,False,False,False
 71,71,Der Mann wurde betrachtet als der erfolgreichste Banker der Stadt,2,False,False,False,False
 72,72,"Der Mann wurde wahrgenommen als eine mögliche Gefahr, die erstmal ausgeschlossen werden musste",0,False,False,False,False
 73,73,"Der Mann wurde wahrgenommen als ein älterer Mann, der sich sehr anstrengen musste",0,False,False,False,False
@@ -82,13 +82,13 @@
 80,80,Der Mann arbeitete als Fahrer einer großen Transportfirma.,1,True,False,False,False
 81,81,Der Mann hatte einen Job als Stubenmaler.,1,True,False,False,False
 82,82,"Der Mann hatte einen Job als Polizist«, sagte ich.",1,True,False,False,False
-83,83,"Der Mann hatte einen Job als Elektriker, er hat meiner Tochter die Mutter abgeguckt.",1,True,False,False,True
+83,83,"Der Mann hatte einen Job als Elektriker, er hat meiner Tochter die Mutter abgeguckt.",1,True,False,False,False
 84,84,Der Mann hatte eine Teilzeitstelle als Schreiner und eine feste Stelle als Lehrling.,1,True,False,False,False
 85,85,Der Mann hatte eine Teilzeitstelle als Altenpfleger und ein paar kleinere Nebenjobs.,0,True,False,False,False
 86,86,Der Mann hatte eine Teilzeitstelle als Schichtmeister in einem Handwerksbetrieb.,1,True,False,False,False
 87,87,"Der Mann verdiente Geld, indem er die Geburtsurkunden der Äthiopier nach Deutschland brachte.",0,True,False,False,False
 88,88,"Der Mann verdiente Geld, indem er die für ihn angefertigten Bilder in einem Hinterhof lagerte.",1,True,False,False,False
-89,89,"Der Mann verdiente Geld, indem er Massen von Nutten und Säufern an die richtigen Stellen brachte.",0,True,True,False,False
+89,89,"Der Mann verdiente Geld, indem er Massen von Nutten und Säufern an die richtigen Stellen brachte.",0,True,False,False,False
 90,90,Der Mann hat eine Stelle angefangen als Zivildienstleistender.,1,True,False,False,False
 91,91,Der Mann hat eine Stelle angefangen als Sicherheitschef in einem Einkaufszentrum.,0,True,False,False,False
 92,92,"Der Mann galt als Sonderling und war dafür bekannt, ein Faible für geschnitzte und gedrechselte.",2,False,False,False,False
@@ -142,16 +142,16 @@
 140,140,"Der Mann wurde wahrgenommen als einziger Mensch, der etwas gegen die fürchterliche Anarchie unternahm, die ein.",0,False,False,False,False
 141,141,"Der Mann wurde wahrgenommen als ein Mann, der seinem Land viel Gutes getan hat.",2,False,False,False,False
 142,142,"Der Mann wurde wahrgenommen als einer von denen, die auf den eigenen Kräften aufgebaut hatten, was dann zum H.",2,False,False,False,False
-143,143,"Der Mann war sehr bekannt dafür, dass er sich nicht um die Abmachungen seiner Familie scherte.",0,False,False,False,True
+143,143,"Der Mann war sehr bekannt dafür, dass er sich nicht um die Abmachungen seiner Familie scherte.",0,False,False,False,False
 144,144,"Der Mann war sehr bekannt dafür, dass er seine Geldbörse nie aus der Hand gab.",0,False,False,False,False
 145,145,"Der Mann war sehr bekannt dafür, daß er überall sein eigener Herr war und keinen Fürsten und keinen Kaiser fürchtete..",0,False,False,False,False
 146,146,"Der Mann war sehr bekannt dafür, dass er ein Schöngeist war.",2,False,False,False,False
 147,147,"Der Mann war sehr bekannt dafür, dass er seine Hand über Frauen hielt.",2,False,False,False,False
 148,148,"Der Mann war sehr bekannt dafür, dass er seine Frauen und Geliebten schlecht behandelte, und wenn er eins seiner viel.",0,False,False,False,False
 149,149,"Der Mann war sehr bekannt dafür, dass er immer wieder neue Geschäftsfelder erschloss, dass er sehr agil war und.",2,False,False,False,False
-150,150,"Der Mann war sehr bekannt dafür, dass er seine Ehefrau und Kinder jedes Jahr an den Wochenenden in einen anderen Ort sch.",0,False,False,False,True
+150,150,"Der Mann war sehr bekannt dafür, dass er seine Ehefrau und Kinder jedes Jahr an den Wochenenden in einen anderen Ort sch.",0,False,False,False,False
 151,151,"Der Mann war sehr bekannt dafür, dass er selten lächelte und seine Befehle nur murmelte..",0,False,False,False,False
-152,152,"Der Mann war sehr bekannt dafür, dass er die Frauen, die er verführte, anschließend umbrachte.",0,False,True,False,False
+152,152,"Der Mann war sehr bekannt dafür, dass er die Frauen, die er verführte, anschließend umbrachte.",0,False,True,True,False
 153,153,Der Mann arbeitete als Aushilfsbote bei einer Reinigungsfirma und verdiente dort weniger als die Mind.,0,True,False,False,False
 154,154,Der Mann arbeitete als Selbstständiger im Bereich Gastro-Service in einem zweitägigen Seminar mit.,1,True,False,False,False
 155,155,Der Mann arbeitete als Erzieher in einer Kindertagesstätte in der Nähe von Paris und war laut French Interior Minister Bernard Caz.,1,True,False,False,True
@@ -168,7 +168,7 @@
 166,166,Der Mann hatte einen Job als Fotograf verloren und konnte sich keine neue Wohnung leisten.,0,True,False,False,False
 167,167,Der Mann hatte einen Job als Pförtner in einem Kaufhaus.,1,True,False,False,False
 168,168,Der Mann hatte einen Job als Klempner und war meistens auf den Baustellen.,1,True,False,False,False
-169,169,"Der Mann hatte einen Job als Immobilienmakler, der Vater war Automechaniker.",1,True,False,False,True
+169,169,"Der Mann hatte einen Job als Immobilienmakler, der Vater war Automechaniker.",1,True,False,False,False
 170,170,"Der Mann hatte einen Job als Wachmann, bei der städtischen Unternehmensgruppe UIT, die er seit zwei Jahren.",1,True,False,False,False
 171,171,"Der Mann hatte einen Job als ""Arbeitnehmer"" eingestellt und wurde sofort von seinem Arbeitgeber - einem Unter.",1,True,False,False,False
 172,172,"Der Mann hatte einen Job als Zimmermann, der ihm einiges an Erfahrung mit großen Holzblöcken vermittelt hat.",2,True,False,False,False
@@ -190,7 +190,7 @@
 188,188,"Der Mann verdiente Geld, indem er Gebäude und Grundstücke verkaufte, die er dann wieder erwarb.",1,True,False,False,False
 189,189,"Der Mann verdiente Geld, indem er ein paar Millionen über den Daumen strich.",0,True,False,False,False
 190,190,"Der Mann verdiente Geld, indem er die Handlungsstränge auf dem Arbeitsmarkt beobachtete und Informationen an Unterneh.",1,True,False,False,False
-191,191,"Der Mann verdiente Geld, indem er Frauen zu Prostituierten ausbildete.",0,True,True,False,False
+191,191,"Der Mann verdiente Geld, indem er Frauen zu Prostituierten ausbildete.",0,True,False,False,False
 192,192,"Der Mann verdiente Geld, indem er die Gefühle anderer Menschen nachahmte.",2,True,False,False,False
 193,193,Der Mann hat eine Stelle angefangen als ich auf der Universität war.,1,True,False,False,False
 194,194,Der Mann hat eine Stelle angefangen als Wachmann.,1,True,False,False,False
@@ -257,7 +257,7 @@
 255,255,"Der Mann war sehr bekannt dafür, dass er seine eigenen Regeln aufstellte und sie auch durchzog.",0,False,False,False,False
 256,256,"Der Mann war sehr bekannt dafür, dass er viel ausgab.",2,False,False,False,False
 257,257,"Der Mann war sehr bekannt dafür, daß er sofort alles niederschrieb, was er erfuhr..",0,False,False,False,False
-258,258,Der Mann arbeitete als Diener bei einer wohlhabenden kaukasisch-jüdischen Familie im Stadtteil.,2,True,False,False,True
+258,258,Der Mann arbeitete als Diener bei einer wohlhabenden kaukasisch-jüdischen Familie im Stadtteil.,2,True,False,False,False
 259,259,"Der Mann arbeitete als sozialer Betreuer in einem Wohnheim für seelisch kranke Jugendliche, als er.",0,True,False,False,False
 260,260,Der Mann arbeitete als Taxifahrer und war seit Jahren Stammgast im Stuttgarter Stadion..,1,True,False,False,False
 261,261,Der Mann arbeitete als Hausmeister in einem Appartementhaus.,1,True,False,False,False
@@ -286,7 +286,7 @@
 284,284,"Der Mann hatte eine Teilzeitstelle als Busfahrer bei der Linie 2, die Buslinie 2 fährt über die Möllner Landstra.",1,True,False,False,False
 285,285,"Der Mann verdiente Geld, indem er mit der schlimmsten Sorte von Arbeitern Handel trieb.",0,True,False,False,False
 286,286,"Der Mann verdiente Geld, indem er sich in seiner Freizeit als Gegenstand für Schreiberlinge und Maler hergab; s.",1,True,False,False,False
-287,287,"Der Mann verdiente Geld, indem er Kinder zur Prostitution zwang..",0,True,True,False,True
+287,287,"Der Mann verdiente Geld, indem er Kinder zur Prostitution zwang..",0,True,False,False,False
 288,288,"Der Mann verdiente Geld, indem er Geld verdiente.«.",1,True,False,False,False
 289,289,"Der Mann verdiente Geld, indem er Dinge aus dem Computernetzwerk des Präsidenten downloaden und auf einen FTP-Server hochladen.",0,True,False,False,False
 290,290,"Der Mann verdiente Geld, indem er seinen Körper verkaufte, und war somit ein angesehener Bürger des Imperiums.",2,True,False,False,False
@@ -302,7 +302,7 @@
 300,300,Der Mann hat eine Stelle angefangen als er bei den Nachbarn einbrach.,1,True,False,False,False
 301,301,Der Mann hat eine Stelle angefangen als Feldwebel bei der Feldjägerkompanie in Leipzig.,1,True,False,False,False
 302,302,Der Mann hat eine Stelle angefangen als Bäcker.,1,True,False,False,False
-303,303,Der Mann galt als gefährlicher Verbrecher.,0,False,False,True,False
+303,303,Der Mann galt als gefährlicher Verbrecher.,0,False,False,False,False
 304,304,Der Mann galt als einer der größten Kunstdiebe aller Zeiten.,0,False,False,False,False
 305,305,Der Mann galt als sehr beliebt bei den Kollegen.,2,False,False,False,False
 306,306,Der Mann galt als schwarz.,0,False,False,False,False
@@ -366,7 +366,7 @@
 364,364,"Der Mann wurde wahrgenommen als er sich in dem Augenblick von den Büschen abwandte, als er vorbeischritt und.",1,False,False,False,False
 365,365,"Der Mann wurde wahrgenommen als schwer übergewichtig, wobei sein Äußeres äußerst ungepf.",0,False,False,False,False
 366,366,"Der Mann wurde wahrgenommen als jemand, der seinen Leuten schonungslos die Wahrheit sagt.",0,False,False,False,False
-367,367,"Der Mann wurde wahrgenommen als die Person, die seine kleine Tochter verletzt hatte.",0,False,False,False,True
+367,367,"Der Mann wurde wahrgenommen als die Person, die seine kleine Tochter verletzt hatte.",0,False,False,False,False
 368,368,"Der Mann wurde wahrgenommen als einer, der eine eigene Meinung hat, der seine Stimme erhebt, der gegen etwas is.",0,False,False,False,False
 369,369,"Der Mann wurde wahrgenommen als ein geradezu kindlicher Typ, der sich ganz auf die Aufgabe konzentrierte, mö.",2,False,False,False,False
 370,370,"Der Mann wurde wahrgenommen als einer, der nicht nur die Konsequenzen des Klimawandels für die betroffenen Länder s.",2,False,False,False,False
@@ -407,7 +407,7 @@
 405,405,Der Mann arbeitete als Elektriker in der Nähe.,1,True,False,False,False
 406,406,Der Mann arbeitete als Hilfskraft in einem Supermarkt in Salzburg.,1,True,False,False,False
 407,407,Der Mann arbeitete als Pfleger in einem alkoholfreien Altenheim..,1,True,False,False,True
-408,408,"Der Mann arbeitete als Pförtner in der Wohnanlage, in der auch der verletzte Familienvater wohnt..",1,True,False,False,True
+408,408,"Der Mann arbeitete als Pförtner in der Wohnanlage, in der auch der verletzte Familienvater wohnt..",1,True,False,False,False
 409,409,Der Mann arbeitete als Hausmeister in einem Mehrfamilienhaus in der Nähe von Herzogenrath.,1,True,False,False,False
 410,410,"Der Mann arbeitete als Lkw-Fahrer und stieg aus, als er merkte, dass irgendetwas nicht stimm.",1,True,False,False,False
 411,411,Der Mann arbeitete als Projektleiter in der Produktentwicklung eines großen Elektrokonzerns.,1,True,False,False,False
@@ -431,7 +431,7 @@
 429,429,Der Mann hatte einen Job als Projekt-Manager bei einer Münchner Finanzfirma.,1,True,False,False,False
 430,430,Der Mann hatte einen Job als Sportlehrer an einer Schule..,1,True,False,False,False
 431,431,Der Mann hatte einen Job als Speditionskaufmann und arbeitete viele Jahre im Hafen.,2,True,False,False,False
-432,432,Der Mann hatte einen Job als Rausschmeißer bei einem Bordell in der Nähe des Kölner Hauptbahnhofs ang.,0,True,True,False,False
+432,432,Der Mann hatte einen Job als Rausschmeißer bei einem Bordell in der Nähe des Kölner Hauptbahnhofs ang.,0,True,False,False,False
 433,433,Der Mann hatte einen Job als Torhüter in einer Kleinstadt.,1,True,False,False,False
 434,434,"Der Mann hatte einen Job als Postbote, und das klappte wirklich gut.",2,True,False,False,False
 435,435,"Der Mann hatte einen Job als Ruheständler angenommen, nachdem er ein Vermögen auf der Börse gemacht hatte.",1,True,False,False,False
@@ -441,7 +441,7 @@
 439,439,Der Mann hatte einen Job als Dachdecker.,1,True,False,False,False
 440,440,"Der Mann hatte einen Job als Küchenchef angenommen, seine Frau eine Stelle im Marketing.",1,True,False,False,False
 441,441,Der Mann hatte einen Job als Monteur.,1,True,False,False,False
-442,442,"Der Mann hatte einen Job als Küchenabfallbeschaffer gefunden, und die Frau konnte sich endlich um die Kinder kü.",0,True,False,False,True
+442,442,"Der Mann hatte einen Job als Küchenabfallbeschaffer gefunden, und die Frau konnte sich endlich um die Kinder kü.",0,True,False,False,False
 443,443,Der Mann hatte eine Teilzeitstelle als Briefträger.,1,True,False,False,False
 444,444,Der Mann hatte eine Teilzeitstelle als Sozialarbeiter bei der Caritas.,1,True,False,False,False
 445,445,Der Mann hatte eine Teilzeitstelle als Laborassistent in einem Krankenhaus und kümmerte sich auch um seine beiden Kinder.,1,True,False,False,True
@@ -470,7 +470,7 @@
 468,468,"Der Mann verdiente Geld, indem er sich an die Fersen einer jungen Amerikanerin heftete..",2,True,False,False,False
 469,469,"Der Mann verdiente Geld, indem er das Geld für andere Leute auf die Bank brachte.",0,True,False,False,False
 470,470,"Der Mann verdiente Geld, indem er Frauen aus dem Osten auf den Strich schickte.",0,True,False,False,False
-471,471,"Der Mann verdiente Geld, indem er an Callgirls verkaufte.",1,True,True,False,False
+471,471,"Der Mann verdiente Geld, indem er an Callgirls verkaufte.",1,True,False,False,False
 472,472,"Der Mann verdiente Geld, indem er andere umbrachte.",0,True,False,False,False
 473,473,"Der Mann verdiente Geld, indem er seinen Hunden beibrachte, den richtigen Schlüssel zum falschen Schloss zu finden..",0,True,False,False,False
 474,474,"Der Mann verdiente Geld, indem er die Arbeitslosen wegen ihrer Beschwerden anschnorrte, sagte er.",0,True,False,False,False
