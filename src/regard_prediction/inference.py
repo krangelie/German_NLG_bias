@@ -9,6 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import torch
 from torch.nn import functional as F
+from torch.utils.data import DataLoader, TensorDataset
 from sklearn.metrics import classification_report
 from sentence_transformers import SentenceTransformer
 
@@ -46,7 +47,7 @@ def _vectorize(cfg, model_type, sentences, embedding_path=None, tfidf_weights=No
     return sentences_emb
 
 
-def load_inference_data(cfg, model_type, path, embedding_path=None):
+def load_inference_data(cfg, model_type, path, embedding_path=None, embed=True):
     if path.endswith(".txt"):
         with open(path) as f:
             lines = [line.rstrip() for line in f]
@@ -54,36 +55,47 @@ def load_inference_data(cfg, model_type, path, embedding_path=None):
     else:
         sentence_df = pd.read_csv(path)
     sentence_df = sentence_df.dropna(subset=[cfg.text_col])
+    # Add different demographic mentions to sentences
     if cfg.classifier_mode.add_demographic_terms:
         print("Add demographics")
+        # returns dict {gender : gendered text}
         demographic_texts = add_demographics(
             sentence_df[cfg.text_col],
             constants.PERSON,
             cfg.classifier_mode.demographics,
         )
+        # Embed/tokenize sentences
         gendered_text_embs = {}
         for gen, texts in demographic_texts.items():
-            sentence_df, sentences_emb = embed_texts(
-                cfg,
-                embedding_path,
-                model_type,
-                pd.DataFrame(texts, columns=[cfg.text_col]),
-            )
+            sentence_df = pd.DataFrame(texts, columns=[cfg.text_col])
+            if embed:
+                sentence_df, sentences_emb = embed_texts(
+                    cfg,
+                    embedding_path,
+                    model_type,
+                    sentence_df,
+                )
+            else:
+                sentences_emb = texts.to_list()
             gendered_text_embs[gen] = {
                 "text_df": sentence_df,
                 "text_emb": sentences_emb,
             }
         return gendered_text_embs
     else:
+        # Add just one demographic's mentions to sentences
         if cfg.classifier_mode.add_first_demo:
             sentence_df[cfg.text_col] = sentence_df[cfg.text_col].apply(
                 lambda txt: constants.VARIABLE_DICT[cfg.classifier_mode.demographics[0]]
                 + " "
                 + txt
             )
-        sentence_df, sentences_emb = embed_texts(
-            cfg, embedding_path, model_type, sentence_df
-        )
+        if embed:
+            sentence_df, sentences_emb = embed_texts(
+                cfg, embedding_path, model_type, sentence_df
+            )
+        else:
+            sentences_emb = sentence_df[cfg.text_col].to_list()
         text_embs = {"text_df": sentence_df, "text_emb": sentences_emb}
         return text_embs
 
@@ -231,28 +243,50 @@ def predict_regard(
     model_type,
     use_sklearn_model,
     embedding_path,
+    tokenizer=None
 ):
-    sent_dict = load_inference_data(cfg, model_type, input_path, embedding_path)
+    # load, preprocess, tokenize
+    embed = not bool(tokenizer)
+    sent_dict = load_inference_data(cfg, model_type, input_path, embedding_path, embed)
 
     def predict_regard_(sentence_df, sentences_emb, gen=None):
-        if use_sklearn_model:
-            preds = model.predict(sentences_emb)
-        else:
-            outputs = model(torch.Tensor(sentences_emb))
-            probs = F.log_softmax(outputs, dim=1)
-            preds = torch.argmax(probs, dim=1).detach().numpy()
+        batch_size = 64
+        if len(sentence_df) < batch_size:
+            batch_size = len(sentence_df)
+        dataloader = DataLoader(
+            sentences_emb,
+            batch_size=batch_size,
+            shuffle=False,
+            num_workers=1,
+        )
 
-            if cfg.label_col in sentence_df.columns:
-                sentence_df[cfg.label_col] = sentence_df[cfg.label_col].astype(int)
-                eval_prediction(
-                    output_path,
-                    input_path,
-                    preds,
-                    sentence_df,
-                    cfg.label_col,
-                    cfg.classifier_mode.store_misclassified,
-                )
-        sentence_df["Prediction"] = preds
+        all_preds = np.empty(len(sentence_df))
+        for i, inputs in enumerate(dataloader):
+            if use_sklearn_model:
+                preds = model.predict(inputs)
+            else:
+                if cfg.language == "GER":
+                    outputs = model(torch.Tensor(inputs))
+                    probs = F.log_softmax(outputs, dim=1)
+                    preds = torch.argmax(probs, dim=1).detach().numpy()
+                else:
+                    inputs = tokenizer(inputs, padding=True, truncation=True, return_tensors="pt")
+                    outputs = model(**inputs)
+                    probs = outputs.logits.detach().cpu().numpy()
+                    preds = np.argmax(probs, axis=1)
+            all_preds[i*batch_size: i*batch_size+batch_size] = preds
+
+        if cfg.label_col in sentence_df.columns:
+            sentence_df[cfg.label_col] = sentence_df[cfg.label_col].astype(int)
+            eval_prediction(
+                output_path,
+                input_path,
+                all_preds,
+                sentence_df,
+                cfg.label_col,
+                cfg.classifier_mode.store_misclassified,
+            )
+        sentence_df["Prediction"] = all_preds
 
         if gen is None:
             dest = os.path.join(
@@ -266,7 +300,7 @@ def predict_regard(
 
         if by_class_results:
             store_preds_per_class(
-                cfg.classifier_mode, output_path, preds, sentence_df, cfg.text_col
+                cfg.classifier_mode, output_path, all_preds, sentence_df, cfg.text_col
             )
         del sentences_emb
 
@@ -319,6 +353,10 @@ def predict(
     else:
         model_path = pretrained_model if not eval_model else eval_model
         model = load_torch_model(model_path, model_type, logger=None)
+        if isinstance(model, tuple):
+            model, tokenizer = model
+        else:
+            tokenizer = None
         model.eval()
 
     if any([text_path.endswith(ending) for ending in [".csv", ".txt"]]):
@@ -331,6 +369,7 @@ def predict(
             model_type,
             use_sklearn_model,
             embedding_path,
+            tokenizer=tokenizer,
         )
     else:
         text_path = hydra.utils.to_absolute_path(text_path)
@@ -347,4 +386,5 @@ def predict(
                     model_type,
                     use_sklearn_model,
                     embedding_path,
+                    tokenizer=tokenizer,
                 )
