@@ -1,5 +1,5 @@
 defaults:
-  - run_mode: classifier # data, classifier , generate, trigger, eval_bias
+  - run_mode: eval_bias # data, classifier , generate, trigger, eval_bias
   - classifier_mode: predict # tune, train, incremental_train, predict, eval
   - classifier: transformer # xgb, transformer, lstm
   - gpt: gpt2 # gpt2, gpt3 or gpt-neo

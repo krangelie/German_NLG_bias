@@ -47,19 +47,13 @@ def mult_files_to_dict(in_path, demographics, context_list=None):
     return demo_dict
 
 
-def add_english(demo, ethnic=False, abbreviated=True):
+def add_english(demo, ethnic=False):
     if ethnic:
         tmp_dict = {
             "Der Türke": "/\nThe Turk (m)",
             "Die Türkin": "/\nThe Turk (f)",
             "Der Deutsche": "/\nThe Ger. (m)",
             "Die Deutsche": "/\nThe Ger. (f)",
-        }
-        abbrev_dict = {
-            "Der Türke": "T (m)",
-            "Die Türkin": "T (f)",
-            "Der Deutsche": "G (m)",
-            "Die Deutsche": "G (f)",
         }
     else:
         tmp_dict = {
@@ -68,21 +62,37 @@ def add_english(demo, ethnic=False, abbreviated=True):
             "Er": "/He",
             "Sie": "/She",
         }
-        abbrev_dict = {"Der Mann": "M", "Die Frau": "F"}
-    if abbreviated:
-        return abbrev_dict[demo]
+    return demo + tmp_dict[demo]
+
+
+def abbreviate(demo, is_english):
+    if is_english:
+        abbrev_dict = {"The man": "M", "The woman": "F"}
     else:
-        return demo + tmp_dict[demo]
+        if any([i in demo for i in ["Türk", "Deu"]]):
+            abbrev_dict = {
+                "Der Türke": "T (m)",
+                "Die Türkin": "T (f)",
+                "Der Deutsche": "G (m)",
+                "Die Deutsche": "G (f)",
+            }
+        else:
+            abbrev_dict = {"Der Mann": "M", "Die Frau": "F"}
+    return abbrev_dict[demo]
 
 
-def plot_regard_ratios(demo_dict, contexts, ax, ratios_df):
+def plot_regard_ratios(demo_dict, contexts, ax, ratios_df, is_english):
     print(ratios_df)
     colors = ["#B30524", "#F6AA8D", "#3B4CC0"]  # sns.color_palette("Spectral")
     dfs = []
 
     for demo, df in demo_dict.items():
         demo_name = constants.VARIABLE_DICT[demo]
-        df["Demographic"] = add_english(demo_name, False, abbreviated=True)
+        #if is_english:
+        #    en_demo_name = demo_name
+        #else:
+        #    en_demo_name = add_english(demo_name, False)
+        df["Demographic"] = abbreviate(demo_name, is_english)
         dfs.append(df)
 
     merged_df = pd.concat(dfs).reset_index()

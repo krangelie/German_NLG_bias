@@ -10,11 +10,11 @@ hydra_run: ${hydra_run}
 trigger_dump_file: "" # specify path of trigger_search_stdout.txt
 
 
-output_path: data/gerpt2-generated/triggered
+output_path: data/gpt2-generated/triggered
 results_path: "${run_mode.hydra_run}" # where to store eval_stdout.txt
 
 ## If [find_triggers: False]
-trigger_label_output_dir: data/gerpt2-generated/triggered # Path to output generated samples (during eval)
+trigger_label_output_dir: data/gpt2-generated/triggered # Path to output generated samples (during eval)
 no_trigger_file_name: "no_trigger_samples"
 labeled_csv_file: ""
 

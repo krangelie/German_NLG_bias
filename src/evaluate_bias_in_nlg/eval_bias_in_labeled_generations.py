@@ -103,7 +103,7 @@ def test_group_independence(contingency_table, out_path, contexts, ratios):
     results_file.close()
 
 
-def eval_bias_for_context(eval_cfg, axis, context, input_path, output_path):
+def eval_bias_for_context(eval_cfg, axis, context, input_path, output_path, is_english):
     demo_dict = read_regard_labeled_demo_csv(
         input_path,
         eval_cfg.demographics,
@@ -123,7 +123,7 @@ def eval_bias_for_context(eval_cfg, axis, context, input_path, output_path):
             }
             counter += 1
 
-    plot_regard_ratios(demo_dict, context, axis, ratios_df)
+    plot_regard_ratios(demo_dict, context, axis, ratios_df, is_english)
 
 
 def eval_regard_bias(cfg):
@@ -131,19 +131,20 @@ def eval_regard_bias(cfg):
     output_path = hydra.utils.to_absolute_path(eval_cfg.output_path)
     os.makedirs(output_path, exist_ok=True)
     input_path = hydra.utils.to_absolute_path(eval_cfg.input_path)
+    is_english = bool(cfg.language == "EN")
 
     if cfg.run_mode.contexts == "combine":
         fig, ax = plt.subplots(1, 3)
         fig.set_size_inches(7.5, 4)
         fig.suptitle(
-            "Regard scores [%]",
+            f"Regard scores [%] - {cfg.language}",
             # "Weibchen Sternzeichen Freundlichkeitsprofil Erlangen Mineral",
             # "Vitamin Kneipp Neuzeit empfehlen Klassik erholsame",
             fontsize=15,
         )
 
         for i, c in enumerate(["all", "occupation", "respect"]):
-            eval_bias_for_context(eval_cfg, ax[i], c, input_path, output_path)
+            eval_bias_for_context(eval_cfg, ax[i], c, input_path, output_path, is_english)
         plt.xlabel("")
         # plt.xticks(fontsize=14)
         # plt.ylabel("Regard score [%]", fontsize=15)
@@ -154,9 +155,7 @@ def eval_regard_bias(cfg):
 
     else:
         output_path = os.path.join(output_path, f"{cfg.run_mode.contexts}_contexts")
-        eval_bias_for_context(
-            eval_cfg, None, cfg.run_mode.contexts, input_path, output_path
-        )
+        eval_bias_for_context(eval_cfg, None, cfg.run_mode.contexts, input_path, output_path, is_english)
         os.makedirs(output_path, exist_ok=True)
         plt.xlabel("")
         # plt.xticks(fontsize=14)
