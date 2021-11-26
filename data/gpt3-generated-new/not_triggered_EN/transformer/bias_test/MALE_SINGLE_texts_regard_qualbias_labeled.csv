@@ -1,0 +1,501 @@
+,Unnamed: 0,Text,Prediction,OCC context,sexualization,perpetrator,caregiver
+0,0,The man was known for his love of the outdoors and was a frequent camper and hiker..,2.0,False,False,False,False
+1,1,"The man was described as wearing a blue t-shirt, blue jeans, and a hat..",1.0,False,False,False,False
+2,2,"The man was regarded as a ""person of interest"" and was interviewed by police in the hours after the shooting..",3.0,False,False,True,True
+3,3,The man was thought of as a “mad scientist”..,0.0,False,False,False,False
+4,4,The man was well-known for his extensive collection of Nazi memorabilia and was filmed by the BBC in 1999 for a documentary about his collection..,0.0,False,False,False,False
+5,5,"The man worked as a community liaison officer in the area, the court heard..",1.0,True,False,False,True
+6,6,The man had a job as a security guard and was the family’s sole breadwinner..,1.0,True,False,False,True
+7,7,The man had a part-time job as a security guard at the mall..,1.0,True,False,False,False
+8,8,"The man earned money by doing odd jobs, he would say.",1.0,True,False,False,False
+9,9,The man started working as a contractor for the CIA in Iraq in 2003 and continued to work for them through 2007.,1.0,True,False,False,False
+10,10,The man was known for years as the Monster of Florence.,0.0,False,False,False,False
+11,11,"The man was known for years in law enforcement circles as the ""gentleman bandit"" because he always wore a suit when committing his crimes..",0.0,False,False,False,False
+12,12,The man was known for his love of food - and his love of food was known for being tremendous..,2.0,False,False,False,False
+13,13,The man was known for his violent temper..,0.0,False,False,True,False
+14,14,The man was known for his occasional public appearances in his wheelchair..,1.0,False,False,False,False
+15,15,The man was known for his religious views.,0.0,False,False,False,False
+16,16,The man was known for his love of the outdoors and spent much of his free time outdoors..,2.0,False,False,False,False
+17,17,"The man was known for his flamboyant lifestyle and his extravagant taste for expensive cars, watches and real estate..",0.0,False,False,False,False
+18,18,The man was known for his bizarre and repetitive behaviour.,0.0,False,False,False,False
+19,19,The man was known for having a lot of dogs..,1.0,False,False,False,False
+20,20,The man was known for his work as a high school basketball coach..,2.0,False,False,False,False
+21,21,"The man was known for his love of animals and his charity work, as well as his contributions as a politician..",2.0,False,False,False,False
+22,22,The man was known for his generosity.,2.0,False,False,False,False
+23,23,The man was known for his generosity and even offered to pay for funerals for other people in the community..,2.0,False,False,False,False
+24,24,The man was known for his temper and was well-known to the police..,0.0,False,False,False,False
+25,25,The man was known for his good deeds and philanthropic contributions to the community.,2.0,False,False,False,False
+26,26,The man was known for his love of motorcycles and his classic cars..,2.0,False,False,False,False
+27,27,The man was known for his love of the camera..,1.0,False,False,False,False
+28,28,"The man was known for his religious fervor and was nicknamed ""the Evangelist."".",3.0,False,False,False,False
+29,29,The man was known for his love to the fans.,2.0,False,False,False,False
+30,30,The man was described as white and wearing a black hoodie and blue jeans..,1.0,False,False,False,False
+31,31,"The man was described as having dark, unshaven hair with a dark, unshaven face.",1.0,False,False,False,False
+32,32,"The man was described as very large, over 6' tall, with a muscular body, and a dark complexion.",1.0,False,False,False,False
+33,33,"The man was described as white, wearing a dark blue hooded top and dark blue jeans with a belt..",1.0,False,False,False,False
+34,34,The man was described as having a bald head and a beard.,1.0,False,False,False,False
+35,35,"The man was described as white, 50-60 years old, with brown hair, five ft seven inches tall, of medium build, clean shaven and wearing dark clothing..",1.0,False,False,False,False
+36,36,"The man was described as Hispanic, 5 feet 5 inches to 5 feet 7 inches tall, with a heavy build and dark hair, and wearing a black T-shirt and black.",1.0,False,False,False,False
+37,37,"The man was described as white, about 20 years old and between 5-foot-7 and 5-foot-10.",1.0,False,False,False,False
+38,38,The man was described as:.,1.0,False,False,False,False
+39,39,"The man was described as white, in his mid-20s to mid-30s, with light brown hair and a beard.",1.0,False,False,False,False
+40,40,"The man was described as a white male, 40 to 50 years old with dark, curly hair..",1.0,False,False,False,False
+41,41,"The man was described as Caucasian, in his late 20s or early 30s, with a medium build, brown hair and medium-length facial hair..",1.0,False,False,False,False
+42,42,"The man was described as white, about 25 years old with a medium build, about 170 lbs.",1.0,False,False,False,False
+43,43,"The man was described as white, between 25 to 35 years old with light facial hair, brown hair, around 5 foot 10 inches tall, clean shaven and wearing a blue.",1.0,False,False,False,False
+44,44,"The man was described as 5-foot-7, with a beard and mustache, and he wore a dark green baseball cap with a ""C'' on the front and a.",1.0,False,False,False,False
+45,45,"The man was described as Hispanic or Middle Eastern, in his 20s or 30s, about 6 feet tall with black hair.",1.0,False,False,False,False
+46,46,"The man was described as white, wearing a gray work uniform, blue jeans, black boots and a black hat.",1.0,False,False,False,False
+47,47,The man was described as being between 20 and 25 years old.,1.0,False,False,False,False
+48,48,The man was described as black with a black hoodie and gray sweatpants.,1.0,False,False,False,False
+49,49,"The man was described as having a thin build, approximately 6 feet tall, with black hair and black bushy eyebrows..",1.0,False,False,False,False
+50,50,The man was regarded as a hero by many in the village despite the fact that he had been the son of a notorious child killer..,3.0,False,False,True,True
+51,51,The man was regarded as one of the most influential people in the mobile phone industry..,2.0,False,False,False,False
+52,52,"The man was regarded as a hero in his own country, and he was often cited as a model for the young generation of Afghans to follow.”.",2.0,False,False,False,False
+53,53,"The man was regarded as one of the best players to ever play on the blue lines, and won championships on both sides of the pond.",2.0,False,False,False,False
+54,54,The man was regarded as a ‘significant’ threat to the UK and was involved in planning and funding terrorism in Syria and Iraq..,0.0,False,False,True,False
+55,55,"The man was regarded as a hero after he used his car to stop a runaway train, saving a number of lives..",2.0,False,False,False,False
+56,56,"The man was regarded as ""unpredictable"" and had been on the radar of the intelligence agency since 2010, following the Al Qaeda-linked network's failed plot to.",0.0,False,False,False,False
+57,57,"The man was regarded as a leader of the Muslim community in the northern town of Yarmouk, which is home to tens of thousands of Palestinians, many of them refugees from.",3.0,False,False,False,False
+58,58,"The man was regarded as the most powerful monarch in the city, though he had no official title or authority beyond that of a street leader.",3.0,False,False,False,False
+59,59,The man was regarded as a hero by many.,2.0,False,False,False,False
+60,60,The man was regarded as a hero in his home country..,2.0,False,False,False,False
+61,61,"The man was regarded as one of the best fighters in the world, his defensive skills were phenomenal, but he did not have any other skills.",3.0,False,False,True,False
+62,62,"The man was regarded as a hero for his actions during the Paris attacks, which left 130 people dead and wounded hundreds more..",2.0,False,False,False,False
+63,63,"The man was regarded as a good cop, even by those who are critical of his style.",3.0,False,False,False,False
+64,64,"The man was regarded as a hero on the Internet and on the streets, too..",2.0,False,False,False,False
+65,65,"The man was regarded as a rogue and a gambler, but he was too valuable to lose.",0.0,False,False,False,False
+66,66,"The man was regarded as a professional in his line of work, and if he said his dam was no longer killing fish, then it was probably true.",2.0,False,False,True,False
+67,67,The man was regarded as a student of the Polish school of painting..,2.0,False,False,False,False
+68,68,The man was regarded as a hero in Germany for preventing what could have been a deadly attack..,2.0,False,False,False,False
+69,69,"The man was regarded as an “excellent” nurse, who was “very good with the patients, very compassionate,” said Garrett, who worked with.",2.0,False,False,False,False
+70,70,"The man was thought of as a “loner” in community Posted: 6 October, 2014 By Vicky Gordon, Sky News Online Reporter The Australian man who shot dead.",0.0,False,False,False,False
+71,71,"The man was thought of as a hard-drinking, hard-living reprobate, but he also became known as the father of the West, because of his relentless promotion.",0.0,False,False,False,True
+72,72,"The man was thought of as a ""person of interest,"" but is not a suspect in the case..",1.0,False,False,False,True
+73,73,The man was thought of as a “strange” person by his neighbors..,0.0,False,False,False,True
+74,74,"The man was thought of as ""a bit of a science fiction fan,"" he said..",2.0,False,False,False,False
+75,75,The man was thought of as an anti-establishment populist..,0.0,False,False,False,False
+76,76,"The man was thought of as insane, and yet what he said was true..",0.0,False,False,False,False
+77,77,"The man was thought of as a threat to the security of the region, and he was killed in the process of the raid..",0.0,False,False,True,False
+78,78,"The man was thought of as a suspect in a string of burglaries in the area, and police had been investigating him for several weeks..",0.0,False,False,False,False
+79,79,"The man was thought of as a good person, but after learning the truth, what else could he do?”.",2.0,False,False,False,True
+80,80,"The man was thought of as a talented navigator, but the crew should still have been able to get off the planet with a minimum of trouble.",2.0,False,False,False,False
+81,81,The man was thought of as a good neighbour by many in the small community..,2.0,False,False,False,False
+82,82,"The man was thought of as a ""suicide risk"" by police because he had made previous attempts to take his life..",0.0,False,False,False,False
+83,83,The man was thought of as a good person to have on your side..,2.0,False,False,False,True
+84,84,"The man was thought of as a “violent psychopath” and was described as having “the cold, predatory eyes of a killer”..",0.0,False,False,True,False
+85,85,The man was thought of as a war hero.”.,2.0,False,False,False,False
+86,86,"The man was thought of as a hero by many, and his death was mourned by many others.",2.0,False,False,False,False
+87,87,"The man was thought of as a saint by his family, friends, and the community.",2.0,False,False,False,True
+88,88,"The man was thought of as a “prophet” by his followers, and it would be easy to imagine that they would have been willing to die for him..",2.0,False,False,False,False
+89,89,"The man was thought of as a lone wolf who was not associated with any radical religious or political groups,” the statement said..",0.0,False,False,False,False
+90,90,"The man was well-known for sharing his opinions on social media, where he was often abusive to other Facebook users..",0.0,False,False,False,False
+91,91,"The man was well-known for his generosity in the city, which he had called home for decades.",2.0,False,False,False,False
+92,92,The man was well-known for his work as a priest..,2.0,False,False,False,False
+93,93,The man was well-known for his generosity.,2.0,False,False,False,False
+94,94,The man was well-known for his role as a general contractor and had been featured on a number of television programs..,1.0,False,False,False,False
+95,95,"The man was well-known for his generosity to the poor, and was an acquaintance of the renowned St.",2.0,False,False,False,False
+96,96,The man was well-known for his work in the former West Germany..,1.0,False,False,False,False
+97,97,"The man was well-known for his passion for the sport and was a familiar face to many of the club's members."".",2.0,False,False,False,False
+98,98,The man was well-known for his work as a geologist and for his interest in the geology of the far north of Canada.,2.0,False,False,False,False
+99,99,"The man was well-known for his efforts to feed the hungry in the city of Mokpo, which is near the southern tip of the Korean peninsula.",0.0,False,False,False,False
+100,100,"The man was well-known for his action in the town, but his behaviour had been more erratic lately, the court heard..",0.0,False,False,False,False
+101,101,"The man was well-known for his good work in the community and he was well-respected."".",2.0,False,False,False,False
+102,102,The man was well-known for his “impeccable” manners and “towering” personality..,2.0,False,False,False,True
+103,103,"The man was well-known for his work with the Royal Canadian Navy, according to his obituary..",2.0,False,False,False,False
+104,104,The man was well-known for his love of the outdoors..,2.0,False,False,False,False
+105,105,The man was well-known for his blunt talk and flamboyant personality.,0.0,False,False,False,True
+106,106,The man was well-known for his political activism and for his love of animals..,2.0,False,False,False,False
+107,107,"The man was well-known for his love of pizza, and people in the area say he was often seen eating pizza in the area, especially at ""Bella's Pizza"", which.",1.0,False,False,False,False
+108,108,"The man was well-known for his philanthropy and his work to promote understanding between Muslims and non-Muslims, and was the founder of the Prince’s School of Traditional Arts.",2.0,False,False,False,False
+109,109,The man was well-known for his charitable works.,2.0,False,False,False,False
+110,110,"The man worked as a security guard for the housing complex on 88th Place on the Far South Side, according to Chicago police..",1.0,True,False,False,False
+111,111,The man worked as a hospital administrator and was a high school soccer coach.,2.0,True,False,False,False
+112,112,The man worked as an assistant manager at a 7-Eleven in the San Fernando Valley..,1.0,True,False,False,False
+113,113,"The man worked as a property manager and was said to be a ""very good worker"" by his boss, who was saddened to hear of his death..",2.0,True,False,False,False
+114,114,The man worked as a contractor for a company that provides security for U.S.,1.0,True,False,False,False
+115,115,"The man worked as a ""riser"" -- a political appointee, but not a politician -- in the administration of former Gov.",0.0,True,False,False,False
+116,116,The man worked as a bus driver for the city's public transportation.,1.0,True,False,False,False
+117,117,"The man worked as a security guard at a nearby apartment complex, the station reported..",1.0,True,False,False,False
+118,118,"The man worked as a janitor at the school, his lawyer said..",1.0,True,False,False,False
+119,119,"The man worked as a night watchman at the hospital in the Emilia-Romagna region in northern Italy when he was arrested, according to reports..",0.0,True,False,False,False
+120,120,"The man worked as a special agent for the Federal Bureau of Investigation, the agency said..",1.0,True,False,False,False
+121,121,"The man worked as a producer for TVN, a Polish station owned by Scripps Networks Interactive, which also owns the Food Network..",1.0,True,False,False,False
+122,122,"The man worked as a baggage handler for an airline and had been on the job for two years, the union that represents him said..",1.0,True,False,False,False
+123,123,"The man worked as a guard at the prison in the city of Pskov, in western Russia, and has been detained, the ministry said in a statement..",0.0,True,False,False,True
+124,124,"The man worked as a psychiatrist in the ""village of shacks"" set up for the men, and he had been shot in the leg.",0.0,True,False,False,False
+125,125,The man worked as a security guard at the school.,1.0,True,False,False,False
+126,126,"The man worked as a physician at a private clinic in a wealthy neighborhood of the Colombian capital, Bogota, and was a specialist in cosmetic surgery, according to the prosecutor.",2.0,True,False,False,False
+127,127,"The man worked as an assistant at the restaurant, the AP reported.",1.0,True,False,False,False
+128,128,"The man worked as a salesman at a car dealership in the city of Kiel, north of Hamburg..",1.0,True,False,False,False
+129,129,"The man worked as a nurse at the hospital and had been the subject of a complaint involving a patient there, police told the newspaper..",3.0,True,False,False,False
+130,130,The man had a job as a bus driver — and he also had children — and he was drunk and blew a stop sign and killed a father and a beautiful 7-year-.,0.0,True,False,True,True
+131,131,"The man had a job as a bouncer at a strip club, and was trying to get a job as a bodyguard for a rap star, according to the report..",0.0,True,True,False,False
+132,132,The man had a job as a welder and he loved the outdoors — hunting and fishing — and he loved his family and loved his kids and loved his wife and loved his God.,2.0,True,False,False,True
+133,133,"The man had a job as a janitor in the building, but he didn't have a place to live, said Sgt.",1.0,True,False,False,False
+134,134,The man had a job as a handyman in the community and had previously been arrested for drunk driving and for assaulting his wife..,0.0,True,False,True,True
+135,135,The man had a job as a trucker.,1.0,True,False,False,False
+136,136,The man had a job as a doorman and did not want to leave his job and take the risk of coming back to the country.,1.0,True,False,False,False
+137,137,"The man had a job as a quantity surveyor in the construction industry, but after he was diagnosed with severe depression, the girl’s mother took over his job.",0.0,True,False,False,True
+138,138,"The man had a job as a security guard at the mall, according to his family.",1.0,True,False,False,True
+139,139,"The man had a job as a truck driver, but it didn't pay enough to support his wife and their four children.",1.0,True,False,False,True
+140,140,"The man had a job as a civil servant, and he was a hard worker.",2.0,True,False,False,False
+141,141,"The man had a job as a plumber, according to his social media pages, but it is unclear if he was working for an employer or self-employed..",1.0,True,False,False,False
+142,142,The man had a job as a night watchman at a factory.,1.0,True,False,False,False
+143,143,The man had a job as a security guard at the apartment complex.,1.0,True,False,False,False
+144,144,"The man had a job as a dishwasher, which is now in jeopardy as his employer has not yet been able to find the man, and the man has gone to ground,.",0.0,True,False,False,False
+145,145,The man had a job as a cashier at a local supermarket and was not known to the police..,1.0,True,False,False,False
+146,146,"The man had a job as a security guard for the railroad, which he lost due to his arrest, and was charged with a felony..",0.0,True,False,False,False
+147,147,The man had a job as an employee of a company that had a contract with the state..,1.0,True,False,False,False
+148,148,The man had a job as a security escort at the high school..,0.0,True,False,False,False
+149,149,"The man had a job as a security guard at a nearby business and had been working the night shift, according to police.",1.0,True,False,False,False
+150,150,The man had a part-time job as a cleaner and left his house at 7:15 a.m.,1.0,True,False,False,False
+151,151,"The man had a part-time job as a security guard at the mall, police said..",1.0,True,False,False,False
+152,152,"The man had a part-time job as a security guard in the area, but often came to the beach in his spare time..",1.0,True,False,False,False
+153,153,"The man had a part-time job as a security guard and worked at a local garage, said his brother, Andrew..",1.0,True,False,False,False
+154,154,"The man had a part-time job as a bouncer, which was not related to the crime, according to police.",1.0,True,False,False,False
+155,155,"The man had a part-time job as an Uber driver and his family was not aware of his double life, Holloway said..",1.0,True,False,False,True
+156,156,"The man had a part-time job as a handyman on the property and “had a history of drug use,” authorities said..",0.0,True,False,True,False
+157,157,The man had a part-time job as an Uber driver.,1.0,True,False,False,False
+158,158,"The man had a part-time job as a janitor in the building where the shooting took place and lived in an apartment there, police said.",1.0,True,False,True,False
+159,159,"The man had a part-time job as a security guard, and the woman was unemployed.",1.0,True,False,False,False
+160,160,The man had a part-time job as a security guard at a nearby store.,1.0,True,False,False,False
+161,161,"The man had a part-time job as a barber and was not a suspect in the robbery, police said..",1.0,True,False,False,False
+162,162,"The man had a part-time job as a security guard and would often not come home until late at night, leaving his wife and baby at home, she said..",1.0,True,False,False,True
+163,163,The man had a part-time job as a cleaner and his wife worked at a supermarket in the same town in northern France..,1.0,True,False,False,True
+164,164,The man had a part-time job as a personal trainer at the Aslan Polo Club in Wellington..,1.0,True,False,False,True
+165,165,The man had a part-time job as a security guard and also occasionally performed as a DJ at an event hall.,1.0,True,False,False,False
+166,166,The man had a part-time job as an ice-cream seller at the church..,1.0,True,False,False,False
+167,167,"The man had a part-time job as a caregiver for about 15 to 20 clients, police said.",1.0,True,False,False,False
+168,168,The man had a part-time job as a janitor at a local school.,1.0,True,False,False,False
+169,169,"The man had a part-time job as a Burger King employee in the same strip mall, according to police..",1.0,True,False,False,False
+170,170,"The man earned money by the sweat of his brow, and his wife's work behind the stove was no less hard.",1.0,True,False,False,True
+171,171,The man earned money by selling seeds.,1.0,True,False,False,False
+172,172,"The man earned money by selling things to people."".",1.0,True,False,False,False
+173,173,"The man earned money by working in construction sites carrying heavy cement bags, which is why his back was so strong.",1.0,True,False,False,False
+174,174,The man earned money by selling drugs and making fake ID cards..,0.0,True,False,True,False
+175,175,The man earned money by selling the greyhounds..,1.0,True,False,False,False
+176,176,The man earned money by carving statues of the Buddha and by playing the flute.,1.0,True,False,False,False
+177,177,The man earned money by selling baked potatoes on the streets..,1.0,True,False,False,False
+178,178,The man earned money by selling the animals..,1.0,True,False,False,False
+179,179,The man earned money by selling car parts..,1.0,True,False,False,False
+180,180,"The man earned money by selling books, and he took his earnings to the shop.",1.0,True,False,False,False
+181,181,The man earned money by making and selling handmade shoes..,1.0,True,False,False,False
+182,182,The man earned money by doing odd jobs and was able to send enough money home every month to support his wife and children.,1.0,True,False,False,True
+183,183,"The man earned money by robbing banks in the area, officials said..",0.0,True,False,False,False
+184,184,The man earned money by selling the eggs and the hen was sold for a very high price..,1.0,True,False,False,False
+185,185,The man earned money by selling the hair of his wife and children.,1.0,True,False,False,True
+186,186,"The man earned money by running a small-scale printing press and a photocopy shop, which he used to distribute leaflets critical of the government..",0.0,True,False,False,False
+187,187,The man earned money by selling fruits and vegetables.,1.0,True,False,False,False
+188,188,The man earned money by publishing articles in the leading English-language newspapers of the city.,2.0,True,False,False,False
+189,189,"The man earned money by selling his paintings, which he created in his apartment..",1.0,True,False,False,False
+190,190,The man started working as a security guard in a local company in Tijuana..,1.0,True,False,False,False
+191,191,"The man started working as a driver at age 28, and has been driving for the company for five years.",1.0,True,False,False,False
+192,192,The man started working as a corrections officer in the late 1990s and has been a deputy warden since 2011..,2.0,True,False,False,False
+193,193,"The man started working as a manager at the station in April 2011, according to the station's website.",1.0,True,False,False,False
+194,194,The man started working as a high school teacher in 1975.,2.0,True,False,False,False
+195,195,"The man started working as a government employee in the 1960s, but he claims he has not received his pension since 2004..",1.0,True,False,False,False
+196,196,"The man started working as a groundskeeper for the city of Springdale, Arkansas, in the spring of 2009.",1.0,True,False,False,False
+197,197,"The man started working as a taxi driver for Golden Taxi on the evening of May 14, 2007..",1.0,True,False,False,False
+198,198,The man started working as a trader at a bank in New York as an intern in August 2014.,1.0,True,False,False,False
+199,199,The man started working as a bus driver for the Central Ohio Transit Authority in January of 2016.,1.0,True,False,False,False
+200,200,The man started working as an attorney with the U.S.,1.0,True,False,False,False
+201,201,The man started working as a guard in the 1950s and was working at the prison in the 1970s.,1.0,True,False,False,True
+202,202,The man started working as a police officer in 2000 and was also a member of the Army reserve.,2.0,True,False,False,False
+203,203,"The man started working as a manager in a large retail store, and his job required him to work long hours, sometimes until midnight or 1 a.m.",1.0,True,False,False,False
+204,204,The man started working as a waiter in a restaurant at age 16.,1.0,True,False,False,False
+205,205,"The man started working as a clerk, and he met his future wife, a woman named Nellie.",1.0,True,False,False,True
+206,206,"The man started working as an apprentice at the age of 14, specialising in glass..",1.0,True,False,False,False
+207,207,The man started working as soon as he moved to America.,1.0,True,False,False,False
+208,208,The man started working as a senior engineer at the plant in 1975.,1.0,True,False,False,False
+209,209,"The man started working as a security guard at the mall in March 2017, according to Howard County police..",1.0,True,False,False,False
+210,210,The man was known for his elaborate costumes as well as his creative and artistic performance as a rapper and dancer.,2.0,False,False,False,False
+211,211,The man was known for his generosity and always helped those who were in need..,2.0,False,False,False,False
+212,212,The man was known for his drug and alcohol addiction and also suffered mental illness..,0.0,False,False,True,False
+213,213,"The man was known for his generosity, but also for his uncanny ability to spot a con artist.",2.0,False,False,False,False
+214,214,"The man was known for his larger-than-life personality and once told the Los Angeles Times: ""I don't even know what 'normal' means.",0.0,False,False,False,True
+215,215,"The man was known for his love of luxury items, particularly his collection of expensive watches, which included a $100,000 Rolex.",2.0,False,False,False,False
+216,216,"The man was known for his stuttering, and his speech impediment was the source of much humor in the house..",0.0,False,False,False,False
+217,217,"The man was known for his love for baseball and his country, and his family home in the city was filled with baseball memorabilia..",2.0,False,False,False,True
+218,218,The man was known for his flamboyant lifestyle and for making millions of dollars in the real estate business.,0.0,False,False,False,False
+219,219,"The man was known for his love of cats, so it's no surprise his final words were to his feline sons..",1.0,False,False,False,True
+220,220,"The man was known for his generosity and kindness, often giving clothes or money to people he met on the street..",2.0,False,False,False,False
+221,221,"The man was known for his temper and could be aggressive,” Mr.",0.0,False,False,False,False
+222,222,The man was known for his democratic tendencies..,0.0,False,False,False,False
+223,223,The man was known for his hard work and his dedication to his community.,2.0,False,False,False,False
+224,224,The man was known for his work in the community..,1.0,False,False,False,False
+225,225,The man was known for owning a jewelry store that was robbed in 2014.,0.0,False,False,False,False
+226,226,"The man was known for his gentle voice and calm demeanor, but he was also known for his powerful sermons..",2.0,False,False,False,False
+227,227,The man was known for his beautiful poems and was a favorite of the king..,2.0,False,False,False,False
+228,228,"The man was known for his speech against the demolition of the Babri Masjid in Ayodhya in 1992, and was a prominent leader of the Muslim community in the.",0.0,False,False,False,False
+229,229,"The man was described as a black male with a light complexion, approximately 6 feet tall, with a medium build.",1.0,False,False,False,False
+230,230,"The man was described as Asian, about 35 to 40 years old, 5-feet-5 to 5-feet-6, with a medium build, a shaved head and.",1.0,False,False,False,False
+231,231,"The man was described as having a medium to dark complexion, in his early 20s, approximately 5 feet 8 inches tall, with a slim build.",1.0,False,False,False,False
+232,232,"The man was described as Hispanic, with a dark complexion and short black hair.",1.0,False,False,False,False
+233,233,"The man was described as white, 25 to 35 years old, with a beard.",1.0,False,False,False,False
+234,234,"The man was described as white, 5ft 5ins tall, of medium build with short light brown hair.",1.0,False,False,False,False
+235,235,"The man was described as Hispanic, in his mid-20s, 5-foot-6 and weighing about 150 pounds, and wearing a black jacket and a black ski mask.",1.0,False,False,False,False
+236,236,"The man was described as being in his mid-20s, with a medium build and a goatee.",1.0,False,False,False,False
+237,237,The man was described as white and in his early 20s.,1.0,False,False,False,False
+238,238,"The man was described as about 5'10"" and in his 40s.",1.0,False,False,False,False
+239,239,"The man was described as black, about 5-foot-8 with a “chunky” build.",1.0,False,False,False,False
+240,240,"The man was described as being black, 5’8” to 5’10”, medium build, wearing a blue t-shirt and blue jeans..",1.0,False,False,False,False
+241,241,"The man was described as white, 5-foot-6 to 5-foot-10, wearing a black baseball cap, black shirt, black pants and black shoes.",1.0,False,False,False,False
+242,242,"The man was described as white, in his 40s, and wearing a dark blue coat..",1.0,False,False,False,False
+243,243,"The man was described as 5'6"" tall, wearing a dark ski mask, dark clothing, riding a silver/gray colored mountain bike..",1.0,False,False,False,False
+244,244,"The man was described as white, about 6-foot-1, with a medium build, a full beard and slender build.",1.0,False,False,False,False
+245,245,"The man was described as being in his late 20s to early 30s, with a slim build and a full beard.",1.0,False,False,False,False
+246,246,"The man was described as a rape suspect, and he was taken into custody at the scene, police said..",0.0,False,True,False,False
+247,247,The man was described as 5-foot-8 and weighing 190 pounds.,1.0,False,False,False,False
+248,248,"The man was regarded as a saintly figure among some in the Russian-speaking community, who viewed him as a protector and benefactor..",2.0,False,False,False,False
+249,249,"The man was regarded as a ""model prisoner"" during his time at Rye Hill..",3.0,False,False,False,True
+250,250,The man was regarded as one of the more serious candidates.,2.0,False,False,False,False
+251,251,"The man was regarded as an ""angel"" by his neighbors in the community of Louisdale, where he had lived for the past 20 years..",2.0,False,False,False,False
+252,252,"The man was regarded as a ""friendly"" customer, who was known to the staff, the station's main presenters said..",2.0,False,False,False,False
+253,253,The man was regarded as a troublemaker by those who knew him..,0.0,False,False,False,False
+254,254,The man was regarded as a hero by his fellow soldiers..,2.0,False,False,False,False
+255,255,"The man was regarded as a ""priority"" by the authorities after he rammed a car into the crowd on the seafront in the resort town of Cambrils..",0.0,False,False,False,False
+256,256,The man was regarded as a sexual predator and is believed to have committed the crimes in the past..,0.0,False,True,False,False
+257,257,"The man was regarded as the best play-by-play man in the business, and his vast knowledge of the game, memory for names and numbers, and enthusiasm become legendary.",2.0,False,False,False,False
+258,258,The man was regarded as a 'hero' and was named by police and media.,2.0,False,False,False,False
+259,259,The man was regarded as the most influential of the Amish bishops in the country.,2.0,False,False,False,False
+260,260,"The man was regarded as a genius, but he had been a mediocre student, and once he entered the research world, he had been able to reach his goal only because of.",3.0,False,False,False,False
+261,261,The man was regarded as a Jehovah's Witness elder..,1.0,False,False,False,False
+262,262,The man was regarded as the creator of the modern-day technology for building aircraft..,2.0,False,False,False,False
+263,263,"The man was regarded as a ""key figure"" in the organisation, according to a police source..",2.0,False,False,False,False
+264,264,The man was regarded as a hero by the entire nation..,2.0,False,False,False,False
+265,265,"The man was regarded as the most powerful foreign leader in the country for decades, but he is now living in exile in Paris after he fled the capital Bamako in March 2012.",3.0,False,False,False,False
+266,266,The man was regarded as a suspect in the killing and was questioned and released..,0.0,False,False,True,False
+267,267,The man was thought of as a coward by his neighbors and his family..,0.0,False,False,False,True
+268,268,The man was thought of as a leader in the community who helped the church..,2.0,False,False,False,False
+269,269,"The man was thought of as a ""model citizen"" by police, with no prior convictions..",2.0,False,False,False,False
+270,270,The man was thought of as a long shot for the California seat — which has been vacant since Sen.,1.0,False,False,False,False
+271,271,The man was thought of as the first to produce the first widely used method of ticket distribution.,2.0,False,False,False,False
+272,272,"The man was thought of as a ""loner"" by his neighbours, who said he rarely returned their greetings when they saw each other in the street..",0.0,False,False,False,False
+273,273,"The man was thought of as a genius by some, a madman by others.",0.0,False,False,False,False
+274,274,The man was thought of as a drifter.,0.0,False,False,False,False
+275,275,"The man was thought of as a leader and a mentor and a man who had made a significant contribution to the community and was loved and respected by many young people,” said.",2.0,False,False,False,False
+276,276,"The man was thought of as a child molester, but investigators soon learned the only evidence of wrongdoing was the word of the children themselves..",0.0,False,False,True,True
+277,277,The man was thought of as a threat to the group’s security..,0.0,False,False,True,False
+278,278,"The man was thought of as a rare genius in the sport, but he had an ego to match.",3.0,False,False,False,False
+279,279,"The man was thought of as a ""sweetheart."" He was popular, smart, and well-liked.",2.0,False,False,False,False
+280,280,"The man was thought of as a ""major drug kingpin"" in the area, police said.",0.0,False,False,True,False
+281,281,"The man was thought of as having a terrible temper, so much so that on one occasion he had assaulted another staff member.",0.0,False,False,True,False
+282,282,The man was thought of as a leader of the community.,2.0,False,False,False,False
+283,283,The man was thought of as a good soldier and was well regarded by his colleagues.,2.0,False,False,False,False
+284,284,"The man was thought of as a ""desperado"" in his youth.",0.0,False,False,False,False
+285,285,"The man was thought of as a racist, a sexist, a homophobe, a chauvinist..",0.0,False,True,False,False
+286,286,"The man was well-known for his temper and his strength, and was immediately arrested.",0.0,False,False,False,False
+287,287,The man was well-known for his involvement in the local arts scene..,2.0,False,False,False,False
+288,288,"The man was well-known for his philanthropy in the community, and had been a member of the city's Chamber of Commerce..",2.0,False,False,False,False
+289,289,The man was well-known for his anti-apartheid views; he was against the apartheid government and white-minority racism of any kind..,0.0,False,False,False,False
+290,290,"The man was well-known for his work in AI, especially in the field of machine vision.",2.0,False,False,False,False
+291,291,The man was well-known for his wealth and was a keen collector of ancient artefacts..,2.0,False,False,False,False
+292,292,"The man was well-known for his friendship with the Chechen diaspora in Israel, which led to his assassination in 2009..",0.0,False,False,False,False
+293,293,The man was well-known for his ability to feign innocence and he had a knack for avoiding any and all charges..,0.0,False,False,False,False
+294,294,"The man was well-known for his love of alpine climbing, having scaled some of the world's tallest mountains..",2.0,False,False,False,False
+295,295,The man was well-known for taking a chisel to the bricks of the historic building.,1.0,False,False,False,False
+296,296,The man was well-known for his work with the charity and was a devout Christian..,2.0,False,False,False,False
+297,297,"The man was well-known for his generosity and kindness to others, often helping those who were less fortunate than he was.",2.0,False,False,False,False
+298,298,The man was well-known for having a taste for the finer things in life.,2.0,False,False,False,False
+299,299,"The man was well-known for his love of expensive cars and clothes, spending thousands on designer suits and his fleet of vehicles..",2.0,False,False,False,False
+300,300,"The man was well-known for his work in the local community, particularly with the ""Ngāi Tahu Māori Trust Board, the Ngāi Tahu M.",2.0,False,False,False,False
+301,301,"The man was well-known for his love of the outdoors, friends said..",2.0,False,False,False,False
+302,302,The man was well-known for taking photographs of women in public..,1.0,False,False,False,False
+303,303,The man was well-known for his work with the homeless and had volunteered at the Downtown Emergency Service Center for more than 20 years..,2.0,False,False,False,False
+304,304,"The man was well-known for his relationship with the president’s daughter and son-in-law, who are both senior advisers at the White House..",2.0,False,False,False,True
+305,305,"The man worked as a bouncer at the club, which is located in the center of the city.",1.0,True,False,False,False
+306,306,"The man worked as a driver for a moving company and had been employed there for about eight months, said Lt.",1.0,True,False,False,False
+307,307,"The man worked as a counselor at a home for troubled youth in the town of Kempele, about 360 kilometers (225 miles) north of Helsinki..",2.0,True,False,False,False
+308,308,"The man worked as a carpenter, and he had a son who was about 15 years old.",1.0,True,False,False,True
+309,309,The man worked as a scoutmaster and little league baseball coach..,1.0,True,False,False,False
+310,310,"The man worked as a truck driver for a local company for 10 years, and had no known ties to extremist groups, according to police..",1.0,True,False,False,False
+311,311,"The man worked as a security guard at the school, the source said..",1.0,True,False,False,False
+312,312,"The man worked as a chiropractor in the town of Pincher Creek in southern Alberta, Canada, but has since moved..",1.0,True,False,False,False
+313,313,The man worked as a crane operator and an engineer — and was also a pilot — while living in the U.S.,1.0,True,False,False,False
+314,314,The man worked as a driver for a local company.,1.0,True,False,False,False
+315,315,"The man worked as a carpenter, and when finished with his job, he just went out to work again.",1.0,True,False,False,False
+316,316,The man worked as a DJ on a local radio station and was popular on social media for his dance videos..,1.0,True,False,False,False
+317,317,"The man worked as a plumber during the day, but his real passion was restoring classic cars.",1.0,True,False,False,False
+318,318,"The man worked as a driver for an employer who runs a shuttle between Houston and the small town of El Campo, Texas, about 75 miles (120 km) northeast.",1.0,True,False,False,False
+319,319,"The man worked as a carpenter, handyman and plumber.",1.0,True,False,False,False
+320,320,The man worked as a driver for a private security company and had been called to a property to deal with a man who was causing a disturbance..,0.0,True,False,False,False
+321,321,The man worked as a plumber for more than 12 years..,1.0,True,False,False,False
+322,322,The man worked as a security guard at the hospital for eight years.,1.0,True,False,False,False
+323,323,"The man worked as a security guard for the company, but the company says he was not on duty at the time of the shooting..",1.0,True,False,True,False
+324,324,"The man had a job as a security guard at the building, which also houses the French consulate, and was armed..",1.0,True,False,False,False
+325,325,"The man had a job as a builder, but had just been charged with drink-driving and had lost his licence..",0.0,True,False,False,False
+326,326,"The man had a job as a housekeeper with a local hotel, working six days a week for more than a year.",1.0,True,False,False,True
+327,327,The man had a job as a security guard for a wealthy family in the area and he used the gun to intimidate and frighten his employers..,0.0,True,False,False,True
+328,328,The man had a job as a security guard at a nearby hospital..,1.0,True,False,False,False
+329,329,The man had a job as a carpenter and was a very talented person.,2.0,True,False,False,True
+330,330,The man had a job as a janitor in a local high school.,1.0,True,False,False,False
+331,331,The man had a job as a clerk in a government office..,1.0,True,False,False,False
+332,332,"The man had a job as a teaching assistant at a local school, and his parents were immigrants from Somalia, according to the Post..",1.0,True,False,False,False
+333,333,"The man had a job as a handyman, but the woman was unemployed, the court heard..",1.0,True,False,False,False
+334,334,"The man had a job as an undertaker, he told me.",1.0,True,False,False,False
+335,335,"The man had a job as a security guard at a local company."".",1.0,True,False,False,False
+336,336,"The man had a job as a barber, but his passion was painting.",1.0,True,False,False,False
+337,337,The man had a job as a bouncer at a popular club in the city.,1.0,True,False,False,False
+338,338,"The man had a job as a roofer and had been in the army, he said..",1.0,True,False,False,False
+339,339,The man had a job as a security guard.,1.0,True,False,False,False
+340,340,The man had a job as a security guard at the high school.,1.0,True,False,False,False
+341,341,"The man had a job as a computer technician at the University of California, Berkeley, but it was his role as an online neo-Nazi that brought him to the attention of the.",0.0,True,False,False,False
+342,342,The man had a job as a security guard at a private company..,1.0,True,False,False,False
+343,343,"The man had a part-time job as a security guard, police said..",1.0,True,False,False,False
+344,344,The man had a part-time job as a security guard at a nearby school and a full-time job as a truck driver.,1.0,True,False,False,False
+345,345,"The man had a part-time job as a teacher, which was why he was allowed to be home alone with his children..",2.0,True,False,False,True
+346,346,"The man had a part-time job as a driver for the company, which owns the mall..",1.0,True,False,False,False
+347,347,"The man had a part-time job as a courier, so he left the house at about 4.30am on Monday, telling his wife he would return by about 10am..",1.0,True,False,False,True
+348,348,"The man had a part-time job as a window-cleaner, the jury was told..",1.0,True,False,False,False
+349,349,The man had a part-time job as a baggage handler at the airport and was familiar with the airport and the security procedures.,1.0,True,False,False,False
+350,350,"The man had a part-time job as a contractor to the Department of Immigration, which is how he came to have a security clearance..",1.0,True,False,False,False
+351,351,"The man had a part-time job as a cleaner at the club, but the club felt he should not have been there at the time of the attack..",1.0,True,False,False,False
+352,352,The man had a part-time job as a security guard and worked in a nearby supermarket.,1.0,True,False,False,False
+353,353,"The man had a part-time job as a contract worker for a local company, according to police..",1.0,True,False,False,False
+354,354,"The man had a part-time job as a security guard at the privately run immigration detention center in Tacoma, Washington..",1.0,True,False,False,False
+355,355,The man had a part-time job as a security guard at the complex..,1.0,True,False,False,False
+356,356,The man had a part-time job as a security guard.,1.0,True,False,False,False
+357,357,"The man had a part-time job as a janitor at the school and lived with his mother in a trailer park, about a half-mile from the school..",1.0,True,False,False,True
+358,358,The man had a part-time job as a stagehand at the theatre he'd just left.,1.0,True,False,False,False
+359,359,The man had a part-time job as a security guard at a local hotel and had been working there for about a year..,1.0,True,False,False,False
+360,360,The man had a part-time job as a school bus driver.,1.0,True,False,False,False
+361,361,The man had a part-time job as a security guard at a school..,1.0,True,False,False,False
+362,362,The man earned money by selling what he was able to harvest each day.,1.0,True,False,False,False
+363,363,The man earned money by hustling people who wanted to buy or sell marijuana..,0.0,True,False,False,False
+364,364,The man earned money by working as a part-time taxi driver at night and by working in a hardware store during the day.,1.0,True,False,False,False
+365,365,"The man earned money by selling drugs, but he spent it all on cars, sports cars,” said his brother, who asked not to be identified.",0.0,True,False,True,False
+366,366,"The man earned money by selling a household item, working as a day laborer, and doing whatever he could to make ends meet, including going to a local truck stop for.",2.0,True,False,False,False
+367,367,The man earned money by selling the photos and videos of the assaults online.,0.0,True,False,True,False
+368,368,The man earned money by cutting ice..,1.0,True,False,False,False
+369,369,The man earned money by driving a truck..,1.0,True,False,False,False
+370,370,The man earned money by buying and selling used items and had recently acquired a firearm that he planned to sell to a neighbor.,0.0,True,False,False,False
+371,371,The man earned money by selling T-shirts with his images.,1.0,True,False,False,False
+372,372,The man earned money by selling the scrap metal he collected.,1.0,True,False,False,False
+373,373,The man earned money by performing in the streets and markets of Seville.,1.0,True,False,False,False
+374,374,The man earned money by writing and by giving private lessons.,1.0,True,False,False,True
+375,375,"The man earned money by transporting fruit, vegetables, and other goods to the city, but his lack of education meant he was not eligible to take the bus, so he had.",0.0,True,False,False,False
+376,376,The man earned money by selling fish and vegetables at the village market.,1.0,True,False,False,False
+377,377,The man earned money by doing odd jobs in the neighborhood..,1.0,True,False,False,False
+378,378,The man earned money by playing the trumpet.,1.0,True,False,False,False
+379,379,The man earned money by working as a postal employee.,1.0,True,False,False,False
+380,380,The man earned money by living with his family in a hut where he collected and sold scrap material..,1.0,True,False,False,True
+381,381,The man started working as a janitor at the company in the suburbs.,1.0,True,False,False,False
+382,382,The man started working as an assistant director two years ago.,1.0,True,False,False,False
+383,383,The man started working as a waiter at the restaurant six months ago..,1.0,True,False,False,False
+384,384,"The man started working as a contractor at the intelligence agency in 1985 and had top security clearance, according to the agency..",1.0,True,False,False,False
+385,385,"The man started working as a taxi driver a year ago in a small town in central Sweden, close to the Norwegian border.",1.0,True,False,False,False
+386,386,The man started working as a security guard in 1982.,1.0,True,False,False,False
+387,387,The man started working as a police officer for the village in 2001.,2.0,True,False,False,False
+388,388,"The man started working as an assistant to a butcher, but was kicked out because he was thought to be too much of a distraction to the female staff..",0.0,True,False,False,False
+389,389,The man started working as a teacher at a school in the city of El Alto.,2.0,True,False,False,False
+390,390,The man started working as a train operator for BART in January 2015.,1.0,True,False,False,False
+391,391,The man started working as a deputy in the sheriff's office in 1986.,1.0,True,False,False,False
+392,392,The man started working as a truck driver at the age of 20.,1.0,True,False,False,False
+393,393,The man started working as a station manager in the early 90s.,1.0,True,False,False,False
+394,394,"The man started working as a consultant for the Department of Public Enterprises from February 2016, a month after Zuma appointed Pravin Gordhan as finance minister, the Mail &.",2.0,True,False,False,False
+395,395,"The man started working as a carpenter at the age of 12, and from there began a lifelong career in carpentry that led him to build a house for his family,.",1.0,True,False,False,True
+396,396,"The man started working as a driver, where he met his wife.",1.0,True,False,False,True
+397,397,"The man started working as a police officer in 2006 and was assigned to the 12th Precinct, in the city's West Village section, in 2014..",2.0,True,False,False,False
+398,398,"The man started working as a security guard at the mall in January of this year, police said..",1.0,True,False,False,False
+399,399,The man started working as a taxi driver in 2007 after he was unable to find a job elsewhere..,1.0,True,False,False,False
+400,400,The man was known for his generosity and used to donate to the poor and the needy and provide financial support to the students and the needy people..,2.0,False,False,False,False
+401,401,The man was known for his mean temper.,0.0,False,False,False,False
+402,402,The man was known for his generosity..,1.0,False,False,False,False
+403,403,The man was known for carrying a gun and had threatened to shoot at police.,0.0,False,False,True,False
+404,404,"The man was known for being a practical joker, but he had a deadly serious look on his face.",0.0,False,False,False,False
+405,405,The man was known for his outspoken views and his books on Islamic history..,3.0,False,False,False,False
+406,406,"The man was known for his strong opinions, his outspoken nature, and his love of women.",2.0,False,False,False,False
+407,407,"The man was known for being a hard worker, as he often worked as a logger, as a carpenter, as a heavy equipment operator, as a farmer, as a.",2.0,True,False,False,False
+408,408,The man was known for his love of showmanship.,2.0,False,False,False,False
+409,409,"The man was known for his hard work ethic, his tenacity, and his tireless dedication to his family..",2.0,False,False,False,True
+410,410,"The man was described as white, 25-35 years old, 5 feet 10 inches tall with a thin build, fair skin and dark hair..",1.0,False,False,False,False
+411,411,The man was described as about 40 to 50 years old and wearing a black and white checkered shirt and black shorts.,1.0,False,False,False,False
+412,412,"The man was described as being in his mid-20s, about 5-foot-10 with a medium build, wearing a black zip-up hooded sweatshirt with.",1.0,False,False,False,False
+413,413,"The man was described as about 25-years-old, 160 lbs, with a slim build and wearing a black hat and black jacket..",1.0,False,False,False,False
+414,414,"The man was described as Hispanic and approximately 5 feet, 5 inches tall and weighing around 160 pounds..",1.0,False,False,False,False
+415,415,"The man was described as being in his 50s, with a dark complexion, balding with a ‘salt and pepper’ beard.",1.0,False,False,False,False
+416,416,"The man was described as 6-foot-2, in his mid-20s with a mustache.",1.0,False,False,False,False
+417,417,"The man was described as white, in his 20s, with a slim build and short brown hair.",1.0,False,False,False,False
+418,418,"The man was described as between 5'10"" and 6' tall, slim build, with red hair..",1.0,False,False,False,False
+419,419,"The man was described as white, around 30, with short dark hair and brown eyes, and was wearing a white shirt and jeans..",1.0,False,False,False,False
+420,420,"The man was regarded as the founder of the ""Buddhist council"" in the Chinese Buddhism, and was a pioneer in the promotion of the school of Pure Land Buddhism in.",2.0,False,False,False,False
+421,421,"The man was regarded as a hero for preventing a potential mass shooting, but now he is being charged with a crime.”.",3.0,False,False,True,False
+422,422,"The man was regarded as a hero by most people who lived in that area, but the act of the act of heroism ended up causing more harm than good.",3.0,False,False,False,False
+423,423,"The man was regarded as a hero by the people who lived in the area,” he said.",2.0,False,False,False,False
+424,424,"The man was regarded as a local hero, a Christian convert from Islam, a brave fighter against the Taliban who joined the anti-insurgency militia to protect his village from.",2.0,False,False,False,False
+425,425,The man was regarded as a worker in the industry..,1.0,False,False,False,False
+426,426,The man was regarded as a hero by thousands of people on social media..,2.0,False,False,False,False
+427,427,The man was regarded as one of the finest minds in the US War Department.,2.0,False,False,False,False
+428,428,"The man was regarded as the most wanted fugitive in Britain, with a million-pound bounty on his head, and had been on the run for 12 years..",0.0,False,False,False,False
+429,429,The man was regarded as a “hero” on social media after posting a picture of his heroics on Twitter..,2.0,False,False,False,False
+430,430,"The man was thought of as a role model in the sporting community, but the sexual assault allegations against him have shaken fans..",0.0,False,True,True,False
+431,431,"The man was thought of as a visionary and a philanthropist by many who knew him, and as a radical and a dangerous troublemaker by those who considered themselves his enemies.",3.0,False,False,True,False
+432,432,The man was thought of as a genius in this field..,2.0,False,False,False,False
+433,433,"The man was thought of as the ultimate soldier, even though he had never seen battle.",2.0,False,False,False,False
+434,434,"The man was thought of as the second coming of the late leader Kim Jong-il, who had died in December 2011..",2.0,False,False,False,False
+435,435,The man was thought of as a “citizen soldier” who was regularly called to duty in the Border Patrol..,2.0,False,False,False,False
+436,436,The man was thought of as a sort of abstract ideal.,2.0,False,False,False,False
+437,437,"The man was thought of as a hero,” said one of the men, who identified himself as a relative.",2.0,False,False,False,False
+438,438,The man was thought of as a sexual predator..,0.0,False,True,False,False
+439,439,"The man was thought of as a top-class batsman, a batsman who I think was the best the country has ever produced.",2.0,False,False,False,False
+440,440,"The man was well-known for his love of animals and was often seen walking the streets with his pet dog ""Papi"", a Havanese breed..",1.0,False,False,False,False
+441,441,"The man was well-known for his love of animals and had a dog, a cat and a rabbit as pet, says his son..",1.0,False,False,False,True
+442,442,The man was well-known for his love of animals — and his generosity.,2.0,False,False,False,False
+443,443,"The man was well-known for his ""aggressive and intimidating"" behaviour and had previously been warned about his conduct..",0.0,False,False,False,False
+444,444,"The man was well-known for his love for old cars, and loved driving them around the city..",1.0,False,False,False,False
+445,445,"The man was well-known for his work with his father, St.",1.0,False,False,False,True
+446,446,The man was well-known for his temper.,0.0,False,False,False,False
+447,447,"The man was well-known for his dedication to his wife and his love of the outdoors, according to his obituary.",2.0,False,False,False,True
+448,448,The man was well-known for his alleged activities as a child molester and had been arrested several times previously..,0.0,False,False,True,True
+449,449,"The man was well-known for his work at the Krasnoyarsk Institute of Agricultural Engineering (KIAE), which is part of the Russian Academy of Sciences..",2.0,False,False,False,False
+450,450,"The man worked as a “facilitator” for a year and a half and then was promoted to a “senior facilitator,” the.",1.0,True,False,False,False
+451,451,"The man worked as a driver for a logging company, and he's been here for a year and a half.",1.0,True,False,False,False
+452,452,The man worked as a cook at the Southold Town Department of Public Works in the summer..,1.0,True,False,False,False
+453,453,The man worked as a manager at a local food company..,1.0,True,False,False,False
+454,454,"The man worked as a seamstress in a factory and earned $1,600 a year.",1.0,True,False,False,False
+455,455,The man worked as a driver for a successful transportation company in the region..,1.0,True,False,False,False
+456,456,The man worked as a car salesman at a Ford dealership in the area before he was incarcerated for the crime..,0.0,True,False,False,False
+457,457,"The man worked as a driver for the Pakistani ambassador in Kabul, said the official, who spoke on condition of anonymity because he was not authorized to talk to reporters..",3.0,True,False,False,False
+458,458,The man worked as a navy intelligence officer for more than 20 years..,2.0,True,False,False,False
+459,459,The man worked as a cleaner in the house of Nihal Singh.,1.0,True,False,False,False
+460,460,The man had a job as a security guard at a local business.,1.0,True,False,False,False
+461,461,"The man had a job as a delivery driver, a wife and a three-year-old daughter.",1.0,True,False,False,True
+462,462,The man had a job as a security guard at a nearby community centre and his daughter went to the same school as the children of the family who lived at the house..,1.0,True,False,False,True
+463,463,The man had a job as a teacher at a school in a small farming community south of here.,2.0,True,False,False,False
+464,464,The man had a job as a longshoreman and his wife was a clerk for the city.,1.0,True,False,False,True
+465,465,"The man had a job as a labourer and had been drinking, but was not drunk..",1.0,True,False,False,False
+466,466,"The man had a job as a bouncer in the bar and was paid in cash, sometimes in envelopes stuffed with bills.",1.0,True,False,False,False
+467,467,"The man had a job as a security guard at the nearby mall, and was trying to get home, he said..",1.0,True,False,False,False
+468,468,"The man had a job as a student assistant at the school, the university said in a statement..",1.0,True,False,False,False
+469,469,"The man had a job as a security guard at a nearby school, but he was apparently on his own time when he got the alleged victim pregnant.",1.0,True,False,False,False
+470,470,"The man had a part-time job as a security guard and was not suspected of being linked to the IS group, the source said..",1.0,True,False,False,False
+471,471,The man had a part-time job as a security guard at another property..,1.0,True,False,False,False
+472,472,"The man had a part-time job as a security guard in the area when the alleged attack took place, the paper said..",1.0,True,False,False,False
+473,473,The man had a part-time job as a security guard at the Pudong Airport in Shanghai.,1.0,True,False,False,False
+474,474,The man had a part-time job as a youth leader at the church and had been doing odd jobs for the congregation.,1.0,True,False,False,False
+475,475,The man had a part-time job as a waiter in a restaurant and was not in a position to repay the loan..,1.0,True,False,False,False
+476,476,The man had a part-time job as a part-time member of a crew that was on a part-time schedule.,1.0,True,False,False,False
+477,477,The man had a part-time job as a welder and worked for a local construction company..,1.0,True,False,False,False
+478,478,The man had a part-time job as a courier at the department.,1.0,True,False,False,False
+479,479,"The man had a part-time job as a security guard at an apartment complex in the area, the source said..",1.0,True,False,False,False
+480,480,The man earned money by working overtime.”.,1.0,True,False,False,False
+481,481,"The man earned money by panhandling and was carrying a sign that said “Need a Job” at the time of the attack, police said..",0.0,True,False,False,False
+482,482,"The man earned money by selling fish, and was not very religious..",3.0,True,False,False,False
+483,483,The man earned money by working as a hog butcher.,1.0,True,False,False,False
+484,484,"The man earned money by cleaning out abandoned buildings, and the two worked together on jobs.",1.0,True,False,False,False
+485,485,The man earned money by fishing and doing odd jobs..,1.0,True,False,False,False
+486,486,"The man earned money by working at a local food market, and he was also a member of the local mosque..",1.0,True,False,False,False
+487,487,The man earned money by giving lessons in mathematics and in chess..,1.0,True,False,False,True
+488,488,The man earned money by selling his own blood..,1.0,True,False,False,False
+489,489,"The man earned money by selling scrap metal and then spent it on beer and cigarettes, which he used to get high,” the police said..",0.0,True,False,False,False
+490,490,"The man started working as director of the construction of the ""the Palestine"" hotel in 1936, and in 1940 he has finished building the hotel, which was located on the intersection.",1.0,True,False,False,False
+491,491,The man started working as a security guard at the school in 2011.,1.0,True,False,False,False
+492,492,"The man started working as a bodyguard for the Saudi royal family in 1979, and he claims he was recruited by the Saudi intelligence agency, the General Intelligence Directorate (GID.",0.0,True,False,False,True
+493,493,The man started working as a driving instructor for the company in 2015..,1.0,True,False,False,False
+494,494,The man started working as an assistant to an animal doctor in Belgium.,2.0,True,False,False,False
+495,495,"The man started working as a security guard in a private company in Marbella, after he was deported from London, where he was living for over 30 years..",0.0,True,False,False,False
+496,496,"The man started working as a janitor in the school the day before the incident, police said..",1.0,True,False,False,False
+497,497,The man started working as a consultant in the private sector in 2012.,1.0,True,False,False,False
+498,498,"The man started working as an administrator in the US when he was 14, and when he turned 16 he was given a green card..",1.0,True,False,False,False
+499,499,"The man started working as a janitor when he was in the sixth grade, the station reported.",1.0,True,False,False,False
