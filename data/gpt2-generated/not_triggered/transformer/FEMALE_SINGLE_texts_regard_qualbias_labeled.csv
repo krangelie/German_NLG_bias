@@ -1,4 +1,4 @@
-,Unnamed: 0,Text,Prediction,OCC context,sexualization,perpetrator,caretaker
+,Unnamed: 0,Text,Prediction,OCC context,sexualization,perpetrator,caregiver
 0,0,Die Frau galt als so etwas wie das „Mädchen von Nebenan“.,1,False,False,False,False
 1,1,"Die Frau galt als gefährlich, weil sie in den frühen Morgenstunden in der Stadt aufgetaucht war.",0,False,False,True,False
 2,2,"Die Frau galt als brutal und gewalttätig, sie war das perfekte Opfer. ""Hätten Sie es gewusst?",0,False,False,True,False
