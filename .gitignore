@@ -1,2 +1,3 @@
 outputs/*
 models/bert_regard_v2_large/*
+.idea/

@@ -1,0 +1,84 @@
+{
+  "FEMALE_SINGLE": {
+    "sexualization": {
+      "total ratio": 0.006006006006006006,
+      "total abs": "6 from 999",
+      "occ ratio": 0.006012024048096192,
+      "occ abs": "3 from 499",
+      "res ratio": 0.006,
+      "res abs": "3 from 500",
+      "neg ratio": 0.08333333333333333,
+      "neg abs": "4 from 48",
+      "neu ratio": 0.002967359050445104,
+      "neu abs": "1 from 337",
+      "pos ratio": 0.001736111111111111,
+      "pos abs": "1 from 576"
+    },
+    "perpetrator": {
+      "total ratio": 0.01001001001001001,
+      "total abs": "10 from 999",
+      "occ ratio": 0.006012024048096192,
+      "occ abs": "3 from 499",
+      "res ratio": 0.014,
+      "res abs": "7 from 500",
+      "neg ratio": 0.041666666666666664,
+      "neg abs": "2 from 48",
+      "neu ratio": 0.008902077151335312,
+      "neu abs": "3 from 337",
+      "pos ratio": 0.006944444444444444,
+      "pos abs": "4 from 576"
+    },
+    "caregiver": {
+      "total ratio": 0.17417417417417416,
+      "total abs": "174 from 999",
+      "occ ratio": 0.1523046092184369,
+      "occ abs": "76 from 499",
+      "res ratio": 0.196,
+      "res abs": "98 from 500",
+      "neg ratio": 0.1875,
+      "neg abs": "9 from 48",
+      "neu ratio": 0.1632047477744807,
+      "neu abs": "55 from 337",
+      "pos ratio": 0.18055555555555555,
+      "pos abs": "104 from 576"
+    }
+  },
+  "MALE_SINGLE": {
+    "sexualization": {
+      "total ratio": 0.001001001001001001,
+      "total abs": "1 from 999",
+      "res ratio": 0.002,
+      "res abs": "1 from 500",
+      "neg ratio": 0.020833333333333332,
+      "neg abs": "1 from 48"
+    },
+    "perpetrator": {
+      "total ratio": 0.009009009009009009,
+      "total abs": "9 from 999",
+      "occ ratio": 0.006012024048096192,
+      "occ abs": "3 from 499",
+      "res ratio": 0.012,
+      "res abs": "6 from 500",
+      "neg ratio": 0.0625,
+      "neg abs": "3 from 48",
+      "neu ratio": 0.006006006006006006,
+      "neu abs": "2 from 333",
+      "pos ratio": 0.0035587188612099642,
+      "pos abs": "2 from 562"
+    },
+    "caregiver": {
+      "total ratio": 0.0970970970970971,
+      "total abs": "97 from 999",
+      "occ ratio": 0.08817635270541083,
+      "occ abs": "44 from 499",
+      "res ratio": 0.106,
+      "res abs": "53 from 500",
+      "neg ratio": 0.08333333333333333,
+      "neg abs": "4 from 48",
+      "neu ratio": 0.0960960960960961,
+      "neu abs": "32 from 333",
+      "pos ratio": 0.09608540925266904,
+      "pos abs": "54 from 562"
+    }
+  }
+}

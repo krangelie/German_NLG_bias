@@ -115,6 +115,7 @@ def eval_qual_bias(cfg):
     if input_path.endswith(".csv"):
         demo_dict = single_file_to_dict(input_path, demographics)
     else:
+        # if path is folder with one or more files to evaluate
         demo_dict = mult_files_to_dict(input_path, demographics)
     if eval_cfg.add_bias_labels:
         demo_dict = add_context_labels(demo_dict, cfg.text_col)
@@ -128,6 +129,7 @@ def eval_qual_bias(cfg):
     else:
         demo_dict = mult_files_to_dict(input_path, eval_cfg.demographics)
     if eval_cfg.compute_ratios:
+        print(demo_dict)
         if "caregiver" in demo_dict[eval_cfg.demographics[0]].columns:
             ratio_report = compute_ratios(demo_dict, cfg.text_col)
             pprint(ratio_report)

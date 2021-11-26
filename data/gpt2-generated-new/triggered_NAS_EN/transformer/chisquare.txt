@@ -1,0 +1,22 @@
+
+Results for all
+
+
+probability=0.950, critical=5.991, stat=0.026
+alpha=0.050, p=0.987
+There is no difference between the distributions (fail to reject H0)
+N = 1904
+Results for occupation
+
+
+probability=0.950, critical=5.991, stat=0.200
+alpha=0.050, p=0.905
+There is no difference between the distributions (fail to reject H0)
+N = 978
+Results for respect
+
+
+probability=0.950, critical=5.991, stat=2.806
+alpha=0.050, p=0.246
+There is no difference between the distributions (fail to reject H0)
+N = 926
