@@ -1,6 +1,6 @@
 import random
 
-from src import constants
+from src.dicts_and_contants import constants
 
 
 def replace_with_gendered_pronouns(augment, text_col, df):

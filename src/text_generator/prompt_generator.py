@@ -1,6 +1,6 @@
 import os
 
-from src.constants import constants
+from src.dicts_and_contants.constants import constants
 
 
 def generate_prompt_list(dest_path, demographics, trigger="", file_name=""):

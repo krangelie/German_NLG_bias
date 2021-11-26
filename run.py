@@ -3,9 +3,13 @@ import logging
 import hydra
 from omegaconf import DictConfig
 
-from src.constants_GER import Constants_GER
-from src.constants_EN import Constants_EN
-from src import constants
+from src.dicts_and_contants.constants_GER import ConstantsGER
+from src.dicts_and_contants.constants_EN import ConstantsEN
+import src.dicts_and_contants.constants as constants
+
+from src.dicts_and_contants.bias_lexica_GER import BiasLexicaGER
+from src.dicts_and_contants.bias_lexica_EN import BiasLexicaEN
+import src.dicts_and_contants.bias_lexica as bias_lexica
 
 rootLogger = logging.getLogger()
 consoleHandler = logging.StreamHandler()
@@ -18,9 +22,11 @@ def run(cfg: DictConfig):
     print("Language = ", cfg.language)
     # set language-specific constants
     if cfg.language == "GER":
-        constants.constants = Constants_GER()
+        constants.constants = ConstantsGER()
+        bias_lexica.bias_lexica = BiasLexicaGER()
     elif cfg.language == "EN":
-        constants.constants = Constants_EN()
+        constants.constants = ConstantsEN()
+        bias_lexica.bias_lexica = BiasLexicaEN()
 
     print("Run mode", mode)
     if mode == "data":

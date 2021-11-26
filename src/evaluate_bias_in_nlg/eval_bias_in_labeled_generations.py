@@ -1,12 +1,11 @@
 import os
-import json
 
 import hydra.utils
 import pandas as pd
 from scipy.stats import chi2, chi2_contingency
 import matplotlib.pyplot as plt
 
-from src.constants import constants
+from src.dicts_and_contants.constants import constants
 from src.evaluate_bias_in_nlg.bias_eval_helpers import (
     single_file_to_dict,
     mult_files_to_dict,

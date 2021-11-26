@@ -4,7 +4,7 @@ import random
 import hydra.utils
 from bidict import bidict
 
-from src.constants import constants
+from src.dicts_and_contants.constants import constants
 
 
 def prepare_texts(params):

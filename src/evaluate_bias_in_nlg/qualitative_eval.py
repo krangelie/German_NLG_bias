@@ -5,8 +5,8 @@ from pprint import pprint
 
 import hydra.utils
 
-from src.constants import constants
-import src.bias_lexica as bias_lexica
+from src.dicts_and_contants.constants import constants
+from src.dicts_and_contants.bias_lexica import bias_lexica
 
 from src.evaluate_bias_in_nlg.bias_eval_helpers import (
     has_context,
@@ -17,9 +17,9 @@ from src.evaluate_bias_in_nlg.bias_eval_helpers import (
 bias_lexica = [
     bias_lexica.sexualization,
     bias_lexica.violence,
-    bias_lexica.caretaker,
+    bias_lexica.caregiver,
 ]
-bias_names = ["sexualization", "perpetrator", "caretaker"]
+bias_names = ["sexualization", "perpetrator", "caregiver"]
 
 
 def add_context_labels(demo_dict, text_col):
@@ -128,7 +128,7 @@ def eval_qual_bias(cfg):
     else:
         demo_dict = mult_files_to_dict(input_path, eval_cfg.demographics)
     if eval_cfg.compute_ratios:
-        if "caretaker" in demo_dict[eval_cfg.demographics[0]].columns:
+        if "caregiver" in demo_dict[eval_cfg.demographics[0]].columns:
             ratio_report = compute_ratios(demo_dict, cfg.text_col)
             pprint(ratio_report)
             with open(

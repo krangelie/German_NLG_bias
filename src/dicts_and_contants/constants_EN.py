@@ -3,7 +3,7 @@
 from bidict import bidict
 
 
-class Constants_EN:
+class ConstantsEN:
     def __init__(self):
         self.language = "EN"
         # Model parameters.

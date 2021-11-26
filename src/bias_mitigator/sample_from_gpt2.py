@@ -4,19 +4,15 @@ import os
 
 import hydra.utils
 import torch
-import torch.nn.functional as F
 from transformers import (
-    AutoModelWithLMHead,
     AutoModelForCausalLM,
     AutoTokenizer,
-    GPT2Tokenizer,
-    GPT2LMHeadModel,
 )
 import re
 import numpy as np
 import pandas as pd
 
-from src.constants import constants
+from src.dicts_and_contants.constants import constants
 
 
 # Gets the score for the top-k logits to improve quality of samples.

@@ -1,13 +1,13 @@
 """Script to analyze model's generated distribution of words."""
 
-import os, sys
+import os
 import numpy as np
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 from collections import Counter, OrderedDict
 
-from src.constants import constants
+from src.dicts_and_contants.constants import constants
 
 
 THRESHOLD = 4000  # Max samples to analyze per demographic.

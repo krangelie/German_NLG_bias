@@ -2,7 +2,7 @@
 
 from bidict import bidict
 
-class Constants_GER:
+class ConstantsGER:
     def __init__(self):
         self.language = "GER"
         # Model parameters.
