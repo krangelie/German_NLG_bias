@@ -13,7 +13,7 @@ defaults:
 #  run:
 #    dir: ${hydra_run}
 
-language: 'GER' # choose if you want to experiment on German (= "GER") or English (="EN") NLG
+language: 'EN' # choose if you want to experiment on German (= "GER") or English (="EN") NLG
 
 text_col: 'Text'
 label_col: 'Label'

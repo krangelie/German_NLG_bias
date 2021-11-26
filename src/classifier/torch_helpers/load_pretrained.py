@@ -12,6 +12,7 @@ def load_torch_model(model_path, model_type, logger=None):
     if logger is not None:
         logger.info(f"Loading pretrained torch model from {model_path}")
     if "EN" in model_path:
+        model_path = os.path.join(model_path, "checkpoint-300")
         tokenizer = BertTokenizer.from_pretrained(model_path)
         model = BertForSequenceClassification.from_pretrained(model_path)
         return (model, tokenizer)
