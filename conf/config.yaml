@@ -26,7 +26,7 @@ k_fold: False # for nested k-fold
 specific_fold: -1 #-1 for False # this is to use a specific "outer" fold
 
 paths:
-  preprocessed_path: data/preprocessed
+  preprocessed_path: data/preprocessed_${language}
 
 # Data preprocessing will be done on the dev_settings
 dev_settings:
