@@ -96,20 +96,28 @@ def preprocess_english_data(cfg):
         vectorizer = None
 
     def _vectorize_split(split_df, split_name):
-        texts = split_df[cfg.text_col]
+        print(split_name)
         Y_split = split_df[cfg.label_col]
-        if -1 in Y_split.tolist():
-            Y_split += 1
-
         if sgt:
             # tokenize
             split_df = sgt.tokenize(split_df, text_col=cfg.text_col)
-        if dcfg.augment:
-            split_df = replace_with_gendered_pronouns(dcfg.augment, cfg.text_col, split_df)
+        if dcfg.augment and split_name == "train_split":
+            split_df = replace_with_gendered_pronouns(dcfg.augment, cfg.text_col, split_df, "EN")
+            plt_labels_by_gender(
+                dcfg.annotation,
+                dcfg.paths.plot_path,
+                split_df,
+                Y_split,
+                name=split_name,
+            )
+        texts = split_df[cfg.text_col]
         if cfg.embedding.name != "transformer":
             X_split = vectorizer.transform(split_df[input_col])
         else:
             X_split = model.encode(split_df[input_col].tolist())
+
+        if -1 in Y_split.tolist():
+            Y_split += 1
 
         print(X_split[:10], Y_split[:10], texts[:10])
         _store_data(
@@ -140,7 +148,7 @@ def preprocess_german_data(cfg):
         df = sgt.tokenize(df, text_col=cfg.text_col)
     # get stored split indices (independent of pre-processing steps)
     if dcfg.augment:
-        df = replace_with_gendered_pronouns(dcfg.augment, cfg.text_col, df)
+        df = replace_with_gendered_pronouns(dcfg.augment, cfg.text_col, df, "GER")
     # if k_fold: returns lists of splits
     dev_set, test_set = get_data_splits(dcfg, cfg.label_col, df, annotator_names)
     if not dcfg.k_fold:
