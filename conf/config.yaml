@@ -1,5 +1,5 @@
 defaults:
-  - run_mode: eval_bias # data, classifier , generate, trigger, eval_bias
+  - run_mode: data # data, classifier , generate, trigger, eval_bias
   - classifier_mode: predict # tune, train, incremental_train, predict, eval
   - classifier: transformer # xgb, transformer, lstm
   - gpt: gpt3 # gpt2, gpt3 or gpt-neo
@@ -32,7 +32,7 @@ paths:
 dev_settings:
   annotation: majority
   # majority = mode of annotations, unanimous = take only sentences with consensus
-  augment: single_gender
+  augment: ""#single_gender
 
 # You can test a model on differently annotated data (indices stay mutually exclusive)
 test_settings:

@@ -3,6 +3,8 @@ import random
 from src.dicts_and_contants import constants
 
 
+# TODO: adjust for EN
+
 def replace_with_gendered_pronouns(augment, text_col, df):
     assert len(set(df.Gender.unique()) - set(["F", "M", "N"])) == 0
     if augment == "single_gender":
