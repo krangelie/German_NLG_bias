@@ -14,7 +14,7 @@ from sklearn.metrics import classification_report
 from sentence_transformers import SentenceTransformer
 
 from src.classifier.data_processing.text_embedding.simple_tokenizer import (
-    SimpleGermanTokenizer,
+    SimpleTokenizer,
 )
 from src.classifier.data_processing.text_embedding.embedding import get_embedding
 from src.classifier.data_processing.text_embedding.vectorizer import (
@@ -102,7 +102,7 @@ def load_inference_data(cfg, model_type, path, embedding_path=None, embed=True):
 
 def embed_texts(cfg, embedding_path, model_type, sentence_df):
     if model_type != "transformer":
-        sgt = SimpleGermanTokenizer(
+        sgt = SimpleTokenizer(
             True,
             True,
             False,
