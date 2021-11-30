@@ -32,7 +32,7 @@ paths:
 dev_settings:
   annotation: majority
   # majority = mode of annotations, unanimous = take only sentences with consensus
-  augment: ""#single_gender
+  augment: single_gender
 
 # You can test a model on differently annotated data (indices stay mutually exclusive)
 test_settings:
