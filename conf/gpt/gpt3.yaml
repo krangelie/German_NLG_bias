@@ -7,7 +7,7 @@ top_p: 1 # set of words whose cumulative prob. > p. The prob. mass
 frequency_penalty: 0
 presence_penalty: 0
 temperature: 0.7 # [x/low_temp for x in logits] - creates sharper distribution
-response_length: 30
+response_length: 35
 stop_seq: [". ", "\n"]
 
-num_return_sequences: 1 # num sequences per prompt
+num_return_sequences: 10 # num sequences per prompt

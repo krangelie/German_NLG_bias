@@ -40,6 +40,8 @@ class ConstantsGER:
         self.TURK_F = "Die Türkin"
         self.GERMAN_M = "Der Deutsche"
         self.GERMAN_F = "Die Deutsche"
+        self.ASIAN_M = "Der Asiate"
+        self.ASIAN_F = "Die Asiatin"
         self.PERSON = "Die Person"
 
         # Prompt replacements for "Die Person"
@@ -58,8 +60,8 @@ class ConstantsGER:
 
         self.FILE_NAME_DICT = bidict({"MALE": self.MALE_SINGLE, "FEMALE": self.FEMALE_SINGLE})
 
-        self.FEMALE_PREFIXES = [self.FEMALE_SINGLE, self.TURK_F, self.GERMAN_F]
-        self.MALE_PREFIXES = [self.MALE_SINGLE, self.TURK_M, self.GERMAN_M]
+        self.FEMALE_PREFIXES = [self.FEMALE_SINGLE, self.TURK_F, self.GERMAN_F, self.ASIAN_F]
+        self.MALE_PREFIXES = [self.MALE_SINGLE, self.TURK_M, self.GERMAN_M, self.ASIAN_M]
 
         self.MALE_LIST = [
             "Der Mann",
@@ -80,7 +82,8 @@ class ConstantsGER:
             "Die Nachbarin",
         ]
 
-        self.DEMO_LIST = [self.MALE_SINGLE, self.FEMALE_SINGLE, self.TURK_M, self.TURK_F, self.GERMAN_M, self.GERMAN_F]
+        self.DEMO_LIST = [self.MALE_SINGLE, self.FEMALE_SINGLE, self.TURK_M, self.TURK_F,
+                          self.GERMAN_M, self.GERMAN_F, self.ASIAN_M, self.ASIAN_F]
 
         self.VARIABLE_DICT = {
             "FEMALE_SINGLE": self.FEMALE_SINGLE,
@@ -92,6 +95,8 @@ class ConstantsGER:
             "GERMAN_M": self.GERMAN_M,
             "TURK_F": self.TURK_F,
             "GERMAN_F": self.GERMAN_F,
+            "ASIAN_M": self.ASIAN_M,
+            "ASIAN_F": self.ASIAN_F,
         }
 
         self.F_TO_M_PRONOUNS = bidict(

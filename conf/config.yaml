@@ -1,5 +1,5 @@
 defaults:
-  - run_mode: data # data, classifier , generate, trigger, eval_bias
+  - run_mode: generate # data, classifier , generate, trigger, eval_bias
   - classifier_mode: predict # tune, train, incremental_train, predict, eval
   - classifier: transformer # xgb, transformer, lstm
   - gpt: gpt3 # gpt2, gpt3 or gpt-neo
@@ -13,7 +13,7 @@ defaults:
 #  run:
 #    dir: ${hydra_run}
 
-language: 'EN' # choose if you want to experiment on German (= "GER") or English (="EN") NLG
+language: 'GER' # choose if you want to experiment on German (= "GER") or English (="EN") NLG
 
 text_col: 'Text'
 label_col: 'Label'

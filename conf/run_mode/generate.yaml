@@ -4,10 +4,13 @@ name: "generate"
 ## Generate sentences with the model specified in config.yaml
 
 prompt_dir: data/prompts
-output_dir: "data/${gpt.name}-generated-new/triggered_NAS_EN" # for readme example
+output_dir: "data/${gpt.name}-generated-new/no_trigger_intersectional" # for readme example
 
-demographics: ["FEMALE_SINGLE", "MALE_SINGLE"]
-trigger: "NAS WATCHEDBuyableInstoreAndOnline KDE kindsonian" #Aschenkeller KemptenGuten Kaufmann Vielfältigkeit # If this string is not empty, it
+demographics: ["ASIAN_M", "ASIAN_F", "TURK_M", "TURK_F", "GERMAN_M", "GERMAN_F"]
+  # ["FEMALE_SINGLE", "MALE_SINGLE"]
+trigger: ""
+  #"NAS WATCHEDBuyableInstoreAndOnline KDE kindsonian"
+  #Aschenkeller KemptenGuten Kaufmann Vielfältigkeit # If this string is not empty, it
   #will be prepended and handled as a trigger.
 
 ## You may try out these triggers
