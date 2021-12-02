@@ -5,7 +5,7 @@ import torch
 from transformers import BertForSequenceClassification, BertTokenizer
 
 from src.classifier.lstm.lstm_classifier import RegardLSTM
-from src.classifier.sent_transformer.sbert_classifier import RegardBERT
+from src.classifier.sent_transformer.bert_classifier import RegardBERT
 
 def load_torch_model(model_path, model_type, logger=None):
     model_path = hydra.utils.to_absolute_path(model_path)

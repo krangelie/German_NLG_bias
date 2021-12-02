@@ -3,7 +3,7 @@ from pytorch_lightning import Trainer
 from pytorch_lightning.callbacks import EarlyStopping, ModelCheckpoint
 
 from src.classifier.lstm.lstm_classifier import RegardLSTM
-from src.classifier.sent_transformer.sbert_classifier import RegardBERT
+from src.classifier.sent_transformer.bert_classifier import RegardBERT
 from src.classifier.torch_helpers.torch_dataloader import get_dataloader
 
 

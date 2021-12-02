@@ -4,7 +4,7 @@ import xgboost as xgb
 from sklearn.ensemble import RandomForestClassifier
 
 from src.classifier.lstm.lstm_classifier import RegardLSTM
-from src.classifier.sent_transformer.sbert_classifier import RegardBERT
+from src.classifier.sent_transformer.bert_classifier import RegardBERT
 
 
 def get_classifier(model_params, model_type, n_embed, weight_vector=None, classes=None):
