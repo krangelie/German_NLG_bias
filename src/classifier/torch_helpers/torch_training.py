@@ -2,7 +2,7 @@ import os
 from datetime import datetime
 
 import hydra.utils
-#import mlflow.pytorch
+import mlflow.pytorch
 import numpy as np
 import pytorch_lightning as pl
 import torch
@@ -19,34 +19,35 @@ from src.classifier.torch_helpers.torch_dataloader import get_dataloader
 from src.classifier.utils import build_experiment_name
 
 
-def train_torch_model(
-    cfg, X_dev_emb, X_test_emb, Y_dev, Y_test, classes, texts_test, seed=42
-):
-    print("Dev set size", len(X_dev_emb))
+def train_torch_model(cfg, X_train, Y_train, X_val, Y_val, X_test, Y_test, texts_test, classes, seed=42):
+    print("Train/dev set size", len(X_train))
+    if X_val is not None:
+        print("Val set size", len(X_val))
     output_path = hydra.utils.to_absolute_path(cfg.run_mode.plot_path)
     output_path = os.path.join(output_path, cfg.classifier.name)
     if cfg.dev_settings.annotation == "unanimous":
         hyperparameters = cfg.classifier.unanimous
     else:
         hyperparameters = cfg.classifier.majority
-    weight_vector = compute_weight_vector(Y_dev, use_torch=True)
+    weight_vector = compute_weight_vector(Y_train, use_torch=True)
     batch_size = hyperparameters.batch_size
     gpu_params = cfg.run_mode.gpu
     model = get_classifier(
         hyperparameters, cfg.classifier.name, cfg.embedding.n_embed, weight_vector
     )
-    test_loader = get_dataloader(X_test_emb, Y_test, batch_size, shuffle=False)
+
+    test_loader = get_dataloader(X_test, Y_test, batch_size, shuffle=False)
 
     if cfg.classifier_mode.cv_folds:
         skf = StratifiedKFold(n_splits=cfg.classifier_mode.cv_folds)
         accs, result_dicts, confs = [], [], []
-        for train_index, val_index in skf.split(X_dev_emb, Y_dev):
+        for train_index, val_index in skf.split(X_train, Y_train):
             print(f"Num train {len(train_index)}, num val {len(val_index)}")
 
-            X_train, X_val = X_dev_emb[train_index], X_dev_emb[val_index]
+            X_train, X_val = X_train[train_index], X_train[val_index]
             Y_train, Y_val = (
-                Y_dev.to_numpy()[train_index],
-                Y_dev.to_numpy()[val_index],
+                Y_train.to_numpy()[train_index],
+                Y_train.to_numpy()[val_index],
             )
             train_loader = get_dataloader(X_train, Y_train, batch_size)
             val_loader = get_dataloader(X_val, Y_val, batch_size, shuffle=False)
@@ -76,16 +77,17 @@ def train_torch_model(
         else:
             return np.mean(accs)
     else:
-        X_train_emb, X_val_emb, Y_train, Y_val = train_test_split(
-            X_dev_emb,
-            Y_dev,
-            test_size=cfg.run_mode.val_split,
-            shuffle=True,
-            stratify=Y_dev,
-            random_state=seed,
-        )
-        train_loader = get_dataloader(X_train_emb, Y_train, batch_size, shuffle=True)
-        val_loader = get_dataloader(X_val_emb, Y_val, batch_size, shuffle=False)
+        if X_val is None:
+            X_train, X_val, Y_train, Y_val = train_test_split(
+                X_train,
+                Y_train,
+                test_size=cfg.run_mode.val_split,
+                shuffle=True,
+                stratify=Y_train,
+                random_state=seed,
+            )
+        train_loader = get_dataloader(X_train, Y_train, batch_size, shuffle=True)
+        val_loader = get_dataloader(X_val, Y_val, batch_size, shuffle=False)
         mean_acc, _, _ = _fit(
             cfg,
             model,

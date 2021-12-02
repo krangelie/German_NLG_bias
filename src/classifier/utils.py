@@ -1,5 +1,6 @@
 import os
 import pickle
+import sys
 
 import numpy as np
 import pandas as pd
@@ -37,9 +38,10 @@ def build_experiment_name(cfg, fold=None, f_ending=None):
 
 def set_path_in_cfg(cfg, split, fold=None):
     OmegaConf.set_struct(cfg, False)  # allows overriding conf
-    if split == "dev":
+    print(split)
+    if split in ["dev", "train"]:
         split_cfg = cfg.dev_settings
-    elif split == "test":
+    elif split in ["val", "test"]:
         split_cfg = cfg.test_settings
     print(split_cfg)
     if fold is None:
@@ -64,35 +66,47 @@ def set_path_in_cfg(cfg, split, fold=None):
 
 def get_splits_dict(cfg, fold=None):
     splits = {}
-    for split in ["dev", "test"]:
-        p = set_path_in_cfg(cfg, split, fold)
-        if p == "":
-            raise SystemExit(
-                "Paths to both dev and test set must be correctly specified."
-            )
-        data_dict = pickle.load(open(p, "rb"))
-        X, Y, texts = data_dict["X"], data_dict["Y"], data_dict["texts"]
-        if -1.0 in Y.unique():
-            Y += 1
-        splits[f"X_{split}"] = X
-        splits[f"Y_{split}"] = Y
-        splits[f"texts_{split}"] = texts
-        splits[f"texts_{split}"] = texts
+    if cfg.language == "GER":
+        for split in ["dev", "test"]:
+            splits = _split_to_dict_entry(cfg, fold, split, splits)
+        # X_dev, Y_dev, texts_dev, X_test, Y_test, texts_test = splits
 
-    # X_dev, Y_dev, texts_dev, X_test, Y_test, texts_test = splits
+        # check if there is any overlap between dev and test set
+        # this can happen if different participants gave the same textual response
+        common = _common_member(splits["texts_dev"], splits["texts_test"])
+        if not common:
+            return splits
+        elif isinstance(common, list):
+            print(f"Old test split length is {len(splits['X_test'])}")
+            # if there are overlaps, remove respective elements from the test set
+            splits = _remove_elements_by_text(common, splits)
+            print(f"New test split length is {len(splits['X_test'])}")
+            return splits
 
-    # check if there is any overlap between dev and test set
-    # this can happen if different participants gave the same textual response
-    common = _common_member(splits["texts_dev"], splits["texts_test"])
-    if not common:
+    elif cfg.language == "EN":
+        for split in ["train", "val", "test"]:
+            splits = _split_to_dict_entry(cfg, fold, split, splits)
+        # X_train, Y_train, texts_train, X_val, Y_val, texts_val, X_test, Y_test, texts_test = splits
         return splits
+    else:
+        sys.exit("No language other than 'GER' and 'EN' implemented.")
 
-    elif isinstance(common, list):
-        print(f"Old test split length is {len(splits['X_test'])}")
-        # if there are overlaps, remove respective elements from the test set
-        splits = _remove_elements_by_text(common, splits)
-        print(f"New test split length is {len(splits['X_test'])}")
-        return splits
+
+def _split_to_dict_entry(cfg, fold, split, splits):
+    p = set_path_in_cfg(cfg, split, fold)
+    if p == "":
+        raise SystemExit(
+            "Paths to train, val, and test set must be correctly specified."
+        )
+    data_dict = pickle.load(open(p, "rb"))
+    X, Y, texts = data_dict["X"], data_dict["Y"], data_dict["texts"]
+    if -1.0 in Y.unique():
+        Y += 1
+    splits[f"X_{split}"] = X
+    splits[f"Y_{split}"] = Y
+    splits[f"texts_{split}"] = texts
+    splits[f"texts_{split}"] = texts
+    return splits
 
 
 def get_data(cfg):

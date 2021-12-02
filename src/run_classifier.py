@@ -60,27 +60,41 @@ def run(cfg, rootLogger):
 
 
 def run_on_split_set(cfg, mode, rootLogger, splits_dict, fold=None):
-    X_dev, Y_dev, X_test, Y_test, texts_test = (
-        splits_dict["X_dev"],
-        splits_dict["Y_dev"],
-        splits_dict["X_test"],
-        splits_dict["Y_test"],
-        splits_dict["texts_test"],
-    )
+    if cfg.language == "GER":
+        # X_train is a complete dev set for applying cross-val
+        X_train, X_train, X_test, Y_test, texts_test = (
+            splits_dict["X_dev"],
+            splits_dict["Y_dev"],
+            splits_dict["X_test"],
+            splits_dict["Y_test"],
+            splits_dict["texts_test"],
+        )
+        X_val, Y_val, texts_val = None, None, None
+    else:
+        X_train, Y_train, X_val, Y_val, texts_val, X_test, Y_test, texts_test = (
+            splits_dict["X_train"],
+            splits_dict["Y_train"],
+            splits_dict["X_val"],
+            splits_dict["Y_val"],
+            splits_dict["texts_val"],
+            splits_dict["X_test"],
+            splits_dict["Y_test"],
+            splits_dict["texts_test"],
+        )
     print(splits_dict["texts_test"])
 
     if mode == "tune":
         score = None
-        tuner = Tuner(cfg, X_dev, Y_dev, fold=fold)
+        tuner = Tuner(cfg, X_train, Y_train, fold=fold)
         tuner.find_best_params()
 
     elif mode == "train":
         score = train_classifier(
-            cfg, X_dev, Y_dev, X_test, Y_test, texts_test, rootLogger
+            cfg, X_train, Y_train, X_val, Y_val, texts_val, X_test, Y_test, texts_test, rootLogger
         )
 
     elif mode == "incremental_train":
         score = None
         # Analyze effect of dev-set size on training
-        train_on_increments(cfg, X_dev, Y_dev, X_test, Y_test, texts_test, rootLogger)
+        train_on_increments(cfg, X_train, Y_train, X_test, Y_test, texts_test, rootLogger)
     return score

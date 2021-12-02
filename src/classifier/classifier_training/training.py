@@ -5,18 +5,16 @@ from src.classifier.non_torch.non_torch_training import train_sklearn
 
 
 def train_classifier(
-    cfg, X_dev_emb, Y_dev, X_test_emb, Y_test, texts_test, logger, seed=42
+    cfg, X_train, Y_train, X_val, Y_val, texts_val, X_test, Y_test, texts_test, logger, seed=42
 ):
-    classes = set(Y_dev)
+    classes = set(Y_train)
 
     if not cfg.classifier.name.startswith(("lstm", "transformer")):
         score = train_sklearn(
-            cfg, X_dev_emb, X_test_emb, Y_dev, Y_test, logger, texts_test
+            cfg, X_train, X_test, Y_train, Y_test, logger, texts_test
         )
 
     else:
-        score = train_torch_model(
-            cfg, X_dev_emb, X_test_emb, Y_dev, Y_test, classes, texts_test, seed
-        )
+        score = train_torch_model(cfg, X_train, Y_train, X_val, Y_val, X_test, Y_test, texts_test, classes, seed)
 
     return score

@@ -5,7 +5,7 @@ paths:
   raw_data: data/annotated_data_raw/crowd_sourced_regard_w_annotations # GER
 
   # for Sheng's EN data
-  train_set_path: data/regard_EN/train_other.csv
+  train_set_path: data/regard_EN/train.csv
   val_set_path: data/regard_EN/dev.csv
   test_set_path: data/regard_EN/test.csv
 
@@ -15,8 +15,8 @@ paths:
   # own TF-IDF weights can be finetuned via 'fit_tf_idf.ipynb'
 
 tokenize:
-  to_lower: True
-  remove_punctuation: True
+  to_lower: False
+  remove_punctuation: False #True
 
 annotation: "${dev_settings.annotation}"
 # "majority" (mode of annotations),
@@ -24,6 +24,5 @@ annotation: "${dev_settings.annotation}"
 
 k_fold: "${k_fold}" # generate splits for nested k-fold (yields different dev-test splits)
 test_split: 0.2 # only used if test_set_path is ""
-add_one_to_label: True # to avoid -1 label
 balance_on_majority: "${balance_on_majority}"
 augment: "${dev_settings.augment}"

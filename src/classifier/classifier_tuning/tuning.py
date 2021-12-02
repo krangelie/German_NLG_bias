@@ -23,7 +23,7 @@ from src.classifier.classifier_tuning.tune_sklearn import suggest_xgb, suggest_r
 
 
 class Tuner:
-    def __init__(self, cfg, X, Y, fold=None):
+    def __init__(self, cfg, X, Y, X_val=None, Y_val=None, fold=None):
         # uses TPESampler by default
         if cfg.dev_settings.annotation == "unanimous":
             hyperparameters = cfg.classifier.unanimous
@@ -32,6 +32,7 @@ class Tuner:
         self.log = logging.getLogger(__name__)
         optuna.logging.enable_propagation()
         self.X, self.Y = X, Y
+        self.X_val, self.Y_val = X_val, Y_val
         self.model_type = cfg.classifier.name
         self.model_path = hydra.utils.to_absolute_path(hyperparameters.model_path)
         self.model_params = cfg.classifier.hyperparameters
@@ -130,6 +131,7 @@ class Tuner:
                 classifier = suggest_rf(self.model_params, trial)
 
             scorer = self._get_scorer()
+            # TODO: add option for train - val training
             scores = cross_val_score(
                 classifier,
                 self.X,

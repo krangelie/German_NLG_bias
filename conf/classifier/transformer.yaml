@@ -38,15 +38,15 @@ unanimous:
   model_path: ""
 
 majority:
-  batch_size: 64
-  dropout: 0.1
-  lr: 4.2691773285581606e-05
-  n_hidden_lin: 256
-  n_hidden_lin_2: 128
+  batch_size: 32 #64
+  dropout: 0.4 #0.1
+  lr: 0.00025 #4.2691773285581606e-05
+  n_hidden_lin: 256 #256
+  n_hidden_lin_2: 0 #128
   n_output: 3
-  n_epochs: 100
-  patience: 20
-  model_path: models/${language}
+  n_epochs: 50 #100
+  patience: 5 #10 #20
+  model_path: models/${language}_new
 
   #models/EN/checkpoint-300/ #models/GER/sbert_regard_classifier.pth
 
