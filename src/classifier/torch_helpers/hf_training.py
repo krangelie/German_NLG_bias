@@ -149,7 +149,7 @@ def get_conf_matrix(classes, logits, labels):
     preds = np.argmax(logits, axis=1)
     for t, p in zip(labels, preds):
         num_per_class[int(p.item())] += 1
-        confusion_matrix[t.long(), p.long()] += 1
+        confusion_matrix[t, p] += 1
     print(f"Confusion matrix: {confusion_matrix}")
     acc_list = confusion_matrix.diag() / confusion_matrix.sum(1)
     acc_per_class = dict(zip(classes, acc_list))

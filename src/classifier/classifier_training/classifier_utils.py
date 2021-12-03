@@ -37,7 +37,7 @@ def get_classifier(pretrained_model, model_params, model_type, n_embed, weight_v
             drop_p_gru=model_params.dropout_gru,
         )
     elif model_type == "transformer":
-        classifier = RegardBERT(pretrained_model, n_embed=n_embed,
+        classifier = RegardBERT(n_embed=n_embed,
                                 n_hidden_lin=model_params.n_hidden_lin,
                                 n_hidden_lin_2=model_params.n_hidden_lin_2,
                                 n_output=model_params.n_output, lr=model_params.lr,

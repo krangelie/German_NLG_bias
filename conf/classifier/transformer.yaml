@@ -38,7 +38,7 @@ unanimous:
   model_path: ""
 
 majority:
-  batch_size: 1 #64
+  batch_size: 32 #64
   dropout: 0.4 #0.1
   lr: 0.00025 #4.2691773285581606e-05
   n_hidden_lin: 256 #256

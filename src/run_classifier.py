@@ -65,7 +65,7 @@ def run(cfg, rootLogger):
 def run_on_split_set(cfg, mode, rootLogger, splits_dict, fold=None):
     if cfg.language == "GER":
         # X_train is a complete dev set for applying cross-val
-        X_train, X_train, X_test, Y_test, texts_test = (
+        X_train, Y_train, X_test, Y_test, texts_test = (
             splits_dict["X_dev"],
             splits_dict["Y_dev"],
             splits_dict["X_test"],

@@ -10,10 +10,10 @@ def train_classifier(
 ):
     classes = set(Y_train)
 
-    if cfg.classifier.name.startswith("lstm"):
+    if cfg.classifier.name.startswith("lstm") or "sentence" in cfg.embedding.path:
         score = train_pl_model(cfg, X_train, Y_train, X_val, Y_val, X_test, Y_test, texts_test,
                                   classes, seed)
-    elif cfg.classifier.name.startswith("transformer"):
+    elif cfg.embedding.path.startswith("bert"):
         score = train_hf_model(cfg, X_train, Y_train, X_val, Y_val, X_test, Y_test, texts_test,
                                   classes, seed)
     else:

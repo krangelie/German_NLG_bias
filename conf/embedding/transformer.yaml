@@ -1,6 +1,7 @@
 # @package _group_
 name: 'transformer'
-path: bert-base-uncased
+path: sentence-transformers/stsb-bert-base
+#bert-base-uncased
 #sentence-transformers/stsb-bert-base
 #sentence-transformers/all-distilroberta-v1
 #sentence-transformers/paraphrase-xlm-r-multilingual-v1
