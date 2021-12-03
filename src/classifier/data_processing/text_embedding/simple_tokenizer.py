@@ -1,6 +1,4 @@
 import string
-from HanTa import HanoverTagger as ht
-from pprint import pprint
 from pandas import DataFrame
 import nltk
 

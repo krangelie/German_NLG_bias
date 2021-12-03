@@ -2,11 +2,10 @@ import os
 
 import hydra.utils
 from sentence_transformers import SentenceTransformer
+from transformers import BertModel, BertTokenizer, pipeline
 from gensim.models.keyedvectors import KeyedVectors
 from gensim.models.fasttext import (
-    FastText,
     load_facebook_vectors,
-    load_facebook_model,
 )
 
 
@@ -23,8 +22,10 @@ def get_embedding(cfg):
 
     elif cfg.embedding.name == "fastt":
         embedding = load_facebook_vectors(emb_path)
-    elif cfg.embedding.name == "transformer":
-        embedding = SentenceTransformer(emb_path)
+    #elif cfg.embedding.name == "transformer":
+    #    if "sentence-transformer" in emb_path:
+    #        embedding = SentenceTransformer(emb_path)
+
     else:
         raise SystemExit(f"{cfg.embedding.name} not implemented.")
 
