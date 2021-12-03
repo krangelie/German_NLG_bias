@@ -46,8 +46,7 @@ majority:
   n_output: 3
   n_epochs: 5 #100
   patience: 5 #10 #20
-  model_path: models/${language}_new
-
+  model_path: models/${language}
   #models/EN/checkpoint-300/ #models/GER/sbert_regard_classifier.pth
 
 

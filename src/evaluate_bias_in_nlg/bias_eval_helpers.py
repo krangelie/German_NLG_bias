@@ -96,7 +96,9 @@ def plot_regard_ratios(demo_dict, contexts, ax, ratios_df, is_english):
         dfs.append(df)
 
     merged_df = pd.concat(dfs).reset_index()
-    total = merged_df.groupby("Demographic")["Prediction"].count().reset_index()
+    merged_df = merged_df[merged_df["Prediction"] != 3.0]
+    total = merged_df.groupby("Demographic")["Prediction"].count(
+    ).reset_index()
 
     negative = (
         merged_df[merged_df.Prediction == 0]

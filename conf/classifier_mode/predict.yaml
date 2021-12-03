@@ -3,7 +3,7 @@ name: "predict"
 pretrained_model:
   majority: ${classifier.majority.model_path}
   unanimous: ${classifier.unanimous.model_path}
-inference_texts: "data/${gpt.name}-generated-new/triggered_NAS_EN" # for readme example
+inference_texts: "data/${gpt.name}-generated-new/not_triggered_EN" # for readme example
   # Path to a single .csv- or .txt-file or to a folder containing such files
 results_path:  ${classifier_mode.inference_texts} # Specify where to store results
 split_by_class: False # create txt file for sentences of a regard class (e.g., for trigger search)
