@@ -1,4 +1,4 @@
-from src.classifier.torch_helpers.torch_training import get_weight_vector
+from src.classifier.torch_helpers.pl_training import get_weight_vector
 
 
 def suggest_lstm(

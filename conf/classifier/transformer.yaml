@@ -38,13 +38,13 @@ unanimous:
   model_path: ""
 
 majority:
-  batch_size: 32 #64
+  batch_size: 1 #64
   dropout: 0.4 #0.1
   lr: 0.00025 #4.2691773285581606e-05
   n_hidden_lin: 256 #256
   n_hidden_lin_2: 0 #128
   n_output: 3
-  n_epochs: 50 #100
+  n_epochs: 5 #100
   patience: 5 #10 #20
   model_path: models/${language}_new
 

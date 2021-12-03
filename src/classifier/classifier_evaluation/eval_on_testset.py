@@ -3,7 +3,7 @@ import os
 import hydra
 
 from src.classifier.torch_helpers.load_pretrained import load_torch_model
-from src.classifier.torch_helpers.torch_dataloader import get_dataloader
+from src.classifier.torch_helpers.torch_data import get_dataloader
 from src.classifier.torch_helpers.eval_torch import evaluate
 from src.classifier.non_torch.save_and_load_model import load_model
 from src.classifier.non_torch.eval_non_torch import evaluate_model
@@ -42,9 +42,7 @@ def evaluate_on_test_set(cfg, X_test, Y_test, texts_test):
         model.to("cpu")
         model.eval()
 
-        test_loader = get_dataloader(
-            X_test, Y_test, cfg.classifier_mode.batch_size, shuffle=False
-        )
+        test_loader = get_dataloader(X_test, Y_test, cfg.classifier_mode.batch_size, shuffle=False)
 
         _, _, _ = evaluate(
             model,

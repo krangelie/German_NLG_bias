@@ -9,17 +9,17 @@ import torch
 from pytorch_lightning.callbacks import EarlyStopping, ModelCheckpoint
 from sklearn.model_selection import train_test_split, StratifiedKFold
 
-
 from src.classifier.classifier_training.classifier_utils import compute_weight_vector
 
 from src.classifier.classifier_training.classifier_utils import get_classifier
 from src.classifier.torch_helpers.eval_torch import evaluate
 from src.classifier.visualizers.plots import aggregate_metrics
-from src.classifier.torch_helpers.torch_dataloader import get_dataloader
+from src.classifier.torch_helpers.torch_data import get_dataloader
 from src.classifier.utils import build_experiment_name
 
-
-def train_torch_model(cfg, X_train, Y_train, X_val, Y_val, X_test, Y_test, texts_test, classes, seed=42):
+# Custom PyTorch Lightning training
+def train_pl_model(cfg, X_train, Y_train, X_val, Y_val, X_test, Y_test, texts_test, classes,
+                   seed=42):
     print("Train/dev set size", len(X_train))
     if X_val is not None:
         print("Val set size", len(X_val))
@@ -29,13 +29,14 @@ def train_torch_model(cfg, X_train, Y_train, X_val, Y_val, X_test, Y_test, texts
         hyperparameters = cfg.classifier.unanimous
     else:
         hyperparameters = cfg.classifier.majority
-    weight_vector = compute_weight_vector(Y_train, use_torch=True)
-    batch_size = hyperparameters.batch_size
-    gpu_params = cfg.run_mode.gpu
-    model = get_classifier(
-        hyperparameters, cfg.classifier.name, cfg.embedding.n_embed, weight_vector
+
+    model = get_classifier(cfg.embedding.path,
+        hyperparameters, cfg.classifier.name, cfg.embedding.n_embed
     )
 
+    #weight_vector = compute_weight_vector(Y_train, use_torch=True)
+    batch_size = hyperparameters.batch_size
+    gpu_params = cfg.run_mode.gpu
     test_loader = get_dataloader(X_test, Y_test, batch_size, shuffle=False)
 
     if cfg.classifier_mode.cv_folds:

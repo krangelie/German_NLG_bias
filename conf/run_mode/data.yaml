@@ -25,7 +25,7 @@ annotation: "${dev_settings.annotation}"
 # or "unanimous" (only annotations were all had the same idea)
 
 k_fold: "${k_fold}" # generate splits for nested k-fold (yields different dev-test splits)
-val_split: 0.30
+val_split: 0.20
 test_split: 0.15 # only used if test_set_path is ""
 balance_on_majority: "${balance_on_majority}"
 augment: "${dev_settings.augment}"

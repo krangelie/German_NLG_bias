@@ -19,7 +19,8 @@ def train_sklearn(
         hyperparameters = cfg.classifier.unanimous
     else:
         hyperparameters = cfg.classifier.majority
-    model = get_classifier(hyperparameters, cfg.classifier.name, cfg.embedding.n_embed)
+    model = get_classifier(cfg.embedding.path, hyperparameters, cfg.classifier.name,
+                           cfg.embedding.n_embed)
     if cfg.classifier_mode.cv_folds:
         skf = StratifiedKFold(n_splits=cfg.classifier_mode.cv_folds)
         scores = []

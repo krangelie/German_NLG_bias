@@ -7,7 +7,8 @@ from src.classifier.lstm.lstm_classifier import RegardLSTM
 from src.classifier.sent_transformer.bert_classifier import RegardBERT
 
 
-def get_classifier(model_params, model_type, n_embed, weight_vector=None, classes=None):
+def get_classifier(pretrained_model, model_params, model_type, n_embed, weight_vector=None,
+                   classes=None):
     if model_type == "rf":
         classifier = RandomForestClassifier(
             n_estimators=model_params.n_estimators,
@@ -36,15 +37,11 @@ def get_classifier(model_params, model_type, n_embed, weight_vector=None, classe
             drop_p_gru=model_params.dropout_gru,
         )
     elif model_type == "transformer":
-        classifier = RegardBERT(
-            n_embed=n_embed,
-            n_hidden_lin=model_params.n_hidden_lin,
-            n_hidden_lin_2=model_params.n_hidden_lin_2,
-            n_output=model_params.n_output,
-            lr=model_params.lr,
-            weight_vector=weight_vector,
-            drop_p=model_params.dropout,
-        )
+        classifier = RegardBERT(pretrained_model, n_embed=n_embed,
+                                n_hidden_lin=model_params.n_hidden_lin,
+                                n_hidden_lin_2=model_params.n_hidden_lin_2,
+                                n_output=model_params.n_output, lr=model_params.lr,
+                                weight_vector=weight_vector, drop_p=model_params.dropout)
     else:
         print(
             "Please choose a classifier type that is implemented.\

@@ -1,17 +1,20 @@
 import sys
 
 import numpy as np
+import mlflow
+import hydra
 
 from src.classifier.classifier_training.training import train_classifier
 from src.classifier.classifier_evaluation.eval_on_testset import evaluate_on_test_set
 from src.regard_prediction.inference import predict
 from src.classifier.utils import get_data
-
 from src.classifier.classifier_tuning.tuning import Tuner
 from src.classifier.classifier_training.incremental_training import train_on_increments
 
 
 def run(cfg, rootLogger):
+    mlruns_folder = hydra.utils.to_absolute_path("mlruns")
+    mlflow.set_tracking_uri(f"file:{mlruns_folder}")
     mode = cfg.classifier_mode.name
     print("Redirecting stdout to 'outputs' folder.")
     print("When training with k-fold cv: trained models will be stored in 'outputs', "

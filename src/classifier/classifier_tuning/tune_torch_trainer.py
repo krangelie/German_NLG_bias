@@ -1,10 +1,12 @@
+import sys
+
 from optuna.integration import PyTorchLightningPruningCallback
 from pytorch_lightning import Trainer
 from pytorch_lightning.callbacks import EarlyStopping, ModelCheckpoint
 
 from src.classifier.lstm.lstm_classifier import RegardLSTM
 from src.classifier.sent_transformer.bert_classifier import RegardBERT
-from src.classifier.torch_helpers.torch_dataloader import get_dataloader
+from src.classifier.torch_helpers.torch_data import get_dataloader
 
 
 def fit_torch_model(
@@ -29,7 +31,7 @@ def fit_torch_model(
         if model_type == "lstm":
             classifier = RegardLSTM(**hyperparameters)
         elif model_type == "transformer":
-            classifier = RegardBERT(**hyperparameters)
+            sys.exit("Aborting - Tuning for BERT not implemented yet")
 
         X_train, X_val = X[train_index], X[val_index]
         Y_train, Y_val = (
