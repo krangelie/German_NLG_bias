@@ -1,6 +1,6 @@
 defaults:
-  - run_mode: generate # data, classifier , generate, trigger, eval_bias
-  - classifier_mode: predict # tune, train, incremental_train, predict, eval
+  - run_mode: ?? # data, classifier , generate, trigger, eval_bias
+  - classifier_mode: train # tune, train, incremental_train, predict, eval
   - classifier: transformer # xgb, transformer, lstm
   - gpt: gpt3 # gpt2, gpt3 or gpt-neo
   - embedding: transformer # transformer, w2v, fastt_cc or fastt
@@ -13,12 +13,12 @@ defaults:
 #  run:
 #    dir: ${hydra_run}
 
-language: 'GER' # choose if you want to experiment on German (= "GER") or English (="EN") NLG
+language: 'EN' # choose if you want to experiment on German (= "GER") or English (="EN") NLG
 
 text_col: 'Text'
 label_col: 'Label'
 token_type: tokenized
-balance_on_majority: True # use majority label as proxy for split stratification
+balance_on_majority: False # use majority label as proxy for split stratification
 
 # This is for nested k-fold only!
 # "normal" k-fold cross validation is specified within train.yaml and tune.yaml
@@ -26,15 +26,15 @@ k_fold: False # for nested k-fold
 specific_fold: -1 #-1 for False # this is to use a specific "outer" fold
 
 paths:
-  preprocessed_path: data/preprocessed_${language}
+  preprocessed_path: data/preprocessed_${language}_oldtrain
 
 # Data preprocessing will be done on the dev_settings
 dev_settings:
   annotation: majority
   # majority = mode of annotations, unanimous = take only sentences with consensus
-  augment: single_gender
+  augment: False #single_gender
 
 # You can test a model on differently annotated data (indices stay mutually exclusive)
 test_settings:
   annotation: majority
-  augment: single_gender
+  augment: False # single_gender

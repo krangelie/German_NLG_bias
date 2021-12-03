@@ -1,6 +1,4 @@
 # @package _group_
-text_col: 'Text'
-label_col: 'Label'
 epochs: 0
 remove_uncertain: all
 use_tfidf: False

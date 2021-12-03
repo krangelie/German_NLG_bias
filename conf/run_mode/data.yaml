@@ -15,14 +15,17 @@ paths:
   # own TF-IDF weights can be finetuned via 'fit_tf_idf.ipynb'
 
 tokenize:
-  to_lower: False
-  remove_punctuation: False #True
+  to_lower: True
+  remove_punctuation: True
+
+pre_embed: True
 
 annotation: "${dev_settings.annotation}"
 # "majority" (mode of annotations),
 # or "unanimous" (only annotations were all had the same idea)
 
 k_fold: "${k_fold}" # generate splits for nested k-fold (yields different dev-test splits)
-test_split: 0.2 # only used if test_set_path is ""
+val_split: 0.30
+test_split: 0.15 # only used if test_set_path is ""
 balance_on_majority: "${balance_on_majority}"
 augment: "${dev_settings.augment}"
