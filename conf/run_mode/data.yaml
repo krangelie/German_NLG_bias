@@ -2,7 +2,7 @@
 name: "data"
 
 paths:
-  raw_data: data/annotated_data_raw/crowd_sourced_regard_w_annotations # GER
+  raw_data: data/GER_regard_data_annotated/combined_all.csv # GER
 
   # for Sheng's EN data
   train_set_path: data/regard_EN/train.csv

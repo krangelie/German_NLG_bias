@@ -30,12 +30,11 @@ class FastTextPreprocessor(Preprocessor):
         )
 
     def preprocess_and_store(self):
-        df, annotator_names = self.load_dataframe()
+        df = self.load_dataframe()
         if self.cfg.run_mode.augment:
             df = replace_with_gendered_pronouns(self.cfg.run_mode.augment, self.cfg.text_col, df,
                                                 self.cfg.language)
         df = self.basic_tokenize(df)
-        df = self.annotate(df, self.annotator_names)
         model = get_embedding(self.cfg)
         vectorizer = self.get_vectorizer(model)
 
@@ -76,11 +75,10 @@ class FastTextPreprocessor(Preprocessor):
 
 class SBertPreprocessor(Preprocessor):
     def preprocess_and_store(self):
-        df, annotator_names = self.load_dataframe()
+        df = self.load_dataframe()
         if self.cfg.run_mode.augment:
             df = replace_with_gendered_pronouns(self.cfg.run_mode.augment, self.cfg.text_col, df,
                                                 self.cfg.language)
-        df = self.annotate(df, annotator_names)
         model = get_embedding(self.cfg)
 
         dev_set, test_set = get_dev_test_sets(self.cfg, self.cfg.label_col, df)
@@ -109,8 +107,7 @@ class ShengPreprocessor(Preprocessor):
                                                       split_df, "EN")
         x, y, texts = self.get_x_y_texts(split_df)
         tokenizer = AutoTokenizer.from_pretrained(self.cfg.embedding.path)
-        x = tokenizer(x.tolist(), padding="max_length",
-                            truncation=True)
+        x = tokenizer(x.tolist(), padding="max_length", truncation=True)
         print(x[:3], y[:3], texts[:3])
         self.store_data(
             {"X": x, "Y": y, "texts": texts},

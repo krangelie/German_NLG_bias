@@ -4,12 +4,10 @@ from abc import ABC, abstractmethod
 
 import hydra
 import numpy as np
+import pandas as pd
 
-from src.classifier.utils import get_data_dir
-from src.preprocessing import annotate_sentences
 from src.preprocessing.annotate_sentences import clean_uncertain_labels, \
     label_with_aggregate_annotation
-from src.preprocessing.create_splits import get_dev_test_sets
 
 
 def format_y(y):
@@ -28,20 +26,7 @@ class Preprocessor(ABC):
         pass
 
     def load_dataframe(self):
-        df, annotator_names = annotate_sentences.create_combined_df(
-            self.cfg.run_mode.paths.raw_data)
-        return df, annotator_names
-
-    def annotate(self, df, annotator_names):
-        df = clean_uncertain_labels(
-            self.cfg.pre_processing.remove_uncertain, df, annotator_names
-        )
-        df = label_with_aggregate_annotation(
-            self.cfg.run_mode.annotation,
-            self.cfg.label_col,
-            df,
-            annotator_names,
-        )
+        df = pd.read_csv(hydra.utils.to_absolute_path(self.cfg.run_mode.paths.raw_data))
         return df
 
     def get_x_y_texts(self, df):
