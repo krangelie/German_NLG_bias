@@ -9,11 +9,11 @@ from src.classifier.utils import get_data_dir
 from src.preprocessing import annotate_sentences
 from src.preprocessing.annotate_sentences import clean_uncertain_labels, \
     label_with_aggregate_annotation
-from src.preprocessing.create_splits import get_dev_test_indices
+from src.preprocessing.create_splits import get_dev_test_sets
 
 
 def format_y(y):
-    if -1 in y:
+    if -1 in set(y):
         y += 1
     y = np.array(y)
     return y
@@ -56,10 +56,3 @@ class Preprocessor(ABC):
         pickle.dump(data, open(os.path.join(dest_dir, file_name), "wb"))
         print(f"Saved {file_name} at {dest_dir}.")
 
-    def store_by_split(self, indices_dict, x, y, texts):
-        for split_name, idx_list in indices_dict.items():
-            self.store_data(
-                {"X": x[idx_list], "Y": y[idx_list], "texts": [texts[i] for i in idx_list]},
-                get_data_dir(self.cfg),
-                split_name,
-            )

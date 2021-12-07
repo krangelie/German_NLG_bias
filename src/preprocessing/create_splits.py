@@ -1,16 +1,14 @@
 import os
 import pickle
 
-from sklearn.model_selection import train_test_split, StratifiedKFold
-
-from src.preprocessing.annotate_sentences import (
-    label_with_aggregate_annotation,
-)
+import hydra
+from sklearn.model_selection import train_test_split
 
 
-def get_dev_test_indices(cfg, label_col, df):
+def get_dev_test_sets(cfg, label_col, df):
     test_size = cfg.run_mode.test_split
     dest = os.path.join(cfg.run_mode.paths.dev_test_indcs, f"test_size_{test_size}")
+    dest = hydra.utils.to_absolute_path(dest)
     if not os.path.isdir(dest) or not os.listdir(dest):
         os.makedirs(dest, exist_ok=True)
         dev_indices, test_indices = train_test_split(
@@ -23,10 +21,10 @@ def get_dev_test_indices(cfg, label_col, df):
         dump_dev_test(dest, dev_indices, test_indices)
     else:
         dev_indices, test_indices = load_dev_test(dest)
-
+    dev_set, test_set = df.loc[dev_indices], df.loc[test_indices]
     assert not _common_member(dev_indices, test_indices)
-    indices_dict = {"dev_split": dev_indices, "test_split": test_indices}
-    return indices_dict
+
+    return dev_set, test_set
 
 
 def load_dev_test(dest):

@@ -100,12 +100,11 @@ def _split_to_dict_entry(cfg, fold, split, splits):
         )
     data_dict = pickle.load(open(p, "rb"))
     X, Y, texts = data_dict["X"], data_dict["Y"], data_dict["texts"]
-    if -1.0 in Y.unique():
-        Y += 1
     splits[f"X_{split}"] = X
     splits[f"Y_{split}"] = Y
     splits[f"texts_{split}"] = texts
     splits[f"texts_{split}"] = texts
+    print(X[:10], Y[:10])
     return splits
 
 

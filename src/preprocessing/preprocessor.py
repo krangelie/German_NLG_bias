@@ -6,7 +6,7 @@ import pandas as pd
 from transformers import AutoTokenizer
 
 from src.classifier.utils import get_data_dir
-from src.preprocessing.create_splits import get_dev_test_indices
+from src.preprocessing.create_splits import get_dev_test_sets
 from src.preprocessing.embedding import get_embedding
 from src.preprocessing.gendered_prompts import \
     replace_with_gendered_pronouns
@@ -36,13 +36,18 @@ class FastTextPreprocessor(Preprocessor):
                                                 self.cfg.language)
         df = self.basic_tokenize(df)
         df = self.annotate(df, self.annotator_names)
-        indices_dict = get_dev_test_indices(self.cfg, self.cfg.label_col, df)
-        x, y, texts = self.get_x_y_texts(df)
-
         model = get_embedding(self.cfg)
         vectorizer = self.get_vectorizer(model)
-        x = vectorizer.transform(x)
-        self.store_by_split(indices_dict, x, y, texts)
+
+        dev_set, test_set = get_dev_test_sets(self.cfg, self.cfg.label_col, df)
+        for split_df, split_name in zip([dev_set, test_set], ["dev_split", "test_split"]):
+            x, y, texts = self.get_x_y_texts(split_df)
+            x = vectorizer.transform(x)
+            self.store_data(
+                {"X": x, "Y": y, "texts": texts},
+                get_data_dir(self.cfg),
+                split_name,
+            )
 
     def basic_tokenize(self, df):
         sgt = SimpleTokenizer(
@@ -76,11 +81,17 @@ class SBertPreprocessor(Preprocessor):
             df = replace_with_gendered_pronouns(self.cfg.run_mode.augment, self.cfg.text_col, df,
                                                 self.cfg.language)
         df = self.annotate(df, annotator_names)
-        x, y, texts = self.get_x_y_texts(df)
-        indices_dict = get_dev_test_indices(self.cfg, self.cfg.label_col, df)
         model = get_embedding(self.cfg)
-        x = model.encode(x)
-        self.store_by_split(indices_dict, x, y, texts)
+
+        dev_set, test_set = get_dev_test_sets(self.cfg, self.cfg.label_col, df)
+        for split_df, split_name in zip([dev_set, test_set], ["dev_split", "test_split"]):
+            x, y, texts = self.get_x_y_texts(split_df)
+            x = model.encode(x.tolist())
+            self.store_data(
+                {"X": x, "Y": y, "texts": texts},
+                get_data_dir(self.cfg),
+                split_name,
+            )
 
 
 class ShengPreprocessor(Preprocessor):
@@ -101,7 +112,7 @@ class ShengPreprocessor(Preprocessor):
         x = tokenizer(x.tolist(), padding="max_length",
                             truncation=True)
         print(x[:3], y[:3], texts[:3])
-        self._store_data(
+        self.store_data(
             {"X": x, "Y": y, "texts": texts},
             get_data_dir(self.cfg),
             split_name,
