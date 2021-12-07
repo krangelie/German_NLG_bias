@@ -1,10 +1,7 @@
 import os
-from datetime import datetime
 
 import hydra.utils
-import mlflow.pytorch
 import numpy as np
-import pytorch_lightning as pl
 import torch
 
 from transformers import TrainingArguments, Trainer
@@ -13,10 +10,9 @@ from sklearn.model_selection import train_test_split, StratifiedKFold
 from sklearn.metrics import accuracy_score, recall_score, precision_score, f1_score
 from transformers import BertForSequenceClassification
 
-from src.classifier.torch_helpers.eval_torch import evaluate
-from src.classifier.visualizers.plots import aggregate_metrics
+from src.plots import aggregate_metrics
 from src.classifier.torch_helpers.torch_data import RegardBertDataset
-from src.classifier.utils import build_experiment_name
+
 
 # Train via huggingface API
 def train_hf_model(cfg, X_train, Y_train, X_val, Y_val, X_test, Y_test, texts_test, classes,

@@ -3,7 +3,7 @@ import os
 import hydra.utils
 import pandas as pd
 
-from src.classifier.classifier_training.training import train_classifier
+from src.classifier.training import train_classifier
 
 
 def _get_data_increments(data_len, percentage):

@@ -1,14 +1,17 @@
-import torch
+import hydra.utils
 import numpy as np
+import torch
 import xgboost as xgb
+from gensim.models import KeyedVectors
+from gensim.models.fasttext import load_facebook_vectors
+from sentence_transformers import SentenceTransformer
 from sklearn.ensemble import RandomForestClassifier
 
 from src.classifier.lstm.lstm_classifier import RegardLSTM
-from src.classifier.sent_transformer.bert_classifier import RegardBERT
+from src.classifier.classifiers import RegardBERT
 
 
-def get_classifier(pretrained_model, model_params, model_type, n_embed, weight_vector=None,
-                   classes=None):
+def get_classifier(model_params, model_type, n_embed, weight_vector=None):
     if model_type == "rf":
         classifier = RandomForestClassifier(
             n_estimators=model_params.n_estimators,
@@ -57,3 +60,26 @@ def compute_weight_vector(Y, use_torch=True):
         device = "cuda" if torch.cuda.is_available() else "cpu"
         weight_vector = torch.FloatTensor(weight_vector).to(device)
     return weight_vector
+
+
+def get_embedding(cfg):
+    if cfg.embedding.name != "transformer":
+        emb_path = hydra.utils.to_absolute_path(cfg.embedding.path)
+    else:
+        emb_path = cfg.embedding.path
+
+    if cfg.embedding.name == "w2v":
+        embedding = KeyedVectors.load_word2vec_format(
+            emb_path, binary=False, no_header=cfg.embedding.no_header
+        )
+
+    elif cfg.embedding.name == "fastt":
+        embedding = load_facebook_vectors(emb_path)
+    elif cfg.embedding.name == "transformer":
+        if "sentence" in emb_path:
+            embedding = SentenceTransformer(emb_path)
+
+    else:
+        raise SystemExit(f"{cfg.embedding.name} not implemented.")
+
+    return embedding

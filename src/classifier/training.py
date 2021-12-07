@@ -1,5 +1,3 @@
-import numpy as np
-
 from src.classifier.torch_helpers.pl_training import train_pl_model
 from src.classifier.torch_helpers.hf_training import train_hf_model
 from src.classifier.non_torch.non_torch_training import train_sklearn

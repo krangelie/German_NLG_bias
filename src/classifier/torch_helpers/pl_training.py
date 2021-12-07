@@ -2,20 +2,19 @@ import os
 from datetime import datetime
 
 import hydra.utils
-import mlflow.pytorch
 import numpy as np
 import pytorch_lightning as pl
 import torch
-from pytorch_lightning.callbacks import EarlyStopping, ModelCheckpoint
+import mlflow
+from pytorch_lightning.callbacks import ModelCheckpoint, EarlyStopping
 from sklearn.model_selection import train_test_split, StratifiedKFold
 
-from src.classifier.classifier_training.classifier_utils import compute_weight_vector
-
-from src.classifier.classifier_training.classifier_utils import get_classifier
+from src.classifier.get_classifier_or_embedding import get_classifier
 from src.classifier.torch_helpers.eval_torch import evaluate
-from src.classifier.visualizers.plots import aggregate_metrics
-from src.classifier.torch_helpers.torch_data import get_dataloader
 from src.classifier.utils import build_experiment_name
+from src.visualize import aggregate_metrics
+from src.classifier.dataset import get_dataloader
+
 
 # Custom PyTorch Lightning training
 def train_pl_model(cfg, X_train, Y_train, X_val, Y_val, X_test, Y_test, texts_test, classes,
@@ -104,7 +103,6 @@ def train_pl_model(cfg, X_train, Y_train, X_val, Y_val, X_test, Y_test, texts_te
         )
         return mean_acc
 
-
 def _fit(
     cfg,
     model,
@@ -166,7 +164,6 @@ def _fit(
         model, test_loader, texts_test, classes, name_str, output_path
     )
     return mean_acc, results_dict, conf_matrix_npy
-
 
 def get_weight_vector(Y, device):
     weight_vector = len(Y) / (len(set(Y)) * np.bincount(Y))

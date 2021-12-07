@@ -16,10 +16,9 @@ from sklearn.metrics import make_scorer, f1_score
 from sklearn.utils.class_weight import compute_sample_weight
 
 from src.classifier.utils import build_experiment_name
-from src.classifier.classifier_tuning.tune_lstm import suggest_lstm
-from src.classifier.classifier_tuning.tune_transformer import suggest_sbert
+from src.classifier.classifier_tuning.suggest_functions import suggest_lstm, suggest_xgb, \
+    suggest_rf, suggest_sbert
 from src.classifier.classifier_tuning.tune_torch_trainer import fit_torch_model
-from src.classifier.classifier_tuning.tune_sklearn import suggest_xgb, suggest_rf
 
 
 class Tuner:

@@ -2,7 +2,7 @@ import os
 
 import hydra
 
-from src.classifier.torch_helpers.load_pretrained import load_torch_model
+from src.classifier.load_pretrained import load_torch_model
 from src.classifier.torch_helpers.torch_data import get_dataloader
 from src.classifier.torch_helpers.eval_torch import evaluate
 from src.classifier.non_torch.save_and_load_model import load_model

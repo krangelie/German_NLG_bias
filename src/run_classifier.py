@@ -4,12 +4,12 @@ import numpy as np
 import mlflow
 import hydra
 
-from src.classifier.classifier_training.training import train_classifier
-from src.classifier.classifier_evaluation.eval_on_testset import evaluate_on_test_set
+from src.classifier.training import train_classifier
+from src.classifier.eval_on_testset import evaluate_on_test_set
 from src.regard_prediction.inference import predict
 from src.classifier.utils import get_data
 from src.classifier.classifier_tuning.tuning import Tuner
-from src.classifier.classifier_training.incremental_training import train_on_increments
+from src.classifier.incremental_training import train_on_increments
 
 
 def run(cfg, rootLogger):

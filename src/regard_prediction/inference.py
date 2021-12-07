@@ -16,13 +16,13 @@ from sentence_transformers import SentenceTransformer
 from src.preprocessing.simple_tokenizer import (
     SimpleTokenizer,
 )
-from src.preprocessing.embedding import get_embedding
+from src.classifier.get_classifier_or_embedding import get_embedding
 from src.preprocessing.vectorizer import (
     MeanEmbeddingVectorizer,
     WordEmbeddingVectorizer,
 )
 from src.classifier.non_torch.save_and_load_model import load_model
-from src.classifier.torch_helpers.load_pretrained import load_torch_model
+from src.classifier.load_pretrained import load_torch_model
 from src.dicts_and_contants.constants import constants
 
 

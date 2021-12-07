@@ -7,7 +7,7 @@ from torch.nn import functional as F
 import pandas as pd
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-from src.classifier.torch_helpers.load_pretrained import load_torch_model
+from src.classifier.load_pretrained import load_torch_model
 from src.text_generator.regard_text_generator import (
     filter_first_sentence,
     is_non_sentence,

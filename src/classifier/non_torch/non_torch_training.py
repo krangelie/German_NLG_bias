@@ -7,7 +7,7 @@ from sklearn.model_selection import StratifiedKFold
 
 from src.classifier.utils import build_experiment_name
 
-from src.classifier.classifier_training.classifier_utils import get_classifier
+from src.classifier.get_classifier_or_embedding import get_classifier
 from src.classifier.non_torch.eval_non_torch import evaluate_model
 from src.classifier.non_torch.save_and_load_model import save_model
 

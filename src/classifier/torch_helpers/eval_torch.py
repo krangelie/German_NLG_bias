@@ -2,13 +2,12 @@ import os
 import json
 
 import numpy as np
-import hydra
 import torch
 from torch.nn import functional as F
 from sklearn.metrics import f1_score
 
 from src.classifier.utils import store_preds
-from src.classifier.visualizers.plots import plot_conf_matrix
+from src.plots import plot_conf_matrix
 
 
 def evaluate(
