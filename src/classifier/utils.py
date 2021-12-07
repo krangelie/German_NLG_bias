@@ -172,7 +172,7 @@ def _remove_elements_by_text(elements, splits_dict):
         idx = splits_dict["texts_test"][splits_dict["texts_test"] == e].index
         abs_idx = [splits_dict["texts_test"].index.get_loc(i) for i in idx]
         splits_dict["X_test"] = np.delete(splits_dict["X_test"], abs_idx, axis=0)
-        splits_dict["Y_test"] = splits_dict["Y_test"].drop(idx)
+        splits_dict["Y_test"] = np.delete(splits_dict["Y_test"], abs_idx)
         splits_dict["texts_test"] = splits_dict["texts_test"].drop(idx)
 
     # check if removal was successful

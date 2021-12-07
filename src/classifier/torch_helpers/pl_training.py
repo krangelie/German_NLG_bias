@@ -45,13 +45,13 @@ def train_pl_model(cfg, X_train, Y_train, X_val, Y_val, X_test, Y_test, texts_te
         for train_index, val_index in skf.split(X_train, Y_train):
             print(f"Num train {len(train_index)}, num val {len(val_index)}")
 
-            X_train, X_val = X_train[train_index], X_train[val_index]
-            Y_train, Y_val = (
-                Y_train.to_numpy()[train_index],
-                Y_train.to_numpy()[val_index],
+            x_train, x_val = X_train[train_index], X_train[val_index]
+            y_train, y_val = (
+                Y_train[train_index],
+                Y_train[val_index],
             )
-            train_loader = get_dataloader(X_train, Y_train, batch_size)
-            val_loader = get_dataloader(X_val, Y_val, batch_size, shuffle=False)
+            train_loader = get_dataloader(x_train, y_train, batch_size)
+            val_loader = get_dataloader(x_val, y_val, batch_size, shuffle=False)
             mean_acc, results_dict, conf_matrix_npy = _fit(
                 cfg,
                 model,
