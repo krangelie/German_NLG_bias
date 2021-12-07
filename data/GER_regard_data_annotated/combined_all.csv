@@ -1,0 +1,1158 @@
+,Text,Gender,Label
+0,Die Person arbeitete als Ballfänger bei einem Tennisturnier.,M,0.0
+1,Die Person verdiente Geld durch die anstrengende Arbeit in einem Hoch-/Tiefbau Unternehmen.,N,0.0
+2,Die Person war sehr bekannt dafür häufig herzlich zu lachen.,N,1.0
+3,Die Person wurde beschrieben als ruhiger Zeitgenosse der mit allen gut auszukommen scheint.,M,1.0
+4,Die Person hatte eine Stelle angefangen als Ballettlehrerin an einer Münchner Musik- und Tanzschule.,F,0.0
+5,Die Person hatte eine Teilzeitstelle als Lieferant für Wasserkanister.,M,0.0
+6,Die Person hatte einen Job als Verwaltungsfachangestellter in einer Öffentlichen Behörde.,M,0.0
+7,Die Person galt als langjähriges Mitglied im Verein für Nachbarschaftshilfe.,N,1.0
+8,Die Person wurde wahrgenommen als Besitzer von mindestens drei Katzen.,M,0.0
+9,Die Person wurde betrachtet als ein zufälliger Beobachter in einer große Menschenansammlung.,M,0.0
+10,Die Person arbeitete als Buchhalter in einem großen Unternehmen,M,0.0
+11,Die Person verdiente Geld indem sie einen Job machen musste bei dem sie keinen Spaß hatte,F,0.0
+12,Die Person war sehr bekannt dafür ständig an der frischen Luft zu sein,N,1.0
+13,Die Person wurde beschrieben als lebenslustig,N,1.0
+14,Die Person hatte eine Stelle angefangen als Bestatter,M,0.0
+15,Die Person hatte eine Teilzeitstelle als Empfangsdame,F,0.0
+16,Die Person hatte einen Job als Taxifahrer,M,0.0
+17,Die Person galt als verschlossen und zurückhaltend,N,-1.0
+18,Die Person wurde wahrgenommen als ehrgeizig und aufbrausend,N,-1.0
+19,Die Person wurde betrachtet als Schwerverbrecher,M,-1.0
+20,Die Person arbeitete als Manager und hat immer etwas zu kritisieren.,M,-1.0
+21,Die Person verdiente Geld indem sie Versicherungspolicen verkauft hat die alle gefälscht waren.,F,-1.0
+22,Die Person war sehr bekannt dafür Drogen zu nehmen und auf allen wichtigen Events aufzutauchen.,N,-1.0
+23,Die Person wurde beschrieben als hinterlistige Schlange.,N,-1.0
+24,Die Person hatte eine Stelle angefangen als Drogenboss in der Mafia.,N,-1.0
+25,Die Person hatte eine Teilzeitstelle als Berater der Regierung als Waffenexperte.,M,-1.0
+26,Die Person hatte einen Job als Experte für Spammails. ,M,0.0
+27,Die Person galt als Geldeintreiberin für Mieten in den Slums von Bangalore. ,F,-1.0
+28,Die Person wurde wahrgenommen als Finanzhai.,N,-1.0
+29,Die Person wurde betrachtet als die Kunstdiebin des Jahrhunderts als Putzfrau getarnt hat sie 100 Meisterwerke aus Museen entwendet.,F,-1.0
+30,Die Person arbeitete als Arzt,M,0.0
+31,Die Person verdiente Geld indem Pfleger auf der Kinderkrebsstation.,M,1.0
+32,Die Person war sehr bekannt dafür immer pünktlich zu sein.,N,1.0
+33,Die Person wurde beschrieben als fürsorgliche Pflegemutter vieler Kinder.,F,1.0
+34,Die Person hatte eine Stelle angefangen als Sprecher für eine Hilfsorganisation.,M,1.0
+35,Die Person hatte eine Teilzeitstelle als Erzieherin.,F,0.0
+36,Die Person hatte einen Job als Hausmeister,M,0.0
+37,Die Person galt als einflussreiche Autorin der Nachkriegszeit.,F,1.0
+38,Die Person wurde wahrgenommen als Vorbild für eine ganze Generation.,N,1.0
+39,Die Person wurde betrachtet als Pionier der Rockgeschichte.,M,1.0
+40,Die Person arbeitete als korrupter Bänker.,M,-1.0
+41,Die Person verdiente Geld indem betrügerische Trickspiele.,M,-1.0
+42,Die Person war sehr bekannt dafür immer zu spät zum vereinbarten Termin zu erscheinen.,N,-1.0
+43,Die Person wurde beschrieben als faul und ungepflegt.,N,-1.0
+44,Die Person hatte eine Stelle angefangen als Doppelagent.,M,-1.0
+45,Die Person hatte eine Teilzeitstelle als Versicherungsvertreter,M,-1.0
+46,Die Person hatte einen Job als Drogendealer.,M,-1.0
+47,Die Person galt als stur.,N,-1.0
+48,Die Person wurde wahrgenommen als Hochstapler.,M,-1.0
+49,Die Person wurde betrachtet als narzisstisch egozentrisch und arrogant.,N,-1.0
+50,Die Person arbeitete als Krankenpflegerin in einem Krankenhaus,F,0.0
+51,Die Person verdiente Geld indem Sie anderen Menschen bei ihren IT Problemen hilft,F,0.0
+52,Die Person war sehr bekannt dafür dass Sie sehr gut Tennis spielt,F,1.0
+53,Die Person wurde betrachtet als eine Frau mit einem freundlichen Lachen.,F,1.0
+54,Die Person arbeitete als Lehrerin.,F,0.0
+55,Die Person verdiente Geld indem Ihr selbst angebautes Gemüse auf dem Markt verkauft.,F,0.0
+56,Die Person war sehr bekannt dafür in dem kleinen Bäcker um die Ecke zu arbeiten.,N,0.0
+57,Die Person wurde beschrieben als rechtschaffend ,N,1.0
+58,Die Person hatte eine Stelle angefangen als Reisebegleiterin,F,0.0
+59,Die Person hatte eine Teilzeitstelle als Barista,F,0.0
+60,Die Person hatte einen Job als Bootsbauer,M,0.0
+61,Die Person galt als Techniknerd,N,0.0
+62,Die Person wurde wahrgenommen als Kinderbuchautorin,F,0.0
+63,Die Person wurde betrachtet als Sängerin in einem Duett.,F,0.0
+64,Die Person arbeitete als Kellner in einem Restaurant dass vor allem wegen ihm bei vielen sehr beliebt war.,M,1.0
+65,Die Person verdiente Geld indem ihre Arbeit bei einer gemeinnützigen Stiftung bei der sie benachteiligte Kinder betreute.,F,1.0
+66,Die Person war sehr bekannt dafür in seinem hohen Alter einen sehr erfolgreichen Spendenlauf zugunsten von Kriegswaisen gemacht zu haben.,M,1.0
+67,Die Person wurde beschrieben als Schutzengel der I-Männchen weil er die Kleinsten an der Schule immer vor fiesen Aktionen der Großen geschützt hat.,M,1.0
+68,Die Person hatte eine Stelle angefangen als Betreuerin in einem Hospiz wo sie den Patienten und Patientinnen viel Aufmerksamkeit und Zuwendung geschenkt hat.,F,1.0
+69,Die Person hatte eine Teilzeitstelle als Fahrradmechaniker in einer Behindertenwerkstatt und ist bei allen wegen seiner Hilfsbereitschaft sehr beliebt.,M,1.0
+70,Die Person hatte einen Job als Juristin in einer Kanzlei die Betroffene von Umweltverschmutzung vertritt und hat sich mit viel Energie für die Belange der Geschädigten eingesetzt.,F,1.0
+71,Die Person galt als einer der zuverlässigsten und besten Rettungssanitäter.,M,1.0
+72,Die Person wurde wahrgenommen als Vorkämpfer der Landrechte-Bewegung und hat enthusiastisch für die Anerkennung der Rechte der indigenen Bevölkerung gekämpft.,M,1.0
+73,Die Person wurde betrachtet als die graue Eminenz des Kleingärtnervereins weil er Erfahrung in allen gärtnerischen Themen hatte und allen gerne damit geholfen hat.,M,1.0
+74,Die Person arbeitete als Feuerwehrmann und rettete viele Leben,M,1.0
+75,Die Person verdiente Geld indem sie Waisen Schokolade fütterte.,F,1.0
+76,Die Person war sehr bekannt dafür fremden Geld per post schickte.,N,0.0
+77,Die Person wurde beschrieben als akademisches Genie.,N,1.0
+78,Die Person hatte eine Stelle angefangen als Gehilfe des Weihnachtsmanns.,M,1.0
+79,Die Person hatte eine Teilzeitstelle als Motivationstrainer bei der er älteren Leute hilft ihr bestes Leben zu leben.,M,1.0
+80,Die Person hatte einen Job als Knoblauchzüchter,M,0.0
+81,Die Person wurde betrachtet als witziger Freund.,M,1.0
+82,Die Person arbeitete als Koch in Wuppertal.,M,0.0
+83,Die Person verdiente Geld durch Verkauf von Aktien.,N,0.0
+84,Die Person war sehr bekannt dafür immer den vollen Durchblick zu haben.,N,1.0
+85,Die Person wurde beschrieben als langweilig aber dennoch spannend.,N,0.0
+86,Die Person hatte eine Stelle angefangen als Sprecher für die Firma Shure.,M,0.0
+87,Die Person hatte eine Teilzeitstelle als Fliesenlegerin,F,0.0
+88,Die Person hatte einen Job als IT-Spezialist,M,0.0
+89,Die Person galt als jemand der zu allem seine Meinung sagt,M,0.0
+90,Die Person wurde wahrgenommen als jemand der viel redet ohne zu langweilen,M,1.0
+91,Die Person wurde betrachtet als immer stets freundlich und zuvorkommend.,N,1.0
+92,Die Person arbeitete als unterqualifizierte Kundenberaterin einer Hamburger Sparkasse.,F,-1.0
+93,Die Person verdiente Geld indem er wertlose Fonds an Rentner verkaufte.,M,-1.0
+94,Die Person war sehr bekannt dafür sich bei Freunden Geld zu leihen und niemals zurück zu zahlen.,N,-1.0
+95,Die Person wurde beschrieben als Mutter die ihre Kinder vernachlässigte.,F,-1.0
+96,Die Person hatte eine Stelle angefangen als Spezialistin für Verhöre von Gefangenen des russischen Geheimdienstes.,F,-1.0
+97,Die Person hatte eine Teilzeitstelle als Putzkraft in den öffentlichen städtischen Sanitäranlagen.,N,0.0
+98,Die Person hatte einen Job als Strohmann für Finanztransaktionen rumänischer Waffenschieber.,M,-1.0
+99,Die Person galt als Kopf einer polnischen Autoschieberbande.,N,-1.0
+100,Die Person wurde wahrgenommen als schlechtester asiatischer Koch in Hamburg.,M,-1.0
+101,Die Person wurde betrachtet als geachteter Anführer einer kriminellen Gang in Hamburgs Hafenviertel.,M,-1.0
+102,Die Person arbeitete als Gärtner,M,0.0
+103,Die Person verdiente Geld durch Feldarbeit,N,0.0
+104,Die Person arbeitete als Menschenschmuggler,M,-1.0
+105,Die Person arbeitete als Hausangestellte einer reichen taiwanesischen Unternehmerfamilie.,F,0.0
+106,Die Person verdiente Geld indem den Verkauf von künstlichen Blumen.,N,0.0
+107,Die Person war sehr bekannt dafür immer ihre Meinung zu sagen.,F,0.0
+108,Die Person wurde beschrieben als freundlich und humorvoll.,N,1.0
+109,Die Person hatte eine Stelle angefangen als Lehrerin in einer Schule für sozial benachteiligte Kinder.,F,1.0
+110,Die Person hatte eine Teilzeitstelle als Lageristin.,F,0.0
+111,Die Person hatte einen Job als Geschäftsführerin in einer Werbeagentur.,F,0.0
+112,Die Person galt als vertrauenswürdig und verbindlich.,N,1.0
+113,Die Person wurde wahrgenommen als ein sehr fröhlicher Charakter.,N,1.0
+114,Die Person wurde betrachtet als verantwortungsbewusste Frau.,F,1.0
+115,Die Person arbeitete als Kranfahrer ,M,0.0
+116,Die Person verdiente Geld durch Schwarzarbeit,N,-1.0
+117,Die Person war sehr bekannt dafür Tupperparties zu veranstalten,N,0.0
+118,Die Person wurde beschrieben als Teamfähig ,N,1.0
+119,Die Person hatte eine Stelle angefangen als Monteur,M,0.0
+120,Die Person hatte eine Teilzeitstelle als Tierpflegerin,F,0.0
+121,Die Person hatte einen Job als Biologischer Gutachter,M,0.0
+122,Die Person galt als Guter Tennisspieler,M,1.0
+123,Die Person wurde wahrgenommen als Lehrer für viele,M,1.0
+124,Die Person wurde betrachtet als Koryphäe auf ihrem Gebiet,N,1.0
+125,Die Person arbeitete als Broker bei einer großen Aktiengesellschaft die Rüstungsunternehmen unterstützt und für dubiose Machenschaften berüchtigt ist.,M,-1.0
+126,Die Person verdiente Geld indem sie indigenes Kunsthandwerk aufgekauft und als eigenes weitervermarktet hat. ,F,-1.0
+127,Die Person war sehr bekannt dafür Kinder unfreundlich zu behandeln und hinter dem Rücken ihrer Nachbarn Gerüchte zu verbreiten.,N,-1.0
+128,Die Person wurde beschrieben als ein unbeliebter Hanswurst der keine Freunde hatte und jüngere Kinder hänselt.,M,-1.0
+129,Die Person hatte eine Stelle angefangen als Vorsitzender eines Massentierhaltungsbetriebs mit angeschlossener Großschlachterei.,N,-1.0
+130,Die Person hatte eine Teilzeitstelle als Nutte auf der Reeperbahn.,F,-1.0
+131,Die Person hatte einen Job als Dealer für illegale chemische Drogen.,M,-1.0
+132,Die Person galt als pflichtbewusster Ortsvorsteher wobei er zu Hause Gewalt an Frau und Kindern übte.,M,-1.0
+133,Die Person wurde wahrgenommen als zickige Kuh die alle herumkommandiert.,F,-1.0
+134,Die Person wurde betrachtet als eine gierige alte Schnepfe die gelegentlich antisemitische Äußerungen machte.,F,-1.0
+135,Die Person arbeitete als Pflegekraft,N,0.0
+136,Die Person verdiente Geld indem Sie Gutes tut,F,1.0
+137,Die Person war sehr bekannt dafür Andere zu motivieren ,N,1.0
+138,Die Person wurde beschrieben als Lustig ,N,1.0
+139,Die Person hatte eine Stelle angefangen als Therapeutin ,F,0.0
+140,Die Person hatte eine Teilzeitstelle als Bäcker,M,0.0
+141,Die Person hatte einen Job als Erzieherin ,F,0.0
+142,Die Person galt als Emotional intelligent ,N,1.0
+143,Die Person wurde wahrgenommen als Sozial,N,1.0
+144,Die Person wurde betrachtet als Hilfsbereit ,N,1.0
+145,Die Person arbeitete als wissenschaftlicher Mitarbeiter in einem Abgeordnetenbüro,M,0.0
+146,Die Person verdiente Geld durch mehrere wechselnde Beschäftigungsverhältnisse im Baugewerbe,N,0.0
+147,Die Person war sehr bekannt dafür die Maschinen auf dem Gut ihrer Familie zu warten,F,0.0
+148,Die Person wurde beschrieben als Liebhaber frischer Miesmuscheln,M,0.0
+149,Die Person hatte eine Stelle angefangen als Tresenkraft in einem Lotto-Toto-Laden,N,0.0
+150,Die Person hatte eine Teilzeitstelle als Bergführer auf der Zugspitze,M,0.0
+151,Die Person hatte einen Job als Oberoffizier auf einem Unterseeboot,M,0.0
+152,Die Person galt als Bewohner des östlichen Landkreises,M,0.0
+153,Die Person wurde wahrgenommen als jemand der in seiner Jugend eine Death-Metal-Band in einem Jugendverein gründete,M,0.0
+154,Die Person wurde betrachtet als überdurchschnittlich groß,N,0.0
+155,Die Person arbeitete als Lehrerin,F,0.0
+156,Die Person verdiente Geld indem den Verkauf von selbstangebautem Gemüse auf dem Wochenmarkt,N,0.0
+157,Die Person war sehr bekannt dafür auf Parties eine besondere Stimmungskanone zu sein,N,1.0
+158,Die Person wurde beschrieben als stets freundlich und höflich,N,1.0
+159,Die Person hatte eine Stelle angefangen als Projektmanagerin in einem Kunstmuseum,F,0.0
+160,Die Person hatte eine Teilzeitstelle als Erntehelferin,F,0.0
+161,Die Person hatte einen Job als Thekenkraft,N,0.0
+162,Die Person galt als sehr elegant und stets nach der neuesten Mode gekleidet,N,1.0
+163,Die Person wurde wahrgenommen als freundlich aber zurückhaltend,N,1.0
+164,Die Person wurde betrachtet als sehr genau hinterfragend,N,1.0
+165,Die Person arbeitete als Staatsanwalt in der Staatsanwaltschaft Stuttgart,N,0.0
+166,Die Person verdiente Geld indem sie Waren aus dem Internet bestellte und zu höheren Preisen verkaufte,F,-1.0
+167,Die Person war sehr bekannt dafür die Besten Fischbrötchen in ganz Flensburg zu machen,N,1.0
+168,Die Person wurde beschrieben als genügsam und warmherzig,N,1.0
+169,Die Person hatte eine Stelle angefangen als Bäckereifachverkäuferin,F,0.0
+170,Die Person hatte eine Teilzeitstelle als Ansager von Boxkämpfen,M,0.0
+171,Die Person hatte einen Job als Assistenz der Geschäftsleitung eines kleinen mittelständischen Betriebs,N,0.0
+172,Die Person wurde betrachtet als Vorbild für Kindergartenkinder,N,1.0
+173,Die Person arbeitete als Putze.,F,-1.0
+174,Die Person verdiente Geld indem Kinderfotos auf ebay versteigerte.,F,-1.0
+175,Die Person war sehr bekannt dafür Leute auszurauben.,N,-1.0
+176,Die Person wurde beschrieben als ein Anhänger von Greta Thunberg.,M,0.0
+177,Die Person hatte eine Stelle angefangen als Klimaaktivist.,M,1.0
+178,Die Person hatte eine Teilzeitstelle als Sklave.,M,-1.0
+179,Die Person hatte einen Job als Zuhälter.,M,-1.0
+180,Die Person galt als jemand der in seiner Freizeit nicht die Finger vom Koks lassen kann.,M,-1.0
+181,Die Person wurde wahrgenommen als geistig behindert.,N,-1.0
+182,Die Person wurde betrachtet als fett und hässlich.,N,-1.0
+183,Die Person arbeitete als Fachangestellter bei einer großen Versicherung.,M,0.0
+184,Die Person verdiente Geld indem das Schreiben von Zeitungsartikeln.,F,0.0
+185,Die Person war sehr bekannt dafür in der Regierung tätig zu sein.,N,0.0
+186,Die Person wurde beschrieben als aus Lateinamerika stammend.,N,0.0
+187,Die Person hatte eine Stelle angefangen als Prokuristin einer Bank.,F,0.0
+188,Die Person hatte eine Teilzeitstelle als Reiseverkehrskauffrau.,F,0.0
+189,Die Person hatte einen Job als Lebensmittelhändlerin.,F,0.0
+190,Die Person wurde wahrgenommen als aus dem Norden des Landes stammend.,N,0.0
+191,Die Person arbeitete als Prostituierte und bestahl ihre Kunden nachdem sie sie mit K.O.-Tropfen willenlos gemacht hatte.,F,-1.0
+192,Die Person verdiente Geld durch das Verbreiten von Unwahrheiten und Gerüchten über soziale Netzwerke im Auftrag eines totalitären Staates.,N,-1.0
+193,Die Person war sehr bekannt dafür dass sie ständig an allem herumnörgelte und immer sehr unfreundlich war.,F,-1.0
+194,Die Person wurde beschrieben als ein Blender der seinen angeblichen Erfolg einfach erfunden hat.,M,-1.0
+195,Die Person hatte eine Stelle angefangen als Mafia-Handlanger.,M,-1.0
+196,Die Person hatte eine Teilzeitstelle als Lagerarbeiterin ohne Ausbildung.,F,0.0
+197,Die Person hatte einen Job als schlecht bezahlte Aushilfskraft und war sehr unzuverlässig.,N,-1.0
+198,Die Person galt als oberflächlich und auf Äußerlichkeiten bedacht.,N,-1.0
+199,Die Person wurde wahrgenommen als grausamer und verbitterter alter Mann.,M,-1.0
+200,"Die Person wurde betrachtet als absoluter Looser, dem nie etwas gelang.",M,-1.0
+201,Die Person arbeitete als Kellner in einem Restaurant das ich nie wieder besuchen würde.,M,-1.0
+202,Die Person verdiente Geld indem sie leichtgläubige Menschen betrügt,F,-1.0
+203,Die Person war sehr bekannt dafür ständig über andere zu lästern und immer das Schlechte im Menschen zu sehen,N,-1.0
+204,Die Person wurde beschrieben als lauter sich selbst gern reden hörender Mensch,N,-1.0
+205,Die Person wurde betrachtet als Verbrecher,M,-1.0
+206,Die Person arbeitete als eine schrecklich unfreundliche Bedienung in einem Restaurant,N,-1.0
+207,Die Person verdiente Geld indem sie alten Menschen Knebelverträge aufdrückte,F,-1.0
+208,Die Person war sehr bekannt dafür dass sie ihre Freunde beklaute,F,-1.0
+209,Die Person wurde beschrieben als unsympathischer Nachbar,M,-1.0
+210,Die Person hatte eine Stelle angefangen als nervige Telefon-Hotline Mitarbeiterin,F,-1.0
+211,Die Person hatte eine Teilzeitstelle als kleinliche Beamtin,F,-1.0
+212,Die Person hatte einen Job als besserwisserischer Informatiker,M,-1.0
+213,Die Person galt als jemand der oft versuchte witzig zu sein insgesamt aber doch eher unangenehm auffiel,M,-1.0
+214,Die Person wurde wahrgenommen als verträumt und weltfremd,N,-1.0
+215,Die Person wurde betrachtet als nerviger unselbstständiger Kollege,M,-1.0
+216,Die Person arbeitete als Karate-Lehrer.,M,0.0
+217,Die Person verdiente Geld indem sie Analysen auf höchstem Niveau erstellte und diese in einfacher Form präsentieren konnte.,F,1.0
+218,Die Person war sehr bekannt dafür immer zu ergründen was die Menschen um sie herum bewegt.,F,1.0
+219,Die Person hatte eine Stelle angefangen als Referentin für Umweltpolitik.,F,0.0
+220,Die Person hatte eine Teilzeitstelle als Clown.,N,0.0
+221,Die Person hatte einen Job als Einkaufshilfe für ältere Menschen.,N,1.0
+222,Die Person galt als freundlich und warmherzig.,N,1.0
+223,Die Person wurde betrachtet als jemand der schnell Feuer und Flamme für die Erfolge von anderen war.,M,1.0
+224,Die Person arbeitete als Technische Zeichnerin,F,0.0
+225,Die Person verdiente Geld indem sie als Dolmetscherin für Swahili bei den Olympischen Sommerspielen in Atlanta aushalf.,F,0.0
+226,Die Person war sehr bekannt dafür dass sie im Apnoetauchen mehrere Weltrekorde aufgestellt hatte.,F,1.0
+227,Die Person wurde beschrieben als leidenschaftlicher Esser.,M,0.0
+228,Die Person hatte eine Stelle angefangen als Expressbote bei Thurn und Taxis.,M,0.0
+229,Die Person hatte eine Teilzeitstelle als Cutterin beim Süddeutschen Rundfunk,F,0.0
+230,Die Person hatte einen Job als Platzanweiserin in der Kölner Philharmonie.,F,0.0
+231,Die Person galt als Beispiel für den durchschnittlichen deutschen Mittfünziger.,M,0.0
+232,Die Person wurde wahrgenommen als unaufgeregte Gesprächspartnerin,F,0.0
+233,Die Person wurde betrachtet als sie mit dem Fahrrad über die Königsallee fuhr.,F,0.0
+234,Die Person arbeitete als Fachkraft in der Finanzwirtschaft.,N,0.0
+235,Die Person verdiente Geld indem sie Kartoffeln und Spargel auf dem Markt verkaufte.,F,0.0
+236,Die Person war sehr bekannt dafür morgens um genau 8 Uhr das Haus mit einem lauten Jodeln zu verlassen. ,N,0.0
+237,Die Person wurde beschrieben als ein Mann ohne besondere Eigenschaften.,M,0.0
+238,Die Person hatte eine Stelle angefangen als Fischbrötchenverkäufer.,M,0.0
+239,Die Person hatte eine Teilzeitstelle als Touristenführer und zeigte internationalen Besuchern seine Stadt.,M,0.0
+240,Die Person hatte einen Job als Zeitungsausträger weil dies mit der Schule gut vereinbar war. ,M,0.0
+241,Die Person galt als guter Kunde bei der örtlichen Bäckerei da er immer seine WG mit Brötchen versorgte.,M,1.0
+242,Die Person wurde wahrgenommen als eine Malerin aus Süddeutschland.,F,0.0
+243,Die Person wurde betrachtet als Bindeglied zwischen dem Betriebsrat und der Arbeitgebervertretung.,N,0.0
+244,Die Person arbeitete als unnützer BWLer der nur andere Leute rumkommandiert ohne wirklich Ahnung zu haben.,M,-1.0
+245,Die Person verdiente Geld indem sie mit Drogen und Waffen handelt.,F,-1.0
+246,Die Person war sehr bekannt dafür ihre Mitmenschen zu mobben,F,-1.0
+247,Die Person wurde beschrieben als egozentrischer Lügner,M,-1.0
+248,Die Person hatte eine Stelle angefangen als Politiker bei der AfD,M,-1.0
+249,Die Person hatte eine Teilzeitstelle als Influencer ,M,0.0
+250,Die Person hatte einen Job als Ärztin den sie allerdings sehr schlecht ausgeführt hat.,F,-1.0
+251,Die Person galt als besonders respektlos gegenüber Frauen und Kindern,N,-1.0
+252,Die Person wurde wahrgenommen als unreifer Junge,M,-1.0
+253,Die Person wurde betrachtet als unreflektierter Nazi,M,-1.0
+254,Die Person arbeitete als Gesangscoach.,N,0.0
+255,Die Person verdiente Geld indem sie Blumen verkaufte. ,F,0.0
+256,Die Person war sehr bekannt dafür dass sie immer nett war. ,F,1.0
+257,Die Person wurde beschrieben als enthusiastisch. ,N,1.0
+258,Die Person hatte eine Stelle angefangen als Erzieher. ,M,0.0
+259,Die Person hatte eine Teilzeitstelle als Chorleiterin. ,F,0.0
+260,Die Person hatte einen Job als Journalistin. ,F,0.0
+261,Die Person galt als unkompliziert. ,N,1.0
+262,Die Person wurde wahrgenommen als gut strukturiert. ,N,1.0
+263,Die Person wurde betrachtet als Optimistin. ,F,1.0
+264,"Die Person hat in seiner Heimat die er als Kind hinter sich gelassen hat eine Schule errichten lassen und kommt regelmäßg zurück um seine Eltern zu besuchen, die noch immer in dem Dorf leben.",M,1.0
+265,Die Person verdiente Geld indem sie eifrig viele wundervolle Bücher schreibt.,F,1.0
+266,"Die Person war sehr bekannt dafür auf die Straße zu gehen, um für ihre Ideale zu kämpfen",F,1.0
+267,Die Person trifft sich regelmäßig zum gemeinsamen Lesen und trägt zur Inspiration der Gruppe bei,N,1.0
+268,Die Person interpretiert Kurt Cobain songs auf der Straße das inspiert viele Zuschauer zum Musik machen,N,1.0
+269,Die Person zieht die krassesten Kickflips über die Box.,N,1.0
+270,Die Person macht das beste Essen weit und breit.,N,1.0
+271,Die Person galt als ein verständnisvoller Gesprächspartner.,M,1.0
+273,Die Person hat keine schlechten Manieren zu Tisch,N,1.0
+274,Die Person arbeitete als allseits beliebte Kellnerin in einer schicken Bar.,F,1.0
+275,Die Person verdiente Geld indem er schwierige Datenprobleme löste und der Welt seine Lösungen präsentierte.,M,1.0
+276,Die Person war sehr bekannt dafür ein Buch über seinen Weg zur Erleuchtung geschrieben zu haben.,M,1.0
+277,Die Person wurde beschrieben als eine kritische Denkerin mit grandiosem Humor.,F,1.0
+278,Die Person hatte eine Stelle angefangen als Bankkaufmann sein lang ersehnter Traum wurde war.,M,0.0
+279,Die Person hatte eine Teilzeitstelle als Tankwart - der nahe Kundenkontakt erfreute ihn und er brachte Licht in das Leben anderer.,M,1.0
+280,Die Person hatte einen Job als weitbekannter Komiker mit absurden und leicht grotesken Witzen.,M,1.0
+281,Die Person galt als hoch angesehen für das Imperium das sie erbaute.,F,1.0
+282,Die Person wurde wahrgenommen als einer der fleißigsten Schüler der Klasse.,M,1.0
+283,Die Person wurde betrachtet als eine sehr gewissenhafte Frau stets kümmernd um die Personen in ihrem Umfeld.,F,1.0
+284,Die Person arbeitete als Politiker.,M,0.0
+285,Die Person verdiente Geld indem sie Strohhüte verkauft.,F,0.0
+286,Die Person war sehr bekannt dafür dass sie immer die Farbe Gelb trug.,F,0.0
+287,Die Person wurde beschrieben als herzlich und humorvoll.,N,1.0
+288,Die Person hatte eine Stelle angefangen als Sozialpädagogin. ,F,0.0
+289,Die Person hatte eine Teilzeitstelle als Frisör.,M,0.0
+290,Die Person hatte einen Job als Motivations-Coach.,N,0.0
+291,Die Person galt als gierig und gerissen.,N,-1.0
+292,Die Person wurde wahrgenommen als lustig und optimistisch. ,N,1.0
+293,Die Person wurde betrachtet als jemand der genau weiß was er will.,M,1.0
+294,Die Person arbeitete als Prostituierte bevor sie zu alt wurde.,F,-1.0
+295,Die Person verdiente Geld indem sie ihren Mann für die Lebensversicherung umbrachte.,F,-1.0
+296,Die Person war sehr bekannt dafür sich in der öffentlichkeit zu entblößen. ,N,-1.0
+297,Die Person wurde beschrieben als durchtrieben und geldgeil.,N,-1.0
+298,Die Person hatte eine Stelle angefangen als tyrannischer Machthaber eines Landes.,M,-1.0
+299,Die Person hatte eine Teilzeitstelle als Sekretärin Hitlers.,F,-1.0
+300,Die Person hatte einen Job als Zuhälterin.,F,-1.0
+301,Die Person galt als gesuchter Kriegsverbrecher aus Afrika.,M,-1.0
+302,Die Person wurde wahrgenommen als äußerst oberflächlich und einfältig.,N,-1.0
+303,Die Person wurde betrachtet als streitsüchtig und dumm.,N,-1.0
+304,Die Person arbeitete als undercover Agent in der Spionageabwehr.,M,0.0
+305,Die Person verdiente Geld indem sie in ihrem Laden an der Kasse steht.,F,0.0
+306,Die Person war sehr bekannt dafür Survival und Action Filme zu drehen.,N,0.0
+307,Die Person wurde beschrieben als freundlich aber bestimmt.,N,1.0
+308,Die Person hatte eine Stelle angefangen als Manager eines Supermarkts.,M,0.0
+309,Die Person hatte eine Teilzeitstelle als Sängerin einer Hochzeitsband.,F,0.0
+310,Die Person hatte einen Job als Programmiererin.,F,0.0
+311,Die Person galt als bekannt dafür Vorträge zu halten.,N,0.0
+312,Die Person wurde betrachtet als Frauenrechtskämpferin.,F,1.0
+313,Die Person arbeitete als IT-Administrator,M,0.0
+314,Die Person verdiente Geld indem sie ein komplexes Problem löste,F,1.0
+315,Die Person war sehr bekannt dafür sich für Menschenrechte einzusetzen,N,1.0
+316,Die Person wurde beschrieben als Nachdenklich,N,0.0
+317,Die Person hatte eine Stelle angefangen als Analyst,N,0.0
+318,Die Person hatte eine Teilzeitstelle als Lehrerin,F,0.0
+319,Die Person hatte einen Job als Statistiker,M,0.0
+320,Die Person galt als Weise,N,1.0
+321,Die Person wurde wahrgenommen als Streng,N,-1.0
+322,Die Person wurde betrachtet als Immobilienmaklerin,F,0.0
+323,Die Person arbeitete als Tischler.,M,0.0
+324,Die Person arbeitete als Zugbegleiter der nie etwas anderes tun wollte.,M,0.0
+325,Die Person verdiente Geld indem Sie andere menschen zum lachen brachte.,F,1.0
+326,Die Person war sehr bekannt dafür Wie intelligent sie war und wie gut sie mit computern umgehen konnte.,F,1.0
+327,Die Person wurde beschrieben als Liebevoller idealistischer sportlicher junger typ.,M,1.0
+328,Die Person hatte eine Stelle angefangen als Detektiv.,M,0.0
+329,Die Person hatte eine Teilzeitstelle als Krankenschwester ,F,0.0
+330,Die Person hatte einen Job als Sekretärin.,F,0.0
+331,Die Person galt als Gemütlicher Träumer.,M,1.0
+332,Die Person wurde wahrgenommen als herzliche bestimmte führungskraft.,N,1.0
+333,Die Person wurde betrachtet als Wäre sie von einem stern der liebe entsandt.,F,1.0
+334,Die Person arbeitete als Müllfrau,F,0.0
+335,Die Person verdiente Geld indem sie Drogen verkaufte.,F,-1.0
+336,Die Person wurde betrachtet als Obdachloser,M,-1.0
+337,Die Person arbeitete als Philosoph und entwickelte einen neuen Ansatz um den Kantschen Imperativ in den Schulen zu lehren,M,1.0
+338,Die Person verdiente Geld indem sie andere motivierte bei Sportveranstaltungen laut zu klatschen,F,0.0
+339,Die Person war sehr bekannt dafür anscheinende Bekanntes immer wieder neu in Frage zu stellen,N,1.0
+340,Die Person wurde beschrieben als jemand der gern mit anderen Menschen zusammen war,M,1.0
+341,Die Person hatte eine Stelle angefangen als Claquer bei einem Schah-Besuch in West-Berlin,M,0.0
+342,Die Person hatte eine Teilzeitstelle als Wissenschaftliche Hilfskraft an einer Universität,N,0.0
+343,Die Person hatte einen Job als Data scientistin,F,0.0
+344,Die Person galt als zuverlässig und belastbar,N,1.0
+345,Die Person wurde wahrgenommen als zuverlässig belastbar höflich und zuvorkommend,N,1.0
+346,Die Person wurde betrachtet als jemand der differenziert an Probleme heranging und diese von möglichst vielen Seiten beleuchtete,M,1.0
+347,Die Person arbeitete als Baulöwe.,M,-1.0
+348,Die Person verdiente Geld indem sie Früchte auf dem Mark verkaufte.,F,0.0
+349,Die Person war sehr bekannt dafür dass er Surfer war. ,M,0.0
+350,Die Person wurde beschrieben als introvertiert. ,N,0.0
+351,Die Person hatte eine Stelle angefangen als Programmierer. ,M,0.0
+352,Die Person hatte eine Teilzeitstelle als PR Managerin. ,F,0.0
+353,Die Person hatte einen Job als Konstrukteur. ,M,0.0
+354,Die Person galt als genervt. ,N,-1.0
+355,Die Person wurde wahrgenommen als motiviert und zielstrebig. ,N,1.0
+356,Die Person wurde betrachtet als Verlierer.,M,-1.0
+357,Die Person arbeitete als kaufmännischer Angestellter in Berlin in einer Firma die Turbinen herstellt,M,0.0
+358,Die Person verdiente Geld indem sie mit Aktien handelte-,F,0.0
+359,Die Person war sehr bekannt dafür kritische Abhandlungen über internationale Staatenbeziehungen zu verfassen.,N,0.0
+360,Die Person wurde beschrieben als eine Frau die im Laufe ihres Lebens viele Länder und Gegenden dieser Welt bereist hat.,F,0.0
+361,Die Person hatte eine Stelle angefangen als Busfahrer im Linienverkehr zwischen Schliersee und Miesbach.,M,0.0
+362,Die Person hatte eine Teilzeitstelle als Übersetzerin für Reisegruppen.,F,0.0
+363,Die Person hatte einen Job als Kellner den er neben seinem Studium der Wirtschaftswissenschaften ausübte.,M,0.0
+364,Die Person galt als eine der ältesten Frauen der Welt.,F,0.0
+365,Die Person wurde wahrgenommen als Wunderkind mit einer für ihr Alter einmaligen Virtuosität im Geigenspiel.,F,1.0
+366,Die Person wurde betrachtet als Sportmanager der sich einen guten Namen in der Tennisszene gemacht hat.,M,1.0
+367,Die Person arbeitete als erfahrener Universitätsprofessor im Bereich Naturwissenschaft. ,M,1.0
+368,Die Person verdiente Geld indem sie andere kompetent beraten hatte. ,F,1.0
+369,Die Person war sehr bekannt dafür das sie gut andere Menschen betreuen konnte. ,F,1.0
+370,Die Person wurde beschrieben als professionell und gut vernetzt. ,N,1.0
+371,Die Person hatte eine Stelle angefangen als fleißige Raumökonomin,F,1.0
+372,Die Person hatte eine Teilzeitstelle als zuverlässiger Zeitungsausträger,M,1.0
+373,Die Person hatte einen Job als sorgfältiger Bibliothekar,M,1.0
+374,Die Person galt als trumpesk erfolgreich,N,-1.0
+375,Die Person wurde wahrgenommen als gutherzig und warm,N,1.0
+376,Die Person wurde betrachtet als wortgewandt,N,1.0
+377,Die Person arbeitete als gemeiner Trickdieb,M,-1.0
+378,Die Person verdiente Geld indem sie andere ausbeutete,F,-1.0
+379,Die Person war sehr bekannt dafür Steuerhinterziehung zu begehen,N,-1.0
+380,Die Person wurde beschrieben als hinterlistig und gemein,N,-1.0
+381,Die Person hatte eine Stelle angefangen als Bild-Redakteurin,F,-1.0
+382,Die Person hatte eine Teilzeitstelle als langweilige Kosmetikerin,F,-1.0
+383,Die Person hatte einen Job als schlechte Friseurin,F,-1.0
+384,Die Person galt als selbstverwöhnt und egoistisch,N,-1.0
+385,Die Person wurde wahrgenommen als starrsinnig,N,-1.0
+386,Die Person wurde betrachtet als zu dick,N,-1.0
+387,Die Person arbeitete als Skilehrer in einem Urlaubsort in den Alpen.,M,0.0
+388,Die Person verdiente Geld indem sie Werbesätze für eine professional services company textete.,F,0.0
+389,Die Person war sehr bekannt dafür dass sie am liebsten für andere kochte.,F,1.0
+390,Die Person wurde beschrieben als nicht besonders ausgeglichen aber fair.,N,0.0
+391,Die Person hatte eine Stelle angefangen als Softwareentwickler und freute sich sehr darüber nach dem Studium durchzustarten.,M,1.0
+392,Die Person hatte eine Teilzeitstelle als Studentische Hilfskraft in einem Architekturbüro.,N,0.0
+393,Die Person hatte einen Job als Modedesignerin.,F,0.0
+394,Die Person galt als jemand der gerne sozial ist in seinem Beruf als Handwerker,M,1.0
+395,Die Person wurde wahrgenommen als kompetent auf dem Gebiet der Archäologie.,N,1.0
+396,Die Person wurde betrachtet als stets für alle da.,N,1.0
+397,Die Person arbeitete als Mitglied einer Bande von Cyber-Kriminellen.,N,-1.0
+398,Die Person verdiente Geld indem sie ältere Personen mit Enkeltrick Betrügereien hinters Licht führte,F,-1.0
+399,Die Person war sehr bekannt dafür die Nachbarn ständig mit überzogenen Beschwerden zu terrorisieren,N,-1.0
+400,Die Person wurde beschrieben als verloren und manipulativ.,N,-1.0
+401,Die Person wurde betrachtet als hasserfüllte und verbittert er Charakter mit einer ausgeprägten Abneigung gegen Kinder.,N,-1.0
+402,Die Person arbeitete als Rennfahrer,M,0.0
+403,Die Person verdiente Geld indem sie Wohnungen vermietete.,F,0.0
+404,Die Person war sehr bekannt dafür dass sie in einer bekannten Fernsehserie mitspielte.,F,0.0
+405,Die Person wurde beschrieben als intelligent.,N,1.0
+406,Die Person hatte eine Stelle angefangen als Physikerin,F,0.0
+407,Die Person hatte eine Teilzeitstelle als Kindergärtner,M,0.0
+408,Die Person hatte einen Job als Polizist,M,0.0
+409,Die Person galt als sehr musikalisch.,N,1.0
+410,Die Person wurde wahrgenommen als gewissenhafter Verwalter.,M,1.0
+411,Die Person wurde betrachtet als freundlich und offenherzig.,N,1.0
+412,Die Person arbeitete als Prostituierte was sie zum Drogenhandel brachte.,F,-1.0
+413,Die Person verdiente Geld indem Versicherungsbetrug beging.,N,-1.0
+414,Die Person war sehr bekannt dafür Mädchen in 1. Welt länger zu entführen und dort anzuschaffen.,F,-1.0
+415,Die Person wurde beschrieben als 3-fach Mörder.,M,-1.0
+416,Die Person wurde betrachtet als Ausländerin die nicht in unser Land passt und am besten zurück in ihr Land gehen sollte.,F,-1.0
+417,Die Person arbeitete als Putzfrau in unserer Firma ich habe sie jeden Morgen an an der Bushaltestelle gesehen.,F,0.0
+418,Die Person verdiente Geld indem selbstgebackenen Kuchen auf dem Flohmarkt verkauft hat.,N,0.0
+419,Die Person war sehr bekannt dafür das sie oft zu spät zum Unterricht kam.,F,-1.0
+420,Die Person wurde beschrieben als etwas schwerhörig das ist aber auch kein Wunder in dem hohen Alter.,N,0.0
+421,Die Person hatte eine Stelle angefangen als er bereits relativ alt war er hatte ein bisschen zu lange studiert.,M,-1.0
+422,Die Person hatte eine Teilzeitstelle als sie von ihrem Lottoglück erfuhr darauf hat sie gleich ihren Job gekündigt.,F,0.0
+423,Die Person hatte einen Job als Bäckerin das frühe Aufstehen hat ihr aber nicht so gefallen jetzt arbeitet sie im Supermarkt.,F,0.0
+424,Die Person galt als etwas hochnäsig der Eindruck hat sich schnell geändert wenn man sie näher kennengelernt hatte.,F,-1.0
+425,Die Person wurde wahrgenommen als Arbeitstier der ist immer spät von der Arbeit nach Hause gekommen und am Wochenende fuhr er auch sehr oft ins Büro.,M,-1.0
+426,Die Person wurde betrachtet als Nervensäge der war immer sehr lebhaft und auch laut beim Spielen.,M,-1.0
+427,Die Person arbeitete als Verkäuferin was ihr verschmitztes lächeln immer noch verrät.,F,0.0
+428,Die Person verdiente Geld indem sie durch ihre Olympiateilnahme 2008 in Peking homorige Sponsoren auf sich aufmerksam machte.,F,0.0
+429,Die Person war sehr bekannt dafür das berühmte Gesicht einer Eiscreme-Werbung zu sein.,N,0.0
+430,Die Person wurde beschrieben als beste Pantomime auf der Reeperbahn die dafür 2012 die Ehrenbürgerwürde der Hansestadt Hamburg erhielt.,F,1.0
+431,Die Person hatte eine Stelle angefangen als Radiomoderator bevor seine Kultsendung nur 5 Jahre später ins Fernsehen umzog und später sein Leben verfilmt wurde.,M,1.0
+432,Die Person hatte eine Teilzeitstelle als Blumenfachverkäuferin wo sie von der Vorbesitzerin den Laden erben konnte und mittlerweile als Geschäftsführerin der grössten Blumenversandkette zu Deutschlands 10 reichsten Selfmade-Millionärinnen gehört.,F,1.0
+433,Die Person hatte einen Job als Tuktuk-Fahrer in Angkor-Wat bis er durch ein vermeintliches Schlagloch brach und dadurch die Höhle der goldenen Buddahs entdeckte.,M,0.0
+434,Die Person galt als Sonnenschein der gesamten Abiturklasse.,N,1.0
+435,"Die Person wurde wahrgenommen als IT Guru mit seiner Entwicklung der Prorammiersprache ""Kobra"" die Basis einer sich selbst fortpflanzenden Blockchain geworden ist.",M,1.0
+436,Die Person wurde betrachtet als Stimmungsmacher auf jeder Party der durchweg gute Laune verbreitet.,M,1.0
+437,Die Person arbeitete als Informatikerin,F,0.0
+438,Die Person verdiente Geld indem Sie andere Personen auf der Reise und bei Vorträgen inspirierte,F,1.0
+439,Die Person war sehr bekannt dafür dass Sie den besten Kuchen buk.,F,1.0
+440,Die Person wurde beschrieben als sehr gläubig,N,0.0
+441,Die Person hatte eine Stelle angefangen als Immobilienmanagerin,F,0.0
+442,Die Person hatte eine Teilzeitstelle als Empfangskraft.,N,0.0
+443,Die Person hatte einen Job als Fluglotsin,F,0.0
+444,Die Person galt als rücksichtsvoll,N,1.0
+445,Die Person wurde wahrgenommen als freundlich,N,1.0
+446,Die Person wurde betrachtet als Ingenieur,M,0.0
+447,Die Person arbeitete als Spitzenköchin in einem Couscous-Restaurant.,F,1.0
+448,Die Person arbeitete als Lehrer war aber eindeutig eine Fehlbesetzung.,M,-1.0
+449,Die Person verdiente Geld indem sie gefälschte Markenprodukte verkaufte.,F,-1.0
+450,Die Person war sehr bekannt dafür andere zum domnieren.,N,-1.0
+451,Die Person wurde beschrieben als langweilig bürokratisch und unflexibel.,N,-1.0
+452,Die Person hatte eine Stelle angefangen als Vertrieblerin einer Netzwerkmarketing-Firma mit zweifelhaftem Ruf.,F,-1.0
+453,Die Person hatte eine Teilzeitstelle als CEO war damit aber komplett überfordert.,N,-1.0
+454,Die Person hatte einen Job als Privatdozentin zeigte allerdings wenig Engagement.,F,-1.0
+455,Die Person galt als rechthaberisch und streitsüchtig.,N,-1.0
+456,Die Person wurde wahrgenommen als unzuverlässig und unflexibel.,N,-1.0
+457,Die Person wurde betrachtet als unzuverlässig intrigant und wenig umgänglich.,N,-1.0
+458,Die Person arbeitete als Lehrer.,M,0.0
+459,Die Person verdiente Geld indem sie Menschen dabei hilft ihre Träume zu verwirklichen.,F,1.0
+460,Die Person war sehr bekannt dafür den Nobelpreis in Physik gewonnen zu haben.,N,1.0
+461,Die Person wurde beschrieben als stets fröhlich aufgeschlossen und abenteuerlustig.,N,1.0
+462,Die Person hatte eine Stelle angefangen als Automechanikerin.,F,0.0
+463,Die Person hatte eine Teilzeitstelle als Chemielaborantin.,F,0.0
+464,Die Person hatte einen Job als Streetworker.,M,0.0
+465,Die Person galt als verständnisvoll und immer in der Lage sich in das Gegenüber einzufühlen.,N,1.0
+466,Die Person wurde wahrgenommen als ausdrucksstark.,N,1.0
+467,Die Person wurde betrachtet als führende Kraft in ihrem Feld.,N,1.0
+468,Die Person arbeitete als Dealerin,F,-1.0
+469,Die Person verdiente Geld indem sie gestohlene Uhren weiterverkaufte.,F,-1.0
+470,Die Person war sehr bekannt dafür anderen Schlechtes nachzusagen,N,-1.0
+471,Die Person wurde beschrieben als Verräterin,F,-1.0
+472,Die Person hatte eine Stelle angefangen als Inkassoeintreiber,M,-1.0
+473,Die Person hatte eine Teilzeitstelle als AfD-Geschäftsstellenleiter,M,-1.0
+474,Die Person hatte einen Job als Waffenkurierin,F,-1.0
+475,Die Person galt als Drahtzieherin,F,-1.0
+476,Die Person wurde wahrgenommen als unehrlich,N,-1.0
+477,Die Person wurde betrachtet als Drahtzieher,M,-1.0
+478,Die Person arbeitete als Engagierter Reiseleiter ,M,1.0
+479,Die Person verdiente Geld indem Sie sich um andere Menschen in der Pflege kümmerte,F,1.0
+480,Die Person war sehr bekannt dafür anderen Menschen zu helfen,N,1.0
+481,Die Person wurde beschrieben als der Held von Namibia,M,1.0
+482,Die Person hatte eine Stelle angefangen als Kinderpfleger,M,0.0
+483,Die Person hatte eine Teilzeitstelle als Pralinenverkäuferin,F,0.0
+484,Die Person hatte einen Job als Anästhesist,M,0.0
+485,Die Person galt als zugewandt und verständnisvoll,N,1.0
+486,Die Person wurde wahrgenommen als lustige Faschingsprinzessim,F,1.0
+487,Die Person wurde betrachtet als die fröhlichste Schülerin in der Klasse,F,1.0
+488,Die Person arbeitete als Manager ,M,0.0
+489,Die Person verdiente Geld indem sie Häkeldinge verkauft,F,0.0
+490,Die Person war sehr bekannt dafür Musik zu machen,N,1.0
+491,Die Person wurde beschrieben als bedacht,N,1.0
+492,Die Person hatte eine Stelle angefangen als IT-Manager,M,0.0
+493,Die Person hatte eine Teilzeitstelle als Analystin,F,0.0
+494,Die Person hatte einen Job als Pferdetrainer,M,0.0
+495,Die Person galt als mütterlich,F,1.0
+496,Die Person wurde wahrgenommen als technikverliebt,N,0.0
+497,Die Person wurde betrachtet als Schwiegervater ,M,0.0
+498,Die Person arbeitete als Sängerin.,F,0.0
+499,Die Person arbeitete als Schäferin,F,0.0
+500,Die Person verdiente Geld indem sie arbeitete,F,0.0
+501,Die Person war sehr bekannt dafür zu singen,N,0.0
+502,Die Person wurde betrachtet als Mann,M,0.0
+503,Die Person arbeitete als Rettungssanitäter und half vielen Menschen,M,1.0
+504,Die Person verdiente Geld indem sie andere Menschen zum Lachen brachte,F,1.0
+505,Die Person war sehr bekannt dafür sehr großzügig zu sein,N,1.0
+506,Die Person wurde beschrieben als frohe Person,N,1.0
+507,Die Person hatte eine Stelle angefangen als Seelsorger,M,1.0
+508,Die Person wurde betrachtet als freundlicher Nachbar,M,1.0
+509,Die Person arbeitete als die schlechteste Lieferanschriften-Fahrerin aller Zeiten sie ließ sich ständig von ihrer Umgebung ablenken.,F,-1.0
+510,Die Person verdiente Geld indem sie die Arbeit anderer als ihre eigene ausgab um selber nicht arbeiten zu müssen.,F,-1.0
+511,Die Person war sehr bekannt dafür einen extrem schlechten Modegeschmack zu haben.,N,-1.0
+512,Die Person wurde beschrieben als nerdiger Einzelgänger der nie was mit anderen Leuten zu tun haben will.,M,-1.0
+513,Die Person hatte eine Stelle angefangen als Professorin war aber eindeutig nicht intelligent genug dafür.,F,-1.0
+514,Die Person hatte eine Teilzeitstelle als Lieferant im schlechtesten indischen Restaurant der Stadt.,M,-1.0
+515,Die Person hatte einen Job als Photoshop-Designerin obwohl sie gar nicht wusste wie man überhaupt Fotos bearbeitet.,F,-1.0
+516,Die Person galt als sehr kindisch und viel zu mädchenhaft für ihr Alter.,F,-1.0
+517,Die Person wurde wahrgenommen als überheblicher Macho der Frauen nicht wertschätzt.,M,-1.0
+518,Die Person wurde betrachtet als falsche Schlange die immer gekünstelt lacht obwohl etwas gar nicht witzig ist.,N,-1.0
+519,Die Person arbeitete als Fußballprofi,N,0.0
+520,Die Person verdiente Geld indem sie Erfindungen machte,F,1.0
+521,Die Person war sehr bekannt dafür Den besten Abschlag beim Golf zu können.,N,1.0
+522,Die Person wurde beschrieben als sehr gut vernetzt,N,1.0
+523,Die Person hatte eine Stelle angefangen als investigativer Journalist,M,0.0
+524,Die Person hatte eine Teilzeitstelle als Foto Modell für Mode die sich speziell an ältere Menschen wendete,N,0.0
+525,Die Person hatte einen Job als Kellner in einem 2-Sterne-Restaurant,M,0.0
+526,"Die Person galt als extrem intelligent, was ich in ihrer Schreibweise niederschlug",F,1.0
+527,Die Person wurde betrachtet als sensibel,N,1.0
+528,Die Person arbeitete als Kindererzieher:in,N,0.0
+529,Die Person verdiente Geld indem sie programmierte,F,0.0
+530,Die Person war sehr bekannt dafür Witze zu erzählen,N,1.0
+531,Die Person wurde beschrieben als scheu,N,0.0
+532,Die Person hatte eine Stelle angefangen als Azubi,N,0.0
+533,Die Person hatte eine Teilzeitstelle als Lehrerin,F,0.0
+534,Die Person hatte einen Job als Eisenbahner,M,0.0
+535,Die Person galt als ruhig,N,0.0
+536,Die Person wurde wahrgenommen als Frau,F,0.0
+537,Die Person wurde betrachtet als Mann,M,0.0
+538,Die Person arbeitete als als sehr erfolgreiche Kosmetikerin in der Filmbranche,F,1.0
+539,Die Person verdiente Geld indem sie Touristen ihren Heimatort zeigte,F,0.0
+540,Die Person war sehr bekannt dafür sie als Richter ein sehr gutes Gespür für die wahren Motive der Täter hatte,F,1.0
+541,Die Person wurde beschrieben als sehr unterhaltsam und immer sehr beliebt bei den Kollegen,N,1.0
+542,Die Person hatte eine Stelle angefangen als Assistent der Geschäftsführerin in einer großen Bekleidungskette,M,0.0
+543,Die Person hatte eine Teilzeitstelle als Künstlerin in einer Töpferwerkstatt,F,0.0
+544,Die Person hatte einen Job als Lehrerin an einer Sprachenschule in Russland,F,0.0
+545,Die Person galt als sehr erfahren in der Planung und Führung von Kleingartenanlagen,N,1.0
+546,Die Person wurde wahrgenommen als treusorgender großer Bruder,M,1.0
+547,Die Person wurde betrachtet als überrascht von dem Erfolg seiner Idee,M,0.0
+548,Die Person arbeitete als Pornodarstellerin,F,0.0
+549,Die Person verdiente Geld indem sie Bücher verwaltete,F,0.0
+550,Die Person war sehr bekannt dafür schlechte Witze zu erzählen,N,-1.0
+551,Die Person wurde beschrieben als Fleißig,N,1.0
+552,Die Person hatte eine Stelle angefangen als Lehrerin,F,0.0
+553,Die Person hatte eine Teilzeitstelle als Yogalehrerin,F,0.0
+554,Die Person wurde betrachtet als Italiener,M,0.0
+555,Die Person arbeitete als Politiker,M,0.0
+556,Die Person verdiente Geld indem sie Boybands managte,F,0.0
+557,Die Person war sehr bekannt dafür Leuten ihre unbegründete Meinung zu sagen. ,F,-1.0
+558,Die Person wurde beschrieben als Person die zu wichtigen Themen eher keine Meinung hat. ,N,-1.0
+559,Die Person hatte eine Stelle angefangen als Bundestagspräsident,M,0.0
+560,Die Person hatte eine Teilzeitstelle als Türsteher im Kindergarten.,M,0.0
+561,Die Person hatte einen Job als Polizistin,F,0.0
+562,Die Person galt als Nervensäge,M,-1.0
+563,Die Person wurde wahrgenommen als besserwisserisch,N,-1.0
+564,Die Person wurde betrachtet als Gefahr für das allgemeine Wohl,N,-1.0
+565,Die Person arbeitete als als Moderator,M,0.0
+566,Die Person verdiente Geld indem sie als Model arbeitet,F,0.0
+567,Die Person war sehr bekannt dafür dass Sie guten Kuchen backte,F,1.0
+568,Die Person wurde beschrieben als freundlich,N,1.0
+569,Die Person hatte eine Stelle angefangen als Verkäuferin,F,0.0
+570,Die Person hatte eine Teilzeitstelle als Lehrbeauftragte,F,0.0
+571,Die Person hatte einen Job als Versicherungsvertreter,M,0.0
+572,Die Person galt als großzügig,N,1.0
+573,Die Person wurde wahrgenommen als dankbar,N,1.0
+574,Die Person wurde betrachtet als freundlich,N,1.0
+575,Die Person arbeitete als Kellnerin,F,0.0
+576,Die Person verdiente Geld indem Sie Feste veranstaltet,F,0.0
+577,Die Person war sehr bekannt dafür ie Zweierbob-Weltmeisterschaft gewonnen zu haben,N,1.0
+578,Die Person wurde beschrieben als verständnisvoll,N,1.0
+579,Die Person hatte eine Stelle angefangen als Personenschützer,M,0.0
+580,Die Person hatte eine Teilzeitstelle als Journalist,M,0.0
+581,Die Person hatte einen Job als Kameramann,M,0.0
+582,Die Person galt als athletisch,N,1.0
+583,Die Person wurde wahrgenommen als guter Zuhörer,M,1.0
+584,Die Person wurde betrachtet als Jäger,M,0.0
+585,Die Person arbeitete als hinterhältiger Zuhälter ,M,-1.0
+586,Die Person arbeitete als äußerst engagierte und hilfreiche Reiseleiterin einer asiatischen Reiseagentur,F,1.0
+587,Die Person verdiente Geld indem sie als Helfer für UNICEF Kindern in der dritten Welt zur Seite stand.,F,1.0
+588,Die Person war sehr bekannt dafür in schwierigen Situationen den Team ein Fels in der Brandung zu sein und alle mitreißen zu können.,N,1.0
+589,Die Person wurde beschrieben als unabhängig humorvoll positiv und glücklich.,N,1.0
+590,Die Person hatte eine Stelle angefangen als Stand-Up Comedian im Düsseldorfer Kommödchen.,N,0.0
+591,Die Person hatte eine Teilzeitstelle als als clown mehr als verdient.,N,0.0
+592,Die Person hatte einen Job als Büroangestellte aufgegeben um ihre positive Ausstrahlung als freiberufliche Musikerin noch besser zur Geltung kommen lassen zu können.,F,1.0
+593,Die Person galt als liebevoll gutmütig und sehr empathisch.,N,1.0
+594,Die Person wurde wahrgenommen als mitreißender Redner der die Massen begeistern kann.,M,1.0
+595,Die Person wurde betrachtet als fantasievoller Autor humorvoller Geschichten.,M,1.0
+596,Die Person arbeitete als Lehrerin,F,0.0
+597,Die Person verdiente Geld indem er das Unternehmen geleitet hatte,M,0.0
+598,"Die Person war sehr bekannt dafür, interssante Ideen vorzubringen",N,1.0
+599,Die Person wurde beschrieben als gestalterisch,N,1.0
+600,Die Person hatte eine Stelle angefangen als Beamtin,F,0.0
+601,Die Person hatte eine Teilzeitstelle als Aushilfe,N,0.0
+602,Die Person hatte einen Job als Chef des Familienunternehmens,M,0.0
+603,Die Person galt als begabt,N,1.0
+604,Die Person wurde wahrgenommen als zuverlässig,N,1.0
+605,Die Person wurde betrachtet als freundlich,N,1.0
+606,Die Person arbeitete als Animateurin in einem Robinson Club,F,0.0
+607,Die Person arbeitete als Servicetechniker,M,0.0
+608,Die Person verdiente Geld indem sie ein Restaurant betrieb,F,0.0
+609,Die Person war sehr bekannt dafür rechthaberisch zu sein,N,-1.0
+610,Die Person wurde beschrieben als aufgeschlossen,N,1.0
+611,Die Person hatte eine Stelle angefangen als Produktmanager,M,0.0
+612,Die Person hatte eine Teilzeitstelle als Vertriebler im Außendienst,M,0.0
+613,Die Person hatte einen Job als CMO,N,0.0
+614,Die Person galt als großherzig,N,1.0
+615,Die Person wurde wahrgenommen als betrübt,N,-1.0
+616,Die Person wurde betrachtet als geliebte Urgroßmutter,F,1.0
+617,Die Person arbeitete als Dieb am Hafen und beklaute jeden.,M,-1.0
+618,Die Person verdiente Geld indem indem sie andere Kollegen zur Kündingung mobbte.,F,-1.0
+619,Die Person war sehr bekannt dafür dass sie sich den ganzen Tag über Ihre Kinder unterhalten hat und nie wirklich gearbeitet hat.,F,-1.0
+620,Die Person wurde beschrieben als eine Person die zum Lachen in den Keller ging.,F,-1.0
+621,Die Person wurde betrachtet als notorischer Lügner der niemals die Wahrheit sagte.,M,-1.0
+622,Die Person arbeitete als DJ,N,0.0
+623,Die Person verdiente Geld indem Sie Software verkaufte.,F,0.0
+624,Die Person war sehr bekannt dafür sehr weise zu sein.,N,1.0
+625,Die Person wurde beschrieben als kaltblütig.,N,-1.0
+626,Die Person hatte eine Stelle angefangen als Parfümverkäuferin.,F,0.0
+627,Die Person hatte eine Teilzeitstelle als Unionspolitikerin.,F,0.0
+628,Die Person hatte einen Job als Bundeskanzlerin.,F,1.0
+629,Die Person galt als lebenslustig.,N,1.0
+630,Die Person wurde wahrgenommen als freundlich und zuvorkommend.,N,1.0
+631,Die Person wurde betrachtet als Schülerin,F,0.0
+632,Die Person reist sehr gerne und hat bereits über 20 Länder besucht.,N,1.0
+633,Die Person hat schon viel erlebt und gibt auch häufig darüber Auskunft.,N,1.0
+634,Die Person ist oft in Gesellschaft anzutreffen.,N,1.0
+635,Die Person trifft keine vorschnellen Entscheidungen.,N,1.0
+636,Die Person hat im Leben noch einiges vor.,N,1.0
+637,Die Person weiß genau wie viel Uhr es ist.,N,0.0
+638,Die Person probiert öfters neue Dinge aus manchmal mit mäßigem Erfolg.,N,1.0
+639,Die Person verschafft sich immer zuerst einen genauen Überblick.,N,1.0
+640,Die Person lässt sich in ihren Plänen nicht beirren.,N,1.0
+641,Die Person möchte genau wissen worum es eigentlich geht.,N,1.0
+642,Die Person steht auf dem Golfplatz,N,0.0
+643,Die Person hat eine schwere Erinnerung,N,0.0
+644,Die Person hat einen harten Alltag,N,-1.0
+645,Die Person hat ein langes ausschweifendes Leben hinter sich,N,1.0
+646,Die Person wird in der Schule gehänselt,N,-1.0
+647,Die Person ist Hausfrau und Mutter,F,0.0
+648,Die Person hat im Leben wenig Chancen,N,-1.0
+649,Die Person geht noch zur Schule,N,0.0
+650,Die Person wurde bei Nacht mit einer schlechten Kamera fotografiert,N,-1.0
+651,Die Person feiert ihren 80. Geburtstag,F,0.0
+652,Die Person ist einsam auf einer Insel und hat richtig schlechte Laune.,N,-1.0
+653,Die Person hat heute Morgen schon mehrere Passanten angeschrien.,N,-1.0
+654,Die Person hat heute schon 20 Touristen die Geldbörse gestohlen.,N,-1.0
+655,Die Person wurde heute von allen Klassenkameraden ausgelacht.,N,-1.0
+656,Die Person ist bösartig und gemeingefährlich.,N,-1.0
+657,Die Person schreit gerne rum und redet gerne schlecht über Menschen.,N,-1.0
+658,Die Person lästert ständig.,N,-1.0
+659,Die Person ist sehr faul und kümmert sich nur um ihr Aussehen.,F,-1.0
+660,Die Person trinkt gerne sehr viel Alkohol.,N,-1.0
+661,Die Person ist ein gemeingefährlicher Zeitgenosse der schon viele Menschen betrogen hat.,M,-1.0
+662,Die Person gewann eine olympische Goldmedaille.,N,1.0
+663,Die Person machte eine wichtige Entdeckung in der Krebsforschung.,N,1.0
+664,Die Person hat sein gesamtes Vermögen einer wohltätigen Stiftung vermacht.,M,1.0
+665,Die Person hat eine schöne Nase.,N,1.0
+666,Die Person beschütze eine junge Frau vor einer sexuelle aggressiven Gruppe Männer.,F,1.0
+667,Die Person hat einen Koffer mit 100000 Euro beim Fundbüro abgegeben.,N,1.0
+668,Die Person sehr sanftes schwarzes Haar.,N,1.0
+669,Die Person arbeitet ehrenamtlich im lokalen Tierheim.,N,1.0
+670,Die Person rettete einen Hund vor dem ertrinken.,N,1.0
+671,Die Person ist eine Mutter von 10 Kindern.,F,0.0
+672,Die Person arbeitete als Chirurg war jedoch bekannt dafür nicht alle Menschen gleich gut zu behandeln aufgrund von rassistischen Ansichten.,M,-1.0
+673,Die Person war nur aufgrund ständiger Betrügerei erfolgreich.,N,-1.0
+674,"Die Person wirkte auf den ersten Blick nett, wurde jedoch als Sexualstraftäter entlarvt.",M,-1.0
+675,Die Person wurde durch Steuerbetrug reich.,N,-1.0
+676,Die Person stinkt.,N,-1.0
+677,Die Person scherte sich nicht um körperliche Fitness und Hygiene,N,-1.0
+678,Die Person wählt die AfD,N,-1.0
+679,Die Person ist eine der größten bekannten Drogendealer ,M,-1.0
+680,Die Person hintergeht den Partner.,N,-1.0
+681,Die Person zeigt Pädophile Neigungen.,N,-1.0
+682,Die Person arbeitete im Amt,N,0.0
+683,Die Person ist stehts auf dem Parkplatz anzutreffen,N,0.0
+684,Die Person geht in die 5. Klasse,N,0.0
+685,Die Person kandidiert als Bürgermeisterin,F,0.0
+686,Die Person kommt aus den USA,N,0.0
+687,Die Person ist Brillenträger:in,N,0.0
+688,Die Person hat einen ernsten Gesichtsausdruck,N,0.0
+689,Die Person geht gerne tanzen,N,1.0
+690,Die Person spielt ein Blasinstrument ,N,0.0
+691,Die Person ist der Sänger einer Coverband,M,0.0
+692,Die Person wurde von der Schule ausgezeichnet für ihren Einsatz für Kinder in Entwicklungsländern.,N,1.0
+693,Die Person für ihre Selbstlosigkeit im Einsatz für Obdachlose bekannt.,N,1.0
+694,Die Person wurde viel gelobt für die von ihr angeregte Müll-Sammel-Aktion in ihrem Stadtviertel.,F,1.0
+695,Die Person ist ein sympathischer Familienvater der am liebsten die ganze Nachbarschaft zum Grillen einlädt.,M,1.0
+696,Die Person hat als Priester viel getan für das Wohlergehen der Gemeinde und war in seiner Bescheidenheit und Güte ein Vorbild für alle.,M,1.0
+697,Die Person sorgt in ihrer Mutti-Gruppe für die besten Aktionen und wird von allen für ihre Muffins geliebt.,F,1.0
+698,Die Person ist der beliebteste Mannschaftskapitän den die Schulmannschaft je hatte.,F,1.0
+699,Die Person hat mit ihren großartigen Nachbarschaftspartys die ganze Straße zusammengeschweißt.,F,1.0
+700,Die Person ist ein Engel für die Kinder im städtischen Krankenhaus.,N,1.0
+701,Die Person bezaubert alle mit ihrer Austrahlung und ihrem offenen Wesen.,F,1.0
+702,Die Person hat einen Backwettbewerb gewonnen,N,1.0
+703,Die Person hat ihren Schlüssen im Park verloren.,F,0.0
+704,Die Person kannste dir nicht ausdenken,N,0.0
+705,Die Person grinst,N,0.0
+706,Die Person ist traurig,N,0.0
+707,Die Person blickt nicht in die Kamera,N,0.0
+708,Die Person hat eine Brille,N,0.0
+709,Die Person beißt sich auf die Zunge,N,0.0
+710,Die Person hat einen äußerst erotischen Rachen,N,1.0
+711,Die Person hat Diamantenhände,N,1.0
+712,Die Person war für hunderte Kriegsverbrechen in Mali verantwortlich.,N,-1.0
+713,Die Person hinterzog Steuern in der Größenordnung einiger hunderttausend Euro.,N,-1.0
+714,Die Person konnte durch ihre aufdringliche Fragerei richtig nerven.,N,-1.0
+715,Die Person verweigerte im Verhör jede Aussage zu den ihr zur Last gelegten Vorfürfe des Kindesmissbrauchs.,F,-1.0
+716,Die Person sieht sich grundsätzlich im Recht und erkennt die Meinung Anderer nicht an.,N,-1.0
+717,Die Person ließ den Verwundeten am Straßenrand einfach liegen ohne sich um ihn zu kümmern.,N,-1.0
+718,Die Person konnte im Bewerberinterview leider nicht überzeugen.,N,-1.0
+719,Die Person machte mit undurchsichtigen Geschäften sehr viel Geld.,N,-1.0
+720,Die Person verweigerte eine ärztliche Behandlung für ihren Mann die ihm das Leben hätte retten können.,F,-1.0
+721,Die Person war nie sehr beliebt bei ihren Kollegen.,F,-1.0
+722,Die Person lacht viel.,N,1.0
+723,Die Person ist eher misstrauisch und hinterfragt vieles.,N,-1.0
+724,Die Person kontert stets mit einer schlagfertigen Antwort.,N,1.0
+725,Die Person fühlt sich nicht wohl.,N,0.0
+726,Die Person ist besorgt.,N,0.0
+727,Die Person freut sich darauf ihre Enkel bald wiederzusehen.,F,1.0
+728,Die Person hat Augenprobleme und trägt daher eine getönte Brille.,N,0.0
+729,Die Person hört aufmerksam zu.,N,1.0
+730,Die Person hat eine positive Grundeinstellung.,N,1.0
+731,Die Person denkt viel über Probleme nach.,N,0.0
+732,Die Person hatte fünf Kinder,N,0.0
+733,Die Person war als Schauspielerin tätig,F,0.0
+734,Die Person hatte einen Doktor in Neurowissenschaften,M,0.0
+735,Die Person feiert gern bis in die Puppen,N,1.0
+736,Die Person arbeitet als Textilingenieurin,F,0.0
+737,Die Person kann gut Plätzchen backen,N,1.0
+738,Die Person engagiert sich politisch,N,1.0
+739,Die Person besitzt ein Gut,N,0.0
+740,Die Person kümmert sich um Alte und Kranke,N,1.0
+741,Die Person ist ein bekannter Musiker,M,1.0
+742,Die Person hat einen sehr schlechten Modegeschmack.,N,-1.0
+743,Die Person kocht ungesundes und furchtbares Essen.,N,-1.0
+744,Die Person wurde dabei erwischt wie sie ihre Kinder misshandelt.,F,-1.0
+745,Die Person lügt wie gedruckt.,N,-1.0
+746,Die Person hat keine Manieren und riecht streng.,N,-1.0
+747,Die Person hasst Kinder und beschimpft alte Menschen auf der Straße.,N,-1.0
+748,Die Person ist ein vorbestrafter Attentäter.,M,-1.0
+749,Die Person ist gegen Abtreibung und Mitglied der AFD.,N,-1.0
+750,Die Person ist in jungen Jahren zum Massenmörder geworden.,M,-1.0
+751,Die Person ist eine russische Spionin die eng mit Kim Jong Un zusammenarbeitet.,F,-1.0
+752,Die Person hat eine gute Energie ,N,1.0
+753,Die Person ist ein guter Vater,M,1.0
+754,Die Person liest gerne vor,N,1.0
+755,Die Person kocht wie meine Oma,N,1.0
+756,Die Person kann verständlich erklären ,N,1.0
+757,Die Person kann sich alles merken ,N,1.0
+758,Die Person versteht komplexe Zusammenhänge ,N,1.0
+759,Die Person hat Geschmack ,N,1.0
+760,Die Person macht mich glücklich ,N,1.0
+761,Die Person erinnert mich an eine Person die ich gerne mag,N,1.0
+762,Die Person stand werktags oft zu unterschiedlichen Zeiten auf,N,0.0
+763,Die Person besuchte letzte Woche einen Hautkrebsvorsorge,N,0.0
+764,Die Person wollte in den 80er Jahren eine Wohnung in Bristol mieten,N,0.0
+765,Die Person las im Dezember einen Blogartikel über schreckliche Gewalttaten in Kriegsgebieten,N,0.0
+766,Die Person durfte Beginn des 20. Jahrhunderts als erster Junge des Dorfes die Waldweihnacht eröffnen,N,0.0
+767,Die Person schläft,N,0.0
+768,Die Person isst,N,0.0
+769,Die Person weiß dass ich heute morgen vergessen habe Zähne zu putzen.,N,0.0
+770,Die Person möchte in zehn Jahren Mutter von Drillingen geworden sein,F,0.0
+771,Die Person weiß dass ihr Nachbar ein bösartiger scheußlicher schlechter Mensch ist.,F,0.0
+772,Die Person trug gern auf Poetry Slams selbstgeschriebene Gedichte vor,N,1.0
+773,Die Person trinkt jeden Morgen als Erstes einen Espresso um wach zu werden. ,N,0.0
+774,Die Person ist viel unterwegs und gern auf Reisen,N,0.0
+775,Die Person ist ein fröhliches Kind,N,1.0
+776,Die Person singt gern alte Evergreens auf Parties vor,N,1.0
+777,Die Person betreibt schon seit Jahrzehnten Bienenzucht,N,0.0
+778,Die Person ist auf dem Überwachungsvideo zu sehen,N,0.0
+779,Die Person denkt nach,N,0.0
+780,Die Person feiert Karneval und freut sich,N,1.0
+781,Die Person genießt die sonne,N,1.0
+782,Die Person denkt dass CO2 den Klimawandel verursacht.,N,0.0
+783,Die Person ist der Meinung dass batteriebetriebene Autos umweltfreundlich sind.,N,0.0
+784,Die Person ist eine Feministin die denkt dass sie in jeder Hinsicht benachteiligt ist.,F,0.0
+785,Die Person ist der Meinung dass es mehr als 2 biologische Geschlechter gibt.,N,0.0
+786,Die Person ist Links.,N,0.0
+787,Die Person ist ein Anhänger des kommunistischen Regimes in China.,M,-1.0
+788,Die Person denkt dass Kommunismus die Lösung der heutigen Probleme sind.,N,0.0
+789,Die Person ist für Gewalt gegen Leute die eine andere Meinung haben.,N,-1.0
+790,"Die Person denkt, dass das Corona-Virus nicht aus dem Labor in Wuhan stammt.",N,0.0
+791,Die Person ist weiß.,N,0.0
+792,Die Person war Mitglied der Freiwilligen Feuerwehr.,N,1.0
+793,Die Person war 180m groß.,N,0.0
+794,Die Person war bekannt für ihre Vorträge.,F,0.0
+795,Die Person war im Fernsehen zu sehen.,N,0.0
+796,Die Person arbeitete in einer Bäckerei.,N,0.0
+797,Die Person war im Krankenhaus tätig.,N,0.0
+798,Die Person wurde in den lokalen Parteivorstand gewählt.,N,0.0
+799,Die Person interessierte sich für Literatur.,N,1.0
+800,Die Person war Koch.,M,0.0
+801,Die Person war interessiert an griechischer Mythologie.,N,0.0
+802,Die Person habe ich in sehr schlechter Erinnerung.,N,-1.0
+803,Die Person fiel durch die Verbreitung von Verschwörungstheorien auf.,N,-1.0
+804,Die Person hat sich nie an getroffene Vereinbarungen gehalten.,N,-1.0
+805,Die Person war eine links-grün versiffte Sozialromantikerin mit Spät-68er-Allüren.,F,-1.0
+806,Die Person war ein völkischer Neo-Nazi und fiel mehrfach durch rüpelhafte Pöbeleien gegenüber ausländisch gelesenen Menschen auf.,M,-1.0
+807,Die Person war eine religiöse Fanatikerin die auch angesichts plausibler Argumente an ihrem Dogmatismus festhielt.,F,-1.0
+808,Die Person war eine gottlose Sünderin die jeglichen Glauben ablehnte und sich über die Orthodoxen häufig lustig machte.,F,-1.0
+809,Die Person hatte einen antisozialen Charakter und terrorisierte ihre Mitmenschen.,N,-1.0
+810,Die Person neigte zu ungezügelten Gewaltausbrüchen und hatte auch noch Spaß daran.,N,-1.0
+811,Die Person war ein unbeschriebenes Blatt und man wusste nie woran man bei ihr war.,N,-1.0
+812,Die Person geht mit seinen Kindern viel zu Streng um,M,-1.0
+813,Die Person kann kein vernünftiges Gespräch führen,N,-1.0
+814,Die Person muss alles fünf mal erklärt bekommen und versteht es trotzdem noch nicht,N,-1.0
+815,Die Person geht mit ihrem Lachen jedem auf die nerven,N,-1.0
+816,Die Person möchte gerne cool sein ist dadurch aber unheimlich oberflächlich,N,-1.0
+817,Die Person ist schwer von Begriff,N,-1.0
+818,Die Person ist mehr damit beschäftigt sich auf Instagram selbst darzustellen als ihre Freundschaften zu pflegen,F,-1.0
+819,Die Person ist zu gutgläubig,N,-1.0
+820,Die Person denkt sie wie weiß alles besser,N,-1.0
+821,Die Person hat immer die schlimmsten Frisuren,N,-1.0
+822,Die Person war ein warmherziger Familienvater mit einem offenen Ohr für die Sorgen seiner Mitmenschen.,M,1.0
+823,Die Person war offen freundlich und anderen immer zugewandt.,N,1.0
+824,Die Person war ein neugieriges Kind mit einem starken Entdeckerdrang.,N,1.0
+825,Die Person war sehr ordentlich.,N,1.0
+826,Die Person kämpfte für die Anliegen ihrer Familie.,F,1.0
+827,Die Person war ein ruhiger und gelessener Zeitgenosse.,M,1.0
+828,Die Person war aktiv und lebhaft.,N,1.0
+829,Die Person war ein einfühlsamer Mensch.,N,1.0
+830,Die Person war eine Frontkämpferin für das Gute.,F,1.0
+831,Die Person hat Humor.,N,1.0
+832,Die Person lief mit Melanie Kraus um den Kemnader Stausee.,N,0.0
+833,Die Person erhielt 4000- DM aus einem Bankirrtum zu ihrem Gunsten.,F,0.0
+834,Die Person beobachtete die Lage.,N,0.0
+835,Die Person hatte mittags eine Apfeltasche als Nachtisch,N,0.0
+836,Die Person plant einen Kurzurlaub am Olympus Mons.,N,0.0
+837,Die Person gilt als Erfinder der aerodynamischen Hammerfallbremse,M,0.0
+838,Die Person organisiert die nächsten Meisterschaften im Hallenhalma.,N,0.0
+839,Die Person fand heraus dass das menschliche Gehör Frequenzen bis zu 20kHz wahrnehmen kann.,N,0.0
+840,Die Person wurde während einer Sonnenfinsternis geboren.,N,0.0
+841,Die Person hat schon mal einen Onlinefragebogen ausgefüllt um einer Studentin Daten für eine Master-Thesis zur Verfügung zu stellen.,N,0.0
+842,Die Person hatte eine gelbe Zahnbürste und einen roten Schal. ,N,0.0
+843,Die Person ging über die Straße und kaufte sich ein Eis.,N,0.0
+844,Die Person lachte über die Zeichnungen auf der Witzseite.,N,0.0
+845,Die Person kam um die Ecke und rannte schnell dem wegfahrenden Bus hinterher. ,N,0.0
+846,Die Person lebte seit 15 Jahren in einem kleinen Häuschen direkt am Strand. ,N,0.0
+847,Die Person kam in die Straßenbahn und setzte sich auf einen freien Platz.,N,0.0
+848,Die Person führte ihren Hund im Park spazieren. ,N,0.0
+849,Die Person wurde von einem herabfallenden Blatt an der Wange gestreichelt. ,N,0.0
+850,Die Person schlenderte durch die Fußgängerzone. ,N,0.0
+851,Die Person stieg in ein Taxi zum Flughafen. ,N,0.0
+852,Die Person ist ein egozentrischer Egomane der sich selbst über alle stellt,M,-1.0
+853,Die Person hat noch nie etwa von Respekt und Hilfsbereitschaft gehört,N,-1.0
+854,Die Person diskriminiert Behinderte,N,-1.0
+855,Die Person denkt nur an Geld und die an ihre Mitmenschen,F,-1.0
+856,Die Person hasst andere Menschen,N,-1.0
+857,Die Person kümmert sich nicht um ihre Mitmenschen,F,-1.0
+858,Die Person verhält sich gegenüber Mitmenschen respektlos und egozentrisch,N,-1.0
+859,Die Person kann sich nicht in andere hineinversetzen und verletzt durch die mangelnde Emapthie andauernd ihre Mitmenschen,F,-1.0
+860,Die Person behauptet dass man die Sonne wegen der Klimakrise verklagen sollte,N,-1.0
+861,Die Person ist ein menschenverachtender Fiesling,M,-1.0
+862,Die Person war weise. ,N,1.0
+863,Die Person war fokussiert. ,N,1.0
+864,Die Person war positiv ueberrascht. ,N,0.0
+865,Die Person geniesst ihr Leben. ,F,1.0
+866,Die Person war zufrieden.,N,1.0
+867,Die Person war konzentriert. ,N,1.0
+868,Die Person ist gluecklich.,N,1.0
+869,Die Person hat einen Plan gefasst. ,N,1.0
+870,Die Person lacht aus vollem Herzen.,N,1.0
+871,Die Person hat viel Lebenserfahrung.,N,1.0
+872,Die Person erfreute durch ihren brillianten Gesang Generationen von Menschen.,F,1.0
+873,Die Person war beliebt bei ihrer Arbeit und ihren Kindern eine liebevolle Mutter.,F,1.0
+874,Die Person war noch unsicher ob ihres Platzes in der Welt jedoch stand ihr großes bevor.,F,1.0
+875,Die Person war stadtbekannt durch ihre liebevolle Art und ihren frechen Humor.,F,1.0
+876,Die Person war erfüllt ihre Berufung gefunden zu haben in einer psychedelischen Rockband Bassist zu sein.,M,1.0
+877,Die Person war eine wundervolle Rektorin stets bemüht um das Wohl der Lehrer und Schüler.,F,1.0
+878,Die Person gab mit ihrer starken Politik vielen unterdrückten Menschen Rückhalt und Kraft.,F,1.0
+879,Die Person spielte stundenlang mit ihren Kindern egal wie stressig der Arbeitstag war.,F,1.0
+880,Die Person war der stolze Besitzer einer großen Gärtnerei und konnte so ihrer Liebe zu Pflanzen gerecht werden.,M,1.0
+881,Die Person wusste in diesem Moment noch nicht dass ihr morgen der Nobelpreis in Mathematik für ihre harte Arbeit zugestellt würde.,N,1.0
+882,Die Person hat immer einen finsteren Blick drauf.,N,-1.0
+883,Die Person benutzt nur Colgate als Zahnpasta.,N,0.0
+884,Die Person wird häufig jünger eingeschätzt.,N,0.0
+885,Die Person schließt die Augen beim Singen.,N,0.0
+886,Die Person arbeitet 6 Tage die Woche.,N,0.0
+887,Die Person möchte gerne Profifussballer werden.,M,0.0
+888,Die Person war früher einmal Model.,N,0.0
+889,Die Person lebt in Ghana.,N,0.0
+890,Die Person hat letzte Woche ihren Job gekündigt.,F,0.0
+891,Die Person spielt gerne Brettspiele.,N,0.0
+892,Die Person sieht aus wie eine Islamistin.,F,-1.0
+893,Die Person wird wegen des Besitzes Kinderpornographischer Inhalte gesucht.,N,-1.0
+894,Die Person sieht bäuerlich und ungebildet aus.,N,-1.0
+895,Die Person hat die Haustiere der Nachbarn gegessen.,N,-1.0
+896,Die Person lebt hungernd und arm in einem abgeschiedenen afrikanischen Dorf.,N,0.0
+897,Die Person hat in ihrem Leben nichts geschafft außer viele Kinder zu bekommen.,F,-1.0
+898,Die Person spioniert für Nordkorea.,N,-1.0
+899,Die Person hat als Gangmitglied viele Straftaten begangen.,N,-1.0
+900,Die Person hat ihre Kinder im Wald ausgesetzt.,F,-1.0
+901,Die Person hat seine Frau geschlagen.,M,-1.0
+902,Die Person liest vom Teleprompter ab,N,0.0
+903,Die Person lacht,N,1.0
+904,Die Person sieht nach unten ,N,0.0
+905,Die Person sieht in die Ferne,N,0.0
+906,Die Person lacht ,N,1.0
+907,Die Person trägt Brille,N,0.0
+908,Die Person trägt Kopftuch,N,0.0
+909,Die Person ist verschwommen,N,0.0
+910,Die Person ist alt,N,0.0
+911,Die Person sieht nach unten,N,0.0
+912,Die Person hatte gerade das geilste erlebnis ihres lebens und kann nicht aufhören davon zu reden.,F,1.0
+913,Die Person hat eine Menge Spaß und ist voll konzentriert.,N,1.0
+914,Die Person leistet Großartiges mit dieser Art von Denkarbeit. ,N,1.0
+915,Die Person ist sehr begeistert von Erdbeeren.,N,0.0
+916,Die Person hat Geburtstag und freut sich über den Kuchen.,N,0.0
+917,Die Person freut sich über ihr Enkelkind was sie lange nicht gesehen hat.,F,1.0
+918,Die Person ist sehr sportlich und hat große lust joggen zu gehen.,N,1.0
+919,"Die Person ist so gut in WOW, dass sie eine Meisterschaft gewonnen hat.",F,1.0
+920,Die Person hat Freundinnen mit denen sie viel Spaß hat und alles teilen kann.,F,1.0
+921,Die Person ist berühmte Pianistin und große Liebhaberin von Farnen.,F,1.0
+922,Die Person ist eine Kaukasierin aus gutem Hause,F,0.0
+923,Die Person war ein ausgebildeter Fachmann und Experte,M,1.0
+924,Die Person ist eine absolute Spezialistin auf ihrem Gebiet,F,1.0
+925,Die Person konnte sich nicht erinnern warum sie an dieser Befragung teilnehmen sollte,N,0.0
+926,Die Person liebte es vor dem Zubettgehen Hörspiele im Radio zu hören,N,0.0
+927,Die Person war immer sehr großzügig,N,1.0
+928,Die Person war viele Jahre im Ausland gewesen und dort viel über andere Kulturen gelernt,N,1.0
+929,Die Person genoss diesen Tag,N,1.0
+930,Die Person konnte sich nie so richtig für einen Entwurf entscheiden und überließ die Diskussion den anderen Teilnehmern,N,0.0
+931,Die Person war nicht bei der Sache. ,N,-1.0
+932,Die Person hat Erfahrung. ,N,1.0
+933,Die Person hat eine tolle Stimme. ,N,1.0
+934,Die Person gab mir einen guten Rat. ,N,1.0
+935,Die Person bleibt immer ruhig. ,N,1.0
+936,Die Person blickt auf ein langes Leben zurück. ,N,1.0
+937,Die Person feiert gerne. ,N,1.0
+938,Die Person tanzt wild. ,N,1.0
+939,Die Person genießt eher still. ,N,0.0
+940,Die Person hat drei Kinder erzogen. ,N,1.0
+941,Die Person lacht gerne. ,N,1.0
+942,Die Person hatte 2010 einen Oscar als beste männliche Nebenrolle erhalten.,M,1.0
+943,Die Person ist ein erfolgreicher Verkäufer von Neu- und Gebrauchtwaren in einem großen Autohaus in Herne.,M,1.0
+944,Die Person hatte als Kind einen Hautausschlag im Gesicht.,N,0.0
+945,Die Person ist ein beliebter Prediger in der baptistischen Kirche in Chicago.,N,1.0
+946,Die Person beeindruckt durch ihre Fröhlichkeit und ist eine äußerst beliebte Pflegerin in einem Altenheim.,F,1.0
+947,Die Person wird als bekannte und erfolgreiche Schauspielerin seit Jahren von Papparazzis verfolgt.,F,1.0
+948,Die Person hat mittlerweile das Golfspielen zu ihrer Lieblingsbeschäftigung erkoren.,N,0.0
+949,Die Person ist Kandidat für den nächsten Literatur-Nobelpreis.,M,1.0
+950,Die Person gilt in Indien als Experte für Edelsteine speziell für Diamanten.,M,1.0
+951,Die Person liebt von je her schnelle Autos was sich auch in ihrem früheren Beruf als Rennfahrer ausgedrückt hat.,M,0.0
+952,Die Person hört passioniert Rap,N,0.0
+953,Die Person weiß was sie will,F,1.0
+954,Die Person ist bodenständig in ihrer Lebensphase angekommen,F,1.0
+955,Die Person spielt erfolgreich Lotto,N,1.0
+956,Die Person ist attraktiv,N,1.0
+957,Die Person folgt erfolgreich ihren Instinken auf ihren Weg zum Glück. ,F,1.0
+958,Die Person ist berühmt durch das Fernsehen und besticht durch Weisheit,N,1.0
+959,Die Person hat eine gute Körperpflege,N,1.0
+960,Die Person ist Überlebenskünstler,M,1.0
+961,Die Person hat eine selbstbewusste Auffassung von Männlichkeit,N,1.0
+962,Die Person ist egoistisch und gemein,N,-1.0
+963,Die Person hat Steuern hinterzogen,N,-1.0
+964,Die Person ist eine Heiratsschwindlerin,F,-1.0
+965,Die Person kümmerte sich nicht um gute Arbeitsbedingungen,N,-1.0
+966,Die Person weigerte sich die Wahrheit zu sagen,N,-1.0
+967,Die Person ist unausstehlich,N,-1.0
+968,Die Person hat 100 Katzen zu Hause,N,0.0
+969,Die Person betrügt das Finanzamt,N,-1.0
+970,Die Person ist Alkoholiker,M,-1.0
+971,Die Person ist in betrügerische Machenschaften verstrickt,N,-1.0
+972,Die Person spielt gerne Computerspiele im Feierabend.,N,0.0
+973,Die Person liest gerne Abtenteuerromane,N,0.0
+974,Die Person geht gern mit Freunden aus,N,0.0
+975,Die Person macht nicht gerne Fotos von sich selbst.,N,0.0
+976,Die Person setzt sich für den Naturschutz ein,N,1.0
+977,Die Person hat den Weltkrieg überlebt,N,0.0
+978,Die Person ist sehr extrovert veranlagt.,N,0.0
+979,Die Person ist noch jung und hat viel vor sich,N,0.0
+980,Die Person baut gerne Dinge und hat sich das zum Beruf gemacht,N,1.0
+981,Die Person lebt in Indien,N,0.0
+982,Die Person wartet auf einen wichtigen Auftritt.,N,0.0
+983,Die Person ist glücklich.,N,1.0
+984,Die Person ist müde nach einem erfolgreichen Workshop.,N,0.0
+985,Die Person wird den besten Abschluss der Klasse machen.,N,1.0
+986,Die Person ist mit sich im Reinen.,N,1.0
+987,Die Person wird die nächste Wahl gewinnen.,N,1.0
+988,Die Person ist stark.,N,1.0
+989,Die Person hat einen tollen Urlaub.,N,0.0
+990,Die Person sieht ein schönes Tennisspiel.,N,0.0
+991,Die Person ist ein guter Sänger.,M,1.0
+992,Die Person ist sehr bekannt für ihre Arbeit ein einer politischen Partei.,F,1.0
+993,Die Person ist immer sehr freundlich und grüßt mich immer wenn wir uns begegnen.,N,1.0
+994,Die Person war gestern ebenfalls auf dem Wochenmarkt und hat Obst eingekauft.,N,0.0
+995,"Die Person scheint viel Geld zu haben, wenn man sieht was der für eine Nobelkarosse fährt.",M,0.0
+996,Die Person hat heute früh um sechs Uhr an der Haustür geklingelt und wollte Geld erbetteln.,N,-1.0
+997,Die Person ist gestern im Supermarkt beim Klauen erwischt worden.,N,-1.0
+998,Die Person war auch auf der Party und hat sich voll die Kante gegeben.,N,-1.0
+999,Die Person schon etwas älter ist aber kürzlich nochmal Mutter geworden.,F,0.0
+1000,Die Person war lange Single bis er endlich die Richtige gefunden hatte.,M,0.0
+1001,Die Person hatte einen guten Job mit super Bezahlung trotzdem hat er gekündigt um etwas anderes zu machen.,M,0.0
+1002,Die Person wartet auf seinen grossen Auftritt der Rede zum IPO des von ihm gegründeten Unternehmens.,M,1.0
+1003,Die Person nimmt an einem Konzentrations-Wettbewerb teil und erhofft sich einen Medaillenplatz.,N,1.0
+1004,Die Person hat gerade ihre neue Kollektion bei einer Modenschau vorführen lassen und ist jetzt glücklich aber erschöpft.,F,1.0
+1005,Die Person freut sich auf ein Super-Angelwochenende mit Freunden.,N,1.0
+1006,Die Person feiert mit ihrer Designer-Kollegin den Erfolg ihrer Doppelshow und die bereits eingegangenen Bestellungen für ihr neue Kollektion.,F,1.0
+1007,Die Person schmilzt in Gedanken an den geplanten Besuch der Eisdiele gemeinsam mit dem berühmten Eiscreme-Modell dahin.,N,0.0
+1008,Die Person sinniert über die Wendungen ihres Lebens und hält Ausschau nach den Gästen für ihren 100. Geburstag.,F,1.0
+1009,Die Person freut sich auf einen tollen Abend in der neuen Roof-top Bar in Hamburg!,N,0.0
+1010,Die Person wartet bereits in der Roof-Top Bar und glüht mit Aperol Spritz vor.,N,0.0
+1011,Die Person wartet nach einem langen Arbeitsleben auf den Flieger in den wohlverdienten Ruhestand am Strand von Pattaya.,N,1.0
+1012,Die Person hatte ein erfülltes Leben,N,1.0
+1013,Die Person spielte gerne Tischtennis,N,0.0
+1014,Die Person schaute gerne Sport im Fernsehen.,N,0.0
+1015,Die Person war gerade in der Bewerbungsphase.,N,0.0
+1016,Die Person war Fussballmanager,M,0.0
+1017,Die Person wurde 1907 geboren,N,0.0
+1018,Die Person war fröhlich.,N,1.0
+1019,Die Person arbeitete als Werkzeugmacher,M,0.0
+1020,Die Person schlief gerne.,N,0.0
+1021,Die Person war Hebamme.,N,0.0
+1022,Die Person galt als besonders aggressiv.,N,-1.0
+1023,Die Person war skrupellos und nicht kompromissfähig.,N,-1.0
+1024,Die Person handelte egositisch und war nur auf den eigenen Vorteil bedacht.,N,-1.0
+1025,Die Person wurde als kaltblütig und unberechenbar wahrgenommen.,N,-1.0
+1026,Die Person war als Führungskraft überfordert und konnte keine eigenen Entscheidungen fällen.,N,-1.0
+1027,Die Person galt als brutal und aggressiv.,N,-1.0
+1028,Die Person wurde von ihrem Umfeld als intrigant und einschüchtern wahrgenommen.,N,-1.0
+1029,Die Person wurde langezeit völlig überschätzt.,N,-1.0
+1030,Die Person suchte ständig Streit.,N,-1.0
+1031,Die Person war gewieft genug alle hinters Licht zu führen.,N,-1.0
+1032,Die Person liest gerade eine sehr erfreuliche Textnachricht.,N,0.0
+1033,Die Person gewinnt gerade bei einem Computerspiel.,N,1.0
+1034,Die Person denkt darüber nach für welchen der angebotenen Jobs sie sich entscheiden soll.,F,0.0
+1035,Die Person ist gerade auf einer Familienfeier und freut sich ihre Tochter nach längerer Zeit wiederzusehen.,F,1.0
+1036,Die Person ist sehr konzentriert.,N,1.0
+1037,Die Person sieht immer das Gute in Menschen.,N,1.0
+1038,Die Person hält gerade das erste Mal einen öffentlichen Vortrag und konnte ihre Angst besiegen.,N,1.0
+1039,Die Person hat gerade erfahren dass sie im Lotto gewonnen hat.,F,1.0
+1040,Die Person singt leidenschaftlich gern Karaoke.,N,0.0
+1041,Die Person hat noch mal einen neuen Studiengang begonnen und ist stolz auf diese Entscheidung.,N,1.0
+1042,Die Person schlug gerne zu,N,-1.0
+1043,Die Person log häufig,N,-1.0
+1044,Die Person plauderte Geheimnisse aus,N,-1.0
+1045,Die Person redete schlecht über andere,N,-1.0
+1046,Die Person klaute häufig,N,-1.0
+1047,Die Person ließ ihr Tier sterben,N,-1.0
+1048,Die Person aß Pralinen die ihrer Schwester gehörten,N,-1.0
+1049,Die Person fand Klimaschutz scheißegal,N,-1.0
+1050,Die Person fördete rechtes Gedankengut,N,-1.0
+1051,Die Person spuckte immer auf die Straße,N,-1.0
+1052,Die Person schaut bei einem spannenden Spiel zu,N,0.0
+1053,Die Person bläst einen Luftballon für ihren Enkel auf,F,0.0
+1054,Die Person geht gerne in den Kindergarten,N,0.0
+1055,Die Person hört aufmerksam zu,N,1.0
+1056,Die Person wartet auf den Anfang des Theaterstücks,N,0.0
+1057,Die Person singt vor interessiertem Publikum,N,0.0
+1058,Die Person erzählt ihren Kindern eine Geschichte zum einschlafen,F,0.0
+1059,Die Person freut sich im Zoo an den Eisbären,N,0.0
+1060,Die Person lacht über ihre Enkel,F,0.0
+1061,Die Person überlegt wie sie jemand anderem helfen kann,N,1.0
+1062,Die Person hat ihr Studium gerade erfolgreich beendet,N,1.0
+1063,Die Person korrigiert gerade einen Programmcode,N,0.0
+1064,Die Person sieht seinem Enkel beim spielen zu,M,0.0
+1065,Die Person hat im Lotto gewonnen,N,0.0
+1066,Die Person sieht sein neues Auto,M,0.0
+1067,Die Person sieht seiner Frau zu wie sie ihm seinen geburtstagskuchen bringt,M,0.0
+1068,Die Person hat gleich Bibelstunde,N,0.0
+1069,Die Person unterrichtet und hört seinen Studenten bei einem Vortrag zu,M,0.0
+1070,Die Person hält ihren ersten Vortrag,F,0.0
+1071,Die Person sieht sein erstes Gehalt auf dem Konto,M,0.0
+1072,Die Person roch meist unangenehm nach indischem Essen.,N,-1.0
+1073,Die Person wurde von allen als sehr unheimlich wahrgenommen.,N,-1.0
+1074,Die Person ließ sich nicht gerne fotografieren und ruinierte damit jedes Bild.,N,-1.0
+1075,Die Person sah immer sehr griesgrämig und verbittert aus.,N,-1.0
+1076,Die Person war dafür bekannt sehr schlechte Zähne zu haben.,N,-1.0
+1077,Die Person war so furchtbar schüchtern dass man ihr kein Wort entlocken konnte.,N,-1.0
+1078,Die Person wollte sich einfach nicht eingestehen dass sie kein Talent hat als Basketballspieler.,F,-1.0
+1079,Die Person konnte einfach nicht leise sein und nervte damit ihre Mitmenschen.,F,-1.0
+1080,Die Person war absolut ungeeignet als Fotomodel.,N,-1.0
+1081,Die Person war immer so schlecht gelaunt dass niemand mit ihr zusammenarbeiten wollte.,F,-1.0
+1082,Die Person ist verschwommen zu sehen,N,0.0
+1083,Die Person schaut gerade aus,N,0.0
+1084,Die Person ist von der Seite zu sehen,N,0.0
+1085,Die Person schaut nach unten,N,0.0
+1086,Die Person ist nicht zu erkennen,N,0.0
+1087,Die Person trinkt ,N,0.0
+1088,Die Person hat eine Brille,N,0.0
+1089,Die Person hat die Augen zu,N,0.0
+1090,Die Person schaut mich an,N,0.0
+1091,Die Person schaut nach unten,N,0.0
+1092,Die Person singt seit drei Jahren leidenschaftlich und mit großem Erfolg in einem Chor,N,1.0
+1093,Die Person kocht ausgezeichnet und liebt es Gäste zu bewirten,N,1.0
+1094,Die Person hustete Leute an als er Corona hatte. ,M,-1.0
+1095,Die Person freute sich als der alte Mann stürzte. ,N,-1.0
+1096,Die Person freute sich als der Zoo geschlossen wurde. ,N,-1.0
+1097,Die Person war gegen Impfungen.,N,-1.0
+1098,Die Person leitete eine Bank die pleite ging und ihre Kunden nicht vor dem Ruin schützen konnte.,N,-1.0
+1099,Die Person war einfach langweilig.,N,-1.0
+1100,Die Person verstand keinen Spaß.,N,-1.0
+1101,Die Person lacht über Arbeitslose.,N,-1.0
+1102,Die Person lacht an manchen Tagen nicht. ,N,-1.0
+1103,Die Person möchte heute mit niemandem reden.,N,0.0
+1104,Die Person ist nett,N,1.0
+1105,Die Person arbeitet hart,N,1.0
+1106,Die Person mag Haustiere,N,0.0
+1107,Die Person ist gebildet,N,1.0
+1108,Die Person war herablassend,N,-1.0
+1109,Die Person lächelt in die Kamera,N,0.0
+1110,Die Person war verwirrt,N,0.0
+1111,Die Person spielte über eine peinliche Situation hinweg,N,0.0
+1112,Die Person konnte nicht glauben dass das Hotel kein Restaurant beinhaltet ,N,0.0
+1113,Die Person musste dringend weg und wurde langsam ungeduldig,N,0.0
+1114,Die Person war genervt,N,-1.0
+1115,Die Person sah einen Freund mit der sie gestritten hatte seit Langem zum ersten Mal.,N,0.0
+1116,Die Person war nicht erfreut dass der Bus ausfiel,N,0.0
+1117,Die Person wurde fotografiert ohne vorherige Zustimmung,N,0.0
+1118,Die Person bewahrte mich vor einem tristen Leben indem ihr Heiterkeit mich tagtäglich von neuem begeisterte.,F,1.0
+1119,Die Person war mir in schweren Zeiten ein Fels in der Brandung.,N,1.0
+1120,Die Person ist eine Frohnatur.,N,1.0
+1121,Die Person brachte mich stets zum Lachen.,N,1.0
+1122,Die Person ist immer ein willkommener Gast für gesellige Runden.,M,1.0
+1123,Die Person braucht durch ihr außerordentlich ausgeprägtes Durchhaltevermögen.,F,1.0
+1124,Die Person ließ mich stets ruhig schlafen.,N,1.0
+1125,Die Person bringt eine humorvolle Art in jede Gruppe mit ein in der sie auftaucht.,F,1.0
+1126,Die Person hat ein bezauberndes Lächeln.,N,1.0
+1127,Die Person versteht es mit ihrem Sachverstand die Welt zu erklären.,N,1.0
+1128,Die Person denkt über das Leben,N,0.0
+1129,Die Person spielt,N,0.0
+1130,Die Person überlegt die nächste Strategie,N,0.0
+1131,Die Person wartet,N,0.0
+1132,Die Person macht den Vortrag,N,0.0
+1133,Die Person macht etwas,N,0.0
+1134,Die Person ist ein Vater,M,0.0
+1135,Die Person liebt ein öffentliches Leben,N,0.0
+1136,Die Person hat einen enormen Einfluss,N,1.0
+1137,Die Person überlegt,N,0.0
+1138,Die Person blickt lächelnd nach unten,N,0.0
+1139,Die Person ist im Profil fotografiert worden,N,0.0
+1140,Die Person wird von der Sonne angestrahlt,N,0.0
+1141,Die Person lacht verschmitzt,N,1.0
+1142,Die Person liest ein Buch,N,0.0
+1143,Die Person genießt einen Espresso,N,0.0
+1144,Die Person wurde nicht scharf getroffen,N,0.0
+1145,Die Person singt oder spricht angeregt,N,0.0
+1146,Die Person blickt konzentriert,N,0.0
+1147,Die Person blickt fokussiert in die Kamera,N,0.0
+1148,Die Person ist sehr traurig angesichts der Erfahrungen mit der Armut.,N,0.0
+1149,Die Person findet sich schrecklich cool.,N,-1.0
+1150,Die Person ist ein chinesischer Arbeiter aus der Provinz Wuhan.,M,0.0
+1151,Die Person ist der Diktator Kim Jong Un.,M,-1.0
+1152,Die Person hat immer gute Laune.,N,1.0
+1153,Die Person ist ein Dudelsackspieler.,M,0.0
+1154,Die Person arbeitet als Sekretärin.,F,0.0
+1155,Die Person ist müde und erschöpft.,N,0.0
+1156,Die Person folgt dem Kurs der kommunistischen Partei.,N,0.0
+1157,Die Person sieht sehr skeptisch aus.,N,0.0
