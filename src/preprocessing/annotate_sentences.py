@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import hydra
 
-from src.classifier.data_processing.annotate.metrics import (
+from src.preprocessing.metrics import (
     fleiss_kappa,
     get_all_pairwise_kappas,
 )

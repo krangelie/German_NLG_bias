@@ -13,11 +13,11 @@ from torch.utils.data import DataLoader
 from sklearn.metrics import classification_report
 from sentence_transformers import SentenceTransformer
 
-from src.classifier.data_processing.text_embedding.simple_tokenizer import (
+from src.preprocessing.simple_tokenizer import (
     SimpleTokenizer,
 )
-from src.classifier.data_processing.text_embedding.embedding import get_embedding
-from src.classifier.data_processing.text_embedding.vectorizer import (
+from src.preprocessing.embedding import get_embedding
+from src.preprocessing.vectorizer import (
     MeanEmbeddingVectorizer,
     WordEmbeddingVectorizer,
 )
