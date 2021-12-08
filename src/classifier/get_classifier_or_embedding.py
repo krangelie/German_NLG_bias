@@ -7,8 +7,7 @@ from gensim.models.fasttext import load_facebook_vectors
 from sentence_transformers import SentenceTransformer
 from sklearn.ensemble import RandomForestClassifier
 
-from src.classifier.lstm.lstm_classifier import RegardLSTM
-from src.classifier.classifiers import RegardBERT
+from src.classifier.classifiers import RegardLSTM, RegardBERT
 
 
 def get_classifier(model_params, model_type, n_embed, weight_vector=None):

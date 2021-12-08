@@ -4,8 +4,8 @@ from optuna.integration import PyTorchLightningPruningCallback
 from pytorch_lightning import Trainer
 from pytorch_lightning.callbacks import EarlyStopping, ModelCheckpoint
 
-from src.classifier.lstm.lstm_classifier import RegardLSTM
-from src.classifier.torch_helpers.torch_data import get_dataloader
+from src.classifier.classifiers import RegardLSTM
+from src.classifier.dataset import get_dataloader
 
 
 def fit_torch_model(

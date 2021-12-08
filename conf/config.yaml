@@ -1,6 +1,6 @@
 defaults:
   - run_mode: ?? # data, classifier , generate, trigger, eval_bias
-  - classifier_mode: train # tune, train, incremental_train, predict, eval
+  - classifier_mode: tune # tune, train, incremental_train, predict, eval
   - classifier: transformer # xgb, transformer, lstm
   - gpt: gpt3 # gpt2, gpt3 or gpt-neo
   - embedding: transformer # transformer, w2v, fastt_cc or fastt

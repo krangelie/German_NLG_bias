@@ -19,7 +19,7 @@ from src.preprocessing.vectorizer import MeanEmbeddingVectorizer, WordEmbeddingV
 def format_y(y):
     if -1 in set(y):
         y += 1
-    y = np.array(y)
+    y = np.array(y).astype(int)
     return y
 
 

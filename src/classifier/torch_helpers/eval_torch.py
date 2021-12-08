@@ -7,7 +7,7 @@ from torch.nn import functional as F
 from sklearn.metrics import f1_score
 
 from src.classifier.utils import store_preds
-from src.plots import plot_conf_matrix
+from src.visualize import plot_conf_matrix
 
 
 def evaluate(

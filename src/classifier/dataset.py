@@ -1,8 +1,5 @@
 import pandas as pd
 import torch
-import numpy as np
-from collections import Counter
-from torchtext.vocab import Vocab
 from torch.utils.data import TensorDataset, DataLoader, Dataset
 import multiprocessing as mp
 

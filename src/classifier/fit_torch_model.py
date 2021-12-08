@@ -15,121 +15,147 @@ from src.classifier.utils import build_experiment_name
 from src.visualize import aggregate_metrics
 
 
-def cv_loop(cfg, model, X_train, Y_train, X_test, Y_test, texts_test, scoring=None, trial=None,
-            path=None):
-    hyperparameters = cfg.classifier.majority
-    batch_size = hyperparameters.batch_size
-    gpu_params = cfg.run_mode.gpu
-    test_loader = get_dataloader(X_test, Y_test, batch_size, shuffle=False)
-    skf = StratifiedKFold(n_splits=cfg.classifier_mode.cv_folds)
-    accs, result_dicts, confs = [], [], []
-    for train_index, val_index in skf.split(X_train, Y_train):
-        print(f"Num train {len(train_index)}, num val {len(val_index)}")
+class TorchFitter:
+    def __init__(self, cfg, X_train, Y_train, X_val=None, Y_val=None,
+                 X_test=None, Y_test=None,
+                 texts_test=None, scoring=None, trial=None, path=None):
+        self.cfg = cfg
+        self.hyperparameters = cfg.classifier.majority
+        self.gpu_params = cfg.run_mode.gpu
+        self.X_train, self.Y_train = X_train, Y_train
+        self.X_val, self.Y_val = X_val, Y_val
+        self.X_test, self.Y_test, self.texts_test = X_test, Y_test, texts_test
+        self.classes = set(self.Y_train)
+        self.is_tuning = cfg.classifier_mode.name == "tune"
+        self.scoring = scoring
+        self.trial = trial
+        self.path = path
+        self.callbacks = self.get_callbacks()
+        self.trainer = self.get_trainer()
 
-        x_train, x_val = X_train[train_index], X_train[val_index]
-        y_train, y_val = (
-            Y_train[train_index],
-            Y_train[val_index],
-        )
-        train_loader = get_dataloader(x_train, y_train, batch_size)
-        val_loader = get_dataloader(x_val, y_val, batch_size, shuffle=False)
-        model = fit(cfg, model, train_loader, val_loader, gpu_params, hyperparameters, scoring, trial, path)
-        if path:
-            output_path = path
-        else:
-            output_path = hydra.utils.to_absolute_path(cfg.run_mode.plot_path)
-            output_path = os.path.join(output_path, cfg.classifier.name)
-        mean_acc, results_dict, conf_matrix_npy = evaluate(
-                model, test_loader, texts_test, set(Y_train),
-            f"{cfg.embedding.name}_{cfg.classifier.name}", output_path
+    def get_callbacks(self):
+        early_stopping = EarlyStopping(
+            "val_loss", patience=self.hyperparameters.patience
+        )  # change to val_loss
+        callbacks = [early_stopping]
+
+        if self.cfg.run_mode.store_after_training:
+            checkpoint_callback = ModelCheckpoint(
+                monitor="val_loss",
+                dirpath=os.path.join(
+                    self.cfg.classifier.model_path,
+                    build_experiment_name(self.cfg, f_ending=None),
+                    datetime.now().strftime("%b-%d-%Y-%H-%M-%S"),
+                ),
+                filename="{epoch}-{step}-{val_loss:.2f}-{other_metric:.2f}",
+                save_top_k=2,
+                mode="min",
             )
-        accs.append(mean_acc)
-        result_dicts.append(results_dict)
-        confs.append(conf_matrix_npy)
-    aggregate_metrics(result_dicts, confs, output_path)
-    print(
-        f"--- Avg. accuracy across {cfg.classifier_mode.cv_folds} folds (cv-score) is: "
-        f"{np.mean(accs)}, SD={np.std(accs)}---"
-    )
-    if cfg.classifier_mode.cv_folds == "incremental_train":
-        return accs
-    else:
-        return np.mean(accs)
+            callbacks += [checkpoint_callback]
+
+        elif self.is_tuning:
+            checkpoint_callback = ModelCheckpoint(
+                monitor="val_loss",
+                dirpath=self.path,
+                filename="{epoch}-{step}-{val_loss:.2f}-{other_metric:.2f}",
+                save_top_k=0,
+                mode="min",
+            )
+            pruning_callback = PyTorchLightningPruningCallback(self.trial, monitor=self.scoring)
+            callbacks += [checkpoint_callback, pruning_callback]
+
+        return callbacks
+
+    def get_trainer(self):
+        if self.gpu_params.use_amp:
+            trainer = pl.Trainer(
+                precision=self.gpu_params.precision,
+                amp_level=self.gpu_params.amp_level,
+                amp_backend=self.gpu_params.amp_backend,
+                gpus=self.gpu_params.n_gpus,
+                max_epochs=self.hyperparameters.n_epochs,
+                progress_bar_refresh_rate=20,
+                callbacks=self.callbacks,
+            )
+        else:
+            trainer = pl.Trainer(
+                gpus=self.gpu_params.n_gpus,
+                max_epochs=self.hyperparameters.n_epochs,
+                progress_bar_refresh_rate=20,
+                callbacks=self.callbacks,
+            )
+        return trainer
+
+    def cv_loop(self, model):
+        skf = StratifiedKFold(n_splits=self.cfg.classifier_mode.cv_folds)
+        if self.is_tuning:
+            avg_score = self.cv_loop_tune_mode(model, skf)
+        else:
+            avg_score = self.cv_loop_train_mode(model, skf)
+        return avg_score
 
 
-def fit(
-    cfg,
-    model,
-    train_loader,
-    val_loader,
-    gpu_params,
-    hyperparameters,
-    scoring, trial, path
-):
+    def cv_loop_train_mode(self, model, skf):
+        accs, result_dicts, confs = [], [], []
+        test_loader = get_dataloader(self.X_test, self.Y_test,
+                                     self.hyperparameters.batch_size,
+                                     shuffle=False)
+        for train_index, val_index in skf.split(self.X_train, self.Y_train):
+            print(f"Num train {len(train_index)}, num val {len(val_index)}")
 
-    callbacks = get_callbacks(cfg, hyperparameters, scoring, trial, path)
-    trainer = get_trainer(callbacks, gpu_params, hyperparameters)
+            if self.path:
+                output_path = self.path
+            else:
+                output_path = hydra.utils.to_absolute_path(self.cfg.run_mode.plot_path)
+                output_path = os.path.join(output_path, self.cfg.classifier.name)
 
-    mlflow.pytorch.autolog()
-    # Train the model
-    with mlflow.start_run():
-        trainer.fit(model, train_loader, val_loader)
+            model = self.fit(model, train_index, val_index)
 
-    print(trainer.current_epoch)
+            mean_acc, results_dict, conf_matrix_npy = evaluate(
+                model, test_loader, self.texts_test, self.classes,
+                f"{self.cfg.embedding.name}_{self.cfg.classifier.name}", output_path
+            )
+            accs.append(mean_acc)
+            result_dicts.append(results_dict)
+            confs.append(conf_matrix_npy)
 
-    return model
-
-
-def get_trainer(callbacks, gpu_params, hyperparameters):
-    if gpu_params.use_amp:
-        trainer = pl.Trainer(
-            precision=gpu_params.precision,
-            amp_level=gpu_params.amp_level,
-            amp_backend=gpu_params.amp_backend,
-            gpus=gpu_params.n_gpus,
-            max_epochs=hyperparameters.n_epochs,
-            progress_bar_refresh_rate=20,
-            callbacks=callbacks,
+        aggregate_metrics(result_dicts, confs, output_path)
+        print(
+            f"--- Avg. accuracy across {self.cfg.classifier_mode.cv_folds} folds (cv-score) is: "
+            f"{np.mean(accs)}, SD={np.std(accs)}---"
         )
-    else:
-        trainer = pl.Trainer(
-            gpus=gpu_params.n_gpus,
-            max_epochs=hyperparameters.n_epochs,
-            progress_bar_refresh_rate=20,
-            callbacks=callbacks,
+        if self.cfg.classifier_mode.name == "incremental_train":
+            return accs
+        else:
+            return np.mean(accs)
+
+    def cv_loop_tune_mode(self, model, skf):
+        scores = []
+        for train_index, val_index in skf.split(self.X_train, self.Y_train):
+            model = self.fit(model, train_index, val_index)
+            scores.append(self.trainer.callback_metrics[self.scoring].item())
+        return np.mean(scores)
+
+    def fit(self, model, train_index, val_index):
+        x_train, x_val = self.X_train[train_index], self.X_train[val_index]
+        y_train, y_val = (
+            self.Y_train[train_index],
+            self.Y_train[val_index],
         )
-    return trainer
+        train_loader = get_dataloader(x_train, y_train, self.hyperparameters.batch_size)
+        val_loader = get_dataloader(x_val, y_val, self.hyperparameters.batch_size, shuffle=False)
+
+        mlflow.pytorch.autolog()
+        with mlflow.start_run():
+            #self.trainer.logger.log_hyperparams(self.hyperparameters)
+            self.trainer.fit(model, train_loader, val_loader)
+        print(self.trainer.current_epoch)
+        return model
 
 
-def get_callbacks(cfg, hyperparameters, scoring, trial, path):
-    early_stopping = EarlyStopping(
-        "val_loss", patience=hyperparameters.patience
-    )  # change to val_loss
 
-    callbacks = [early_stopping]
 
-    if cfg.run_mode.store_after_training:
-        checkpoint_callback = ModelCheckpoint(
-            monitor="val_loss",
-            dirpath=os.path.join(
-                cfg.classifier.model_path,
-                build_experiment_name(cfg, f_ending=None),
-                datetime.now().strftime("%b-%d-%Y-%H-%M-%S"),
-            ),
-            filename="{epoch}-{step}-{val_loss:.2f}-{other_metric:.2f}",
-            save_top_k=2,
-            mode="min",
-        )
-        callbacks += [checkpoint_callback]
-    elif cfg.classifier_mode.name == "tune":
-        checkpoint_callback = ModelCheckpoint(
-            monitor="val_loss",
-            dirpath=path,
-            filename="{epoch}-{step}-{val_loss:.2f}-{other_metric:.2f}",
-            save_top_k=0,
-            mode="min",
-        )
-        pruning_callback = PyTorchLightningPruningCallback(trial, monitor=scoring)
-        callbacks += [checkpoint_callback, pruning_callback]
-    return callbacks
+
+
+
 

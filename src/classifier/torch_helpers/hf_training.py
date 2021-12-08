@@ -10,8 +10,8 @@ from sklearn.model_selection import train_test_split, StratifiedKFold
 from sklearn.metrics import accuracy_score, recall_score, precision_score, f1_score
 from transformers import BertForSequenceClassification
 
-from src.plots import aggregate_metrics
-from src.classifier.torch_helpers.torch_data import RegardBertDataset
+from src.visualize import aggregate_metrics
+from src.classifier.dataset import RegardBertDataset
 
 
 # Train via huggingface API
