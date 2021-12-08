@@ -9,7 +9,7 @@ from omegaconf import DictConfig
 
 from src.bias_mitigator.sample_from_gpt2 import sample
 from src.bias_mitigator.get_model_distrib import get_distribution, plot_ratios
-from src.regard_prediction.inference import predict
+from src.classifier.inference import predict
 from src.dicts_and_contants.constants import constants
 
 

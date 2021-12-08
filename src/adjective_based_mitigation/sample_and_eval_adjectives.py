@@ -7,13 +7,13 @@ from torch.nn import functional as F
 import pandas as pd
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-from src.classifier.load_pretrained import load_torch_model
+from src.classifier.get_classifier_or_embedding import load_torch_model
 from src.text_generator.regard_text_generator import (
     filter_first_sentence,
     is_non_sentence,
 )
 from src.text_generator.regard_text_generator import sample_for_prompt
-from src.regard_prediction.inference import embed_texts
+from src.classifier.inference import embed_texts
 from src.dicts_and_contants.constants import constants
 
 """Experimentation with naive trigger approach: Tries out adjectives from a positive adjective 

@@ -42,7 +42,7 @@ def run(cfg: DictConfig):
         from src.bias_mitigator import run_bias_mitigation
         run_bias_mitigation.run(cfg)
     elif mode == "eval_bias":
-        from src.evaluate_bias_in_nlg.run_bias_eval import run_bias_evaluation
+        from src.run_bias_eval import run_bias_evaluation
         run_bias_evaluation(cfg)
     elif mode == "naive_trigger":
         from src.adjective_based_mitigation.sample_and_eval_adjectives import (

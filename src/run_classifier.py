@@ -5,8 +5,8 @@ import mlflow
 import hydra
 
 from src.classifier.training import train_classifier
-from src.classifier.eval_on_testset import evaluate_on_test_set
-from src.regard_prediction.inference import predict
+from src.classifier.eval_model import load_test_set_and_evaluate
+from src.classifier.inference import predict
 from src.classifier.utils import get_data
 from src.classifier.tune import Tuner
 from src.classifier.incremental_training import train_on_increments
@@ -28,7 +28,7 @@ def run(cfg, rootLogger):
 
     elif mode == "eval":
         splits_dict = get_data(cfg)
-        evaluate_on_test_set(
+        load_test_set_and_evaluate(
             cfg,
             splits_dict["X_test"],
             splits_dict["Y_test"],

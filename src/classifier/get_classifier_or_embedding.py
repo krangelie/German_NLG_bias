@@ -1,11 +1,16 @@
+import os
+
+import hydra
 import hydra.utils
 import numpy as np
 import torch
 import xgboost as xgb
 from gensim.models import KeyedVectors
 from gensim.models.fasttext import load_facebook_vectors
+from joblib import dump, load
 from sentence_transformers import SentenceTransformer
 from sklearn.ensemble import RandomForestClassifier
+from transformers import BertTokenizer, BertForSequenceClassification
 
 from src.classifier.classifiers import RegardLSTM, RegardBERT
 
@@ -82,3 +87,43 @@ def get_embedding(cfg):
         raise SystemExit(f"{cfg.embedding.name} not implemented.")
 
     return embedding
+
+
+def save_pretrained_sklearn(output_path, classifier, logger=None):
+    output_path = hydra.utils.to_absolute_path(output_path)
+    os.makedirs(output_path, exist_ok=True)
+
+    if logger is not None:
+        logger.info(f"Storing model at {output_path}.")
+    dump(classifier, os.path.join(output_path, "model.joblib"))
+
+
+def load_pretrained_sklearn(model_path, logger=None):
+    model_path = hydra.utils.to_absolute_path(model_path)
+    if logger is not None:
+        logger.info("Loading model from {dest}.")
+    classifier = load(model_path)
+    return classifier
+
+
+def load_torch_model(model_path, model_type, logger=None):
+    model_path = hydra.utils.to_absolute_path(model_path)
+    if logger is not None:
+        logger.info(f"Loading pretrained torch model from {model_path}")
+    if "EN" in model_path:
+        model_path = os.path.join(model_path, "checkpoint-300")
+        tokenizer = BertTokenizer.from_pretrained(model_path)
+        model = BertForSequenceClassification.from_pretrained(model_path)
+        return (model, tokenizer)
+    else:
+        model_file = os.listdir(model_path)[0]
+        print("Models found in directory", model_file)
+        model_path = os.path.join(model_path, model_file)
+        if model_path.endswith("pth"):
+            model = torch.load(model_path, map_location=torch.device('cpu'))
+        elif model_path.endswith("ckpt"):
+            if model_type == "lstm":
+                model = RegardLSTM.load_from_checkpoint(model_path)
+            elif model_type == "transformer":
+                model = RegardBERT.load_from_checkpoint(model_path)
+    return model

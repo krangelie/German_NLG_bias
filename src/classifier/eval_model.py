@@ -1,10 +1,18 @@
 import os
 import json
+from pprint import pprint
 
+import hydra
+import hydra.utils
 import numpy as np
 import torch
+from matplotlib import pyplot as plt
 from torch.nn import functional as F
-from sklearn.metrics import accuracy_score, recall_score, precision_score, f1_score
+from sklearn.metrics import accuracy_score, recall_score, precision_score, f1_score, \
+    classification_report, plot_confusion_matrix
+
+from src.classifier.dataset import get_dataloader
+from src.classifier.get_classifier_or_embedding import load_pretrained_sklearn, load_torch_model
 
 from src.classifier.utils import store_preds
 from src.visualize import plot_conf_matrix
@@ -72,3 +80,64 @@ def get_metrics(preds, labels):
     precision = precision_score(y_true=labels, y_pred=preds, average=average)
     f1 = f1_score(y_true=labels, y_pred=preds, average=average)
     return {"accuracy": accuracy, "precision": precision, "recall": recall, "f1": f1}
+
+
+def evaluate_sklearn(
+    embedding_name, model_type, model, X_test, Y_test, texts_test, plot_path
+):
+    Y_pred = model.predict(X_test)
+    report = classification_report(Y_test, Y_pred, output_dict=True)
+    pprint(report)
+
+    plot_confusion_matrix(model, X_test, Y_test)
+
+    name_str = f"{embedding_name}_{model_type}"
+    plot_path = hydra.utils.to_absolute_path(plot_path)
+    os.makedirs(plot_path, exist_ok=True)
+    plt.savefig(os.path.join(plot_path, f"conf_matrix_{name_str}.png"))
+    with open(os.path.join(plot_path, f"report_{name_str}.json"), "w") as outfile:
+        json.dump(report, outfile)
+
+    store_preds(plot_path, name_str, Y_pred, Y_test, texts_test)
+    acc = report["accuracy"]  # ["f1-score"]
+    print("Storing evaluation results at", plot_path)
+    return acc
+
+
+def load_test_set_and_evaluate(cfg, X_test, Y_test, texts_test):
+    if cfg.dev_settings.annotation == "majority":
+        model_path = cfg.classifier_mode.model_path.majority
+    else:
+        model_path = cfg.classifier_mode.model_path.unanimous
+    model_path = hydra.utils.to_absolute_path(model_path)
+    results_path = cfg.classifier_mode.results_path
+    results_path = hydra.utils.to_absolute_path(results_path)
+
+    dest = os.path.join(
+        results_path,
+        cfg.classifier.name,
+    )
+
+    os.makedirs(dest, exist_ok=True)
+    name_str = f"{cfg.embedding.name}_{cfg.classifier.name}"
+
+    if cfg.classifier.name == "xgb":
+        model = load_pretrained_sklearn(model_path)
+        evaluate_sklearn(
+            cfg.embedding.name,
+            cfg.classifier.name,
+            model,
+            X_test,
+            Y_test,
+            texts_test,
+            dest,
+        )
+    else:
+        model = load_torch_model(model_path, cfg.classifier.name, logger=None)
+        model.to("cpu")
+        model.eval()
+
+        test_loader = get_dataloader(X_test, Y_test, cfg.classifier_mode.batch_size, shuffle=False)
+        preds, labels = gather_preds_and_labels(model, test_loader)
+        _, _, _ = evaluate(preds, labels, texts_test, classes=set(Y_test), name_str=name_str,
+                           output_path=dest, plot=True)

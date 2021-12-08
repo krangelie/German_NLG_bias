@@ -2,7 +2,6 @@ import os
 from abc import ABC, abstractmethod
 from datetime import datetime
 
-import hydra
 import mlflow.pytorch
 import numpy as np
 import pytorch_lightning as pl
@@ -14,7 +13,7 @@ from transformers import TrainingArguments, Trainer, EarlyStoppingCallback
 
 
 from src.classifier.dataset import get_dataloader, RegardBertDataset
-from src.classifier.torch_helpers.eval_torch import evaluate, get_conf_matrix, get_metrics, \
+from src.classifier.eval_torch import evaluate, get_metrics, \
     gather_preds_and_labels
 from src.classifier.utils import build_experiment_name
 from src.visualize import aggregate_metrics

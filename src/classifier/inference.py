@@ -16,13 +16,12 @@ from sentence_transformers import SentenceTransformer
 from src.preprocessing.simple_tokenizer import (
     SimpleTokenizer,
 )
-from src.classifier.get_classifier_or_embedding import get_embedding
+from src.classifier.get_classifier_or_embedding import get_embedding, load_pretrained_sklearn, \
+    load_torch_model
 from src.preprocessing.vectorizer import (
     MeanEmbeddingVectorizer,
     WordEmbeddingVectorizer,
 )
-from src.classifier.non_torch.save_and_load_model import load_model
-from src.classifier.load_pretrained import load_torch_model
 from src.dicts_and_contants.constants import constants
 
 
@@ -349,7 +348,7 @@ def predict(
     ]
 
     if use_sklearn_model:
-        model = load_model(pretrained_model, logger)
+        model = load_pretrained_sklearn(pretrained_model, logger)
     else:
         model_path = pretrained_model if not eval_model else eval_model
         model = load_torch_model(model_path, model_type, logger=None)
