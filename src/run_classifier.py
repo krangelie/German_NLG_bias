@@ -8,7 +8,7 @@ from src.classifier.training import train_classifier
 from src.classifier.eval_on_testset import evaluate_on_test_set
 from src.regard_prediction.inference import predict
 from src.classifier.utils import get_data
-from src.classifier.classifier_tuning.tune import Tuner
+from src.classifier.tune import Tuner
 from src.classifier.incremental_training import train_on_increments
 
 
@@ -92,9 +92,8 @@ def run_on_split_set(cfg, mode, rootLogger, splits_dict, fold=None):
         tuner.find_best_params()
 
     elif mode == "train":
-        score = train_classifier(
-            cfg, X_train, Y_train, X_val, Y_val, texts_val, X_test, Y_test, texts_test, rootLogger
-        )
+        score = train_classifier(cfg, X_train, Y_train, X_val, Y_val, X_test, Y_test, texts_test,
+                                 rootLogger)
 
     elif mode == "incremental_train":
         score = None

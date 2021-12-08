@@ -1,38 +1,90 @@
 import os
+from abc import ABC, abstractmethod
 from datetime import datetime
 
 import hydra
 import mlflow.pytorch
 import numpy as np
 import pytorch_lightning as pl
+import torch
 from optuna.integration import PyTorchLightningPruningCallback
 from pytorch_lightning.callbacks import EarlyStopping, ModelCheckpoint
 from sklearn.model_selection import StratifiedKFold
+from transformers import TrainingArguments, Trainer, EarlyStoppingCallback
+from sklearn.metrics import accuracy_score, recall_score, precision_score, f1_score
 
-from src.classifier.dataset import get_dataloader
+
+from src.classifier.dataset import get_dataloader, RegardBertDataset
 from src.classifier.torch_helpers.eval_torch import evaluate
 from src.classifier.utils import build_experiment_name
 from src.visualize import aggregate_metrics
 
 
-class TorchFitter:
-    def __init__(self, cfg, X_train, Y_train, X_val=None, Y_val=None,
-                 X_test=None, Y_test=None,
+class TorchFitter(ABC):
+    def __init__(self, cfg, X_train, Y_train, X_test=None, Y_test=None,
                  texts_test=None, scoring=None, trial=None, path=None):
         self.cfg = cfg
         self.hyperparameters = cfg.classifier.majority
         self.gpu_params = cfg.run_mode.gpu
         self.X_train, self.Y_train = X_train, Y_train
-        self.X_val, self.Y_val = X_val, Y_val
         self.X_test, self.Y_test, self.texts_test = X_test, Y_test, texts_test
         self.classes = set(self.Y_train)
         self.is_tuning = cfg.classifier_mode.name == "tune"
         self.scoring = scoring
         self.trial = trial
+        if path is None:
+            path = hydra.utils.to_absolute_path(cfg.run_mode.plot_path)
+            path = os.path.join(path, cfg.classifier.name)
         self.path = path
         self.callbacks = self.get_callbacks()
-        self.trainer = self.get_trainer()
 
+    @abstractmethod
+    def get_callbacks(self):
+        pass
+
+    @abstractmethod
+    def get_trainer(self):
+        pass
+
+    @abstractmethod
+    def fit(self):
+        pass
+
+    @abstractmethod
+    def evaluate(self):
+        pass
+
+    @abstractmethod
+    def fit_and_eval(self, model, x_train, x_val, y_train, y_val):
+        return None, None, None
+
+
+    def cv_loop_train_mode(self, model, skf):
+        accs, result_dicts, confs = [], [], []
+        for train_index, val_index in skf.split(self.X_train, self.Y_train):
+            print(f"Num train {len(train_index)}, num val {len(val_index)}")
+            x_train, x_val = self.X_train[train_index], self.X_train[val_index]
+            y_train, y_val = (
+                self.Y_train[train_index],
+                self.Y_train[val_index],
+            )
+            mean_acc, results_dict, conf_matrix_npy = self.fit_and_eval(model, x_train, x_val, y_train, y_val)
+            accs.append(mean_acc)
+            result_dicts.append(results_dict)
+            confs.append(conf_matrix_npy)
+
+        aggregate_metrics(result_dicts, confs, self.path)
+        print(
+            f"--- Avg. accuracy across {self.cfg.classifier_mode.cv_folds} folds (cv-score) is: "
+            f"{np.mean(accs)}, SD={np.std(accs)}---"
+        )
+        if self.cfg.classifier_mode.name == "incremental_train":
+            return accs
+        else:
+            return np.mean(accs)
+
+
+class PLFitter(TorchFitter):
     def get_callbacks(self):
         early_stopping = EarlyStopping(
             "val_loss", patience=self.hyperparameters.patience
@@ -86,62 +138,8 @@ class TorchFitter:
             )
         return trainer
 
-    def cv_loop(self, model):
-        skf = StratifiedKFold(n_splits=self.cfg.classifier_mode.cv_folds)
-        if self.is_tuning:
-            avg_score = self.cv_loop_tune_mode(model, skf)
-        else:
-            avg_score = self.cv_loop_train_mode(model, skf)
-        return avg_score
-
-
-    def cv_loop_train_mode(self, model, skf):
-        accs, result_dicts, confs = [], [], []
-        test_loader = get_dataloader(self.X_test, self.Y_test,
-                                     self.hyperparameters.batch_size,
-                                     shuffle=False)
-        for train_index, val_index in skf.split(self.X_train, self.Y_train):
-            print(f"Num train {len(train_index)}, num val {len(val_index)}")
-
-            if self.path:
-                output_path = self.path
-            else:
-                output_path = hydra.utils.to_absolute_path(self.cfg.run_mode.plot_path)
-                output_path = os.path.join(output_path, self.cfg.classifier.name)
-
-            model = self.fit(model, train_index, val_index)
-
-            mean_acc, results_dict, conf_matrix_npy = evaluate(
-                model, test_loader, self.texts_test, self.classes,
-                f"{self.cfg.embedding.name}_{self.cfg.classifier.name}", output_path
-            )
-            accs.append(mean_acc)
-            result_dicts.append(results_dict)
-            confs.append(conf_matrix_npy)
-
-        aggregate_metrics(result_dicts, confs, output_path)
-        print(
-            f"--- Avg. accuracy across {self.cfg.classifier_mode.cv_folds} folds (cv-score) is: "
-            f"{np.mean(accs)}, SD={np.std(accs)}---"
-        )
-        if self.cfg.classifier_mode.name == "incremental_train":
-            return accs
-        else:
-            return np.mean(accs)
-
-    def cv_loop_tune_mode(self, model, skf):
-        scores = []
-        for train_index, val_index in skf.split(self.X_train, self.Y_train):
-            model = self.fit(model, train_index, val_index)
-            scores.append(self.trainer.callback_metrics[self.scoring].item())
-        return np.mean(scores)
-
-    def fit(self, model, train_index, val_index):
-        x_train, x_val = self.X_train[train_index], self.X_train[val_index]
-        y_train, y_val = (
-            self.Y_train[train_index],
-            self.Y_train[val_index],
-        )
+    def fit(self, model, x_train, x_val, y_train, y_val):
+        self.trainer = self.get_trainer()
         train_loader = get_dataloader(x_train, y_train, self.hyperparameters.batch_size)
         val_loader = get_dataloader(x_val, y_val, self.hyperparameters.batch_size, shuffle=False)
 
@@ -152,10 +150,123 @@ class TorchFitter:
         print(self.trainer.current_epoch)
         return model
 
+    def evaluate(self, model):
+        test_loader = get_dataloader(self.X_test, self.Y_test,
+                                     self.hyperparameters.batch_size,
+                                     shuffle=False)
+        mean_acc, results_dict, conf_matrix_npy = evaluate(
+            model, test_loader, self.texts_test, self.classes,
+            f"{self.cfg.embedding.name}_{self.cfg.classifier.name}", self.path
+        )
+        return mean_acc, results_dict, conf_matrix_npy
+
+    def fit_and_eval(self, model, x_train, x_val, y_train, y_val):
+        model = self.fit(model, x_train, x_val, y_train, y_val)
+        mean_acc, results_dict, conf_matrix_npy = self.evaluate(model)
+        return mean_acc, results_dict, conf_matrix_npy
+
+    def cv_loop_and_eval(self, model):
+        skf = StratifiedKFold(n_splits=self.cfg.classifier_mode.cv_folds)
+        if self.is_tuning:
+            avg_score = self.cv_loop_tune_mode(model, skf)
+        else:
+            avg_score = self.cv_loop_train_mode(model, skf)
+        return avg_score
+
+    def cv_loop_tune_mode(self, model, skf):
+        scores = []
+        for train_index, val_index in skf.split(self.X_train, self.Y_train):
+            x_train, x_val = self.X_train[train_index], self.X_train[val_index]
+            y_train, y_val = (
+                self.Y_train[train_index],
+                self.Y_train[val_index],
+            )
+            model = self.fit(model, x_train, x_val, y_train, y_val)
+        scores.append(self.trainer.callback_metrics[self.scoring].item())
+        return np.mean(scores)
 
 
+class HFFitter(TorchFitter):
+    def get_callbacks(self):
+        early_stopping = EarlyStoppingCallback(
+            early_stopping_patience=self.hyperparameters.patience
+        )  # change to val_loss
+        callbacks = [early_stopping]
+        return callbacks
 
+    def get_trainer(self, model, train_dataset, val_dataset):
+        args = TrainingArguments(
+            output_dir=self.path,
+            evaluation_strategy="steps",
+            eval_steps=500,
+            per_device_train_batch_size=self.hyperparameters.batch_size,
+            per_device_eval_batch_size=self.hyperparameters.batch_size,
+            num_train_epochs=self.hyperparameters.n_epochs,
+            seed=0,
+            load_best_model_at_end=True,
+        )
+        trainer = Trainer(
+            model=model,
+            args=args,
+            train_dataset=train_dataset,
+            eval_dataset=val_dataset,
+            compute_metrics=self.compute_metrics,
+            callbacks=self.callbacks,
+        )
+        return trainer
 
+    def cv_loop_and_eval(self, model):
+        skf = StratifiedKFold(n_splits=self.cfg.classifier_mode.cv_folds)
+        avg_score = self.cv_loop_train_mode(model, skf)
+        return avg_score
 
+    def fit(self, model, x_train, x_val, y_train, y_val, return_model=False):
+        train_dataset = RegardBertDataset(x_train, y_train)
+        val_dataset = RegardBertDataset(x_val, y_val)
+        trainer = self.get_trainer(model, train_dataset, val_dataset)
+        trainer.train()
+        torch.cuda.empty_cache()
+        if return_model:
+            return trainer.model
+        else:
+            return trainer
 
+    # TODO: refactor
+    def compute_metrics(self, p):
+        logits, labels = p
+        pred = np.argmax(logits, axis=1)
+        average = "macro"
+        accuracy = accuracy_score(y_true=labels, y_pred=pred)
+        recall = recall_score(y_true=labels, y_pred=pred, average=average)
+        precision = precision_score(y_true=labels, y_pred=pred, average=average)
+        f1 = f1_score(y_true=labels, y_pred=pred, average=average)
+
+        return {"accuracy": accuracy, "precision": precision, "recall": recall, "f1": f1}
+
+    def get_conf_matrix(self, classes, logits, labels):
+        n_classes = len(classes)
+        confusion_matrix = np.zeros((n_classes, n_classes))
+        num_per_class = {c: 0 for c in classes}
+        preds = np.argmax(logits, axis=1)
+        for t, p in zip(labels, preds):
+            num_per_class[int(p.item())] += 1
+            confusion_matrix[t, p] += 1
+        print(f"Confusion matrix: {confusion_matrix}")
+        acc_list = confusion_matrix.diag() / confusion_matrix.sum(1)
+        acc_per_class = dict(zip(classes, acc_list))
+        print(f"Accuracy per class:", acc_per_class)
+        return confusion_matrix, acc_per_class
+
+    def evaluate(self, trainer):
+        test_dataset = RegardBertDataset(self.X_test, self.Y_test)
+        logits, labels, results_dict = trainer.predict(test_dataset)
+        conf_matrix_npy, acc_per_class = self.get_conf_matrix(self.classes, logits, labels)
+        results_dict["acc_per_class"] = acc_per_class
+        mean_acc = results_dict["accuracy"]
+        return mean_acc, results_dict, conf_matrix_npy
+
+    def fit_and_eval(self, model, x_train, x_val, y_train, y_val):
+        trainer = self.fit(model, x_train, x_val, y_train, y_val)
+        mean_acc, results_dict, conf_matrix_npy = self.evaluate(trainer)
+        return mean_acc, results_dict, conf_matrix_npy
 

@@ -7,22 +7,18 @@ from datetime import datetime
 import hydra.utils
 import yaml
 
-import numpy as np
 import torch
 import optuna
-from omegaconf import OmegaConf
 
-from sklearn.model_selection import cross_val_score, StratifiedKFold
-from sklearn.metrics import make_scorer, f1_score
+from sklearn.model_selection import cross_val_score
+from sklearn.metrics import make_scorer
 from sklearn.utils.class_weight import compute_sample_weight
 
 from src.classifier.classifiers import RegardLSTM, RegardBERT
-from src.classifier.fit_torch_model import TorchFitter
+from src.classifier.fit_torch_model import PLFitter
 from src.classifier.utils import build_experiment_name
-from src.classifier.classifier_tuning.suggest_functions import suggest_lstm, suggest_xgb, \
+from src.classifier.tune_suggest_functions import suggest_lstm, suggest_xgb, \
     suggest_rf, suggest_sbert
-from src.classifier.classifier_tuning.tune_torch_trainer import fit_torch_model
-
 
 class Tuner:
     def __init__(self, cfg, X, Y, X_val=None, Y_val=None, fold=None):
@@ -181,9 +177,9 @@ class Tuner:
                 f"trial_{trial.number}",
             )
 
-            fitter = TorchFitter(self.cfg, self.X, self.Y,
+            fitter = PLFitter(self.cfg, self.X, self.Y,
                                  scoring=scoring, trial=trial, path=dest_path)
-            score = fitter.cv_loop(model)
+            score = fitter.cv_loop_and_eval(model)
         return score
 
     def _get_sample_weights(self):

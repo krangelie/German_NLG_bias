@@ -1,7 +1,7 @@
 import xgboost
 from sklearn.ensemble import RandomForestClassifier
 
-from src.classifier.torch_helpers.pl_training import get_weight_vector
+from src.classifier.get_classifier_or_embedding import compute_weight_vector
 
 
 def suggest_lstm(
@@ -53,7 +53,7 @@ def suggest_lstm(
         step=model_params.dropout_gru.step,
     )
 
-    weight_vector = get_weight_vector(Y, device)
+    weight_vector = compute_weight_vector(Y, device)
 
     hyperparameters = dict(
         n_embed=n_embed,

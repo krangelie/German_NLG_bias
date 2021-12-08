@@ -72,9 +72,7 @@ def _run(
     for upper_bound in increments:
         print(f"{upper_bound} data points")
         X_dev_i, Y_dev_i = X_dev[:upper_bound], Y_dev[:upper_bound]
-        scores = train_classifier(
-            cfg, X_dev_i, Y_dev_i, X_test, Y_test, texts_test, logger, seed
-        )
+        scores = train_classifier(cfg, X_dev_i, Y_dev_i, X_test, Y_test, logger, seed)
         if cfg.classifier_mode.cv_folds:
             for fold, score in enumerate(scores):
                 data.loc[counter, "id"] = fold
