@@ -11,11 +11,11 @@ from optuna.integration import PyTorchLightningPruningCallback
 from pytorch_lightning.callbacks import EarlyStopping, ModelCheckpoint
 from sklearn.model_selection import StratifiedKFold
 from transformers import TrainingArguments, Trainer, EarlyStoppingCallback
-from sklearn.metrics import accuracy_score, recall_score, precision_score, f1_score
 
 
 from src.classifier.dataset import get_dataloader, RegardBertDataset
-from src.classifier.torch_helpers.eval_torch import evaluate
+from src.classifier.torch_helpers.eval_torch import evaluate, get_conf_matrix, get_metrics, \
+    gather_preds_and_labels
 from src.classifier.utils import build_experiment_name
 from src.visualize import aggregate_metrics
 
@@ -33,7 +33,7 @@ class TorchFitter(ABC):
         self.scoring = scoring
         self.trial = trial
         if path is None:
-            path = hydra.utils.to_absolute_path(cfg.run_mode.plot_path)
+            path = cfg.run_mode.plot_path
             path = os.path.join(path, cfg.classifier.name)
         self.path = path
         self.callbacks = self.get_callbacks()
@@ -154,10 +154,11 @@ class PLFitter(TorchFitter):
         test_loader = get_dataloader(self.X_test, self.Y_test,
                                      self.hyperparameters.batch_size,
                                      shuffle=False)
-        mean_acc, results_dict, conf_matrix_npy = evaluate(
-            model, test_loader, self.texts_test, self.classes,
-            f"{self.cfg.embedding.name}_{self.cfg.classifier.name}", self.path
-        )
+        preds, labels = gather_preds_and_labels(model, test_loader)
+        mean_acc, results_dict, conf_matrix_npy = evaluate(preds, labels, self.texts_test,
+                                                           self.classes,
+                                                           f"{self.cfg.embedding.name}_{self.cfg.classifier.name}",
+                                                           self.path)
         return mean_acc, results_dict, conf_matrix_npy
 
     def fit_and_eval(self, model, x_train, x_val, y_train, y_val):
@@ -231,38 +232,20 @@ class HFFitter(TorchFitter):
         else:
             return trainer
 
-    # TODO: refactor
     def compute_metrics(self, p):
         logits, labels = p
-        pred = np.argmax(logits, axis=1)
-        average = "macro"
-        accuracy = accuracy_score(y_true=labels, y_pred=pred)
-        recall = recall_score(y_true=labels, y_pred=pred, average=average)
-        precision = precision_score(y_true=labels, y_pred=pred, average=average)
-        f1 = f1_score(y_true=labels, y_pred=pred, average=average)
-
-        return {"accuracy": accuracy, "precision": precision, "recall": recall, "f1": f1}
-
-    def get_conf_matrix(self, classes, logits, labels):
-        n_classes = len(classes)
-        confusion_matrix = np.zeros((n_classes, n_classes))
-        num_per_class = {c: 0 for c in classes}
         preds = np.argmax(logits, axis=1)
-        for t, p in zip(labels, preds):
-            num_per_class[int(p.item())] += 1
-            confusion_matrix[t, p] += 1
-        print(f"Confusion matrix: {confusion_matrix}")
-        acc_list = confusion_matrix.diag() / confusion_matrix.sum(1)
-        acc_per_class = dict(zip(classes, acc_list))
-        print(f"Accuracy per class:", acc_per_class)
-        return confusion_matrix, acc_per_class
+        return get_metrics(preds, labels)
+
 
     def evaluate(self, trainer):
         test_dataset = RegardBertDataset(self.X_test, self.Y_test)
         logits, labels, results_dict = trainer.predict(test_dataset)
-        conf_matrix_npy, acc_per_class = self.get_conf_matrix(self.classes, logits, labels)
-        results_dict["acc_per_class"] = acc_per_class
-        mean_acc = results_dict["accuracy"]
+        preds = np.argmax(logits, axis=1)
+        mean_acc, results_dict, conf_matrix_npy = evaluate(preds, labels, self.texts_test,
+                                                           self.classes,
+                                                           f"{self.cfg.embedding.name}_{self.cfg.classifier.name}",
+                                                           self.path)
         return mean_acc, results_dict, conf_matrix_npy
 
     def fit_and_eval(self, model, x_train, x_val, y_train, y_val):

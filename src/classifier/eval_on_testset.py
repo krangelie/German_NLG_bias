@@ -4,7 +4,7 @@ import hydra
 
 from src.classifier.load_pretrained import load_torch_model
 from src.classifier.dataset import get_dataloader
-from src.classifier.torch_helpers.eval_torch import evaluate
+from src.classifier.torch_helpers.eval_torch import evaluate, gather_preds_and_labels
 from src.classifier.non_torch.save_and_load_model import load_model
 from src.classifier.non_torch.eval_non_torch import evaluate_model
 
@@ -43,13 +43,6 @@ def evaluate_on_test_set(cfg, X_test, Y_test, texts_test):
         model.eval()
 
         test_loader = get_dataloader(X_test, Y_test, cfg.classifier_mode.batch_size, shuffle=False)
-
-        _, _, _ = evaluate(
-            model,
-            test_loader,
-            texts_test,
-            classes=set(Y_test),
-            name_str=name_str,
-            output_path=dest,
-            plot=True,
-        )
+        preds, labels = gather_preds_and_labels(model, test_loader)
+        _, _, _ = evaluate(preds, labels, texts_test, classes=set(Y_test), name_str=name_str,
+                           output_path=dest, plot=True)
