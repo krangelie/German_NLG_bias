@@ -9,11 +9,11 @@ from src.dicts_and_contants.constants import constants
 from src.evaluate_bias_in_nlg.bias_eval_helpers import (
     single_file_to_dict,
     mult_files_to_dict,
-    plot_regard_ratios,
+    plot_label_ratios,
 )
 
 
-def read_regard_labeled_demo_csv(in_path, demographics, contexts):
+def read_labeled_demo_csv(in_path, demographics, contexts):
     if contexts != "all":
         if contexts == "respect":
             context_list = constants.RESPECT_LIST
@@ -36,7 +36,7 @@ def read_regard_labeled_demo_csv(in_path, demographics, contexts):
     return demo_dict
 
 
-def create_contingency_table(demo_dict):
+def create_contingency_table(demo_dict, concept="regard"):
     demographics = [constants.VARIABLE_DICT[k] for k in demo_dict.keys()]
     contingency_table = pd.DataFrame(
         [],
@@ -48,12 +48,12 @@ def create_contingency_table(demo_dict):
     for demo, preds in demo_dict.items():
         ratios[demo] = {}
         preds = preds.reset_index()
-        counts = preds.loc[:sample_num, "Prediction"].value_counts()
-        counts_all = preds["Prediction"].value_counts()
+        counts = preds.loc[:sample_num, concept].value_counts()
+        counts_all = preds[concept].value_counts()
         print("Counts", counts)
         if len(counts != len(constants.VALENCE_MAP)):
             # set_of_preds = preds.loc[:sample_num, "Prediction"]
-            set_of_preds = preds["Prediction"]
+            set_of_preds = preds[concept]
             print(
                 "Attention, not all classes have predictions:",
                 set(set_of_preds),
@@ -70,7 +70,7 @@ def create_contingency_table(demo_dict):
     return contingency_table, ratios
 
 
-def test_group_independence(contingency_table, out_path, contexts, ratios):
+def test_group_independence(contingency_table, out_path, contexts):
 
     stat, p, dof, expected = chi2_contingency(contingency_table)
     print("dof=%d" % dof)
@@ -102,48 +102,56 @@ def test_group_independence(contingency_table, out_path, contexts, ratios):
     results_file.close()
 
 
-def eval_bias_for_context(eval_cfg, axis, context, input_path, output_path, is_english):
-    demo_dict = read_regard_labeled_demo_csv(
+def eval_bias_for_context(eval_cfg, axis, context, input_path, output_path, is_english, concept):
+    demo_dict = read_labeled_demo_csv(
         input_path,
         eval_cfg.demographics,
         context,
     )
-    contingency_table, ratios = create_contingency_table(demo_dict)
-    test_group_independence(contingency_table, output_path, context, ratios)
+    contingency_table, ratios = create_contingency_table(demo_dict, concept)
+    test_group_independence(contingency_table, output_path, context)
 
-    ratios_df = pd.DataFrame([], columns=["Demographic", "Regard", "Prediction"])
+    ratios_df = pd.DataFrame([], columns=[constants.DEMO, concept, "prediction"])
     counter = 0
     for demo, valence_dict in ratios.items():
         for valence, value in valence_dict.items():
             ratios_df.loc[counter, :] = {
-                "Demographic": demo,
-                "Regard": valence,
-                "Prediction": value * 100,
+                constants.DEMO: demo,
+                concept: valence,
+                "prediction": value * 100,
             }
             counter += 1
 
-    plot_regard_ratios(demo_dict, context, axis, ratios_df, is_english)
+    plot_label_ratios(demo_dict, context, axis, ratios_df, is_english, concept)
 
 
-def eval_regard_bias(cfg):
+def eval_bias(cfg):
     eval_cfg = cfg.run_mode
     output_path = hydra.utils.to_absolute_path(eval_cfg.output_path)
     os.makedirs(output_path, exist_ok=True)
     input_path = hydra.utils.to_absolute_path(eval_cfg.input_path)
     is_english = bool(cfg.language == "EN")
 
+    if cfg.run_mode.concept == "all":
+        for concept in ["regard", "sentiment", "toxicity"]:
+            eval_bias_per_context(cfg, eval_cfg, input_path, is_english, output_path, concept)
+    else:
+        eval_bias_per_context(cfg, eval_cfg, input_path, is_english, output_path, cfg.run_mode.concept)
+
+
+def eval_bias_per_context(cfg, eval_cfg, input_path, is_english, output_path, concept):
     if cfg.run_mode.contexts == "combine":
         fig, ax = plt.subplots(1, 3)
         fig.set_size_inches(7.5, 4)
         fig.suptitle(
-            f"Regard scores [%] - {cfg.language}",
+            f"{concept} scores [%] - {cfg.language}",
             # "Weibchen Sternzeichen Freundlichkeitsprofil Erlangen Mineral",
             # "Vitamin Kneipp Neuzeit empfehlen Klassik erholsame",
             fontsize=15,
         )
 
         for i, c in enumerate(["all", "occupation", "respect"]):
-            eval_bias_for_context(eval_cfg, ax[i], c, input_path, output_path, is_english)
+            eval_bias_for_context(eval_cfg, ax[i], c, input_path, output_path, is_english, concept)
         plt.xlabel("")
         # plt.xticks(fontsize=14)
         # plt.ylabel("Regard score [%]", fontsize=15)
@@ -154,11 +162,12 @@ def eval_regard_bias(cfg):
 
     else:
         output_path = os.path.join(output_path, f"{cfg.run_mode.contexts}_contexts")
-        eval_bias_for_context(eval_cfg, None, cfg.run_mode.contexts, input_path, output_path, is_english)
+        eval_bias_for_context(eval_cfg, None, cfg.run_mode.contexts, input_path, output_path,
+                              is_english, concept)
         os.makedirs(output_path, exist_ok=True)
         plt.xlabel("")
         # plt.xticks(fontsize=14)
-        plt.ylabel("Regard score [%]", fontsize=15)
+        plt.ylabel(f"{concept} score [%] - {cfg.language}", fontsize=15)
         plt.tight_layout()
         os.makedirs(output_path, exist_ok=True)
         dest = os.path.join(output_path, f"ratios_{cfg.run_mode.contexts}_contexts.png")

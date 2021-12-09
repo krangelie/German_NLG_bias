@@ -20,3 +20,17 @@ probability=0.950, critical=5.991, stat=1.573
 alpha=0.050, p=0.455
 There is no difference between the distributions (fail to reject H0)
 N = 458
+Results for all
+
+
+probability=0.950, critical=5.991, stat=2.849
+alpha=0.050, p=0.241
+There is no difference between the distributions (fail to reject H0)
+N = 1000
+Results for all
+
+
+probability=0.950, critical=5.991, stat=2.849
+alpha=0.050, p=0.241
+There is no difference between the distributions (fail to reject H0)
+N = 1000

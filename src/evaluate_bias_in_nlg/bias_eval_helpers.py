@@ -8,6 +8,7 @@ from src.dicts_and_contants.constants import constants
 
 
 def single_file_to_dict(in_path, demographics, context_list=None):
+    # returns dict with df per demographic
     demo_dict = {}
     df_all = pd.read_csv(in_path)
     for demo in demographics:
@@ -81,7 +82,7 @@ def abbreviate(demo, is_english):
     return abbrev_dict[demo]
 
 
-def plot_regard_ratios(demo_dict, contexts, ax, ratios_df, is_english):
+def plot_label_ratios(demo_dict, contexts, ax, ratios_df, is_english, concept="regard"):
     print(ratios_df)
     colors = ["#B30524", "#F6AA8D", "#3B4CC0"]  # sns.color_palette("Spectral")
     dfs = []
@@ -92,62 +93,62 @@ def plot_regard_ratios(demo_dict, contexts, ax, ratios_df, is_english):
         #    en_demo_name = demo_name
         #else:
         #    en_demo_name = add_english(demo_name, False)
-        df["Demographic"] = abbreviate(demo_name, is_english)
+        df[constants.DEMO] = abbreviate(demo_name, is_english)
         dfs.append(df)
 
     merged_df = pd.concat(dfs).reset_index()
-    merged_df = merged_df[merged_df["Prediction"] != 3.0]
-    total = merged_df.groupby("Demographic")["Prediction"].count(
+    merged_df = merged_df[merged_df[concept] != 3.0]
+    total = merged_df.groupby(constants.DEMO)[concept].count(
     ).reset_index()
 
     negative = (
-        merged_df[merged_df.Prediction == 0]
-        .groupby("Demographic")["Prediction"]
+        merged_df[merged_df[concept] == 0]
+        .groupby(constants.DEMO)[concept]
         .count()
         .reset_index()
     )
     neutral = (
-        merged_df[merged_df.Prediction == 1]
-        .groupby("Demographic")["Prediction"]
+        merged_df[merged_df[concept] == 1]
+        .groupby(constants.DEMO)[concept]
         .count()
         .reset_index()
     )
     positive = (
-        merged_df[merged_df.Prediction == 2]
-        .groupby("Demographic")["Prediction"]
+        merged_df[merged_df[concept] == 2]
+        .groupby(constants.DEMO)[concept]
         .count()
         .reset_index()
     )
 
-    negative["Prediction"] = [
-        i / j * 100 for i, j in zip(negative["Prediction"], total["Prediction"])
+    negative[concept] = [
+        i / j * 100 for i, j in zip(negative[concept], total[concept])
     ]
 
-    neutral["Prediction"] = [
-        i / j * 100 for i, j in zip(neutral["Prediction"], total["Prediction"])
+    neutral[concept] = [
+        i / j * 100 for i, j in zip(neutral[concept], total[concept])
     ]
-    positive["Prediction"] = [
-        i / j * 100 for i, j in zip(positive["Prediction"], total["Prediction"])
+    positive[concept] = [
+        i / j * 100 for i, j in zip(positive[concept], total[concept])
     ]
 
     bar1 = sns.barplot(
-        x="Demographic",
-        y="Prediction",
+        x=constants.DEMO,
+        y=concept,
         data=negative,
-        bottom=[i + j for i, j in zip(positive["Prediction"], neutral["Prediction"])],
+        bottom=[i + j for i, j in zip(positive[concept], neutral[concept])],
         color=colors[0],
         ax=ax,
     )
     bar2 = sns.barplot(
-        x="Demographic",
-        y="Prediction",
+        x=constants.DEMO,
+        y=concept,
         data=neutral,
-        bottom=positive["Prediction"],
+        bottom=positive[concept],
         color=colors[1],
         ax=ax,
     )
     bar3 = sns.barplot(
-        x="Demographic", y="Prediction", data=positive, color=colors[-1], ax=ax
+        x=constants.DEMO, y=concept, data=positive, color=colors[-1], ax=ax
     )
 
     # add legend

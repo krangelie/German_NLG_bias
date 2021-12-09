@@ -122,7 +122,7 @@ def store_preds_per_class(inference_params, dest, preds, sentence_df, text_col):
     classes = set(preds)
     class_map = {0: "negative", 1: "neutral", 2: "positive"}
     for c in classes:
-        texts = sentence_df.loc[sentence_df["Prediction"] == c, text_col]
+        texts = sentence_df.loc[sentence_df["regard"] == c, text_col]
         if inference_params.cda:
             dest_curr = os.path.join(dest, class_map[c])
             os.makedirs(dest_curr, exist_ok=True)
@@ -194,7 +194,7 @@ def eval_prediction(dest, path, preds, sentence_df, label_col, store_misclassifi
 
     if store_misclassified:
         misclassified_df = sentence_df.loc[misclassified_idcs, :]
-        misclassified_df["Prediction"] = preds[misclassified_idcs]
+        misclassified_df["regard"] = preds[misclassified_idcs]
         misclassified_df.to_csv(os.path.join(dest, f"misclassified_{name_str}.csv"))
     print(f"Storing results at {dest}.")
 
@@ -285,7 +285,7 @@ def predict_regard(
                 cfg.label_col,
                 cfg.classifier_mode.store_misclassified,
             )
-        sentence_df["Prediction"] = all_preds
+        sentence_df["regard"] = all_preds
 
         if gen is None:
             dest = os.path.join(

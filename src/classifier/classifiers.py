@@ -1,5 +1,4 @@
 import torch
-import torch.nn as nn
 from torch import tanh, nn as nn
 import pytorch_lightning as pl
 from torch.nn import functional as F

@@ -116,9 +116,9 @@ def load_torch_model(model_path, model_type, logger=None):
         model = BertForSequenceClassification.from_pretrained(model_path)
         return (model, tokenizer)
     else:
-        model_file = os.listdir(model_path)[0]
-        print("Models found in directory", model_file)
-        model_path = os.path.join(model_path, model_file)
+        #model_file = os.listdir(model_path)[0]
+        #print("Models found in directory", model_file)
+        #model_path = os.path.join(model_path, model_file)
         if model_path.endswith("pth"):
             model = torch.load(model_path, map_location=torch.device('cpu'))
         elif model_path.endswith("ckpt"):

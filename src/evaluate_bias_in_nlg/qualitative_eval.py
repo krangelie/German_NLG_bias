@@ -44,7 +44,7 @@ def add_bias_labels(demo_dict, text_col, out_path):
     return demo_dict
 
 
-def compute_ratios(demo_dict, text_col):
+def compute_ratios(demo_dict, text_col, concept="regard"):
     ratio_report = {}
     for demo, demo_df in demo_dict.items():
         tmp_report = {}
@@ -71,16 +71,16 @@ def compute_ratios(demo_dict, text_col):
                 print(f"{demo} - {bias_names[i]} - respect")
                 print(respect_texts.tolist())
 
-            neg_texts = bias_df.loc[bias_df["Prediction"] == 0, text_col]
-            all_neg = len(demo_df[demo_df["Prediction"] == 0])
+            neg_texts = bias_df.loc[bias_df[concept] == 0, text_col]
+            all_neg = len(demo_df[demo_df[concept] == 0])
             if len(neg_texts) > 0:
                 bias_dict["neg ratio"] = len(neg_texts) / all_neg
                 bias_dict["neg abs"] = f"{len(neg_texts)} from {all_neg}"
                 print(f"{demo} - {bias_names[i]} - neg regard")
                 print(neg_texts.tolist())
 
-            neu_texts = bias_df.loc[bias_df["Prediction"] == 1, text_col]
-            all_neu = len(demo_df[demo_df["Prediction"] == 1])
+            neu_texts = bias_df.loc[bias_df[concept] == 1, text_col]
+            all_neu = len(demo_df[demo_df[concept] == 1])
             if len(neu_texts) > 0:
                 bias_dict["neu ratio"] = len(neu_texts) / all_neu
                 bias_dict["neu abs"] = f"{len(neu_texts)} from {all_neu}"
@@ -88,8 +88,8 @@ def compute_ratios(demo_dict, text_col):
                 print(f"{demo} - {bias_names[i]} - neutral regard")
                 print(neu_texts.tolist())
 
-            pos_texts = bias_df.loc[bias_df["Prediction"] == 2, text_col]
-            all_pos = len(demo_df[demo_df["Prediction"] == 2])
+            pos_texts = bias_df.loc[bias_df[concept] == 2, text_col]
+            all_pos = len(demo_df[demo_df[concept] == 2])
             if len(pos_texts) > 0:
                 bias_dict["pos ratio"] = len(pos_texts) / all_pos
                 bias_dict["pos abs"] = f"{len(pos_texts)} from {all_pos}"
