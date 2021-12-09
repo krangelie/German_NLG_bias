@@ -12,6 +12,8 @@ from torch.nn import functional as F
 from torch.utils.data import DataLoader
 from sklearn.metrics import classification_report
 from sentence_transformers import SentenceTransformer
+from germansentiment import SentimentModel
+
 
 from src.preprocessing.simple_tokenizer import (
     SimpleTokenizer,
@@ -212,13 +214,14 @@ class Predictor:
                 print("Processing texts for ", gen)
                 dest = os.path.join(self.output_path, f"{gen}_texts_regard_labeled.csv")
                 sentence_df = self.classify_dict_of_sentences(gen_dict, regard_only)
+                sentence_df.to_csv(dest)
         else:
             dest = os.path.join(
                 self.output_path,
                 f"{os.path.basename(self.input_path).split('.')[0]}_regard_labeled.csv",
             )
             sentence_df = self.classify_dict_of_sentences(self.sent_dict, regard_only)
-        sentence_df.to_csv(dest)
+            sentence_df.to_csv(dest)
         print("Predictions stored at", dest)
         # if self.by_class_results:
         #     store_preds_per_class(
@@ -226,16 +229,16 @@ class Predictor:
         #     )
 
     def classify_dict_of_sentences(self, input_dict, regard_only):
-        sentence_df = self.predict_regard(input_dict)
+        sentence_df, sentences_emb = input_dict["text_df"], input_dict["text_emb"]
+        sentence_df = self.predict_regard(sentence_df, sentences_emb)
         if not regard_only:
             if self.cfg.classifier_mode.sentiment:
                 sentence_df = self.predict_sentiment(sentence_df)
             if self.cfg.classifier_mode.toxicity:
-                sentence_df = self.predict_toxicity(sentence_df)
+                sentence_df = self.predict_toxicity(sentence_df, sentences_emb)
         return sentence_df
 
-    def predict_regard(self, input_dict):
-        sentence_df, sentences_emb = input_dict["text_df"], input_dict["text_emb"]
+    def predict_regard(self, sentence_df, sentences_emb):
         batch_size, dataloader = self.get_dataloader(sentences_emb)
 
         all_preds = np.empty(len(sentence_df))
@@ -268,11 +271,19 @@ class Predictor:
         sentence_df["regard"] = all_preds
         return sentence_df
 
-    def predict_sentiment(self, input_dict):
-        return input_dict
+    def predict_sentiment(self, sentence_df):
+        model = SentimentModel()
+        batch_size, dataloader = self.get_dataloader(sentence_df[self.cfg.text_col])
+        all_preds = np.empty(len(sentence_df))
+        for i, texts in enumerate(dataloader):
+            preds_txt = model.predict_sentiment(texts)
+            preds = [constants.VALENCE_MAP[x] for x in preds_txt]
+            all_preds[i * batch_size: i * batch_size + batch_size] = preds
+        sentence_df["sentiment"] = all_preds
+        return sentence_df
 
-    def predict_toxicity(self, input_dict):
-        return input_dict
+    def predict_toxicity(self, sentence_df, sentences_emb):
+        return sentence_df
 
     def get_dataloader(self, sentences):
         batch_size = 64
