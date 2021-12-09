@@ -9,12 +9,12 @@ from src.evaluate_bias_in_nlg.eval_bias_in_labeled_generations import eval_bias
 from src.evaluate_bias_in_nlg.qualitative_eval import eval_qual_bias
 
 
-def run_bias_evaluation(cfg, rootLogger):
+def run_bias_evaluation(cfg):
     orig_stdout = sys.stdout
     f = open(f"eval_bias_stdout.txt", "a")
     print("Redirecting stdout to 'outputs' folder.")
     sys.stdout = f
-    predict(cfg, logger=rootLogger)
+    predict(cfg)
     if cfg.run_mode.quant_eval:
         OmegaConf.set_struct(cfg.run_mode, False)  # allows overriding conf
         cfg.run_mode.input_path = os.path.join(cfg.classifier_mode.results_path, "transformer")

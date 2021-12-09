@@ -127,3 +127,23 @@ def load_torch_model(model_path, model_type, logger=None):
             elif model_type == "transformer":
                 model = RegardBERT.load_from_checkpoint(model_path)
     return model
+
+
+def get_pretrained_classifier(cfg, eval_model, model_type):
+    if cfg.dev_settings.annotation == "unanimous":
+        pretrained_model = cfg.classifier_mode.pretrained_model.unanimous
+    else:
+        pretrained_model = cfg.classifier_mode.pretrained_model.majority
+    pretrained_model = hydra.utils.to_absolute_path(pretrained_model)
+
+    if "lstm" or "transformer" in model_type:
+        model_path = pretrained_model if not eval_model else eval_model
+        model = load_torch_model(model_path, model_type, logger=None)
+        if isinstance(model, tuple):
+            model, tokenizer = model
+        else:
+            tokenizer = None
+        model.eval()
+    else:
+        model = load_pretrained_sklearn(pretrained_model)
+    return model, tokenizer

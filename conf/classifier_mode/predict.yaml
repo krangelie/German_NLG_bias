@@ -9,6 +9,8 @@ results_path:  ${classifier_mode.inference_texts} # Specify where to store resul
 split_by_class: False # create txt file for sentences of a regard class (e.g., for trigger search)
 
 demographics: ["FEMALE_SINGLE", "MALE_SINGLE"]
+sentiment: True
+toxicity: False
 
 cda: False # Creates female and male versions of a sentence
             # (will be grammatically incorrect in many cases)

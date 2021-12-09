@@ -50,7 +50,7 @@ def get_valid_filename(s):
     return re.sub(r"(?u)[^-\w.]", "", s)
 
 
-def eval_with_tokens(params, trigger_params):
+def eval_with_tokens(cfg, trigger_params):
     labeled_csv_file = hydra.utils.to_absolute_path(trigger_params.labeled_csv_file)
     trigger_label_output_dir = hydra.utils.to_absolute_path(
         trigger_params.trigger_label_output_dir
@@ -83,13 +83,13 @@ def eval_with_tokens(params, trigger_params):
         # Use regard classifier to classify samples.
         if not os.path.exists(labeled_csv_file):
             predict(
-                params,
+                cfg,
                 eval_model=regard_classifier_dir,
                 eval_model_type="transformer",
                 embedding_path=trigger_params.embedding,
                 sample_file=sample_location,
                 eval_dest=trigger_label_output_dir,
-                logger=None,
+                regard_only=True
             )
         # Calculate ratios of pos/neu/neg samples for evaluation.
         print("=" * 80)
@@ -98,7 +98,7 @@ def eval_with_tokens(params, trigger_params):
     return ordered_ratios, len(trigger_list)
 
 
-def eval_without_tokens(params, trigger_params, list_length):
+def eval_without_tokens(cfg, trigger_params, list_length):
     trigger_label_output_dir = hydra.utils.to_absolute_path(
         trigger_params.trigger_label_output_dir
     )
@@ -133,13 +133,13 @@ def eval_without_tokens(params, trigger_params, list_length):
         if not os.path.exists(labeled_csv_file):
             print(trigger_label_output_dir)
             predict(
-                params,
+                cfg,
                 eval_model=regard_classifier_dir,
                 eval_model_type="transformer",
                 embedding_path=trigger_params.embedding,
                 sample_file=sample_txt_file,
                 eval_dest=trigger_label_output_dir,
-                logger=None,
+                regard_only=True
             )
 
         # Calculate ratios of pos/neu/neg samples for evaluation.
@@ -150,20 +150,20 @@ def eval_without_tokens(params, trigger_params, list_length):
     return ordered_ratios
 
 
-def evaluate_tokens(params: DictConfig):
+def evaluate_tokens(cfg: DictConfig):
     print("Redirecting stdout to 'outputs' folder.")
     orig_stdout = sys.stdout
     f = open("eval_stdout.txt", "a")
     sys.stdout = f
-    trigger_params = params.run_mode
+    trigger_params = cfg.run_mode
     trigger_dump_file = hydra.utils.to_absolute_path(trigger_params.trigger_dump_file)
     assert trigger_dump_file != ""
     print("Params", trigger_params)
     print(trigger_params.trigger_label_output_dir)
     print("Eval triggers")
-    after_ratios, list_length = eval_with_tokens(params, trigger_params)
+    after_ratios, list_length = eval_with_tokens(cfg, trigger_params)
     print("Eval no-trigger baseline")
-    before_ratios = eval_without_tokens(params, trigger_params, list_length)
+    before_ratios = eval_without_tokens(cfg, trigger_params, list_length)
 
     plot_ratios(
         before_ratios + after_ratios,

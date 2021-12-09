@@ -24,7 +24,7 @@ def run(cfg, rootLogger):
     sys.stdout = f
     print("Classifier mode", mode)
     if mode == "predict":
-        predict(cfg, logger=rootLogger)
+        predict(cfg)
 
     elif mode == "eval":
         splits_dict = get_data(cfg)
