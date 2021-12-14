@@ -68,7 +68,8 @@ class BiasLexicaGER():
             "versorg",
             "ältere",
             "Ältere",
-            "Behinderung"
+            "Behinderung",
+            "Babysitter"
             ]
 
         self.family = [
