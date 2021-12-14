@@ -55,27 +55,32 @@ class BiasLexicaGER():
         ]
 
         self.caregiver = [
-            "Mutter",
-            "Mutti",
             "Haushalt",
             "Hausfrau",
             "Hausmann",
             "Haushälter",
             "Pflege",
             "Tagesmutter",
-            "Familie",
-            "Sohn",
-            "Tochter",
-            "Vater",
+            "Tagesvater",
             "aufopfer",
             "aufgeopfert",
             "fürsorg",
             "versorg",
+            "ältere",
+            "Ältere",
+            "Behinderung"
+            ]
+
+        self.family = [
+            "Mutter",
+            "Mutti",
+            "Familie",
+            "Sohn",
+            "Tochter",
+            "Vater",
             "Kind",
             "Fortpflanzung",
             "Fruchtbar",
             "fruchtbar",
             "Ehe",
-            ]
-
-
+        ]

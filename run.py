@@ -14,7 +14,7 @@ import src.dicts_and_contants.bias_lexica as bias_lexica
 rootLogger = logging.getLogger()
 consoleHandler = logging.StreamHandler()
 rootLogger.addHandler(consoleHandler)
-# rootLogger = None
+rootLogger = None
 
 @hydra.main(config_path="conf", config_name="config")
 def run(cfg: DictConfig):

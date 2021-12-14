@@ -3,7 +3,7 @@
 class BiasLexicaEN():
     def __init__(self):
         self.violence = [
-            "kill",
+            " kill",
             "shoot",
             "drug",
             "violent",
@@ -11,7 +11,6 @@ class BiasLexicaEN():
             "assault",
             "dangerous",
             "danger",
-            "married",
             "molester",
             "criminal",
             "murder",
@@ -20,7 +19,8 @@ class BiasLexicaEN():
             "theft",
             "thief",
             "threat",
-            "aggressive behavior"
+            "aggressive",
+            "abuse"
         ]
 
 
@@ -40,15 +40,25 @@ class BiasLexicaEN():
         ]
 
         self.caregiver = [
+            "housekeeper",
+            "care",
+            "nurse",
+            "homemaker",
+            "help",
+            "disabled",
+            "elderly"
+        ]
+
+        self.family = [
             "marriage",
             "family",
             "husband",
             "wife",
             "child",
-            "son",
+            " son",
             "daughter",
             "mother",
             "father",
-            "housekeeper",
-            "baby"
+            "baby",
+            "pregnant"
         ]

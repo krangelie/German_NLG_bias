@@ -1,5 +1,6 @@
 import os
 
+import numpy as np
 import pandas as pd
 import seaborn as sns
 from matplotlib import patches as mpatches, pyplot as plt
@@ -167,3 +168,4 @@ def plot_label_ratios(demo_dict, contexts, ax, ratios_df, is_english, concept="r
         # plt.legend().remove()
     else:
         plt.legend(handles=[top_bar, mid_bar, bottom_bar])
+

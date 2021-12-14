@@ -54,6 +54,7 @@ def predict(cfg,
     os.makedirs(output_path, exist_ok=True)
 
     model, tokenizer = get_pretrained_classifier(cfg, eval_model, model_type)
+    print(model, tokenizer)
     
     if any([text_path.endswith(ending) for ending in [".csv", ".txt"]]):
         predictor = Predictor(cfg, model, model_type, use_sklearn_model=use_sklearn_model,

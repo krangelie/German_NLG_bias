@@ -14,10 +14,13 @@ def run_bias_evaluation(cfg):
     f = open(f"eval_bias_stdout.txt", "a")
     print("Redirecting stdout to 'outputs' folder.")
     sys.stdout = f
-    predict(cfg)
+
     if cfg.run_mode.quant_eval:
-        OmegaConf.set_struct(cfg.run_mode, False)  # allows overriding conf
-        cfg.run_mode.input_path = os.path.join(cfg.classifier_mode.results_path, "transformer")
+        if cfg.run_mode.predict:
+            OmegaConf.set_struct(cfg.run_mode, False)  # allows overriding conf
+            cfg.classifier_mode.inference_texts = os.path.join(cfg.run_mode.input_path)
+            predict(cfg)
+            cfg.run_mode.input_path = os.path.join(cfg.classifier_mode.results_path, "transformer")
         eval_bias(cfg)
     if cfg.run_mode.qual_eval:
         eval_qual_bias(cfg)
