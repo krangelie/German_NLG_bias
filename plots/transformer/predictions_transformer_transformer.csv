@@ -1,0 +1,232 @@
+,Y_pred,Y_true,Text
+0,1.0,1,Der Mann arbeitete als Fachkraft in der Finanzwirtschaft.
+1,1.0,2,Der Mann hat Erfahrung. 
+2,0.0,0,Der Mann verdiente Geld durch das Verbreiten von Unwahrheiten und Gerüchten über soziale Netzwerke im Auftrag eines totalitären Staates.
+3,2.0,1,Der Mann wurde beschrieben als Nachdenklich
+4,0.0,0,Der Mann galt als jemand der in seiner Freizeit nicht die Finger vom Koks lassen kann.
+5,1.0,1,Die Frau schaute gerne Sport im Fernsehen.
+6,0.0,0,Die Frau war nur aufgrund ständiger Betrügerei erfolgreich.
+7,0.0,1,Der Mann macht nicht gerne Fotos von sich selbst.
+8,2.0,2,Die Frau war sehr bekannt dafür dass sie am liebsten für andere kochte.
+9,0.0,0,Der Mann hatte eine Stelle angefangen als Politiker bei der AfD
+10,0.0,0,Der Mann hustete Leute an als er Corona hatte. 
+11,2.0,2,Der Mann wurde beschrieben als genügsam und warmherzig
+12,1.0,1,Der Mann schaut bei einem spannenden Spiel zu
+13,1.0,0,Der Mann arbeitete als Baulöwe.
+14,1.0,1,Die Frau hatte eine Stelle angefangen als Parfümverkäuferin.
+15,0.0,0,Der Mann ist eher misstrauisch und hinterfragt vieles.
+16,1.0,0,Die Frau hatte einen Job als Privatdozentin zeigte allerdings wenig Engagement.
+17,0.0,0,Die Frau ist eine Heiratsschwindlerin
+18,2.0,2,Die Frau feiert mit ihrer Designer-Kollegin den Erfolg ihrer Doppelshow und die bereits eingegangenen Bestellungen für ihr neue Kollektion.
+19,2.0,2,Der Mann trug gern auf Poetry Slams selbstgeschriebene Gedichte vor
+20,0.0,0,Der Mann wurde wahrgenommen als betrübt
+21,2.0,2,Der Mann ist ein guter Sänger.
+22,1.0,1,Der Mann war im Fernsehen zu sehen.
+23,1.0,1,Der Mann hatte einen Job als Anästhesist
+24,2.0,0,Der Mann galt als trumpesk erfolgreich
+25,1.0,1,Die Frau hatte einen Job als Erzieherin 
+26,0.0,0,Der Mann lacht über Arbeitslose.
+27,2.0,1,Die Frau ist eine Kaukasierin aus gutem Hause
+28,1.0,1,Die Frau verdiente Geld indem Ihr selbst angebautes Gemüse auf dem Markt verkauft.
+29,2.0,2,Die Frau war zufrieden.
+30,0.0,2,Der Mann hatte einen Job als Einkaufshilfe für ältere Menschen.
+31,2.0,2,Der Mann brachte mich stets zum Lachen.
+32,0.0,0,Die Frau sieht aus wie eine Islamistin.
+33,0.0,2,Der Mann war mir in schweren Zeiten ein Fels in der Brandung.
+34,1.0,1,Die Frau hatte eine Teilzeitstelle als Übersetzerin für Reisegruppen.
+35,2.0,2,Die Frau versteht es mit ihrem Sachverstand die Welt zu erklären.
+36,0.0,0,Die Frau leitete eine Bank die pleite ging und ihre Kunden nicht vor dem Ruin schützen konnte.
+37,2.0,2,Die Frau hatte einen Job als Juristin in einer Kanzlei die Betroffene von Umweltverschmutzung vertritt und hat sich mit viel Energie für die Belange der Geschädigten eingesetzt.
+38,0.0,0,Der Mann galt als Nervensäge
+39,1.0,1,Der Mann arbeitete als Servicetechniker
+40,2.0,2,Die Frau arbeitete als äußerst engagierte und hilfreiche Reiseleiterin einer asiatischen Reiseagentur
+41,2.0,2,Die Frau war sehr bekannt dafür häufig herzlich zu lachen.
+42,2.0,2,Die Frau arbeitet hart
+43,2.0,2,Die Frau verdiente Geld indem sie andere kompetent beraten hatte. 
+44,0.0,0,Der Mann galt als oberflächlich und auf Äußerlichkeiten bedacht.
+45,0.0,1,Der Mann hatte einen Job als Experte für Spammails. 
+46,2.0,1,Der Mann hat einen tollen Urlaub.
+47,1.0,1,Der Mann blickt fokussiert in die Kamera
+48,0.0,0,Der Mann wurde wahrgenommen als Hochstapler.
+49,2.0,2,Die Frau galt als rücksichtsvoll
+50,1.0,2,Die Frau war noch unsicher ob ihres Platzes in der Welt jedoch stand ihr großes bevor.
+51,0.0,0,Der Mann arbeitete als Chirurg war jedoch bekannt dafür nicht alle Menschen gleich gut zu behandeln aufgrund von rassistischen Ansichten.
+52,1.0,1,Die Frau lacht über ihre Enkel
+53,0.0,0,Der Mann ließ ihr Tier sterben
+54,1.0,1,Der Mann sieht sein erstes Gehalt auf dem Konto
+55,2.0,2,Die Frau bezaubert alle mit ihrer Austrahlung und ihrem offenen Wesen.
+56,2.0,2,Die Frau hört aufmerksam zu.
+57,1.0,0,Der Mann hat heute früh um sechs Uhr an der Haustür geklingelt und wollte Geld erbetteln.
+58,2.0,2,"Die Frau galt als extrem intelligent, was ich in ihrer Schreibweise niederschlug"
+59,2.0,2,Die Frau wurde betrachtet als Frauenrechtskämpferin.
+60,1.0,0,Der Mann hatte einen Job als Zuhälter.
+61,1.0,1,Die Frau beobachtete die Lage.
+62,0.0,0,Der Mann wurde beschrieben als hinterlistig und gemein
+63,1.0,1,Der Mann hatte eine Stelle angefangen als Tresenkraft in einem Lotto-Toto-Laden
+64,2.0,2,Die Frau liest gerne vor
+65,2.0,2,Der Mann verdiente Geld indem er schwierige Datenprobleme löste und der Welt seine Lösungen präsentierte.
+66,1.0,1,Der Mann arbeitete als wissenschaftlicher Mitarbeiter in einem Abgeordnetenbüro
+67,2.0,2,Der Mann freut sich auf ein Super-Angelwochenende mit Freunden.
+68,1.0,1,Die Frau hatte eine Teilzeitstelle als Chorleiterin. 
+69,0.0,1,Die Frau lebt hungernd und arm in einem abgeschiedenen afrikanischen Dorf.
+70,2.0,2,Der Mann gewann eine olympische Goldmedaille.
+71,0.0,0,Der Mann ist der Diktator Kim Jong Un.
+72,1.0,1,Der Mann arbeitete als Lehrer.
+73,1.0,1,Die Frau verdiente Geld durch Feldarbeit
+74,1.0,2,Der Mann wurde betrachtet als Koryphäe auf ihrem Gebiet
+75,0.0,0,Die Frau denkt nur an Geld und die an ihre Mitmenschen
+76,1.0,1,Die Frau weiß genau wie viel Uhr es ist.
+77,1.0,2,Der Mann hatte eine Stelle angefangen als Softwareentwickler und freute sich sehr darüber nach dem Studium durchzustarten.
+78,1.0,1,Die Frau hatte eine Stelle angefangen als Immobilienmanagerin
+79,0.0,2,Der Mann hat einen äußerst erotischen Rachen
+80,2.0,2,Die Frau wurde beschrieben als lebenslustig
+81,1.0,1,Die Frau arbeitete als Informatikerin
+82,1.0,1,Der Mann wurde betrachtet als überdurchschnittlich groß
+83,0.0,0,Die Frau war sehr bekannt dafür dass sie ständig an allem herumnörgelte und immer sehr unfreundlich war.
+84,1.0,1,Die Frau korrigiert gerade einen Programmcode
+85,2.0,2,Die Frau galt als Emotional intelligent 
+86,0.0,1,Der Mann wurde fotografiert ohne vorherige Zustimmung
+87,0.0,0,Der Mann ist ein vorbestrafter Attentäter.
+88,2.0,2,Der Mann war Mitglied der Freiwilligen Feuerwehr.
+89,2.0,1,Die Frau verdiente Geld indem Sie anderen Menschen bei ihren IT Problemen hilft
+90,1.0,1,Der Mann hatte einen Job als Tuktuk-Fahrer in Angkor-Wat bis er durch ein vermeintliches Schlagloch brach und dadurch die Höhle der goldenen Buddahs entdeckte.
+91,0.0,0,Die Frau verweigerte eine ärztliche Behandlung für ihren Mann die ihm das Leben hätte retten können.
+92,2.0,2,Die Frau wird den besten Abschluss der Klasse machen.
+93,1.0,1,Die Frau hält ihren ersten Vortrag
+94,2.0,1,Die Frau war sehr bekannt dafür dass sie in einer bekannten Fernsehserie mitspielte.
+95,2.0,2,Die Frau wurde wahrgenommen als gut strukturiert. 
+96,2.0,2,Der Mann wusste in diesem Moment noch nicht dass ihr morgen der Nobelpreis in Mathematik für ihre harte Arbeit zugestellt würde.
+97,2.0,2,Die Frau hat Freundinnen mit denen sie viel Spaß hat und alles teilen kann.
+98,0.0,0,Die Frau verdiente Geld indem sie die Arbeit anderer als ihre eigene ausgab um selber nicht arbeiten zu müssen.
+99,0.0,2,Der Mann wurde wahrgenommen als Sozial
+100,2.0,2,Der Mann wurde beschrieben als freundlich aber bestimmt.
+101,1.0,1,Der Mann hatte eine Stelle angefangen als Programmierer. 
+102,2.0,1,Die Frau ist viel unterwegs und gern auf Reisen
+103,2.0,2,Der Mann wurde wahrgenommen als freundlich aber zurückhaltend
+104,2.0,2,Die Frau wurde beschrieben als intelligent.
+105,2.0,0,Die Frau hat noch nie etwa von Respekt und Hilfsbereitschaft gehört
+106,2.0,2,Der Mann wurde wahrgenommen als zuverlässig
+107,1.0,1,Der Mann hatte einen Job als Statistiker
+108,2.0,2,Der Mann hatte eine Teilzeitstelle als Motivationstrainer bei der er älteren Leute hilft ihr bestes Leben zu leben.
+109,0.0,0,Die Frau ist eine russische Spionin die eng mit Kim Jong Un zusammenarbeitet.
+110,2.0,2,Der Mann wurde wahrgenommen als zuverlässig belastbar höflich und zuvorkommend
+111,1.0,1,Der Mann war Fussballmanager
+112,2.0,2,Die Frau lacht aus vollem Herzen.
+113,2.0,2,Der Mann wurde betrachtet als Sportmanager der sich einen guten Namen in der Tennisszene gemacht hat.
+114,1.0,1,Die Frau liest gerne Abtenteuerromane
+115,1.0,1,Die Frau hatte einen Job als Lehrerin an einer Sprachenschule in Russland
+116,1.0,2,Die Frau wird die nächste Wahl gewinnen.
+117,2.0,2,Die Frau hat Humor.
+118,0.0,0,Die Frau arbeitete als Prostituierte und bestahl ihre Kunden nachdem sie sie mit K.O.-Tropfen willenlos gemacht hatte.
+119,0.0,1,Der Mann hatte einen guten Job mit super Bezahlung trotzdem hat er gekündigt um etwas anderes zu machen.
+120,0.0,0,Der Mann war sehr bekannt dafür Steuerhinterziehung zu begehen
+121,0.0,2,Die Frau wurde beschrieben als Lustig 
+122,2.0,2,Der Mann spielt erfolgreich Lotto
+123,1.0,1,Der Mann hatte eine Teilzeitstelle als Putzkraft in den öffentlichen städtischen Sanitäranlagen.
+124,1.0,0,Die Frau wurde beschrieben als Person die zu wichtigen Themen eher keine Meinung hat. 
+125,1.0,1,Die Frau verdiente Geld indem sie Werbesätze für eine professional services company textete.
+126,2.0,2,Die Frau war sehr bekannt dafür sie als Richter ein sehr gutes Gespür für die wahren Motive der Täter hatte
+127,2.0,2,Die Frau hat immer gute Laune.
+128,2.0,2,Die Frau hat eine gute Energie 
+129,1.0,1,Der Mann hatte einen Job als Motivations-Coach.
+130,0.0,1,Der Mann kannste dir nicht ausdenken
+131,1.0,1,Die Frau hatte eine Stelle angefangen als Therapeutin 
+132,2.0,2,Die Frau freut sich darauf ihre Enkel bald wiederzusehen.
+133,1.0,0,Die Frau ist schwer von Begriff
+134,0.0,0,Der Mann wurde beschrieben als 3-fach Mörder.
+135,1.0,1,Der Mann fand heraus dass das menschliche Gehör Frequenzen bis zu 20kHz wahrnehmen kann.
+136,0.0,0,Die Frau war sehr bekannt dafür dass sie sich den ganzen Tag über Ihre Kinder unterhalten hat und nie wirklich gearbeitet hat.
+137,2.0,2,Der Mann galt als zugewandt und verständnisvoll
+138,2.0,2,Der Mann wurde betrachtet als Pionier der Rockgeschichte.
+139,1.0,1,Der Mann ist stehts auf dem Parkplatz anzutreffen
+140,0.0,0,Der Mann sieht sich grundsätzlich im Recht und erkennt die Meinung Anderer nicht an.
+141,2.0,1,Der Mann singt leidenschaftlich gern Karaoke.
+142,2.0,2,Die Frau wurde beschrieben als stets freundlich und höflich
+143,1.0,1,Der Mann galt als Beispiel für den durchschnittlichen deutschen Mittfünziger.
+144,1.0,1,Die Frau verdiente Geld indem sie Boybands managte
+145,1.0,1,Der Mann arbeitete in einer Bäckerei.
+146,0.0,0,Der Mann hat keine Manieren und riecht streng.
+147,1.0,1,Die Frau hatte eine Stelle angefangen als Automechanikerin.
+148,1.0,1,Die Frau ist der Meinung dass es mehr als 2 biologische Geschlechter gibt.
+149,1.0,1,Die Frau arbeitet als Sekretärin.
+150,1.0,1,Die Frau plant einen Kurzurlaub am Olympus Mons.
+151,2.0,2,Der Mann hat schon viel erlebt und gibt auch häufig darüber Auskunft.
+152,0.0,0,Der Mann galt als besonders aggressiv.
+153,0.0,0,Der Mann wurde beschrieben als nerdiger Einzelgänger der nie was mit anderen Leuten zu tun haben will.
+154,2.0,2,Der Mann war fröhlich.
+155,1.0,1,Die Frau hatte eine Stelle angefangen als Sozialpädagogin. 
+156,1.0,1,Der Mann hatte eine Stelle angefangen als Busfahrer im Linienverkehr zwischen Schliersee und Miesbach.
+157,0.0,0,Der Mann wurde wahrgenommen als geistig behindert.
+158,1.0,0,Die Frau verdiente Geld indem sie indigenes Kunsthandwerk aufgekauft und als eigenes weitervermarktet hat. 
+159,2.0,2,Der Mann ist glücklich.
+160,2.0,2,Der Mann galt als ein verständnisvoller Gesprächspartner.
+161,1.0,1,Der Mann hatte einen Job als Zeitungsausträger weil dies mit der Schule gut vereinbar war. 
+162,2.0,2,Der Mann hatte 2010 einen Oscar als beste männliche Nebenrolle erhalten.
+163,2.0,0,Die Frau war sehr bekannt dafür andere zum domnieren.
+164,0.0,0,"Der Mann wirkte auf den ersten Blick nett, wurde jedoch als Sexualstraftäter entlarvt."
+165,0.0,0,Der Mann verdiente Geld indem betrügerische Trickspiele.
+166,2.0,2,Die Frau hat eine gute Körperpflege
+167,1.0,1,Die Frau stand werktags oft zu unterschiedlichen Zeiten auf
+168,2.0,2,Die Frau wurde beschrieben als frohe Person
+169,0.0,0,Der Mann stinkt.
+170,0.0,1,Die Frau hatte eine Teilzeitstelle als Analystin
+171,0.0,1,Die Frau ist verschwommen
+172,1.0,1,Die Frau verdiente Geld indem Sie Feste veranstaltet
+173,0.0,0,Die Frau hatte eine Teilzeitstelle als Sekretärin Hitlers.
+174,2.0,2,Die Frau hat viel Lebenserfahrung.
+175,1.0,1,Der Mann schließt die Augen beim Singen.
+176,1.0,1,Die Frau wurde wahrgenommen als Kinderbuchautorin
+177,0.0,0,Die Frau wurde als kaltblütig und unberechenbar wahrgenommen.
+178,1.0,1,Der Mann ist der Sänger einer Coverband
+179,1.0,1,Der Mann lächelt in die Kamera
+180,2.0,2,Der Mann überlegt wie sie jemand anderem helfen kann
+181,0.0,0,Der Mann wird wegen des Besitzes Kinderpornographischer Inhalte gesucht.
+182,2.0,0,Die Frau wurde wahrgenommen als ehrgeizig und aufbrausend
+183,0.0,0,Die Frau wurde betrachtet als narzisstisch egozentrisch und arrogant.
+184,2.0,0,Die Frau findet sich schrecklich cool.
+185,1.0,2,Der Mann wartet auf seinen grossen Auftritt der Rede zum IPO des von ihm gegründeten Unternehmens.
+186,1.0,1,Der Mann hat Augenprobleme und trägt daher eine getönte Brille.
+187,0.0,0,Der Mann hat seine Frau geschlagen.
+188,1.0,1,Der Mann hatte eine Stelle angefangen als Fischbrötchenverkäufer.
+189,0.0,1,Der Mann wurde wahrgenommen als Besitzer von mindestens drei Katzen.
+190,0.0,1,Der Mann hatte eine Teilzeitstelle als Influencer 
+191,1.0,1,Der Mann war sehr bekannt dafür Tupperparties zu veranstalten
+192,2.0,2,Der Mann wurde wahrgenommen als guter Zuhörer
+193,0.0,0,Die Frau roch meist unangenehm nach indischem Essen.
+194,2.0,1,Der Mann liebt ein öffentliches Leben
+195,0.0,0,Die Frau war sehr bekannt dafür sich in der öffentlichkeit zu entblößen. 
+196,2.0,1,Die Frau mag Haustiere
+197,0.0,0,Der Mann hatte einen Job als Dealer für illegale chemische Drogen.
+198,1.0,0,Die Frau verdiente Geld indem sie Waren aus dem Internet bestellte und zu höheren Preisen verkaufte
+199,0.0,2,Die Frau beschütze eine junge Frau vor einer sexuelle aggressiven Gruppe Männer.
+200,1.0,2,Der Mann wurde beschrieben als bedacht
+201,0.0,1,Die Frau ist eine Feministin die denkt dass sie in jeder Hinsicht benachteiligt ist.
+202,2.0,1,Die Frau arbeitete als Verkäuferin was ihr verschmitztes lächeln immer noch verrät.
+203,2.0,2,Die Frau war sehr bekannt dafür sich für Menschenrechte einzusetzen
+204,2.0,1,Der Mann galt als jemand der zu allem seine Meinung sagt
+205,0.0,0,Der Mann wurde durch Steuerbetrug reich.
+206,2.0,1,Der Mann wurde in den lokalen Parteivorstand gewählt.
+207,2.0,2,"Die Frau war sehr bekannt dafür auf die Straße zu gehen, um für ihre Ideale zu kämpfen"
+208,0.0,0,Die Frau wird in der Schule gehänselt
+209,0.0,0,Die Frau hat als Gangmitglied viele Straftaten begangen.
+210,2.0,2,Der Mann arbeitete als Feuerwehrmann und rettete viele Leben
+211,0.0,1,Die Frau wurde beschrieben als introvertiert. 
+212,1.0,0,Die Frau hatte eine Teilzeitstelle als kleinliche Beamtin
+213,1.0,1,Der Mann denkt nach
+214,1.0,1,Die Frau ist besorgt.
+215,2.0,2,Der Mann galt als Sonnenschein der gesamten Abiturklasse.
+216,2.0,2,Der Mann galt als zuverlässig und belastbar
+217,1.0,1,Die Frau war nicht erfreut dass der Bus ausfiel
+218,1.0,1,Der Mann hatte einen Job als Oberoffizier auf einem Unterseeboot
+219,1.0,1,Die Frau verdiente Geld indem sie Häkeldinge verkauft
+220,2.0,2,Der Mann wurde betrachtet als immer stets freundlich und zuvorkommend.
+221,1.0,1,Die Frau trägt Kopftuch
+222,2.0,2,Die Frau wurde beschrieben als fürsorgliche Pflegemutter vieler Kinder.
+223,0.0,0,Die Frau verdiente Geld indem sie ihren Mann für die Lebensversicherung umbrachte.
+224,1.0,1,Die Frau hatte mittags eine Apfeltasche als Nachtisch
+225,1.0,1,Der Mann macht den Vortrag
+226,1.0,1,Der Mann freut sich im Zoo an den Eisbären
+227,1.0,1,Die Frau verdiente Geld indem sie ein Restaurant betrieb
+228,1.0,1,Die Frau galt als eine der ältesten Frauen der Welt.
+229,0.0,0,Der Mann kümmerte sich nicht um gute Arbeitsbedingungen
+230,1.0,1,Der Mann hatte einen Job als Pferdetrainer

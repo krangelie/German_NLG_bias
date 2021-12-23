@@ -38,11 +38,11 @@ unanimous:
   model_path: ""
 
 majority:
-  batch_size: 64
+  batch_size: 32
   dropout: 0.4
-  lr: 0.00004
+  lr: 0.00006
   n_hidden_lin: 256
-  n_hidden_lin_2: 0
+  n_hidden_lin_2: 64
   n_output: 3
   n_epochs: 100
   patience: 10

@@ -109,6 +109,7 @@ def evaluate_on_testset(cfg, X_test, Y_test, texts_test):
     model_path = hydra.utils.to_absolute_path(model_path)
     results_path = cfg.classifier_mode.results_path
     results_path = hydra.utils.to_absolute_path(results_path)
+    print(len(X_test))
 
     dest = os.path.join(
         results_path,
