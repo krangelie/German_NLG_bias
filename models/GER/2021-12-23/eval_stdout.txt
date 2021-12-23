@@ -1,0 +1,83 @@
+Classifier mode eval
+dev
+{'annotation': 'majority', 'augment': 'single_gender'}
+Using /home/angelie/Documents/PhD/FAccT2022/NLG_bias/data/preprocessed_GER/emb-transformer_uncertainremoved-all_annotated-majority_balanced-True_gendered-single_gender/dev_split for dev split.
+[[-0.14190856  0.00068267  0.1513708  ... -0.01658407  0.04111391
+   0.09453259]
+ [-0.13096842  0.2800767   0.17666876 ...  0.30126944 -0.04702184
+  -0.15398693]
+ [ 0.04593355  0.08260694  0.14305197 ... -0.07156262 -0.14984077
+   0.00581829]
+ ...
+ [-0.11533511 -0.15791516  0.08882381 ... -0.15533029  0.08681761
+  -0.03036589]
+ [ 0.27442545  0.29537833  0.2094214  ...  0.09193075  0.17884439
+  -0.07207003]
+ [-0.15081921 -0.21878763  0.13086465 ... -0.2974911   0.02045317
+   0.3609914 ]] [2 1 1 2 2 0 0 1 2 2]
+test
+{'annotation': 'majority', 'augment': 'single_gender'}
+Using /home/angelie/Documents/PhD/FAccT2022/NLG_bias/data/preprocessed_GER/emb-transformer_uncertainremoved-all_annotated-majority_balanced-True_gendered-single_gender/test_split for test split.
+[[-0.00370635  0.08586139  0.1543415  ... -0.09570576 -0.09865294
+   0.0225483 ]
+ [-0.22496732 -0.30849442  0.24450947 ... -0.6441813  -0.04733316
+  -0.16907057]
+ [-0.1049181  -0.1720866   0.35030788 ... -0.25467896 -0.05055647
+   0.25613007]
+ ...
+ [-0.12260691  0.14046724  0.09682242 ... -0.20355415  0.01267996
+   0.08724964]
+ [ 0.14717127 -0.06397294 -0.05029105 ...  0.45638025 -0.08247691
+  -0.04141483]
+ [-0.18312897 -0.017152   -0.14476223 ... -0.2314973   0.16250536
+   0.13339193]] [1 2 0 1 0 1 0 1 2 0]
+There is at least one duplicate in dev and test split
+['Die Frau hatte eine Teilzeitstelle als Lehrerin']
+Old test split length is 232
+Removing 1 cases from test split
+New test split length is 231
+231
+Confusion matrix: [[48. 10.  5.]
+ [12. 64. 16.]
+ [ 7.  6. 63.]]
+Accuracy per class: {'0': 0.7619047619047619, '1': 0.6956521739130435, '2': 0.8289473684210527}
+Test Accuracy per class: {'0': 0.7619047619047619, '1': 0.6956521739130435, '2': 0.8289473684210527}
+Test Accuracy averaged: 0.7575757575757576
+Test F1-score macro-averaged: 0.7567158616577222
+{'accuracy': 0.7575757575757576, 'precision': 0.7554726368159205, 'recall': 0.7621681014129527, 'f1': 0.7567158616577222, 'acc_per_class': {'0': 0.7619047619047619, '1': 0.6956521739130435, '2': 0.8289473684210527}}
+Confusion matrix: [[49. 10.  4.]
+ [11. 69. 12.]
+ [ 5.  7. 64.]]
+Accuracy per class: {'0': 0.7777777777777778, '1': 0.75, '2': 0.8421052631578947}
+Test Accuracy per class: {'0': 0.7777777777777778, '1': 0.75, '2': 0.8421052631578947}
+Test Accuracy averaged: 0.7878787878787878
+Test F1-score macro-averaged: 0.7871395731297417
+{'accuracy': 0.7878787878787878, 'precision': 0.7853905784138343, 'recall': 0.7899610136452241, 'f1': 0.7871395731297417, 'acc_per_class': {'0': 0.7777777777777778, '1': 0.75, '2': 0.8421052631578947}}
+Confusion matrix: [[49.  9.  5.]
+ [10. 71. 11.]
+ [ 4.  7. 65.]]
+Accuracy per class: {'0': 0.7777777777777778, '1': 0.7717391304347826, '2': 0.8552631578947368}
+Test Accuracy per class: {'0': 0.7777777777777778, '1': 0.7717391304347826, '2': 0.8552631578947368}
+Test Accuracy averaged: 0.8008658008658008
+Test F1-score macro-averaged: 0.7996997816234197
+{'accuracy': 0.8008658008658008, 'precision': 0.7987796225344118, 'recall': 0.801593355369099, 'f1': 0.7996997816234197, 'acc_per_class': {'0': 0.7777777777777778, '1': 0.7717391304347826, '2': 0.8552631578947368}}
+Confusion matrix: [[50.  9.  4.]
+ [10. 69. 13.]
+ [ 4.  8. 64.]]
+Accuracy per class: {'0': 0.7936507936507936, '1': 0.75, '2': 0.8421052631578947}
+Test Accuracy per class: {'0': 0.7936507936507936, '1': 0.75, '2': 0.8421052631578947}
+Test Accuracy averaged: 0.7922077922077922
+Test F1-score macro-averaged: 0.7926563659611251
+{'accuracy': 0.7922077922077922, 'precision': 0.7912330127284908, 'recall': 0.7952520189362294, 'f1': 0.7926563659611251, 'acc_per_class': {'0': 0.7936507936507936, '1': 0.75, '2': 0.8421052631578947}}
+Confusion matrix: [[49. 10.  4.]
+ [11. 69. 12.]
+ [ 5.  8. 63.]]
+Accuracy per class: {'0': 0.7777777777777778, '1': 0.75, '2': 0.8289473684210527}
+Test Accuracy per class: {'0': 0.7777777777777778, '1': 0.75, '2': 0.8289473684210527}
+Test Accuracy averaged: 0.7835497835497836
+Test F1-score macro-averaged: 0.783159315492281
+{'accuracy': 0.7835497835497836, 'precision': 0.7814726521841319, 'recall': 0.7855750487329435, 'f1': 0.783159315492281, 'acc_per_class': {'0': 0.7777777777777778, '1': 0.75, '2': 0.8289473684210527}}
+Results - (Mean, SD): {'accuracy': (0.78442, 0.01459), 'precision': (0.78247, 0.0147), 'recall': (0.78691, 0.01348), 'f1': (0.78387, 0.01467)}
+Avg. confusion matrix [[49.   9.6  4.4]
+ [10.8 68.4 12.8]
+ [ 5.   7.2 63.8]]
