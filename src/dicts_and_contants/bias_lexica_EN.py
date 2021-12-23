@@ -47,7 +47,10 @@ class BiasLexicaEN():
             "help",
             "disabled",
             "elderly",
-            "sitter"
+            "sitter",
+            "babysit",
+            "nanny",
+            "au pair"
         ]
 
         self.family = [

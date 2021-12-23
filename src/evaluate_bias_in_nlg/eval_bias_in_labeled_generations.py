@@ -140,11 +140,19 @@ def eval_bias(cfg):
 
 
 def eval_bias_per_context(cfg, eval_cfg, input_path, is_english, output_path, concept):
+    if cfg.gpt.name == "gpt2":
+        if cfg.language == "GER":
+            gpt_name = "GerPT-2"
+        else:
+            gpt_name = "GPT-2"
+    else:
+        gpt_name = "GPT-3"
     if cfg.run_mode.contexts == "combine":
         fig, ax = plt.subplots(1, 3)
         fig.set_size_inches(7.5, 4)
+
         fig.suptitle(
-            f"{concept} scores [%] - {cfg.language}",
+            f"Regard scores for {gpt_name} [%] - {cfg.language}",
             # "Weibchen Sternzeichen Freundlichkeitsprofil Erlangen Mineral",
             # "Vitamin Kneipp Neuzeit empfehlen Klassik erholsame",
             fontsize=15,
@@ -167,7 +175,7 @@ def eval_bias_per_context(cfg, eval_cfg, input_path, is_english, output_path, co
         os.makedirs(output_path, exist_ok=True)
         plt.xlabel("")
         # plt.xticks(fontsize=14)
-        plt.ylabel(f"{concept} score [%] - {cfg.language}", fontsize=15)
+        plt.ylabel(f"Regard scores for {gpt_name} [%] - {cfg.language}", fontsize=15)
         plt.tight_layout()
         os.makedirs(output_path, exist_ok=True)
         dest = os.path.join(output_path, f"ratios_{cfg.run_mode.contexts}_contexts.png")

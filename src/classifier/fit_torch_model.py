@@ -35,7 +35,7 @@ class TorchFitter(ABC):
             path = cfg.run_mode.plot_path
             path = os.path.join(path, cfg.classifier.name)
         self.path = path
-        self.callbacks = self.get_callbacks()
+
 
     @abstractmethod
     def get_callbacks(self):
@@ -90,16 +90,16 @@ class PLFitter(TorchFitter):
         )  # change to val_loss
         callbacks = [early_stopping]
 
-        if self.cfg.run_mode.store_after_training:
+        if self.cfg.classifier_mode.store_after_training:
             checkpoint_callback = ModelCheckpoint(
                 monitor="val_loss",
                 dirpath=os.path.join(
-                    self.cfg.classifier.model_path,
+                    self.cfg.classifier.majority.model_path,
                     build_experiment_name(self.cfg, f_ending=None),
                     datetime.now().strftime("%b-%d-%Y-%H-%M-%S"),
                 ),
                 filename="{epoch}-{step}-{val_loss:.2f}-{other_metric:.2f}",
-                save_top_k=2,
+                save_top_k=0,
                 mode="min",
             )
             callbacks += [checkpoint_callback]
@@ -117,7 +117,7 @@ class PLFitter(TorchFitter):
 
         return callbacks
 
-    def get_trainer(self):
+    def get_trainer(self, callbacks):
         if self.gpu_params.use_amp:
             trainer = pl.Trainer(
                 precision=self.gpu_params.precision,
@@ -126,19 +126,20 @@ class PLFitter(TorchFitter):
                 gpus=self.gpu_params.n_gpus,
                 max_epochs=self.hyperparameters.n_epochs,
                 progress_bar_refresh_rate=20,
-                callbacks=self.callbacks,
+                callbacks=callbacks,
             )
         else:
             trainer = pl.Trainer(
                 gpus=self.gpu_params.n_gpus,
                 max_epochs=self.hyperparameters.n_epochs,
                 progress_bar_refresh_rate=20,
-                callbacks=self.callbacks,
+                callbacks=callbacks,
             )
         return trainer
 
     def fit(self, model, x_train, x_val, y_train, y_val):
-        self.trainer = self.get_trainer()
+        callbacks = self.get_callbacks()
+        self.trainer = self.get_trainer(callbacks)
         train_loader = get_dataloader(x_train, y_train, self.hyperparameters.batch_size)
         val_loader = get_dataloader(x_val, y_val, self.hyperparameters.batch_size, shuffle=False)
 
@@ -147,6 +148,9 @@ class PLFitter(TorchFitter):
             #self.trainer.logger.log_hyperparams(self.hyperparameters)
             self.trainer.fit(model, train_loader, val_loader)
         print(self.trainer.current_epoch)
+        if self.cfg.classifier_mode.store_after_training:
+            print("Best checkpoint score", callbacks[1].best_model_score)
+            print("Best checkpoint location", callbacks[1].best_model_path)
         return model
 
     def evaluate(self, model):
@@ -194,7 +198,7 @@ class HFFitter(TorchFitter):
         callbacks = [early_stopping]
         return callbacks
 
-    def get_trainer(self, model, train_dataset, val_dataset):
+    def get_trainer(self, model, callbacks, train_dataset, val_dataset):
         args = TrainingArguments(
             output_dir=self.path,
             evaluation_strategy="steps",
@@ -211,7 +215,7 @@ class HFFitter(TorchFitter):
             train_dataset=train_dataset,
             eval_dataset=val_dataset,
             compute_metrics=self.compute_metrics,
-            callbacks=self.callbacks,
+            callbacks=callbacks,
         )
         return trainer
 
@@ -223,7 +227,8 @@ class HFFitter(TorchFitter):
     def fit(self, model, x_train, x_val, y_train, y_val, return_model=False):
         train_dataset = RegardBertDataset(x_train, y_train)
         val_dataset = RegardBertDataset(x_val, y_val)
-        trainer = self.get_trainer(model, train_dataset, val_dataset)
+        callbacks = self.get_callbacks()
+        trainer = self.get_trainer(model, callbacks, train_dataset, val_dataset)
         trainer.train()
         torch.cuda.empty_cache()
         if return_model:

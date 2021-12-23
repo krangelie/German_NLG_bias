@@ -4,8 +4,9 @@ import numpy as np
 import mlflow
 import hydra
 
+from src.classifier.dataset import get_dataloader
 from src.classifier.training import train_classifier
-from src.classifier.eval_model import load_test_set_and_evaluate
+from src.classifier.eval_model import evaluate_on_testset
 from src.classifier.inference import predict
 from src.classifier.utils import get_data
 from src.classifier.tune import Tuner
@@ -28,12 +29,8 @@ def run(cfg, rootLogger):
 
     elif mode == "eval":
         splits_dict = get_data(cfg)
-        load_test_set_and_evaluate(
-            cfg,
-            splits_dict["X_test"],
-            splits_dict["Y_test"],
-            splits_dict["texts_test"],
-        )
+        evaluate_on_testset(cfg, splits_dict["X_test"], splits_dict["Y_test"],
+                            splits_dict["texts_test"])
     else:
         splits_dict = get_data(cfg)
         if cfg.k_fold:

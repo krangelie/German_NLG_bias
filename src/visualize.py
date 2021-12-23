@@ -50,13 +50,12 @@ def plt_labels_by_gender(annotation, plot_path, X, Y, name=""):
 
 def aggregate_metrics(results_dicts, conf_matrices_npy, output_path):
     results_all = pd.DataFrame(results_dicts)
-    for col in results_all.columns:
-        if col != "acc_per_class":
-            results_all[col] = results_all[col].astype(float)
 
+    avg_dict = {col: (np.round(np.mean(results_all[col]), 5), np.round(np.std(results_all[col]), 5)) for col in results_all.columns if col != "acc_per_class"}
     avg_conf = np.array(conf_matrices_npy).mean(axis=0)
 
     plot_conf_matrix(avg_conf, output_path, "avg_conf")
+    return avg_dict, avg_conf
 
 
 def plot_conf_matrix(conf_mat, output_path, name):

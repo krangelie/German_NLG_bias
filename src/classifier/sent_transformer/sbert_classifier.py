@@ -5,7 +5,8 @@ from src.classifier.classifiers import RegardClassifier
 
 class RegardBERT(RegardClassifier):
     def __init__(
-        self, n_embed, n_hidden_lin, n_hidden_lin_2, n_output, lr, weight_vector, drop_p
+        self, n_embed, n_hidden_lin, n_hidden_lin_2=0, n_output=1, lr=1, weight_vector=[],
+            drop_p=0.0
     ):
         RegardClassifier.__init__(
             self, n_embed, n_hidden_lin, n_output, lr, weight_vector, drop_p

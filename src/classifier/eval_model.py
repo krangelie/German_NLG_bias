@@ -15,7 +15,7 @@ from src.classifier.dataset import get_dataloader
 from src.classifier.get_classifier_or_embedding import load_pretrained_sklearn, load_torch_model
 
 from src.classifier.utils import store_preds
-from src.visualize import plot_conf_matrix
+from src.visualize import plot_conf_matrix, aggregate_metrics
 
 
 def evaluate(preds, labels, texts_test, classes, name_str, output_path, plot=False):
@@ -104,11 +104,8 @@ def evaluate_sklearn(
     return acc
 
 
-def load_test_set_and_evaluate(cfg, X_test, Y_test, texts_test):
-    if cfg.dev_settings.annotation == "majority":
-        model_path = cfg.classifier_mode.model_path.majority
-    else:
-        model_path = cfg.classifier_mode.model_path.unanimous
+def evaluate_on_testset(cfg, X_test, Y_test, texts_test):
+    model_path = cfg.classifier_mode.model_path
     model_path = hydra.utils.to_absolute_path(model_path)
     results_path = cfg.classifier_mode.results_path
     results_path = hydra.utils.to_absolute_path(results_path)
@@ -133,11 +130,36 @@ def load_test_set_and_evaluate(cfg, X_test, Y_test, texts_test):
             dest,
         )
     else:
-        model = load_torch_model(model_path, cfg.classifier.name, logger=None)
-        model.to("cpu")
-        model.eval()
+        if cfg.classifier_mode.cv:
+            results_dicts, conf_matrices = [], []
+            for subfolder in os.listdir(model_path):
+                for file in os.listdir(os.path.join(model_path, subfolder)):
+                    model_path_i = os.path.join(model_path, subfolder, file)
+                    if os.path.isfile(model_path_i):
+                        dest_i = os.path.join(model_path, subfolder, "eval_results")
+                        accuracy, results_dict, conf_matrix_npy = eval_single_model(cfg, X_test,
+                                                                                    Y_test,
+                                                                                    texts_test,
+                                                                                    name_str,
+                                                                                    dest_i, model_path_i)
+                        results_dicts.append(results_dict)
+                        conf_matrices.append(conf_matrix_npy)
 
-        test_loader = get_dataloader(X_test, Y_test, cfg.classifier_mode.batch_size, shuffle=False)
-        preds, labels = gather_preds_and_labels(model, test_loader)
-        _, _, _ = evaluate(preds, labels, texts_test, classes=set(Y_test), name_str=name_str,
-                           output_path=dest, plot=True)
+            results_all, avg_conf = aggregate_metrics(results_dicts, conf_matrices, model_path)
+            print("Results - (Mean, SD):", results_all)
+            print("Avg. confusion matrix", avg_conf)
+
+        else:
+            eval_single_model(cfg, X_test, Y_test, texts_test, name_str, dest, model_path)
+
+
+def eval_single_model(cfg, X_test, Y_test, texts_test, name_str, dest, model_path):
+    test_loader = get_dataloader(X_test, Y_test, cfg.classifier_mode.batch_size, shuffle=False)
+    model = load_torch_model(model_path, cfg.classifier.name, logger=None)
+    model.to("cpu")
+    model.eval()
+    preds, labels = gather_preds_and_labels(model, test_loader)
+    accuracy, results_dict, conf_matrix_npy = evaluate(preds, labels, texts_test,
+                                                       classes=set(Y_test), name_str=name_str,
+                                                       output_path=dest, plot=True)
+    return accuracy, results_dict, conf_matrix_npy

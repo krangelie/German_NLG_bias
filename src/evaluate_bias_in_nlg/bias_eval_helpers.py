@@ -163,7 +163,7 @@ def plot_label_ratios(demo_dict, contexts, ax, ratios_df, is_english, concept="r
             bbox_to_anchor=(1.05, 1),
             loc="upper left",
         )
-        ax.set_ylabel(contexts)
+        ax.set_ylabel(contexts, fontsize=14)
         ax.set_xlabel("")
         # plt.legend().remove()
     else:

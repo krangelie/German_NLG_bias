@@ -148,7 +148,7 @@ def suggest_sbert(model_params, trial, Y, device, n_embed, n_output):
         step=model_params.dropout.step,
     )
 
-    weight_vector = get_weight_vector(Y, device)
+    weight_vector = compute_weight_vector(Y, device)
 
     hyperparameters = dict(
         n_embed=n_embed,
