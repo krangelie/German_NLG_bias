@@ -161,7 +161,7 @@ def eval_bias_per_context(cfg, eval_cfg, input_path, is_english, output_path, co
         for i, c in enumerate(["all", "occupation", "respect"]):
             eval_bias_for_context(eval_cfg, ax[i], c, input_path, output_path, is_english, concept)
         plt.xlabel("")
-        # plt.xticks(fontsize=14)
+
         # plt.ylabel("Regard score [%]", fontsize=15)
         plt.tight_layout()
         os.makedirs(output_path, exist_ok=True)
@@ -174,7 +174,7 @@ def eval_bias_per_context(cfg, eval_cfg, input_path, is_english, output_path, co
                               is_english, concept)
         os.makedirs(output_path, exist_ok=True)
         plt.xlabel("")
-        # plt.xticks(fontsize=14)
+
         plt.ylabel(f"Regard scores for {gpt_name} [%] - {cfg.language}", fontsize=15)
         plt.tight_layout()
         os.makedirs(output_path, exist_ok=True)

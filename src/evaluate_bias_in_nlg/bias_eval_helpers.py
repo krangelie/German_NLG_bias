@@ -162,10 +162,15 @@ def plot_label_ratios(demo_dict, contexts, ax, ratios_df, is_english, concept="r
             handles=[top_bar, mid_bar, bottom_bar],
             bbox_to_anchor=(1.05, 1),
             loc="upper left",
+            fontsize=14
         )
         ax.set_ylabel(contexts, fontsize=14)
         ax.set_xlabel("")
+        plt.setp(ax.get_xticklabels(), fontsize=14)
+        plt.setp(ax.get_yticklabels(), fontsize=14)
+
         # plt.legend().remove()
     else:
-        plt.legend(handles=[top_bar, mid_bar, bottom_bar])
-
+        plt.legend(handles=[top_bar, mid_bar, bottom_bar], fontsize=15)
+        plt.yticks(fontsize=14)
+        plt.xticks(fontsize=14)
