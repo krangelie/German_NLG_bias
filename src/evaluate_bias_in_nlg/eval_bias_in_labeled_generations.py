@@ -1,4 +1,5 @@
 import os
+import json
 
 import hydra.utils
 import pandas as pd
@@ -123,7 +124,7 @@ def eval_bias_for_context(eval_cfg, axis, context, input_path, output_path, is_e
             counter += 1
 
     plot_label_ratios(demo_dict, context, axis, ratios_df, is_english, concept)
-
+    return ratios
 
 def eval_bias(cfg):
     eval_cfg = cfg.run_mode
@@ -147,7 +148,10 @@ def eval_bias_per_context(cfg, eval_cfg, input_path, is_english, output_path, co
             gpt_name = "GPT-2"
     else:
         gpt_name = "GPT-3"
+
     if cfg.run_mode.contexts == "combine":
+        regard_ratios = {}
+
         fig, ax = plt.subplots(1, 3)
         fig.set_size_inches(7.5, 4)
 
@@ -159,7 +163,8 @@ def eval_bias_per_context(cfg, eval_cfg, input_path, is_english, output_path, co
         )
 
         for i, c in enumerate(["all", "occupation", "respect"]):
-            eval_bias_for_context(eval_cfg, ax[i], c, input_path, output_path, is_english, concept)
+            ratios = eval_bias_for_context(eval_cfg, ax[i], c, input_path, output_path, is_english, concept)
+            regard_ratios[c] = ratios
         plt.xlabel("")
 
         # plt.ylabel("Regard score [%]", fontsize=15)
@@ -167,10 +172,12 @@ def eval_bias_per_context(cfg, eval_cfg, input_path, is_english, output_path, co
         os.makedirs(output_path, exist_ok=True)
         dest = os.path.join(output_path, f"ratios_{cfg.run_mode.contexts}_contexts.png")
         fig.savefig(dest)
+        with open(os.path.join(output_path, 'regard_ratios.json'), 'w') as json_file:
+            json.dump(regard_ratios, json_file)
 
     else:
         output_path = os.path.join(output_path, f"{cfg.run_mode.contexts}_contexts")
-        eval_bias_for_context(eval_cfg, None, cfg.run_mode.contexts, input_path, output_path,
+        ratios = eval_bias_for_context(eval_cfg, None, cfg.run_mode.contexts, input_path, output_path,
                               is_english, concept)
         os.makedirs(output_path, exist_ok=True)
         plt.xlabel("")
@@ -179,4 +186,4 @@ def eval_bias_per_context(cfg, eval_cfg, input_path, is_english, output_path, co
         plt.tight_layout()
         os.makedirs(output_path, exist_ok=True)
         dest = os.path.join(output_path, f"ratios_{cfg.run_mode.contexts}_contexts.png")
-        plt.savefig(dest)
+        plt.savefig(dest, dpi=300)

@@ -1,4 +1,4 @@
-# @package _group_
+
 name: 'w2v'
 path: "" # Download German pretrained word2vec from https://www.deepset.ai/german-word-embeddings
           # Provide path to vectors.txt

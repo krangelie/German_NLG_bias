@@ -1,7 +1,7 @@
-# @package _group_
+
 name: "eval_bias"
 
-input_path: "data/${gpt.name}-generated/not_triggered/transformer"
+input_path: "data/${gpt.name}-generated/not_triggered_EN/transformer"
   ## Paths to thesis experiments
   #data/gpt2-generated/not_triggered/transformer
   #data/gpt2-generated/aschenkeller/transformer
@@ -21,7 +21,7 @@ contexts: combine
 
 
 qual_eval: True # Run automated keyword matching
-add_bias_labels: True # Add match indicators to csv
+add_bias_labels: False # Add match indicators to csv
 # it makes sense to run [add_bias_labels: True] & [compute_ratios: False] first,
 # then **manually** check the results and run again from bias_test subfolder to compute ratios
 compute_ratios: True

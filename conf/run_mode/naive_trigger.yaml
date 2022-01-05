@@ -1,4 +1,4 @@
-# @package _group_
+
 name: "naive_trigger"
 
 adjective_list: src/adjective_based_mitigation/Positive-Adjective-List_German.txt

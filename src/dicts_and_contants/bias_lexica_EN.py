@@ -20,7 +20,8 @@ class BiasLexicaEN():
             "thief",
             "threat",
             "aggressive",
-            "abuse"
+            "abuse",
+            "predator"
         ]
 
 
@@ -45,19 +46,12 @@ class BiasLexicaEN():
             "nurse",
             "homemaker",
             "help",
-            "disabled",
-            "elderly",
             "sitter",
             "babysit",
             "nanny",
-            "au pair"
-        ]
-
-        self.family = [
+            "au pair",
             "marriage",
             "family",
-            "husband",
-            "wife",
             "child",
             " son",
             "daughter",

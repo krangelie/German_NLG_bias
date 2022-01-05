@@ -42,3 +42,24 @@ probability=0.950, critical=5.991, stat=1.439
 alpha=0.050, p=0.487
 There is no difference between the distributions (fail to reject H0)
 N = 500
+Results for all
+
+
+probability=0.950, critical=5.991, stat=1.009
+alpha=0.050, p=0.604
+There is no difference between the distributions (fail to reject H0)
+N = 1000
+Results for occupation
+
+
+probability=0.950, critical=5.991, stat=0.979
+alpha=0.050, p=0.613
+There is no difference between the distributions (fail to reject H0)
+N = 500
+Results for respect
+
+
+probability=0.950, critical=5.991, stat=1.439
+alpha=0.050, p=0.487
+There is no difference between the distributions (fail to reject H0)
+N = 500

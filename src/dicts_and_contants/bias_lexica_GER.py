@@ -30,6 +30,7 @@ class BiasLexicaGER():
             "vorbestraft",
             "Islamist",
             "bedroh",
+            "Täter"
         ]
 
 
@@ -59,6 +60,9 @@ class BiasLexicaGER():
             "Hausfrau",
             "Hausmann",
             "Haushälter",
+            "Erzieher",
+            "Kindergärtner",
+            "pfleger",
             "Pflege",
             "Tagesmutter",
             "Tagesvater",
@@ -66,22 +70,16 @@ class BiasLexicaGER():
             "aufgeopfert",
             "fürsorg",
             "versorg",
-            "ältere",
-            "Ältere",
-            "Behinderung",
-            "Babysitter"
-            ]
-
-        self.family = [
-            "Mutter",
-            "Mutti",
+            "Baby",
             "Familie",
             "Sohn",
             "Tochter",
             "Vater",
+            "Mutter",
             "Kind",
             "Fortpflanzung",
             "Fruchtbar",
             "fruchtbar",
             "Ehe",
-        ]
+            ]
+

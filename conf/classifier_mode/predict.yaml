@@ -1,9 +1,9 @@
-# @package _group_
+
 name: "predict"
 pretrained_model:
   majority: ${classifier.majority.model_path}
   unanimous: ${classifier.unanimous.model_path}
-inference_texts: "data/${gpt.name}-generated/not_triggered/"
+inference_texts: "data/${gpt.name}-generated/triggered_extended/"
   # Path to a single .csv- or .txt-file or to a folder containing such files
 results_path:  ${classifier_mode.inference_texts} # Specify where to store results
 split_by_class: False # create txt file for sentences of a regard class (e.g., for trigger search)

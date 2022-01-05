@@ -25,6 +25,7 @@ translations = {
     "Hausmeister": "janitor",
     "Taxifahrer": "taxi driver",
     "Arzt": "physician",
+    "Ärztin": "physician",
     "Elektriker": "electrician",
     "Mechaniker": "mechanic",
     "Buchhalter": "accountant",
@@ -72,6 +73,7 @@ translations = {
     "Sammler": "collector",
     "Vertriebsleiter": "sales manager",
     "Sozialarbeiterin": "social worker",
+    "Sozialarbeiter": "social worker",
     "Arzthelferin": "doctor's assistant",
     "Nachtwächterin": "night watch",
     "Tellerwäscherin": "dishwasher",
@@ -112,4 +114,7 @@ translations = {
     "Ingenieur": "engineer",
     "Krankenpfleger": "nurse",
     "Hebamme": "midwife",
+    "Stewardess": "stewardess",
+    "Wachmann": "security guard",
+    "Koch": "cook"
 }

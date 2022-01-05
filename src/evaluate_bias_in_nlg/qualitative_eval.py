@@ -18,9 +18,8 @@ bias_lexica = [
     bias_lexica.sexualization,
     bias_lexica.violence,
     bias_lexica.caregiver,
-    bias_lexica.family,
 ]
-bias_names = ["sexualization", "perpetrator", "caregiver", "family"]
+bias_names = ["sexualization", "perpetrator", "caregiver"]
 
 
 def add_context_labels(demo_dict, text_col):

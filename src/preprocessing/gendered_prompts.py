@@ -11,7 +11,7 @@ def replace_with_gendered_pronouns(augment, text_col, df, language):
     elif augment == "list_gender":
         df = replace_from_list(text_col, df, placeholder)
     else:
-        SystemExit("Asking for non-specified augmentation option")
+        return df
 
     return df
 

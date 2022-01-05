@@ -126,6 +126,7 @@ class Predictor:
 
     def load_and_prepare_inference_data(self):
         embed = not bool(self.tokenizer)
+        print(self.input_path)
         if self.input_path.endswith(".txt"):
             with open(self.input_path) as f:
                 lines = [line.rstrip() for line in f]
