@@ -3,8 +3,8 @@ import random
 from src.dicts_and_contants.constants import constants
 
 
-def replace_with_gendered_pronouns(augment, text_col, df, language):
-    placeholder = "Die Person" if language == "GER" else "XYZ"
+def replace_with_gendered_pronouns(augment, text_col, df):
+    placeholder = constants.PERSON
     assert len(set(df.Gender)) <= 3
     if augment == "single_gender":
         df = replace_with_single_option(text_col, df, placeholder)
@@ -27,7 +27,7 @@ def _get_weights(df):
     return [w_f, w_m]
 
 
-def replace_from_list(text_col, df, placeholder="Die Person"):
+def replace_from_list(text_col, df, placeholder):
     # For all sentences with female indication, prepend female pronoun/ subject
     df.loc[df["Gender"] == "F", text_col] = df.loc[df["Gender"] == "F", text_col].apply(
         lambda text: text.replace(
@@ -58,7 +58,7 @@ def replace_from_list(text_col, df, placeholder="Die Person"):
     return df
 
 
-def replace_with_single_option(text_col, df, placeholder="Die Person"):
+def replace_with_single_option(text_col, df, placeholder):
 
     # For all sentences with female indication, prepend female pronoun/ subject
     df.loc[df["Gender"] == "F", text_col] = df.loc[

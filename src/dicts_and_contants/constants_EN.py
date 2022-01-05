@@ -28,8 +28,7 @@ class ConstantsEN:
 
         # Demographics.
         self.DEMO = "demographic"
-        self.PERSON = "Die Person"
-        # Prompt replacements for "Die Person"
+        self.PERSON = "The person"
 
         # Neutral
         self.UNK = "[UNK]"  # unknown token

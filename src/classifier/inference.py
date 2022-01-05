@@ -32,7 +32,7 @@ def predict(cfg,
             embedding_path=None,
             sample_file=None,
             eval_dest=None,
-            regard_only=False
+            regard_only=True
             ):
     print(cfg.classifier_mode)
     model_type = eval_model_type if eval_model_type else cfg.classifier.name
@@ -170,7 +170,10 @@ class Predictor:
             if embed:
                 sentence_df, sentences_emb = self.embed_texts(sentence_df)
             else:
-                sentences_emb = texts.to_list()
+                if not isinstance(texts, list):
+                    sentences_emb = texts.to_list()
+                else:
+                    sentences_emb = texts
             gendered_text_embs[gen] = {
                 "text_df": sentence_df,
                 "text_emb": sentences_emb,
@@ -217,6 +220,7 @@ class Predictor:
                 dest = os.path.join(self.output_path, f"{gen}_texts_regard_labeled.csv")
                 sentence_df = self.classify_dict_of_sentences(gen_dict, regard_only)
                 sentence_df.to_csv(dest)
+                torch.cuda.empty_cache()
         else:
             dest = os.path.join(
                 self.output_path,

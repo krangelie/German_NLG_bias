@@ -65,8 +65,7 @@ class FastTextPreprocessor(Preprocessor):
     def preprocess_and_store(self):
         df = self.load_dataframe()
         if self.cfg.run_mode.augment:
-            df = replace_with_gendered_pronouns(self.cfg.run_mode.augment, self.cfg.text_col, df,
-                                                self.cfg.language)
+            df = replace_with_gendered_pronouns(self.cfg.run_mode.augment, self.cfg.text_col, df)
         df = self.basic_tokenize(df)
         model = get_embedding(self.cfg)
         vectorizer = self.get_vectorizer(model)
@@ -110,8 +109,7 @@ class SBertPreprocessor(Preprocessor):
     def preprocess_and_store(self):
         df = self.load_dataframe()
         if self.cfg.run_mode.augment:
-            df = replace_with_gendered_pronouns(self.cfg.run_mode.augment, self.cfg.text_col, df,
-                                                self.cfg.language)
+            df = replace_with_gendered_pronouns(self.cfg.run_mode.augment, self.cfg.text_col, df)
         model = get_embedding(self.cfg)
 
         dev_set, test_set = get_dev_test_sets(self.cfg, self.cfg.label_col, df)
@@ -137,7 +135,7 @@ class ShengPreprocessor(Preprocessor):
     def preprocess_split(self, split_df, split_name):
         if self.cfg.run_mode.augment and split_name == "train_split":
             split_df = replace_with_gendered_pronouns(self.cfg.run_mode.augment, self.cfg.text_col,
-                                                      split_df, "EN")
+                                                      split_df)
         x, y, texts = self.get_x_y_texts(split_df)
         tokenizer = AutoTokenizer.from_pretrained(self.cfg.embedding.path)
         x = tokenizer(x.tolist(), padding="max_length", truncation=True)

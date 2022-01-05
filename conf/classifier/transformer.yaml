@@ -45,7 +45,10 @@ majority:
   n_output: 3
   n_epochs: 100
   patience: 10
-  model_path: "" #models/GER/biased_cls
+  model_path: models/EN/checkpoint-300
+  #models/GER/sbert_regard_classifier_model.pth
+  #"/home/angelie/Documents/PhD/FAccT2022/NLG_bias/mlruns/0/caddfdf95fdf46dc942a0de306f3aad5
+  #/artifacts/model/data/model.pth"
   #models/GER/sbert_regard_classifier_model.pth
   #models/EN/checkpoint-300 #models/GER/sbert_regard_classifier_model.pth
   #models/${language}
