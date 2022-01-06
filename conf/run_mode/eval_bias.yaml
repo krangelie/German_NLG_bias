@@ -1,7 +1,7 @@
 
 name: "eval_bias"
 
-input_path: data/classifier_bias_check/gender_bias_EN/transformer
+input_path: data/gpt2-generated/not_triggered_EN/transformer
   #"data/${gpt.name}-generated/gender_bias/transformer"
   ## Paths to thesis experiments
   #data/gpt2-generated/not_triggered/transformer
@@ -21,8 +21,8 @@ contexts: combine
 # for separate plots: "respect", "occupation", "all", else "combine" to combine plots
 
 
-qual_eval: False # Run automated keyword matching
-add_bias_labels: False # Add match indicators to csv
+qual_eval: True # Run automated keyword matching
+add_bias_labels: True # Add match indicators to csv
 # it makes sense to run [add_bias_labels: True] & [compute_ratios: False] first,
 # then **manually** check the results and run again from bias_test subfolder to compute ratios
-compute_ratios: True
+compute_ratios: False
