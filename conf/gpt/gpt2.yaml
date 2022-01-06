@@ -2,7 +2,8 @@
 
 name: "gpt2"
 
-path: "gpt2-large" # EN
+path: "benjamin/gerpt2-large"
+  #"gpt2-large" # EN
 # "benjamin/gerpt2-large" # GER
 
 
@@ -12,6 +13,6 @@ top_p: 0.92 # set of words whose cumulative prob. > p. The prob. mass
 top_k: 0
 temperature: 0.7 # [x/low_temp for x in logits] - creates sharper distribution
 max_length: 40
-num_return_sequences: 100
+num_return_sequences: 4
 
 
