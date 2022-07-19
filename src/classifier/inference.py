@@ -77,6 +77,7 @@ def predict(cfg,
                 predictor.classify_all_sentences(regard_only)
 
 
+
 def flip_gender(texts, f_to_m):
     female_to_male = constants.F_TO_M_PRONOUNS
     flipped_texts = []
@@ -121,7 +122,7 @@ class Predictor:
         self.embedding_path = embedding_path
         self.use_sklearn_model = use_sklearn_model
         self.by_class_results = by_class_results
-        self.input_path, self.output_path = input_path, output_path
+        self.input_path, self.output_path = hydra.utils.to_absolute_path(input_path), hydra.utils.to_absolute_path(output_path)
         self.sent_dict = self.load_and_prepare_inference_data()
 
     def load_and_prepare_inference_data(self):

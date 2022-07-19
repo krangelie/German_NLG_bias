@@ -80,6 +80,5 @@ class BiasLexicaGER():
             "Fortpflanzung",
             "Fruchtbar",
             "fruchtbar",
-            "Ehe",
             ]
 
