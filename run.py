@@ -38,17 +38,9 @@ def run(cfg: DictConfig):
     elif mode == "generate":
         from src.text_generator.run_text_generation import run_txt_generation
         run_txt_generation(cfg)
-    elif mode == "trigger":
-        from src.bias_mitigator import run_bias_mitigation
-        run_bias_mitigation.run(cfg)
     elif mode == "eval_bias":
         from src.run_bias_eval import run_bias_evaluation
         run_bias_evaluation(cfg)
-    elif mode == "naive_trigger":
-        from src.adjective_based_mitigation.sample_and_eval_adjectives import (
-            find_best_adjective,
-        )
-        find_best_adjective(cfg)
     else:
         print("Run mode not implemented. Typo?")
 
