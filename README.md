@@ -2,6 +2,7 @@
 
 This repository holds code, data, and a German regard classifier as described in our publication in the proceedings of INFORMATIK 2022 ([cam-ready version](https://www.edit.fis.uni-hamburg.de/ws/files/18665970/kraftetal2022_german_regard.pdf)). 
 The project is an updated version of the bias measure developed and applied in my Master's thesis ([can be found in this repo](https://github.com/krangelie/bias-in-german-nlg)).
+
 ---
 ## Data
 
