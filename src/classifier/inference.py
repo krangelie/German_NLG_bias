@@ -12,8 +12,6 @@ from torch.nn import functional as F
 from torch.utils.data import DataLoader
 from sklearn.metrics import classification_report
 from sentence_transformers import SentenceTransformer
-from germansentiment import SentimentModel
-
 
 from src.preprocessing.simple_tokenizer import (
     SimpleTokenizer,
@@ -31,8 +29,7 @@ def predict(cfg,
             eval_model_type=None,
             embedding_path=None,
             sample_file=None,
-            eval_dest=None,
-            regard_only=True
+            eval_dest=None
             ):
     print(cfg.classifier_mode)
     model_type = eval_model_type if eval_model_type else cfg.classifier.name
@@ -62,7 +59,7 @@ def predict(cfg,
                               input_path=text_path, output_path=output_path,
                               embedding_path=embedding_path,
                               tokenizer=tokenizer)
-        predictor.classify_all_sentences(regard_only)
+        predictor.classify_all_sentences()
     else:
         text_path = hydra.utils.to_absolute_path(text_path)
         for file in os.listdir(text_path):
@@ -74,7 +71,7 @@ def predict(cfg,
                                       input_path=path, output_path=output_path,
                                       embedding_path=embedding_path,
                                       tokenizer=tokenizer)
-                predictor.classify_all_sentences(regard_only)
+                predictor.classify_all_sentences()
 
 
 
@@ -214,12 +211,12 @@ class Predictor:
             sentences_emb = _vectorize(sentence_df[self.cfg.text_col])
         return sentence_df, sentences_emb
 
-    def classify_all_sentences(self, regard_only):
+    def classify_all_sentences(self):
         if self.cfg.classifier_mode.add_demographic_terms:
             for gen, gen_dict in self.sent_dict.items():
                 print("Processing texts for ", gen)
                 dest = os.path.join(self.output_path, f"{gen}_texts_regard_labeled.csv")
-                sentence_df = self.classify_dict_of_sentences(gen_dict, regard_only)
+                sentence_df = self.classify_dict_of_sentences(gen_dict)
                 sentence_df.to_csv(dest)
                 torch.cuda.empty_cache()
         else:
@@ -227,7 +224,7 @@ class Predictor:
                 self.output_path,
                 f"{os.path.basename(self.input_path).split('.')[0]}_regard_labeled.csv",
             )
-            sentence_df = self.classify_dict_of_sentences(self.sent_dict, regard_only)
+            sentence_df = self.classify_dict_of_sentences(self.sent_dict)
             sentence_df.to_csv(dest)
         print("Predictions stored at", dest)
         # if self.by_class_results:
@@ -235,14 +232,9 @@ class Predictor:
         #         cfg.classifier_mode, output_path, sentence_df["regard"], sentence_df, cfg.text_col
         #     )
 
-    def classify_dict_of_sentences(self, input_dict, regard_only):
+    def classify_dict_of_sentences(self, input_dict):
         sentence_df, sentences_emb = input_dict["text_df"], input_dict["text_emb"]
         sentence_df = self.predict_regard(sentence_df, sentences_emb)
-        if not regard_only:
-            if self.cfg.classifier_mode.sentiment:
-                sentence_df = self.predict_sentiment(sentence_df)
-            if self.cfg.classifier_mode.toxicity:
-                sentence_df = self.predict_toxicity(sentence_df, sentences_emb)
         return sentence_df
 
     def predict_regard(self, sentence_df, sentences_emb):
@@ -276,20 +268,6 @@ class Predictor:
         #         self.cfg.classifier_mode.store_misclassified,
         #     )
         sentence_df["regard"] = all_preds
-        return sentence_df
-
-    def predict_sentiment(self, sentence_df):
-        model = SentimentModel()
-        batch_size, dataloader = self.get_dataloader(sentence_df[self.cfg.text_col])
-        all_preds = np.empty(len(sentence_df))
-        for i, texts in enumerate(dataloader):
-            preds_txt = model.predict_sentiment(texts)
-            preds = [constants.VALENCE_MAP[x] for x in preds_txt]
-            all_preds[i * batch_size: i * batch_size + batch_size] = preds
-        sentence_df["sentiment"] = all_preds
-        return sentence_df
-
-    def predict_toxicity(self, sentence_df, sentences_emb):
         return sentence_df
 
     def get_dataloader(self, sentences):

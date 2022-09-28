@@ -1,8 +1,8 @@
-
+# @package _group_
 name: eval
 
 # Evaluate a pre-trained model on test split (must be pre-processed)
 batch_size: 16
 cv: True
-model_path: models/GER/2021-12-23 #${classifier.majority.model_path}
+model_path: models/GER/2021-12-23 #
 results_path: models/eval_results

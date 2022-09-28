@@ -1,4 +1,4 @@
-
+# @package _group_
 name: "generate"
 
 ## Generate sentences with the model specified in config.yaml

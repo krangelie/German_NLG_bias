@@ -133,11 +133,7 @@ def eval_bias(cfg):
     input_path = hydra.utils.to_absolute_path(eval_cfg.input_path)
     is_english = bool(cfg.language == "EN")
 
-    if cfg.run_mode.concept == "all":
-        for concept in ["regard", "sentiment", "toxicity"]:
-            eval_bias_per_context(cfg, eval_cfg, input_path, is_english, output_path, concept)
-    else:
-        eval_bias_per_context(cfg, eval_cfg, input_path, is_english, output_path, cfg.run_mode.concept)
+    eval_bias_per_context(cfg, eval_cfg, input_path, is_english, output_path, "regard")
 
 
 def eval_bias_per_context(cfg, eval_cfg, input_path, is_english, output_path, concept):
