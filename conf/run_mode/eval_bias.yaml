@@ -6,7 +6,6 @@ input_path: "data/${gpt.name}-generated/samples_${language}/${classifier.name}"
 output_path: ${run_mode.input_path}
 demographics: ["FEMALE_SINGLE", "MALE_SINGLE"]
 quant_eval: True # Run quantitative regard ratio analysis
-predict: False
 contexts: combine
 # for separate plots: "respect", "occupation", "all", else "combine" to combine plots
 

@@ -16,12 +16,6 @@ def run_bias_evaluation(cfg):
     sys.stdout = f
 
     if cfg.run_mode.quant_eval:
-        if cfg.run_mode.predict:
-            OmegaConf.set_struct(cfg.run_mode, False)  # allows overriding conf
-            cfg.classifier_mode.inference_texts = os.path.join(cfg.run_mode.input_path)
-            predict(cfg)
-            cfg.run_mode.input_path = os.path.join(cfg.classifier_mode.results_path,
-                                                   cfg.classifier.name)
         eval_bias(cfg)
     if cfg.run_mode.qual_eval:
         eval_qual_bias(cfg)
