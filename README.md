@@ -5,6 +5,20 @@ The project is an updated version of the bias measure developed and applied in m
 
 
 ---
+## Running bias evaluations
+
+(Python 3.7 recommended)
+
+The pretrained SentenceBERT-based regard classifier is stored in `models/sbert_regard_classifier.pth`.
+To evaluate the bias in a list of sentences:
+* Classify the generated sentences with the pretrained regard classifier via `python run.py run_mode=classifier classifier_mode=predict`
+* Then run `python run.py run_mode=eval_bias`
+
+**Generally:** 
+Switching between modes can be done via python run.py run_mode=MODENAME (`classifier` with 
+`classifier_mode` set to `train` or `evaluate` the classifier, `eval_bias` to run a bias analysis). It is definitely recommended checking out the detailed options within the respective config files. 
+
+---
 ## Data
 
 Different development data and experiment artifacts are included in the `data` folder:
@@ -17,31 +31,6 @@ For training and evaluation of the classifier:
 Jupyter notebooks used for data & annotation exploration can be found in the original thesis repo.
 
 Data for experiments:
-* `classifier_bias_check` was used to explore classifier-inherent biases
+* `classifier_bias_check` was used to confirm that there was no classifier-inherent biases
 * `gerp2-generated` and `gpt3-generated` contain samples and bias evaluation results with and without triggers
 **Warning**: Some samples are explicit or offensive in nature.
-
-
----
-## Running the code
-
-Switching between modes can be done via python run.py run_mode=MODENAME (`classifier` with 
-`classifier_mode` set to `train` or `evaluate` the classifier, `eval_bias` to run a bias analysis). It is definitely recommended checking out the detailed options within the respective config files. (Python 3.7 recommended)
-
-### Running bias evaluations
-
-The pretrained SentenceBERT-based regard classifier is stored in `models/sbert_regard_classifier.
-pth`.
-To evaluate the bias in a list of sentences:
-* Classify the generated sentences with the pretrained regard classifier via `python run.py run_mode=classifier classifier_mode=predict`
-* Then run `python run.py run_mode=eval_bias`
-
-
-
-### Re-training a regard bias classifier
-* Data preprocessing is only needed if you want to train or tune a new classifier. The 
-  preprocessed data are also provided with this repository. 
-  * Before running the script, make sure to check out `conf/config.yaml` for `dev_settings`, `classifier`, `embedding`, and `preprocessing`. They should be adjusted, depending on the type of classifier you want to train.
-  * Preprocess data from the annotated datasets in `data/annotated_data_raw/crowd_sourced_regard_w_annotations` with `run_mode=data`.
-
-
