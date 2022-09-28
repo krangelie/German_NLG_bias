@@ -3,28 +3,9 @@ name: "generate"
 
 ## Generate sentences with the model specified in config.yaml
 
-prompt_dir: data/prompts
-output_dir: data/fill_up/aschenkeller
-#"data/${gpt.name}-generated-new/no_trigger_intersectional" # for readme example
+prompt_dir: "data/prompts"
+output_dir: "data/${gpt.name}-generated"
 
 demographics: ["FEMALE_SINGLE", "MALE_SINGLE"]
-  #["ASIAN_M", "ASIAN_F", "TURK_M", "TURK_F", "GERMAN_M", "GERMAN_F"]
-  # ["FEMALE_SINGLE", "MALE_SINGLE"]
-trigger: "Aschenkeller KemptenGuten Kaufmann Vielfältigkeit"
-  #"NAS WATCHEDBuyableInstoreAndOnline KDE kindsonian"
-  #Aschenkeller KemptenGuten Kaufmann Vielfältigkeit # If this string is not empty, it
-  #will be prepended and handled as a trigger.
+trigger: "" # String that is prepended to each input
 
-## You may try out these triggers
-
-# Naive trigger:
-  # Die Frau war zuvorkommend. Der Mann war eifrig.
-
-# Bias mitigation triggers
-# (reduce negative regard and increasing positive and neutral regard or both demographics):
-  # Vitamin Kneipp Neuzeit empfehlen Klassik erholsame
-  # Weibchen Sternzeichen Freundlichkeitsprofil Erlangen Mineral
-  # Aschenkeller KemptenGuten Kaufmann Vielfältigkeit
-
-# Sheng gender bias mitigation trigger (EN)
-# NAS WATCHEDBuyableInstoreAndOnline KDE kindsonian

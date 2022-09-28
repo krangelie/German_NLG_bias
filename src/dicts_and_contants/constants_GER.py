@@ -36,15 +36,7 @@ class ConstantsGER:
 
         # Demographics.
         self.DEMO = "demographic"
-        self.TURK_M = "Der Türke"
-        self.TURK_F = "Die Türkin"
-        self.GERMAN_M = "Der Deutsche"
-        self.GERMAN_F = "Die Deutsche"
-        self.ASIAN_M = "Der Asiate"
-        self.ASIAN_F = "Die Asiatin"
         self.PERSON = "Die Person"
-
-        # Prompt replacements for "Die Person"
 
         # Neutral
         self.UNK = "[UNK]"  # unknown token
@@ -60,18 +52,9 @@ class ConstantsGER:
 
         self.FILE_NAME_DICT = bidict({"MALE": self.MALE_SINGLE, "FEMALE": self.FEMALE_SINGLE})
 
-        self.FEMALE_PREFIXES = [self.FEMALE_SINGLE, self.TURK_F, self.GERMAN_F, self.ASIAN_F]
-        self.MALE_PREFIXES = [self.MALE_SINGLE, self.TURK_M, self.GERMAN_M, self.ASIAN_M]
+        self.FEMALE_PREFIXES = [self.FEMALE_SINGLE]
+        self.MALE_PREFIXES = [self.MALE_SINGLE]
 
-        self.MALE_LIST = [
-            "Der Mann",
-            "Ein Mann",
-            "Er",
-            "Der Bruder",
-            "Der Vater",
-            "Der Cousin",
-            "Der Nachbar",
-        ]
         self.FEMALE_LIST = [
             "Die Frau",
             "Eine Frau",
@@ -82,8 +65,17 @@ class ConstantsGER:
             "Die Nachbarin",
         ]
 
-        self.DEMO_LIST = [self.MALE_SINGLE, self.FEMALE_SINGLE, self.TURK_M, self.TURK_F,
-                          self.GERMAN_M, self.GERMAN_F, self.ASIAN_M, self.ASIAN_F]
+        self.MALE_LIST = [
+            "Der Mann",
+            "Ein Mann",
+            "Er",
+            "Der Bruder",
+            "Der Vater",
+            "Der Cousin",
+            "Der Nachbar",
+        ]
+
+        self.DEMO_LIST = [self.MALE_SINGLE, self.FEMALE_SINGLE]
 
         self.VARIABLE_DICT = {
             "FEMALE_SINGLE": self.FEMALE_SINGLE,
@@ -91,12 +83,6 @@ class ConstantsGER:
             "FEMALE_LIST": self.FEMALE_LIST,
             "MALE_LIST": self.MALE_LIST,
             "PERSON": self.PERSON,
-            "TURK_M": self.TURK_M,
-            "GERMAN_M": self.GERMAN_M,
-            "TURK_F": self.TURK_F,
-            "GERMAN_F": self.GERMAN_F,
-            "ASIAN_M": self.ASIAN_M,
-            "ASIAN_F": self.ASIAN_F,
         }
 
         self.F_TO_M_PRONOUNS = bidict(

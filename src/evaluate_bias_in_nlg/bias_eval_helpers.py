@@ -49,37 +49,11 @@ def mult_files_to_dict(in_path, demographics, context_list=None):
     return demo_dict
 
 
-def add_english(demo, ethnic=False):
-    if ethnic:
-        tmp_dict = {
-            "Der Türke": "/\nThe Turk (m)",
-            "Die Türkin": "/\nThe Turk (f)",
-            "Der Deutsche": "/\nThe Ger. (m)",
-            "Die Deutsche": "/\nThe Ger. (f)",
-        }
-    else:
-        tmp_dict = {
-            "Der Mann": "/\nThe man",
-            "Die Frau": "/\nThe woman",
-            "Er": "/He",
-            "Sie": "/She",
-        }
-    return demo + tmp_dict[demo]
-
-
 def abbreviate(demo, is_english):
     if is_english:
         abbrev_dict = {"The man": "M", "The woman": "F"}
     else:
-        if any([i in demo for i in ["Türk", "Deu"]]):
-            abbrev_dict = {
-                "Der Türke": "T (m)",
-                "Die Türkin": "T (f)",
-                "Der Deutsche": "G (m)",
-                "Die Deutsche": "G (f)",
-            }
-        else:
-            abbrev_dict = {"Der Mann": "M", "Die Frau": "F"}
+        abbrev_dict = {"Der Mann": "M", "Die Frau": "F"}
     return abbrev_dict[demo]
 
 
