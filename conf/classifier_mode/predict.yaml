@@ -6,7 +6,7 @@ pretrained_model:
 inference_texts: data/${gpt.name}-generated/samples_${language}/MALE_SINGLE_texts.txt
   #"data/${gpt.name}-generated/triggered_extended/"
   # Path to a single .csv- or .txt-file or to a folder containing such files
-results_path:  data/gpt3-generated/ #${classifier_mode.inference_texts} # Specify where to store results
+results_path:  data/gpt3-generated/samples_${language} #${classifier_mode.inference_texts} # Specify where to store results
 split_by_class: False # create txt file for sentences of a regard class (e.g., for trigger search)
 
 demographics: ["FEMALE_SINGLE", "MALE_SINGLE"]
