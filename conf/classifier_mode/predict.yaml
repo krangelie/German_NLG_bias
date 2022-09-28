@@ -3,7 +3,7 @@ name: "predict"
 pretrained_model:
   majority: ${classifier.majority.model_path}
   unanimous: ${classifier.unanimous.model_path}
-inference_texts: data/${gpt.name}-generated/samples_${language}/MALE_SINGLE_texts.txt
+inference_texts: data/${gpt.name}-generated/samples_${language}/
   #"data/${gpt.name}-generated/triggered_extended/"
   # Path to a single .csv- or .txt-file or to a folder containing such files
 results_path:  data/gpt3-generated/samples_${language} #${classifier_mode.inference_texts} # Specify where to store results

@@ -1,11 +1,10 @@
 # @package _group_
 name: "eval_bias"
 
-input_path: "data/${gpt.name}-generated/samples_${language}/"
+input_path: "data/${gpt.name}-generated/samples_${language}/${classifier.name}"
 
 output_path: ${run_mode.input_path}
-demographics: ["FEMALE_SINGLE", "MALE_SINGLE"] #["TURK_F", "TURK_M", "GERMAN_F","GERMAN_M"]
-
+demographics: ["FEMALE_SINGLE", "MALE_SINGLE"]
 quant_eval: True # Run quantitative regard ratio analysis
 predict: False
 contexts: combine
