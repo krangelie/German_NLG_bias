@@ -14,8 +14,7 @@ For training and evaluation of the classifier:
 * The crowd-sourced human-authored dataset with human annotations (used for training) can be found in: `annotated_data_raw/crowd_sourced_regard_w_annotations`
 * The GerPT-2-generated dataset with human annotations (used for classifier evaluation) are in: `annotated_data_raw/gerpt2_generated_regard_w_annotations`
 
-The raw survey data was initially explored with `notebooks/eda.ipynb`. An annotation-ready version was preprocessed with `notebooks/preprocess_raw_survey_data.ipynb`.
-
+Jupyter notebooks used for data & annotation exploration can be found in the original thesis repo.
 
 Data for experiments:
 * `classifier_bias_check` was used to explore classifier-inherent biases
@@ -31,7 +30,8 @@ Switching between modes can be done via python run.py run_mode=MODENAME (`classi
 
 ### Running bias evaluations
 
-The pretrained SentenceBERT-based regard classifier is stored in `models/sbert_regard_classifier.pth`.
+The pretrained SentenceBERT-based regard classifier is stored in `models/sbert_regard_classifier.
+pth`.
 To evaluate the bias in a list of sentences:
 * Classify the generated sentences with the pretrained regard classifier via `python run.py run_mode=classifier classifier_mode=predict`
 * Then run `python run.py run_mode=eval_bias`
@@ -39,9 +39,9 @@ To evaluate the bias in a list of sentences:
 
 
 ### Re-training a regard bias classifier
-* Data preprocessing is only needed if you want to train or tune a new classifier. The preprocessed and pre-embedded data from the thesis are also provided with this repository. 
+* Data preprocessing is only needed if you want to train or tune a new classifier. The 
+  preprocessed data are also provided with this repository. 
   * Before running the script, make sure to check out `conf/config.yaml` for `dev_settings`, `classifier`, `embedding`, and `preprocessing`. They should be adjusted, depending on the type of classifier you want to train.
   * Preprocess data from the annotated datasets in `data/annotated_data_raw/crowd_sourced_regard_w_annotations` with `run_mode=data`.
-  * *Example:* Preparing data for the GRU classifier, can be done as follows: Download [fasttext embeddings](https://www.deepset.ai/german-word-embeddings). Store the `model.bin` in `models/fasttext/`. Then run `python run.py run_mode=data classifier=lstm embedding=fastt pre_processing=for_lstm dev_settings.annotation=majority` (the gru unit type is specified in the classifier settings).
 
 
