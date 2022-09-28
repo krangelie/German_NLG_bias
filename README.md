@@ -26,7 +26,8 @@ Data for experiments:
 ---
 ## Running the code
 
-Switching between modes can be done via python run.py run_mode=MODENAME (`classifier` with `classifier_mode` set to `train` or `evaluate` the classifier, `eval_bias` to run a bias analysis). It is definitely recommended checking out the detailed options within the respective config files. (Python 3.8 recommended)
+Switching between modes can be done via python run.py run_mode=MODENAME (`classifier` with 
+`classifier_mode` set to `train` or `evaluate` the classifier, `eval_bias` to run a bias analysis). It is definitely recommended checking out the detailed options within the respective config files. (Python 3.7 recommended)
 
 ### Running bias evaluations
 
