@@ -1,8 +1,7 @@
 # Measuring Gender Bias in German Language Generation
 
-This repository holds code, data, and a German regard classifier as described in our [publication](https://dl.gi.de/handle/20.500.12116/39481) in the proceedings of INFORMATIK 2022. 
+This repository holds code, data, and a German regard classifier as described in our paper ["Measuring Gender Bias in German Language Generation"](https://dl.gi.de/handle/20.500.12116/39481) in the proceedings of INFORMATIK 2022. 
 The project is an updated version of the bias measure developed and applied in my Master's thesis ([can be found in this repo](https://github.com/krangelie/bias-in-german-nlg)).
-
 
 ---
 ## Running bias evaluations
@@ -34,3 +33,21 @@ Data for experiments:
 * `classifier_bias_check` was used to confirm that there was no classifier-inherent biases
 * `gerp2-generated` and `gpt3-generated` contain samples and bias evaluation results with and without triggers
 **Warning**: Some samples are explicit or offensive in nature.
+
+# Citation
+
+To cite this work:
+
+```
+@inproceedings{mci/Kraft2022,
+author = {Kraft,Angelie AND Zorn,Hans-Peter AND Fecht,Pascal AND Simon,Judith AND Biemann,Chris AND Usbeck,Ricardo},
+title = {Measuring Gender Bias in German Language Generation},
+booktitle = {INFORMATIK 2022},
+year = {2022},
+editor = {Demmler, Daniel AND Krupka, Daniel AND Federrath, Hannes} ,
+pages = { 1257-1274 } ,
+doi = { 10.18420/inf2022_108 },
+publisher = {Gesellschaft für Informatik, Bonn},
+address = {}
+}
+```
